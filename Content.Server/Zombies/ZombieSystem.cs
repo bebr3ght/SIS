@@ -50,7 +50,7 @@ namespace Content.Server.Zombies
         [Dependency] private SharedPopupSystem _popup = default!;
         [Dependency] private SharedRoleSystem _role = default!;
         // SIS
-        [Dependency] private readonly AntagSelectionSystem _antag = default!;
+        [Dependency] private AntagSelectionSystem _antag = default!;
 
         public readonly ProtoId<NpcFactionPrototype> Faction = "Zombie";
 

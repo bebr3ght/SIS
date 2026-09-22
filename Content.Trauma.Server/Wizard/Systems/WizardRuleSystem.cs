@@ -33,7 +33,6 @@ using Content.Trauma.Shared.Wizard.BindSoul;
 using Robust.Server.Audio;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
-// SIS
 using Content.Shared.Antag;
 using Content.SIS.Common.ChatBriefing;
 
@@ -270,7 +269,7 @@ public sealed partial class WizardRuleSystem : GameRuleSystem<WizardRuleComponen
         MakeWizard(args.EntityUid, ent.Comp, args.Def); // SIS-ChatGreeting
     }
 
-    // SIS-ChatGreeting-Start
+    // SIS-ChatGreeting Start
     public bool MakeWizard(EntityUid target, WizardRuleComponent rule, AntagSpecifierPrototype proto)
     {
         var theme = proto.Briefing?.Theme ?? new GreetingTheme();
@@ -297,5 +296,5 @@ public sealed partial class WizardRuleSystem : GameRuleSystem<WizardRuleComponen
 
         return true;
     }
-    // SIS-ChatGreeting-End
+    // SIS-ChatGreeting End
 }

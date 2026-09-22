@@ -1,8 +1,7 @@
 using Content.Shared.Roles.Components;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
-// SIS
-using Content.Shared.Antag;
+using Content.Shared.Antag; // SIS-ChatBriefing
 
 namespace Content.Shared.Xenoborgs.Components;
 
@@ -20,6 +19,8 @@ public sealed partial class XenoborgComponent : Component
     [DataField]
     public EntProtoId<MindRoleComponent> MindRole = "MindRoleXenoborg";
 
+    // SIS-ChatBriefing Start
     [DataField]
-    public ProtoId<AntagSpecifierPrototype> AntagProto = "Xenoborg"; // SIS-ChatGreeting
+    public ProtoId<AntagSpecifierPrototype> AntagProto = "Xenoborg";
+    // SIS-ChatBriefing End
 }

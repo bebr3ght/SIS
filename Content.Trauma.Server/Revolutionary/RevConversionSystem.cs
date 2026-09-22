@@ -5,7 +5,6 @@ using Content.Server.GameTicking.Rules;
 using Content.Server.Revolutionary.Components;
 using Content.Trauma.Shared.Revolutionary;
 using Robust.Shared.Player;
-// SIS
 using Content.Shared.Antag;
 using Content.SIS.Common.ChatBriefing;
 
@@ -15,8 +14,7 @@ public sealed partial class RevConversionSystem : EntitySystem
 {
     [Dependency] private AntagSelectionSystem _antag = default!;
     [Dependency] private RevolutionaryRuleSystem _rev = default!;
-    // SIS
-    [Dependency] private IPrototypeManager _proto = default!;
+    [Dependency] private IPrototypeManager _proto = default!; // SIS-ChatBriefing
 
     private static readonly ProtoId<AntagSpecifierPrototype> BriefingTheme = "HeadRev"; // SIS-ChatGreeting
 
@@ -31,7 +29,7 @@ public sealed partial class RevConversionSystem : EntitySystem
     {
         if (TryComp<ActorComponent>(args.Target, out var actor))
         {
-            // SIS-ChatGreeting-Start
+            // SIS-ChatGreeting Start
             var proto = _proto.Index(BriefingTheme);
             var theme = proto.Briefing?.Theme ?? new GreetingTheme();
             var entry = new GreetingEntry { Theme = theme };
@@ -46,7 +44,7 @@ public sealed partial class RevConversionSystem : EntitySystem
             entry.AddSection(Loc.GetString("role-greeting-desc-title"), briefing, 1);
 
             _antag.SendBriefing(actor.PlayerSession, entry, args.Target.Comp.RevStartSound);
-            // SIS-ChatGreeting-End
+            // SIS-ChatGreeting End
         }
 
         if (!TryComp<CommandStaffComponent>(args.Target, out var command))

@@ -16,7 +16,6 @@ using Robust.Shared.Random;
 using System.Linq;
 using System.Text;
 using Content.Server.Codewords;
-// SIS
 using Content.Shared.Antag;
 using Content.SIS.Common.ChatBriefing;
 
@@ -107,10 +106,10 @@ public sealed partial class TraitorRuleSystem : GameRuleSystem<TraitorRuleCompon
 
         if (component.GiveBriefing)
         {
-            // SIS-ChatGreeting-Start
+            // SIS-ChatGreeting Start
             var greetingEntry = GenerateGreeting(codewords, code, antag, issuer);
             _antag.SendBriefing(traitor, greetingEntry, component.GreetSoundNotification);
-            // SIS-ChatGreeting-End
+            // SIS-ChatGreeting End
             Log.Debug($"MakeTraitor {ToPrettyString(traitor)} - Sent the Briefing");
         }
 
@@ -234,7 +233,7 @@ public sealed partial class TraitorRuleSystem : GameRuleSystem<TraitorRuleCompon
         return traitors;
     }
 
-    // SIS-ChatGreeting-Start
+    // SIS-ChatGreeting Start
     private GreetingEntry GenerateGreeting(string[]? codewords, Note[]? uplinkCode, AntagSpecifierPrototype proto, string? objectiveIssuer = null)
     {
         var theme = proto.Briefing?.Theme ?? new GreetingTheme();
@@ -263,5 +262,5 @@ public sealed partial class TraitorRuleSystem : GameRuleSystem<TraitorRuleCompon
 
         return entry;
     }
-    // SIS-ChatGreeting-End
+    // SIS-ChatGreeting End
 }

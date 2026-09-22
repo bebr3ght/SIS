@@ -51,9 +51,7 @@ using Content.Shared.NPC.Prototypes;
 using Content.Shared.Roles;
 using Content.Shared.Temperature.Components;
 using Robust.Shared.Utility;
-// SIS
 using Content.SIS.Common.ChatBriefing;
-
 
 namespace Content.Server.Zombies;
 
@@ -84,8 +82,7 @@ public sealed partial class ZombieSystem
     [Dependency] private NPCSystem _npc = default!;
     [Dependency] private TagSystem _tag = default!;
     [Dependency] private ISharedPlayerManager _player = default!;
-    // SIS
-    [Dependency] private IPrototypeManager _prototype = default!;
+    [Dependency] private IPrototypeManager _prototype = default!; // SIS-ChatBriefing
 
     private static readonly ProtoId<TagPrototype> InvalidForGlobalSpawnSpellTag = "InvalidForGlobalSpawnSpell";
     private static readonly ProtoId<TagPrototype> CannotSuicideTag = "CannotSuicide";
@@ -310,7 +307,7 @@ public sealed partial class ZombieSystem
             //Zombie role for player manifest
             _role.MindAddRole(mindId, MindRoleZombie, mind: null, silent: true);
 
-            // SIS-ChatGreeting-Start
+            // SIS-ChatGreeting Start
             var proto = _prototype.Index(InitialInfectedAntag);
             var theme = proto.Briefing?.Theme ?? new GreetingTheme();
             var entry = new GreetingEntry { Theme = theme };
@@ -326,7 +323,7 @@ public sealed partial class ZombieSystem
 
             //Greeting message for new bebe zombers
             _antag.SendBriefing(session, entry, zombiecomp.GreetSoundNotification);
-            // SIS-ChatGreeting-End
+            // SIS-ChatGreeting End
 
             // Notificate player about new role assignment
             // _audio.PlayGlobal(zombiecomp.GreetSoundNotification, session); // SIS-ChatGreeting

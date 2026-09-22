@@ -12,7 +12,6 @@ using Robust.Shared.Audio;
 using Robust.Shared.Enums;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
-// SIS
 using Content.SIS.Common.ChatBriefing;
 
 namespace Content.Server.Antag;
@@ -343,6 +342,27 @@ public sealed partial class AntagSelectionSystem
             SendBriefing(session, briefing, briefingColor, briefingSound);
         }
     }
+
+    // SIS-ChatGreeting Start
+    /*
+    /// <summary>
+    /// Helper method to send the briefing text and sound to a session
+    /// </summary>
+    /// <param name="session">The player chosen to be an antag</param>
+    /// <param name="data">The briefing data</param>
+    private void SendBriefing(
+        ICommonSession? session,
+        BriefingData? data)
+    {
+        if (session == null || data == null)
+            return;
+
+        var text = data.Value.Text == null ? string.Empty : Loc.GetString(data.Value.Text);
+        SendBriefing(session, text, data.Value.Color, data.Value.Sound);
+    }
+    */
+    // SIS-ChatGreeting End
+
 
     /// <summary>
     /// Helper method to send the briefing text and sound to a session

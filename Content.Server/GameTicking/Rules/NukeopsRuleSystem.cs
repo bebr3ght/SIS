@@ -46,7 +46,6 @@ using Robust.Shared.Utility;
 using System.Data;
 using System.Linq;
 using System.Text;
-// SIS
 using Content.Shared.Antag;
 using Content.SIS.Common.ChatBriefing;
 
@@ -608,7 +607,7 @@ public sealed partial class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleCompon
         nukeops.RoundEndBehavior = RoundEndBehavior.Nothing;
     }
 
-    // SIS-ChatGreeting-Start
+    // SIS-ChatGreeting Start
     private GreetingEntry MakeChatBriefingEntry(NukeopsRuleComponent comp, string targetStation, string teamName, AntagSpecifierPrototype proto)
     {
         var theme = proto.Briefing?.Theme ?? new GreetingTheme();
@@ -625,7 +624,7 @@ public sealed partial class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleCompon
 
         return entry;
     }
-    // SIS-ChatGreeting-End
+    // SIS-ChatGreeting End
 
     private void OnAfterAntagEntSelected(Entity<NukeopsRuleComponent> ent, ref AfterAntagEntitySelectedEvent args)
     {

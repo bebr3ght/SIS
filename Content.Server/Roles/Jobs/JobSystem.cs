@@ -27,17 +27,23 @@ public sealed partial class JobSystem : SharedJobSystem
     {
         MindOnDoGreeting(args.MindId, args.Mind, args);
 
-        // SIS-ChatBriefing
-        // if (args.RoleTypeUpdate)
-        //     _roles.RoleUpdateMessage(args.Mind);
+        // SIS-ChatBriefing Start
+        /*
+        if (args.RoleTypeUpdate)
+            _roles.RoleUpdateMessage(args.Mind);
+        */
+        // SIS-ChatGreeting End
     }
 
-    // SIS-ChatBriefing
-    // private void OnRoleRemovedEvent(RoleRemovedEvent args)
-    // {
-        // if (args.RoleTypeUpdate)
-        //     _roles.RoleUpdateMessage(args.Mind);
-    // }
+    // SIS-ChatGreeting Start
+    /*
+    private void OnRoleRemovedEvent(RoleRemovedEvent args)
+    {
+        if (args.RoleTypeUpdate)
+            _roles.RoleUpdateMessage(args.Mind);
+    }
+    */
+    // SIS-ChatGreeting End
 
     private void MindOnDoGreeting(EntityUid mindId, MindComponent component, RoleAddedEvent args)
     {

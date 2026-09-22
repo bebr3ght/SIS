@@ -12,7 +12,6 @@ using Robust.Shared.CPUJob.JobQueues.Queues;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Player;
 using System.Linq;
-// SIS
 using Content.Server.Antag;
 using Content.Shared.Antag;
 using Content.SIS.Common.ChatBriefing;
@@ -27,9 +26,10 @@ public sealed partial class BlobObserverSystem : SharedBlobObserverSystem
     [Dependency] private SharedMindSystem _mind = default!;
     [Dependency] private SharedRoleSystem _role = default!;
     [Dependency] private EntityQuery<MapGridComponent> _gridQuery = default!;
-    // SIS
+    // SIS-ChatGreeting Start
     [Dependency] private AntagSelectionSystem _antag = default!;
     [Dependency] private IPrototypeManager _proto = default!;
+    // SIS-ChatGreeting End
 
     private static readonly EntProtoId BlobCaptureObjective = "BlobCaptureObjective";
     private static readonly EntProtoId BlobRule = "BlobRule";
@@ -137,7 +137,7 @@ public sealed partial class BlobObserverSystem : SharedBlobObserverSystem
         _mind.TryAddObjective(mindId, mind, BlobCaptureObjective);
     }
 
-    // SIS-ChatGreeting-Start
+    // SIS-ChatGreeting Start
     private void SendGreeting(EntityUid mind)
     {
         if (!_player.TryGetSessionByEntity(mind, out var session))
@@ -158,5 +158,5 @@ public sealed partial class BlobObserverSystem : SharedBlobObserverSystem
 
         _antag.SendBriefing(session, entry, proto.Briefing?.Sound);
     }
-    // SIS-ChatGreeting-End
+    // SIS-ChatGreeting End
 }

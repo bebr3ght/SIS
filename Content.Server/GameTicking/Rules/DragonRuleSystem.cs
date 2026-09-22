@@ -6,7 +6,6 @@ using Content.Server.Station.Systems;
 using Content.Shared.Localizations;
 using Content.Shared.Roles.Components;
 using Robust.Server.GameObjects;
-// SIS
 using Content.Shared.Antag;
 using Content.SIS.Common.ChatBriefing;
 
@@ -53,7 +52,7 @@ public sealed partial class DragonRuleSystem : GameRuleSystem<DragonRuleComponen
         _antag.SendBriefing(args.EntityUid, MakeGreeting(args.EntityUid, args.Def)); // SIS-ChatGreeting
     }
 
-    // SIS-ChatGreeting-Start
+    // SIS-ChatGreeting Start
     private GreetingEntry MakeGreeting(EntityUid dragon, AntagSpecifierPrototype proto)
     {
         var theme = proto.Briefing?.Theme ?? new GreetingTheme();
@@ -92,5 +91,5 @@ public sealed partial class DragonRuleSystem : GameRuleSystem<DragonRuleComponen
 
         return Loc.GetString("generic-unknown-title");
     }
-    // SIS-ChatGreeting-End
+    // SIS-ChatGreeting End
 }

@@ -4,7 +4,6 @@ using Content.Shared.Whitelist;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Array;
-// SIS
 using Content.SIS.Common.ChatBriefing;
 
 namespace Content.Shared.Antag;
@@ -156,28 +155,31 @@ public enum AntagAcceptability
     All,
 }
 
-// SIS-ChatBriefing - Replaced with ChatBriefingEntry
-// /// <summary>
-// /// Contains data used to generate a briefing.
-// /// </summary>
-// [DataDefinition]
-// public partial struct BriefingData
-// {
-//     /// <summary>
-//     /// The text shown
-//     /// </summary>
-//     [DataField]
-//     public LocId? Text;
-//
-//     /// <summary>
-//     /// The color of the text.
-//     /// </summary>
-//     [DataField]
-//     public Color? Color;
-//
-//     /// <summary>
-//     /// The sound played.
-//     /// </summary>
-//     [DataField]
-//     public SoundSpecifier? Sound;
-// }
+// SIS-ChatBriefing Start
+/*
+/// <summary>
+/// Contains data used to generate a briefing.
+/// </summary>
+[DataDefinition]
+public partial struct BriefingData
+{
+    /// <summary>
+    /// The text shown
+    /// </summary>
+    [DataField]
+    public LocId? Text;
+
+    /// <summary>
+    /// The color of the text.
+    /// </summary>
+    [DataField]
+    public Color? Color;
+
+    /// <summary>
+    /// The sound played.
+    /// </summary>
+    [DataField]
+    public SoundSpecifier? Sound;
+}
+*/
+// SIS-ChatBriefing End

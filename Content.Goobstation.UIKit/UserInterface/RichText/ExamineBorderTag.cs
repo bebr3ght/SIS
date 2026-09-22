@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Robust.Client.UserInterface.RichText;
-// SIS
 using System.Globalization;
 
 namespace Content.Goobstation.UIKit.UserInterface.RichText;
@@ -13,7 +12,7 @@ public sealed partial class ExamineBorderTag : IMarkupTagHandler
     public string Name => TagName;
 }
 
-// SIS-ChatGreeting-Start
+// SIS-ChatGreeting Start
 public sealed partial class TitleBoxTag : IMarkupTagHandler
 {
     public const string TagName = "titlebox";
@@ -130,4 +129,4 @@ public sealed class GradientTag : IAnimatedColorTag
         return Color.InterpolateBetween(color1, color2, t);
     }
 }
-// SIS-ChatGreeting-End
+// SIS-ChatGreeting End

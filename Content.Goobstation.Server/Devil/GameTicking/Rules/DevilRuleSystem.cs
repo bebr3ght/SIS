@@ -12,7 +12,6 @@ using Content.Shared.NPC.Prototypes;
 using Content.Shared.NPC.Systems;
 using Content.Shared.Roles;
 using Robust.Shared.Audio;
-// SIS
 using Content.Shared.Antag;
 using Content.SIS.Common.ChatBriefing;
 
@@ -38,7 +37,7 @@ public sealed partial class DevilRuleSystem : GameRuleSystem<DevilRuleComponent>
         MakeDevil(args.EntityUid, comp, args.Def); // SIS-ChatGreeting
     }
 
-    // SIS-ChatGreeting-Start
+    // SIS-ChatGreeting Start
     private bool MakeDevil(EntityUid target, DevilRuleComponent rule, AntagSpecifierPrototype proto)
     {
         var devilComp = EnsureComp<DevilComponent>(target);
@@ -50,7 +49,7 @@ public sealed partial class DevilRuleSystem : GameRuleSystem<DevilRuleComponent>
 
         return true;
     }
-    // SIS-ChatGreeting-End
+    // SIS-ChatGreeting End
 
     private void OnGetBrief(Entity<DevilRoleComponent> role, ref GetBriefingEvent args)
     {
@@ -94,7 +93,7 @@ public sealed partial class DevilRuleSystem : GameRuleSystem<DevilRuleComponent>
     }
 
 
-    // SIS-ChatGreeting-Start
+    // SIS-ChatGreeting Start
     private void SendGreeting(EntityUid uid, AntagSpecifierPrototype proto)
     {
         if (!TryComp<DevilComponent>(uid, out var devilComp))
@@ -114,5 +113,5 @@ public sealed partial class DevilRuleSystem : GameRuleSystem<DevilRuleComponent>
 
         _antag.SendBriefing(uid, entry, proto.Briefing?.Sound);
     }
-    // SIS-ChatGreeting-End
+    // SIS-ChatGreeting End
 }

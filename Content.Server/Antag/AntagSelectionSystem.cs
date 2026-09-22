@@ -35,7 +35,6 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
 using static Content.Server.Antag.Components.AntagSelectionTime;
-// SIS
 using Content.SIS.Common.ChatBriefing;
 
 namespace Content.Server.Antag;

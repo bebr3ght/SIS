@@ -30,7 +30,6 @@ using Content.Shared.Zombies;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
-// SIS
 using Content.Server.Antag;
 using Content.Shared.Antag;
 
@@ -49,8 +48,7 @@ namespace Content.Server.Zombies
         [Dependency] private MobStateSystem _mobState = default!;
         [Dependency] private SharedPopupSystem _popup = default!;
         [Dependency] private SharedRoleSystem _role = default!;
-        // SIS
-        [Dependency] private AntagSelectionSystem _antag = default!;
+        [Dependency] private AntagSelectionSystem _antag = default!; // SIS-ChatBriefing
 
         public readonly ProtoId<NpcFactionPrototype> Faction = "Zombie";
 
@@ -64,10 +62,10 @@ namespace Content.Server.Zombies
             SlotFlags.INNERCLOTHING |
             SlotFlags.OUTERCLOTHING;
 
-        // SIS-ChatGreeting-Start
+        // SIS-ChatGreeting Start
         private static readonly ProtoId<AntagSpecifierPrototype> InitialInfectedAntag = "InitialInfected";
         private static readonly Color FallbackColor = Color.Plum;
-        // SIS-ChatGreeting-End
+        // SIS-ChatGreeting End
 
         public override void Initialize()
         {

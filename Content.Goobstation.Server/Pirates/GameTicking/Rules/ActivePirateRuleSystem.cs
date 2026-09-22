@@ -11,7 +11,6 @@ using Content.Shared.GameTicking.Components;
 using Content.Shared.NPC.Prototypes;
 using Content.Shared.NPC.Systems;
 using Robust.Shared.Audio;
-// SIS
 using Content.Shared.Antag;
 using Content.SIS.Common.ChatBriefing;
 
@@ -66,7 +65,7 @@ public sealed partial class ActivePirateRuleSystem : GameRuleSystem<ActivePirate
         }
     }
 
-    // SIS-ChatGreeting-Start
+    // SIS-ChatGreeting Start
     public bool TryMakePirate(EntityUid target, AntagSpecifierPrototype proto)
     {
         if (!_mind.TryGetMind(target, out var mindId, out var mind))
@@ -92,5 +91,5 @@ public sealed partial class ActivePirateRuleSystem : GameRuleSystem<ActivePirate
 
         return true;
     }
-    // SIS-ChatGreeting-End
+    // SIS-ChatGreeting End
 }

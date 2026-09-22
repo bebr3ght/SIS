@@ -3,7 +3,6 @@ using Content.Server.GameTicking.Rules.Components;
 using Content.Server.Roles;
 using Content.Shared.Humanoid;
 using Content.Shared.Roles.Components;
-// SIS
 using Content.Shared.Antag;
 using Content.SIS.Common.ChatBriefing;
 
@@ -52,7 +51,7 @@ public sealed partial class ThiefRuleSystem : GameRuleSystem<ThiefRuleComponent>
         return briefing;
     }
 
-    // SIS-ChatGreeting-Start
+    // SIS-ChatGreeting Start
     private GreetingEntry MakeGreeting(EntityUid ent, AntagSpecifierPrototype proto)
     {
         var theme = proto.Briefing?.Theme ?? new GreetingTheme();
@@ -79,5 +78,5 @@ public sealed partial class ThiefRuleSystem : GameRuleSystem<ThiefRuleComponent>
 
         return entry;
     }
-    // SIS-ChatGreeting-End
+    // SIS-ChatGreeting End
 }

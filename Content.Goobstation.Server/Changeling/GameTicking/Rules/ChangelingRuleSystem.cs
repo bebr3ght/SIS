@@ -14,7 +14,6 @@ using Content.Shared.Store;
 using Content.Shared.Store.Components;
 using Content.Trauma.Common.Silicon;
 using Robust.Shared.Audio;
-// SIS
 using Content.Shared.Antag;
 using Content.SIS.Common.ChatBriefing;
 
@@ -53,7 +52,7 @@ public sealed partial class ChangelingRuleSystem : GameRuleSystem<ChangelingRule
         MakeChangeling(args.EntityUid, comp, args.Def); // SIS-ChatGreeting
     }
 
-    // SIS-ChatGreeting-Start
+    // SIS-ChatGreeting Start
     public bool MakeChangeling(EntityUid target, ChangelingRuleComponent rule, AntagSpecifierPrototype proto)
     {
         if (_silicon.IsSilicon(target))
@@ -98,7 +97,7 @@ public sealed partial class ChangelingRuleSystem : GameRuleSystem<ChangelingRule
 
         return true;
     }
-    // SIS-ChatGreeting-End
+    // SIS-ChatGreeting End
 
     private void OnTextPrepend(Entity<ChangelingRuleComponent> ent, ref ObjectivesTextPrependEvent args)
     {

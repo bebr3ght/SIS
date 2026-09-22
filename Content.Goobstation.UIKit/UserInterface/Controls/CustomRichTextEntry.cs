@@ -5,7 +5,6 @@ using System.Text;
 using Content.Goobstation.UIKit.UserInterface.RichText;
 using Robust.Client.UserInterface.RichText;
 using Robust.Shared.Collections;
-// SIS
 using Robust.Shared.Timing;
 
 namespace Content.Goobstation.UIKit.UserInterface.Controls;
@@ -25,12 +24,12 @@ public struct CustomRichTextEntry
         typeof(EntityTextureTag),
         typeof(RadioIconTag),
         typeof(TextureTag),
-        // SIS-ChatGreeting-Start
+        // SIS-ChatGreeting Start
         typeof(TitleBoxTag),
         typeof(MessageBoxTag),
         typeof(RainbowTag),
         typeof(GradientTag)
-        // SIS-ChatGreeting-End
+        // SIS-ChatGreeting End
     ];
 
     private readonly Color _defaultColor;
@@ -254,7 +253,7 @@ public struct CustomRichTextEntry
         float lineHeightScale = 1)
     {
         var screenHandle = (DrawingHandleScreen) handle;
-        // SIS-ChatGreeting-Start
+        // SIS-ChatGreeting Start
         var panelsToDraw = new List<PanelRenderData>();
 
         var bounds = DrawBoxContent(
@@ -294,7 +293,7 @@ public struct CustomRichTextEntry
             lineHeightScale,
             true,
             null);
-        // SIS-ChatGreeting-End
+        // SIS-ChatGreeting End
     }
 
     private readonly UIBox2 DrawBoxContent(
@@ -330,7 +329,7 @@ public struct CustomRichTextEntry
 
         var screenHandle = (DrawingHandleScreen) handle;
 
-        // SIS-ChatGreeting-Start
+        // SIS-ChatGreeting Start
         string? activePanelName = null;
         var activePanelStartY = 0f;
         var activePanelBg = Color.Transparent;
@@ -339,14 +338,14 @@ public struct CustomRichTextEntry
 
         var time = (float) IoCManager.Resolve<IGameTiming>().RealTime.TotalSeconds;
         var activeAnimTags = new Stack<(IAnimatedColorTag Tag, MarkupNode Node)>();
-        // SIS-ChatGreeting-End
+        // SIS-ChatGreeting End
 
         var nodeIndex = -1;
         foreach (var node in Message)
         {
             nodeIndex++;
 
-            // SIS-ChatGreeting-Start
+            // SIS-ChatGreeting Start
             if (node.Name == "titlebox" || node.Name == "messagebox")
             {
                 if (!node.Closing)
@@ -405,7 +404,7 @@ public struct CustomRichTextEntry
                         activeAnimTags.Pop();
                 }
             }
-            // SIS-ChatGreeting-End
+            // SIS-ChatGreeting End
 
             var text = ProcessNode(tagManager, node, context);
             if (!context.Color.TryPeek(out var color) || !context.Font.TryPeek(out var font))
@@ -423,7 +422,7 @@ public struct CustomRichTextEntry
                     lineBreakIndex += 1;
                 }
 
-                // SIS-ChatGreeting-Start
+                // SIS-ChatGreeting Start
                 Color drawColor = color;
 
                 if (activeAnimTags.TryPeek(out var animState))
@@ -439,7 +438,7 @@ public struct CustomRichTextEntry
                     if (font.TryGetCharMetrics(rune, uiScale, out var metrics))
                         baseLine.X += metrics.Advance;
                 }
-                // SIS-ChatGreeting-End
+                // SIS-ChatGreeting End
 
                 globalBreakCounter += 1;
             }
@@ -456,7 +455,7 @@ public struct CustomRichTextEntry
             LayoutContainer.SetPosition(control, pos);
             control.Measure(new Vector2(Width, Height));
 
-            // SIS-ChatGreeting-Start
+            // SIS-ChatGreeting Start
             if (drawText && control is StaticSpriteView staticSprite && staticSprite.Entity is not null &&
                 _entManager.TryGetComponent<MetaDataComponent>(staticSprite.Entity, out var metaData) &&
                 _entManager.TryGetComponent<SpriteComponent>(staticSprite.Entity, out var spriteComp) &&
@@ -470,10 +469,10 @@ public struct CustomRichTextEntry
             }
 
             baseLine.X += control.DesiredSize.X + control.Margin.Right;
-            // SIS-ChatGreeting-End
+            // SIS-ChatGreeting End
         }
 
-        // SIS-ChatGreeting-Start
+        // SIS-ChatGreeting Start
         if (activePanelName != null && outPanels != null)
         {
             var panelBottomY = baseLine.Y - defaultFont.GetAscent(uiScale) + GetLineHeight(defaultFont, uiScale, lineHeightScale) + boxPadding;
@@ -490,7 +489,7 @@ public struct CustomRichTextEntry
                 new Vector2(drawBox.Left + (margin - finalBoxPadding) - sPixelWidth, baseLineBase.Y - finalBoxPadding),
                 new Vector2(drawBox.Right - (margin - finalBoxPadding) - sPixelWidth,
                     baseLine.Y - GetLineHeight(defaultFont, uiScale, lineHeightScale) + finalBoxPadding));
-        // SIS-ChatGreeting-End
+        // SIS-ChatGreeting End
     }
 
 
@@ -527,12 +526,12 @@ public struct CustomRichTextEntry
         return (int) (height * lineHeightScale); // SIS-ChatGreeting
     }
 
-    // SIS-ChatGreeting-Start
+    // SIS-ChatGreeting Start
     private struct PanelRenderData
     {
         public UIBox2 Bounds;
         public Color BgColor;
         public Color BorderColor;
     }
-    // SIS-ChatGreeting-End
+    // SIS-ChatGreeting End
 }

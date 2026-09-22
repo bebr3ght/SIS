@@ -19,7 +19,6 @@ using Content.Trauma.Shared.Heretic.Systems;
 using Content.Trauma.Shared.Roles;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
-// SIS
 using Content.Shared.Antag;
 using Content.SIS.Common.ChatBriefing;
 
@@ -96,7 +95,7 @@ public sealed partial class HereticRuleSystem : GameRuleSystem<HereticRuleCompon
         }
     }
 
-    // SIS-ChatGreeting-Start
+    // SIS-ChatGreeting Start
     public bool TryMakeHeretic(EntityUid target, HereticRuleComponent rule, AntagSpecifierPrototype proto)
     {
         if (!_mind.TryGetMind(target, out var mindId, out var mind))
@@ -135,7 +134,7 @@ public sealed partial class HereticRuleSystem : GameRuleSystem<HereticRuleCompon
 
         return true;
     }
-    // SIS-ChatGreeting-End
+    // SIS-ChatGreeting End
 
     public StoreComponent InitializeStore(EntityUid mindId)
     {

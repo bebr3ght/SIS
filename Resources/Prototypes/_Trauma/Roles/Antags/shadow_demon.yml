@@ -12,7 +12,7 @@
   mindRoles: [ MindRoleShadowDemon ]
   briefing:
     sound: /Audio/_Trauma/Mobs/ShadowDemon/briefing/shadowdemonbriefing.ogg
-    # SIS-ChatGreeting-Start
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#16081c"
       titleBorder: "#8e24aa"
@@ -33,7 +33,7 @@
         text: role-greeting-desc-title
       message:
         text: shadow-demon-role-greeting-desc
-    # SIS-ChatGreeting-End
+    # SIS-ChatGreeting End
   components:
   - type: RandomMetadata  # Left as is since they are demonic names
     nameSegments:

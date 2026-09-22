@@ -12,7 +12,7 @@
   mindRoles: [ MindRoleMorph ]
   briefing:
     sound: /Audio/_Trauma/Morph/mutate.ogg
-    # SIS-ChatGreeting-Start
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#192112"
       titleBorder: "#79b037"
@@ -33,4 +33,4 @@
         text: role-greeting-desc-title
       message:
         text: morph-role-greeting-desc
-    # SIS-ChatGreeting-End
+    # SIS-ChatGreeting End

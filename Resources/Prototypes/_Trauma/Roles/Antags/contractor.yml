@@ -8,7 +8,7 @@
   mindRoles: [ MindRoleContractor ]
   briefing:
     sound: /Audio/Ambience/Antag/traitor_wawa.ogg
-    # SIS-ChatGreeting-Start
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#181214"
       titleBorder: "#e71d36"
@@ -29,7 +29,7 @@
         text: role-greeting-desc-title
       message:
         text: contractor-role-greeting-desc
-    # SIS-ChatGreeting-End
+    # SIS-ChatGreeting End
   components:
   - type: RandomMetadata
     nameSegments:

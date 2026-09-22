@@ -23,7 +23,7 @@
   - Werewolf
   briefing:
     sound: "/Audio/_Inky/Antag/Werewolf/werewolf_start.ogg"
-    # SIS-ChatGreeting-Start
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#1a110a"
       titleBorder: "#d97706"
@@ -44,7 +44,7 @@
         text: role-greeting-desc-title
       message:
         text: werewolf-role-greeting-desc
-    # SIS-ChatGreeting-End
+    # SIS-ChatGreeting End
 #  components:
   mindRoles:
   - MindRoleWerewolf

@@ -25,7 +25,7 @@
     - AntagImmune
   briefing:
     sound: "/Audio/Ambience/Antag/zombie_start.ogg"
-    # SIS-ChatGreeting-Start
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#2a162b"
       titleBorder: DarkOrchid
@@ -45,7 +45,7 @@
         text: role-greeting-desc-title
       message:
         text: zombie-patientzero-role-greeting-desc
-    # SIS-ChatGreeting-End
+    # SIS-ChatGreeting End
   components:
   - type: PendingZombie #less time to prepare than normal
     minInitialInfectedGrace: 300

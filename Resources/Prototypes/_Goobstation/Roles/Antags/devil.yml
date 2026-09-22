@@ -24,7 +24,7 @@
   jobBlacklist: [ Chaplain, Mime ] # chaplain is obvious, mime can't write.
   mindRoles: [ DevilMindRole ]
   startingGear: DevilStartingGear
-  # SIS-ChatGreeting-Start
+  # SIS-ChatGreeting Start
   briefing:
     sound: /Audio/_Goobstation/Ambience/Antag/devil_start.ogg
     theme:
@@ -36,7 +36,7 @@
       messageText: "#ffeaa7"
       highlight1: "#ff3838"
       highlight2: "#ffa502"
-  # SIS-ChatGreeting-End
+  # SIS-ChatGreeting End
   mindComponents:
   - type: Evil
 

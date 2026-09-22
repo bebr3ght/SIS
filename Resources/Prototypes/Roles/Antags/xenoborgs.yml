@@ -15,7 +15,7 @@
   id: MothershipCore
   prefRoles: [ MothershipCore ]
   spawnerPrototype: SpawnPointGhostRoleMothershipCore
-  # SIS-ChatGreeting-Start
+  # SIS-ChatGreeting Start
   briefing:
     sound: /Audio/Ambience/Antag/xenoborg_start.ogg
     theme:
@@ -38,7 +38,7 @@
         text: role-greeting-desc-title
       message:
         text: mothership-greeting-desc
-  # SIS-ChatGreeting-End
+  # SIS-ChatGreeting End
 
 - type: antag
   id: Xenoborg

@@ -14,7 +14,7 @@
   startingGear: SlasherGear
   briefing:
     sound: /Audio/_Goobstation/Effects/Slasher/SlasherIntro.ogg
-    # SIS-ChatGreeting-Start
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#16181d"
       titleBorder: "#64748b"
@@ -35,7 +35,7 @@
         text: role-greeting-desc-title
       message:
         text: slasher-role-greeting-desc
-    # SIS-ChatGreeting-End
+    # SIS-ChatGreeting End
   mindRoles: [ MindRoleSlasher ]
   components:
   - type: Slasher

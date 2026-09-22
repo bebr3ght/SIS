@@ -11,7 +11,7 @@
   spawnerPrototype: SpawnPointGhostSlaughterDemon
   briefing:
     sound: /Audio/_Goobstation/SlaughterDemon/briefing.ogg
-    # SIS-ChatGreeting-Start
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#3a0005"
       titleBorder: "#ff0033"
@@ -32,7 +32,7 @@
         text: role-greeting-desc-title
       message:
         text: slaughter-role-greeting-desc
-    # SIS-ChatGreeting-End
+    # SIS-ChatGreeting End
   components:
   - type: RandomMetadata
     nameSegments:

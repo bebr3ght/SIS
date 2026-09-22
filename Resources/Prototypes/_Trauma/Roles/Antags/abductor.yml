@@ -6,7 +6,7 @@
   unequipOldGear: true
   briefing:
     sound: /Audio/_Shitmed/Misc/abductor.ogg
-    # SIS-ChatGreeting-Start
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#100d1c"
       titleBorder: "#fd0098"
@@ -27,7 +27,7 @@
         text: role-greeting-desc-title
       message:
         text: abductor-role-greeting-desc
-    # SIS-ChatGreeting-End
+    # SIS-ChatGreeting End
   components:
   - type: Abductor
   - type: ActionGrant

@@ -24,7 +24,7 @@
 - type: antagSpecifier
   parent: BaseTraitor
   id: Traitor
-  # SIS-ChatGreeting-Start
+  # SIS-ChatGreeting Start
   briefing:
     theme:
       titleBackground: "#191113"
@@ -35,7 +35,7 @@
       messageText: "#dcd1d4"
       highlight1: "#ff1744"
       highlight2: "#ff6b81"
-  # SIS-ChatGreeting-End
+  # SIS-ChatGreeting End
   prefRoles:
   - Traitor
   # Trauma - removed blacklist copy, its inherited

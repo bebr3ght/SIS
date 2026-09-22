@@ -43,7 +43,7 @@
   mindRoles: [ MindRoleVampire ]
   briefing:
     sound: /Audio/_Trauma/Vampires/vampalert.ogg
-    # SIS-ChatGreeting-Start
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#2b0b11"
       titleBorder: "#ff2e4d"
@@ -64,7 +64,7 @@
         text: role-greeting-desc-title
       message:
         text: vampire-role-greeting-desc
-    # SIS-ChatGreeting-End
+    # SIS-ChatGreeting End
   components:
   - type: WeakToHoly
   - type: AlwaysTakeHoly

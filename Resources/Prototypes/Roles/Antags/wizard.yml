@@ -27,7 +27,7 @@
   roleLoadout:
   - RoleSurvivalEVA # Trauma - was RoleSurvivalExtended
   briefing:
-    # SIS-ChatGreeting-Start
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#241433"
       titleBorder: "#a855f7"
@@ -36,7 +36,7 @@
       text: "#f3e8ff"
       highlight1: "#ffd700"
       highlight2: "#c084fc"
-    # SIS-ChatGreeting-End
+    # SIS-ChatGreeting End
   # TODO: WizardComp as needed
   components:
   # <Trauma>

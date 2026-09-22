@@ -28,7 +28,7 @@
   - HeadRev
   briefing:
     sound: "/Audio/Ambience/Antag/headrev_start.ogg"
-    # SIS-ChatGreeting-Start
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#1a2333"
       titleBorder: "#4169E1"
@@ -48,7 +48,7 @@
         text: role-greeting-desc-title
       message:
         text: head-rev-role-desc
-    # SIS-ChatGreeting-End
+    # SIS-ChatGreeting End
   startingGear: HeadRevGear
   components:
   - type: Revolutionary

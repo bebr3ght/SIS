@@ -21,7 +21,7 @@
   - MindRoleGhostRoleSoloAntagonist
   briefing:
     sound: /Audio/_Goobstation/Misc/clownalwayswinsshort.ogg
-    # SIS-ChatGreeting-Start
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#24101e"
       titleBorder: "#ec4899"
@@ -42,7 +42,7 @@
         text: role-greeting-desc-title
       message:
         text: tunnel-clown-role-greeting-desc
-    # SIS-ChatGreeting-End
+    # SIS-ChatGreeting End
 
 - type: startingGear
   id: TunnelClownAntagGear

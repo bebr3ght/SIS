@@ -4,7 +4,7 @@
   parent: RestrictedAntag
   id: Shadowling
   prefRoles: [ Shadowling ]
-  # SIS-ChatGreeting-Start
+  # SIS-ChatGreeting Start
   briefing:
     sound: /Audio/_EinsteinEngines/Shadowling/shadowling.ogg
     theme:
@@ -27,4 +27,4 @@
         text: role-greeting-desc-title
       message:
         text: shadowling-role-greeting-desc
-  # SIS-ChatGreeting-End
+  # SIS-ChatGreeting End

@@ -19,7 +19,7 @@
   allowNonHumans: true
   briefing:
     sound: /Audio/Announcements/bloblarm.ogg
-    # SIS-ChatGreeting-Start
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#1e2410"
       titleBorder: "#a3e635"
@@ -40,6 +40,6 @@
         text: role-greeting-desc-title
       message:
         text: blob-carrier-role-greeting-desc
-    # SIS-ChatGreeting-End
+    # SIS-ChatGreeting End
   mindRoles:
   - MindRoleBlob

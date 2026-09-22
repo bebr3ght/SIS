@@ -45,7 +45,7 @@
   id: Heretic
   prefRoles: [ Heretic ]
   jobBlacklist: [ Chaplain ]
-  # SIS-ChatGreeting-Start
+  # SIS-ChatGreeting Start
   briefing:
     theme:
       titleBackground: "#1a0e24"
@@ -56,7 +56,7 @@
       messageText: "#d6c8e0"
       highlight1: "#00ff9f"
       highlight2: "#c084fc"
-  # SIS-ChatGreeting-End
+  # SIS-ChatGreeting End
 
 - type: antagSpecifier
   parent: Heretic

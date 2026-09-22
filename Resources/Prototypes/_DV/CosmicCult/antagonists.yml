@@ -22,7 +22,7 @@
   parent: RestrictedAntag
   id: CosmicCultist
   jobBlacklist: [ Chaplain ]
-  # SIS-ChatGreeting-Start
+  # SIS-ChatGreeting Start
   briefing:
     theme:
       titleBackground: "#102226"
@@ -44,7 +44,7 @@
         text: role-greeting-desc-title
       message:
         text: cosmiccult-role-greeting-desc
-  # SIS-ChatGreeting-End
+  # SIS-ChatGreeting End
   components:
   - type: CosmicCult
   prefRoles: [ CosmicAntagCultist ]

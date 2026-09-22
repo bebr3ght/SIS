@@ -22,7 +22,7 @@
   - RoleSurvivalSpaceNinja
   briefing:
     sound: /Audio/Misc/ninja_greeting.ogg
-    # SIS-ChatGreeting-Start
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#0d1410"
       titleBorder: "#00ff66"
@@ -32,7 +32,7 @@
       messageText: "#c8d6cb"
       highlight1: "#00ff66"
       highlight2: "#00d2d3"
-    # SIS-ChatGreeting-End
+    # SIS-ChatGreeting End
   components:
   - type: SpaceNinja
   - type: NpcFactionMember

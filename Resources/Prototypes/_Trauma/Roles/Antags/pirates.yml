@@ -4,7 +4,7 @@
   id: PirateCaptain
   spawnerPrototype: SpawnPointPirateCaptain
   startingGear: PirateGear
-  # SIS-ChatGreeting-Start
+  # SIS-ChatGreeting Start
   briefing:
     theme:
       titleBackground: "#1f140e"
@@ -15,7 +15,7 @@
       messageText: "#d6c5b2"
       highlight1: "#f59e0b"
       highlight2: "#fbbf24"
-  # SIS-ChatGreeting-End
+  # SIS-ChatGreeting End
   components:
   - type: RandomMetadata
     nameSegments:

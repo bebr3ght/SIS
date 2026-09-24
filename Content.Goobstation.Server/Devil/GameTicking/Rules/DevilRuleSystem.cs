@@ -23,6 +23,8 @@ public sealed partial class DevilRuleSystem : GameRuleSystem<DevilRuleComponent>
     [Dependency] private AntagSelectionSystem _antag = default!;
     [Dependency] private NpcFactionSystem _npcFaction = default!;
     [Dependency] private ObjectivesSystem _objective = default!;
+    [Dependency] private GreetingSystem _greeting = default!; // SIS-ChatGreeting
+
     public override void Initialize()
     {
         base.Initialize();
@@ -37,8 +39,7 @@ public sealed partial class DevilRuleSystem : GameRuleSystem<DevilRuleComponent>
         MakeDevil(args.EntityUid, comp, args.Def); // SIS-ChatGreeting
     }
 
-    // SIS-ChatGreeting Start
-    private bool MakeDevil(EntityUid target, DevilRuleComponent rule, AntagSpecifierPrototype proto)
+    private bool MakeDevil(EntityUid target, DevilRuleComponent rule, AntagSpecifierPrototype proto) // SIS-ChatGreeting
     {
         var devilComp = EnsureComp<DevilComponent>(target);
 
@@ -49,7 +50,6 @@ public sealed partial class DevilRuleSystem : GameRuleSystem<DevilRuleComponent>
 
         return true;
     }
-    // SIS-ChatGreeting End
 
     private void OnGetBrief(Entity<DevilRoleComponent> role, ref GetBriefingEvent args)
     {
@@ -92,7 +92,6 @@ public sealed partial class DevilRuleSystem : GameRuleSystem<DevilRuleComponent>
         args.Text = sb.ToString();
     }
 
-
     // SIS-ChatGreeting Start
     private void SendGreeting(EntityUid uid, AntagSpecifierPrototype proto)
     {
@@ -100,17 +99,14 @@ public sealed partial class DevilRuleSystem : GameRuleSystem<DevilRuleComponent>
             return;
 
         var theme = proto.Briefing?.Theme ?? new GreetingTheme();
-        var entry = new GreetingEntry { Theme = theme };
 
         var hl1 = theme.MessageHighlightFirstColor ?? theme.HighlightFirstColor ?? theme.HighlightColor ?? Color.Orange;
-        var hl2 = theme.MessageHighlightSecondColor ?? theme.HighlightSecondColor  ?? hl1;
+        var hl2 = theme.MessageHighlightSecondColor ?? theme.HighlightSecondColor ?? hl1;
 
         var greetingText = Loc.GetString("devil-role-greeting", ("trueName", devilComp.TrueName), ("playerName", Name(uid)), ("hl1", hl1), ("hl2", hl2));
-        var descText = Loc.GetString("devil-role-desc", ("hl1", hl1), ("hl2", hl2));
+        var greetingDesc = Loc.GetString("devil-role-desc", ("hl1", hl1), ("hl2", hl2));
 
-        entry.AddSection(Loc.GetString("role-greeting-title"), greetingText, 0);
-        entry.AddSection(Loc.GetString("role-greeting-desc-title"), descText, 1);
-
+        var entry = _greeting.CreateGreetingEntry(greetingText, greetingDesc, theme);
         _antag.SendBriefing(uid, entry, proto.Briefing?.Sound);
     }
     // SIS-ChatGreeting End

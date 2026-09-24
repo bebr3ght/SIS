@@ -31,6 +31,7 @@ public sealed partial class HereticRuleSystem : GameRuleSystem<HereticRuleCompon
     [Dependency] private SharedRoleSystem _role = default!;
     [Dependency] private ObjectivesSystem _objective = default!;
     [Dependency] private UserInterfaceSystem _ui = default!;
+    [Dependency] private GreetingSystem _greeting = default!; // SIS-ChatGreeting
 
     public static readonly SoundSpecifier BriefingSound =
         new SoundPathSpecifier("/Audio/_Goobstation/Heretic/Ambience/Antag/Heretic/heretic_gain.ogg");
@@ -106,18 +107,7 @@ public sealed partial class HereticRuleSystem : GameRuleSystem<HereticRuleCompon
         // briefing
         if (HasComp<MetaDataComponent>(target))
         {
-            var theme = proto.Briefing?.Theme ?? new GreetingTheme();
-            var entry = new GreetingEntry { Theme = theme };
-
-            var hl1 = theme.MessageHighlightFirstColor ?? theme.HighlightFirstColor ?? theme.HighlightColor ?? Color.Orange;
-            var hl2 = theme.MessageHighlightSecondColor ?? theme.HighlightSecondColor  ?? hl1;
-
-            var fluffText = Loc.GetString("heretic-role-greeting-fluff", ("hl1", hl1), ("hl2", hl2));
-            var greetingText = Loc.GetString("heretic-role-greeting", ("hl1", hl1), ("hl2", hl2));
-
-            entry.AddSection(Loc.GetString("role-greeting-title"), fluffText, 0);
-            entry.AddSection(Loc.GetString("role-greeting-desc-title"), greetingText, 1);
-
+            var entry = _greeting.DefaultGreeting("heretic-", proto.Briefing?.Theme);
             _antag.SendBriefing(target, entry, BriefingSound);
         }
 

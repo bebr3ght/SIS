@@ -22,6 +22,7 @@ public sealed partial class ActivePirateRuleSystem : GameRuleSystem<ActivePirate
     [Dependency] private RoleSystem _role = default!;
     [Dependency] private AntagSelectionSystem _antag = default!;
     [Dependency] private NpcFactionSystem _npcFaction = default!;
+    [Dependency] private GreetingSystem _greeting = default!; // SIS-ChatGreeting
 
     private static readonly SoundSpecifier BriefingSound = new SoundPathSpecifier("/Audio/Ambience/Antag/pirate_start.ogg");
     private static readonly EntProtoId MindRole = "MindRolePirate";
@@ -65,31 +66,19 @@ public sealed partial class ActivePirateRuleSystem : GameRuleSystem<ActivePirate
         }
     }
 
-    // SIS-ChatGreeting Start
-    public bool TryMakePirate(EntityUid target, AntagSpecifierPrototype proto)
+    public bool TryMakePirate(EntityUid target, AntagSpecifierPrototype proto) // SIS-ChatGreeting
     {
         if (!_mind.TryGetMind(target, out var mindId, out var mind))
             return false;
 
+        // SIS-ChatGreeting Start
         _role.MindAddRole(mindId, MindRole.Id, mind, true);
-
-        var theme = proto.Briefing?.Theme ?? new GreetingTheme();
-        var entry = new GreetingEntry { Theme = theme };
-
-        var hl1 = theme.MessageHighlightFirstColor ?? theme.HighlightFirstColor ?? theme.HighlightColor ?? Color.FromHex("#f59e0b");
-        var hl2 = theme.MessageHighlightSecondColor ?? theme.HighlightSecondColor ?? hl1;
-
-        var greetingText = Loc.GetString("antag-pirate-briefing", ("hl1", hl1), ("hl2", hl2));
-        var descText = Loc.GetString("antag-pirate-briefing-desc", ("hl1", hl1), ("hl2", hl2));
-
-        entry.AddSection(Loc.GetString("role-greeting-title"), greetingText, 0);
-        entry.AddSection(Loc.GetString("role-greeting-desc-title"), descText, 1);
-
+        var entry = _greeting.DefaultGreeting("pirate-", proto.Briefing?.Theme);
         _antag.SendBriefing(target, entry, BriefingSound);
+        // SIS-ChatGreeting End
 
         _npcFaction.AddFaction(target, PirateFaction); // yaml fucking sucks!!!
 
         return true;
     }
-    // SIS-ChatGreeting End
 }

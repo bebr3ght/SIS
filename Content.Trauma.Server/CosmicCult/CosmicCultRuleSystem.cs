@@ -83,7 +83,10 @@ public sealed partial class CosmicCultRuleSystem : GameRuleSystem<CosmicCultRule
     [Dependency] private SharedUserInterfaceSystem _ui = default!;
     [Dependency] private RottingSystem _rotting = default!;
     [Dependency] private RejuvenateSystem _rejuvenate = default!;
-    [Dependency] private IPrototypeManager _proto = default!; // SIS-ChatBriefing
+    // SIS-ChatGreeting Start
+    [Dependency] private IPrototypeManager _proto = default!;
+    [Dependency] private GreetingSystem _greeting = default!;
+    // SIS-ChatGreeting End
 
     private readonly SoundSpecifier _briefingSound = new SoundPathSpecifier("/Audio/_DV/CosmicCult/antag_cosmic_briefing.ogg");
     private readonly SoundSpecifier _deconvertSound = new SoundPathSpecifier("/Audio/_DV/CosmicCult/antag_cosmic_deconvert.ogg");
@@ -473,18 +476,7 @@ public sealed partial class CosmicCultRuleSystem : GameRuleSystem<CosmicCultRule
 
         // SIS-ChatGreeting Start
         var proto = _proto.Index(CosmicCultistAntag);
-        var theme = proto.Briefing?.Theme ?? new GreetingTheme();
-        var entry = new GreetingEntry { Theme = theme };
-
-        var hl1 = theme.MessageHighlightFirstColor ?? theme.HighlightFirstColor ?? theme.HighlightColor ?? Color.Orange;
-        var hl2 = theme.MessageHighlightSecondColor ?? theme.HighlightSecondColor  ?? hl1;
-
-        var fluffText = Loc.GetString("cosmiccult-role-conversion-greeting-fluff", ("hl1", hl1), ("hl2", hl2));
-        var briefingText = Loc.GetString("cosmiccult-role-conversion-greeting", ("hl1", hl1), ("hl2", hl2));
-
-        entry.AddSection(Loc.GetString("role-greeting-title"), fluffText, 0);
-        entry.AddSection(Loc.GetString("role-greeting-desc-title"), briefingText, 1);
-
+        var entry = _greeting.DefaultGreeting("cosmiccult-", proto.Briefing?.Theme);
         _antag.SendBriefing(session, entry, _briefingSound);
         // SIS-ChatGreeting End
 

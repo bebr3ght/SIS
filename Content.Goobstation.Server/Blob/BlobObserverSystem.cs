@@ -29,6 +29,7 @@ public sealed partial class BlobObserverSystem : SharedBlobObserverSystem
     // SIS-ChatGreeting Start
     [Dependency] private AntagSelectionSystem _antag = default!;
     [Dependency] private IPrototypeManager _proto = default!;
+    [Dependency] private GreetingSystem _greeting = default!;
     // SIS-ChatGreeting End
 
     private static readonly EntProtoId BlobCaptureObjective = "BlobCaptureObjective";
@@ -144,18 +145,7 @@ public sealed partial class BlobObserverSystem : SharedBlobObserverSystem
             return;
 
         var proto = _proto.Index(BlobAntag);
-        var theme = proto.Briefing?.Theme ?? new GreetingTheme();
-        var entry = new GreetingEntry { Theme = theme };
-
-        var hl1 = theme.MessageHighlightFirstColor ?? theme.HighlightFirstColor ?? theme.HighlightColor ?? Color.Orange;
-        var hl2 = theme.MessageHighlightSecondColor ?? theme.HighlightSecondColor  ?? hl1;
-
-        var greetingText = Loc.GetString("blob-role-greeting", ("hl1", hl1), ("hl2", hl2));
-        var descText = Loc.GetString("blob-role-desc", ("hl1", hl1), ("hl2", hl2));
-
-        entry.AddSection(Loc.GetString("role-greeting-title"), greetingText, 0);
-        entry.AddSection(Loc.GetString("role-greeting-desc-title"), descText, 1);
-
+        var entry = _greeting.DefaultGreeting("blob-", proto.Briefing?.Theme);
         _antag.SendBriefing(session, entry, proto.Briefing?.Sound);
     }
     // SIS-ChatGreeting End

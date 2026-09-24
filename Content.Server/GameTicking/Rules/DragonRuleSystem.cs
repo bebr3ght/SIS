@@ -18,6 +18,7 @@ public sealed partial class DragonRuleSystem : GameRuleSystem<DragonRuleComponen
     [Dependency] private StationSystem _station = default!;
     [Dependency] private RoleSystem _roleSystem = default!;
     [Dependency] private MindSystem _mind = default!;
+    [Dependency] private GreetingSystem _greeting = default!; // SIS-ChatGreeting
 
     public override void Initialize()
     {
@@ -56,7 +57,6 @@ public sealed partial class DragonRuleSystem : GameRuleSystem<DragonRuleComponen
     private GreetingEntry MakeGreeting(EntityUid dragon, AntagSpecifierPrototype proto)
     {
         var theme = proto.Briefing?.Theme ?? new GreetingTheme();
-        var entry = new GreetingEntry { Theme = theme };
 
         var hl1 = theme.MessageHighlightFirstColor ?? theme.HighlightFirstColor ?? theme.HighlightColor ?? Color.Orange;
         var hl2 = theme.MessageHighlightSecondColor ?? theme.HighlightSecondColor  ?? hl1;
@@ -64,12 +64,9 @@ public sealed partial class DragonRuleSystem : GameRuleSystem<DragonRuleComponen
         var direction = GetDirectionToStation(dragon);
 
         var greetingText = Loc.GetString("dragon-role-greeting", ("direction", direction), ("hl1", hl1), ("hl2", hl2));
-        var descText = Loc.GetString("dragon-role-desc", ("hl1", hl1), ("hl2", hl2));
+        var greetingDesc = Loc.GetString("dragon-role-desc", ("hl1", hl1), ("hl2", hl2));
 
-        entry.AddSection(Loc.GetString("role-greeting-title"), greetingText, 0);
-        entry.AddSection(Loc.GetString("role-greeting-desc-title"), descText, 1);
-
-        return entry;
+        return _greeting.CreateGreetingEntry(greetingText, greetingDesc, theme);
     }
 
     private string GetDirectionToStation(EntityUid dragon)

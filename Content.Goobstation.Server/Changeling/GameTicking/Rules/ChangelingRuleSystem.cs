@@ -28,6 +28,7 @@ public sealed partial class ChangelingRuleSystem : GameRuleSystem<ChangelingRule
     // [Dependency] private SharedUserInterfaceSystem _ui = default!; // inky edit TRAUMA FUCKUP
     [Dependency] private NpcFactionSystem _npcFaction = default!;
     [Dependency] private ObjectivesSystem _objective = default!;
+    [Dependency] private GreetingSystem _greeting = default!; // SIS-ChatGreeting
 
     public readonly SoundSpecifier BriefingSound = new SoundPathSpecifier("/Audio/_Goobstation/Ambience/Antag/changeling_start.ogg");
 
@@ -52,8 +53,7 @@ public sealed partial class ChangelingRuleSystem : GameRuleSystem<ChangelingRule
         MakeChangeling(args.EntityUid, comp, args.Def); // SIS-ChatGreeting
     }
 
-    // SIS-ChatGreeting Start
-    public bool MakeChangeling(EntityUid target, ChangelingRuleComponent rule, AntagSpecifierPrototype proto)
+    public bool MakeChangeling(EntityUid target, ChangelingRuleComponent rule, AntagSpecifierPrototype proto) // SIS-ChatGreeting
     {
         if (_silicon.IsSilicon(target))
             return false;
@@ -63,22 +63,10 @@ public sealed partial class ChangelingRuleSystem : GameRuleSystem<ChangelingRule
 
         // briefing
         var name = Name(target) ?? Loc.GetString("generic-unknown-title");
-
-        var theme = proto.Briefing?.Theme ?? new GreetingTheme();
-        var entry = new GreetingEntry { Theme = theme };
-
-        var hl1 = theme.MessageHighlightFirstColor ?? theme.HighlightFirstColor ?? theme.HighlightColor ?? Color.Orange;
-        var hl2 = theme.MessageHighlightSecondColor ?? theme.HighlightSecondColor  ?? hl1;
-
-        var greetingText = Loc.GetString("changeling-role-greeting", ("name", name), ("hl1", hl1), ("hl2", hl2));
-        var desc = Loc.GetString("changeling-role-desc", ("hl1", hl1), ("hl2", hl2));
-
-        var briefingShort = Loc.GetString("changeling-role-greeting-short", ("name", name));
-
-        entry.AddSection(Loc.GetString("role-greeting-title"), greetingText, 0);
-        entry.AddSection(Loc.GetString("role-greeting-desc-title"), desc, 0);
-
+        // SIS-ChatGreeting Start
+        var entry = _greeting.DefaultGreeting("changeling-", proto.Briefing?.Theme, name);
         _antag.SendBriefing(target, entry);
+        // SIS-ChatGreeting End
 
         if (!_role.MindHasRole<ChangelingRoleComponent>(mindId, out var mr))
         {
@@ -87,6 +75,7 @@ public sealed partial class ChangelingRuleSystem : GameRuleSystem<ChangelingRule
         }
 
         var role = mr.Value.Owner;
+        var briefingShort = Loc.GetString("changeling-role-greeting-short", ("name", name)); // SIS-ChatGreeting
         AddComp(role, new RoleBriefingComponent { Briefing = briefingShort }, overwrite: true);
 
         // hivemind stuff
@@ -97,7 +86,6 @@ public sealed partial class ChangelingRuleSystem : GameRuleSystem<ChangelingRule
 
         return true;
     }
-    // SIS-ChatGreeting End
 
     private void OnTextPrepend(Entity<ChangelingRuleComponent> ent, ref ObjectivesTextPrependEvent args)
     {

@@ -25,7 +25,10 @@ public sealed partial class ShadowlingThrallSystem : EntitySystem
     [Dependency] private MindSystem _mind = default!;
     [Dependency] private RoleSystem _roles = default!;
     [Dependency] private ShadowlingSystem _shadowling = default!;
-    [Dependency] private IPrototypeManager _proto = default!; // SIS-ChatGreeting
+    // SIS-ChatGreeting Start
+    [Dependency] private IPrototypeManager _proto = default!;
+    [Dependency] private GreetingSystem _greeting = default!;
+    // SIS-ChatGreeting End
 
     private static readonly ProtoId<AntagSpecifierPrototype> ShadowlingAntag = "Shadowling"; // SIS-ChatGreeting
 
@@ -52,18 +55,7 @@ public sealed partial class ShadowlingThrallSystem : EntitySystem
 
         // SIS-ChatGreeting Start
         var proto = _proto.Index(ShadowlingAntag);
-        var theme = proto.Briefing?.Theme ?? new GreetingTheme();
-        var entry = new GreetingEntry { Theme = theme };
-
-        var hl1 = theme.MessageHighlightFirstColor ?? theme.HighlightFirstColor ?? theme.HighlightColor ?? Color.Orange;
-        var hl2 = theme.MessageHighlightSecondColor ?? theme.HighlightSecondColor  ?? hl1;
-
-        var greetingText = Loc.GetString("thrall-role-greeting", ("hl1", hl1), ("hl2", hl2));
-        var descText = Loc.GetString("thrall-role-greeting-desc", ("hl1", hl1), ("hl2", hl2));
-
-        entry.AddSection(Loc.GetString("role-greeting-title"), greetingText, 0);
-        entry.AddSection(Loc.GetString("role-greeting-desc-title"), descText, 1);
-
+        var entry = _greeting.DefaultGreeting("thrall-", proto.Briefing?.Theme);
         _antag.SendBriefing(uid, entry, component.ThrallConverted);
         // SIS-ChatGreeting End
     }

@@ -82,7 +82,10 @@ public sealed partial class ZombieSystem
     [Dependency] private NPCSystem _npc = default!;
     [Dependency] private TagSystem _tag = default!;
     [Dependency] private ISharedPlayerManager _player = default!;
-    [Dependency] private IPrototypeManager _prototype = default!; // SIS-ChatBriefing
+    // SIS-ChatGreeting Start
+    [Dependency] private IPrototypeManager _prototype = default!;
+    [Dependency] private GreetingSystem _greeting = default!;
+    // SIS-ChatGreeting End
 
     private static readonly ProtoId<TagPrototype> InvalidForGlobalSpawnSpellTag = "InvalidForGlobalSpawnSpell";
     private static readonly ProtoId<TagPrototype> CannotSuicideTag = "CannotSuicide";
@@ -309,19 +312,7 @@ public sealed partial class ZombieSystem
 
             // SIS-ChatGreeting Start
             var proto = _prototype.Index(InitialInfectedAntag);
-            var theme = proto.Briefing?.Theme ?? new GreetingTheme();
-            var entry = new GreetingEntry { Theme = theme };
-
-            var hl1 = theme.MessageHighlightFirstColor ?? theme.HighlightFirstColor ?? theme.HighlightColor ?? FallbackColor;
-            var hl2 = theme.MessageHighlightSecondColor ?? theme.HighlightSecondColor  ?? hl1;
-
-            var greetingText = Loc.GetString("zombie-infection-greeting", ("hl1", hl1), ("hl2", hl2));
-            var descText = Loc.GetString("zombie-infection-desc", ("hl1", hl1), ("hl2", hl2));
-
-            entry.AddSection(Loc.GetString("role-greeting-title"), greetingText, 0);
-            entry.AddSection(Loc.GetString("role-greeting-desc-title"), descText, 1);
-
-            //Greeting message for new bebe zombers
+            var entry = _greeting.DefaultGreeting("zombie-", proto.Briefing?.Theme);
             _antag.SendBriefing(session, entry, zombiecomp.GreetSoundNotification);
             // SIS-ChatGreeting End
 

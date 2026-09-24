@@ -51,6 +51,7 @@ public sealed partial class WizardRuleSystem : GameRuleSystem<WizardRuleComponen
     [Dependency] private NpcFactionSystem _faction = default!;
     [Dependency] private IAdminLogManager _log = default!;
     [Dependency] private IChatManager _chatManager = default!;
+    [Dependency] private GreetingSystem _greeting = default!; // SIS-ChatGreeting
 
     public static readonly ProtoId<NpcFactionPrototype> Faction = "Wizard";
 
@@ -279,12 +280,9 @@ public sealed partial class WizardRuleSystem : GameRuleSystem<WizardRuleComponen
         var hl2 = theme.MessageHighlightSecondColor ?? theme.HighlightSecondColor  ?? hl1;
 
         var greetingText = Loc.GetString("wizard-role-greeting", ("station", station), ("hl1", hl1), ("hl2", hl2));
-        var descText = Loc.GetString("wizard-role-greeting-desc", ("hl1", hl1), ("hl2", hl2));
+        var greetingDesc = Loc.GetString("wizard-role-greeting-desc", ("hl1", hl1), ("hl2", hl2));
 
-        var entry = new GreetingEntry { Theme = theme };
-        entry.AddSection(Loc.GetString("role-greeting-title"), greetingText, 0);
-        entry.AddSection(Loc.GetString("role-greeting-desc-title"), descText, 1);
-
+        var entry = _greeting.CreateGreetingEntry(greetingText, greetingDesc, theme);
         _antag.SendBriefing(target, entry);
 
         if (!TryComp(target, out HumanoidProfileComponent? humanoid) || humanoid.Age >= 60)

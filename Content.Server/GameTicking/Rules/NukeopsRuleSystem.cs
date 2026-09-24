@@ -72,6 +72,7 @@ public sealed partial class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleCompon
     [Dependency] private StationRecordsSystem _records = default!;
     [Dependency] private StoreSystem _store = default!;
     [Dependency] private TagSystem _tag = default!;
+    [Dependency] private GreetingSystem _greeting = default!; // SIS-ChatGreeting
 
     private static readonly ProtoId<CurrencyPrototype> TelecrystalCurrencyPrototype = "Telecrystal";
     private static readonly ProtoId<TagPrototype> NukeOpsUplinkTagPrototype = "NukeOpsUplink";
@@ -616,13 +617,9 @@ public sealed partial class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleCompon
         var hl1 = theme.MessageHighlightFirstColor ?? theme.HighlightFirstColor ?? theme.HighlightColor ?? Color.Orange;
         var hl2 = theme.MessageHighlightSecondColor ?? theme.HighlightSecondColor ?? hl1;
 
-        var title = Loc.GetString($"{comp.LocalePrefix}role-greeting", ("station", targetStation), ("name", teamName), ("hl1", hl1), ("hl2", hl2));
-        var desc = Loc.GetString($"{comp.LocalePrefix}role-greeting-desc", ("hl1", hl1), ("hl2", hl2));
-
-        entry.AddSection(Loc.GetString("role-greeting-title"), title, 0);
-        entry.AddSection(Loc.GetString("role-greeting-desc-title"), desc, 1);
-
-        return entry;
+        var greetingText = Loc.GetString($"{comp.LocalePrefix}role-greeting", ("station", targetStation), ("name", teamName), ("hl1", hl1), ("hl2", hl2));
+        var greetingDesc = Loc.GetString($"{comp.LocalePrefix}role-greeting-desc", ("hl1", hl1), ("hl2", hl2));
+        return _greeting.CreateGreetingEntry(greetingText, greetingDesc, theme);
     }
     // SIS-ChatGreeting End
 

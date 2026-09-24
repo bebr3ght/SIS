@@ -14,7 +14,10 @@ public sealed partial class RevConversionSystem : EntitySystem
 {
     [Dependency] private AntagSelectionSystem _antag = default!;
     [Dependency] private RevolutionaryRuleSystem _rev = default!;
-    [Dependency] private IPrototypeManager _proto = default!; // SIS-ChatBriefing
+    // SIS-ChatGreeting Start
+    [Dependency] private IPrototypeManager _proto = default!;
+    [Dependency] private GreetingSystem _greeting = default!;
+    // SIS-ChatGreeting End
 
     private static readonly ProtoId<AntagSpecifierPrototype> BriefingTheme = "HeadRev"; // SIS-ChatGreeting
 
@@ -31,18 +34,7 @@ public sealed partial class RevConversionSystem : EntitySystem
         {
             // SIS-ChatGreeting Start
             var proto = _proto.Index(BriefingTheme);
-            var theme = proto.Briefing?.Theme ?? new GreetingTheme();
-            var entry = new GreetingEntry { Theme = theme };
-
-            var hl1 = theme.MessageHighlightFirstColor ?? theme.HighlightFirstColor ?? theme.HighlightColor ?? Color.Orange;
-            var hl2 = theme.MessageHighlightSecondColor ?? theme.HighlightSecondColor  ?? hl1;
-
-            var greeting = Loc.GetString("rev-role-greeting", ("hl1", hl1), ("hl2", hl2));
-            var briefing = Loc.GetString("rev-briefing", ("hl1", hl1), ("hl2", hl2));
-
-            entry.AddSection(Loc.GetString("role-greeting-title"), greeting, 0);
-            entry.AddSection(Loc.GetString("role-greeting-desc-title"), briefing, 1);
-
+            var entry = _greeting.DefaultGreeting("rev-", proto.Briefing?.Theme);
             _antag.SendBriefing(actor.PlayerSession, entry, args.Target.Comp.RevStartSound);
             // SIS-ChatGreeting End
         }

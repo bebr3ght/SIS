@@ -242,8 +242,8 @@ public sealed partial class TraitorRuleSystem : GameRuleSystem<TraitorRuleCompon
 
         var issuerName = objectiveIssuer ?? Loc.GetString("objective-issuer-unknown");
 
-        var hl1 = theme.MessageHighlightFirstColor ?? theme.HighlightFirstColor ?? theme.HighlightColor ?? Color.Orange;
-        var hl2 = theme.MessageHighlightSecondColor ?? theme.HighlightSecondColor  ?? hl1;
+        var hl1 = theme.MessageHighlightFirstColor ?? Color.Orange;
+        var hl2 = theme.MessageHighlightSecondColor ?? hl1;
 
         var greetingText = Loc.GetString("traitor-role-greeting", ("corporation", issuerName), ("hl1", hl1), ("hl2", hl2));
         entry.AddSection(Loc.GetString("role-greeting-title"), greetingText, priority++);

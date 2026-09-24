@@ -59,8 +59,8 @@ public sealed partial class ThiefRuleSystem : GameRuleSystem<ThiefRuleComponent>
 
         var isHuman = HasComp<HumanoidProfileComponent>(ent);
 
-        var hl1 = theme.MessageHighlightFirstColor ?? theme.HighlightFirstColor ?? theme.HighlightColor ?? Color.Orange;
-        var hl2 = theme.MessageHighlightSecondColor ?? theme.HighlightSecondColor  ?? hl1;
+        var hl1 = theme.MessageHighlightFirstColor ?? Color.Orange;
+        var hl2 = theme.MessageHighlightSecondColor ?? hl1;
 
         if (isHuman)
         {

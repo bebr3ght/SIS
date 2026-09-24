@@ -4,29 +4,18 @@ namespace Content.SIS.Common.ChatBriefing;
 
 public sealed class GreetingSystem : EntitySystem
 {
-    private const string TitleBgColorFallback = "#a42f2f";
-    private const string TitleBorderColorFallback = "#ff0000";
-    private const string MessageBgColorFallback = "#221919";
-    private const string MessageBorderColorFallback = "#3b1111";
-    private static readonly Color ColorFallback = Color.Orange;
+    private static readonly Color ColorFallback = Color.White;
+    private static readonly Color BackgroundColorFallback = Color.Black;
 
-    public GreetingEntry CreateGreetingEntry(string localePrefix,
-        GreetingTheme? theme,
-        params (string, object)[]? args)
+    public GreetingEntry CreateGreetingEntry(string localePrefix, GreetingTheme? theme, params (string, object)[]? args)
     {
         var resolvedTheme = theme ?? new GreetingTheme();
 
-        var hl1 = resolvedTheme.MessageHighlightFirstColor
-                  ?? resolvedTheme.HighlightFirstColor
-                  ?? resolvedTheme.HighlightColor
-                  ?? ColorFallback;
-
-        var hl2 = resolvedTheme.MessageHighlightSecondColor
-                  ?? resolvedTheme.HighlightSecondColor
-                  ?? hl1;
+        var hl1 = resolvedTheme.MessageHighlightFirstColor ?? ColorFallback;
+        var hl2 = resolvedTheme.MessageHighlightSecondColor ?? hl1;
 
         var greetingTitle = Loc.GetString($"{localePrefix}role-greeting", [.. args ?? [], ("hl1", hl1), ("hl2", hl2)]);
-        var greetingDesc = Loc.GetString($"{localePrefix}role-desc", ("hl1", hl1), ("hl2", hl2));
+        var greetingDesc = Loc.GetString($"{localePrefix}role-greeting-desc", ("hl1", hl1), ("hl2", hl2));
 
         var entry = new GreetingEntry { Theme = resolvedTheme };
         entry.AddSection(Loc.GetString("role-greeting-title"), greetingTitle, 0);
@@ -44,103 +33,65 @@ public sealed class GreetingSystem : EntitySystem
             return null;
 
         var theme = entry.Theme;
-
-        var sections = new List<GreetingSection>(entry.Sections);
-        sections.Sort((a, b) => a.Priority.CompareTo(b.Priority));
+        var sections = entry.Sections.OrderBy(s => s.Priority).ToList();
 
         var finalMessage = new FormattedMessage();
         finalMessage.PushNewline();
 
-        for (var i = 0; i < sections.Count; i++)
+        foreach (var section in sections)
         {
-            var section = sections[i];
-
-            if (section.Title != null && !string.IsNullOrEmpty(section.Title.Text))
-            {
-                var bgColor = section.Title.BackgroundColor?.ToHex()
-                              ?? theme?.TitleBgColor?.ToHex()
-                              ?? TitleBgColorFallback;
-
-                var borderColor = section.Title.BorderColor?.ToHex()
-                                  ?? theme?.TitleBorderColor?.ToHex()
-                                  ?? TitleBorderColorFallback;
-
-                var color = section.Title.TextColor
-                            ?? section.TextColor
-                            ?? theme?.TitleTextColor
-                            ?? theme?.TextColor
-                            ?? ColorFallback;
-
-                var hl1 = section.Title.HighlightFirstColor
-                          ?? section.TitleHighlightFirstColor
-                          ?? section.HighlightFirstColor
-                          ?? theme?.TitleHighlightFirstColor
-                          ?? theme?.HighlightFirstColor
-                          ?? theme?.HighlightColor
-                          ?? color;
-
-                var hl2 = section.Title.HighlightSecondColor
-                          ?? section.TitleHighlightSecondColor
-                          ?? section.HighlightSecondColor
-                          ?? theme?.TitleHighlightSecondColor
-                          ?? theme?.HighlightSecondColor
-                          ?? hl1;
-
-                var text = Loc.GetString(section.Title.Text, ("hl1", hl1.ToHex()), ("hl2", hl2.ToHex()));
-                var markup = $"[titlebox bg=\"{bgColor}\" border=\"{borderColor}\"][color={color.ToHex()}]{text}[/color][/titlebox]";
-                finalMessage.AddMarkupPermissive(markup);
-
-                finalMessage.PushNewline();
-                finalMessage.PushNewline();
-            }
-
-            if (section.Message != null && !string.IsNullOrEmpty(section.Message.Text))
-            {
-                var bgColor = section.Message.BackgroundColor?.ToHex()
-                              ?? theme?.MessageBgColor?.ToHex()
-                              ?? MessageBgColorFallback;
-
-                var borderColor = section.Message.BorderColor?.ToHex()
-                                  ?? theme?.MessageBorderColor?.ToHex()
-                                  ?? MessageBorderColorFallback;
-
-                var color = section.Message.TextColor
-                            ?? section.TextColor
-                            ?? theme?.MessageTextColor
-                            ?? theme?.TextColor
-                            ?? ColorFallback;
-
-                var hl1 = section.Message.HighlightFirstColor
-                          ?? section.MessageHighlightFirstColor
-                          ?? section.HighlightFirstColor
-                          ?? theme?.MessageHighlightFirstColor
-                          ?? theme?.HighlightFirstColor
-                          ?? theme?.HighlightColor
-                          ?? color;
-
-                var hl2 = section.Message.HighlightSecondColor
-                          ?? section.MessageHighlightSecondColor
-                          ?? section.HighlightSecondColor
-                          ?? theme?.MessageHighlightSecondColor
-                          ?? theme?.HighlightSecondColor
-                          ?? hl1;
-
-                var text = Loc.GetString(section.Message.Text, ("hl1", hl1.ToHex()), ("hl2", hl2.ToHex()));
-
-                var markup = $"[messagebox bg=\"{bgColor}\" border=\"{borderColor}\"][color={color.ToHex()}]{text}[/color][/messagebox]";
-                finalMessage.AddMarkupPermissive(markup);
-            }
-
-            if (i < sections.Count - 1)
-            {
-                finalMessage.PushNewline();
-                finalMessage.PushNewline();
-                finalMessage.PushNewline();
-            }
+            AppendTitleBox(finalMessage, theme, section);
+            AppendMessageBox(finalMessage, theme, section);
+            PushNewlines(finalMessage, 3);
         }
-        finalMessage.PushNewline();
-        // finalMessage.Pop();
 
+        finalMessage.TrimEnd();
+        finalMessage.PushNewline();
         return finalMessage.ToMarkup();
+    }
+
+    private void AppendTitleBox(FormattedMessage message, GreetingTheme? theme, GreetingSection section)
+    {
+        if (string.IsNullOrEmpty(section.Title))
+            return;
+
+        var textColor = theme?.TitleTextColor ?? ColorFallback;
+        var hl1 = theme?.TitleHighlightFirstColor ?? textColor;
+        var hl2 = theme?.TitleHighlightSecondColor ?? hl1;
+        var bgColor = theme?.TitleBgColor ?? BackgroundColorFallback;
+        var borderColor = theme?.TitleBorderColor ?? textColor;
+
+        var text = Loc.GetString(section.Title, ("hl1", hl1.ToHex()), ("hl2", hl2.ToHex()));
+
+        message.AddMarkupPermissive(BuildBoxMarkup("titlebox", textColor, bgColor, borderColor, text));
+        PushNewlines(message, 2);
+    }
+
+    private void AppendMessageBox(FormattedMessage message, GreetingTheme? theme, GreetingSection section)
+    {
+        if (string.IsNullOrEmpty(section.Message))
+            return;
+
+        var textColor = theme?.MessageTextColor ?? ColorFallback;
+        var hl1 = theme?.MessageHighlightFirstColor ?? textColor;
+        var hl2 = theme?.MessageHighlightSecondColor ?? hl1;
+        var bgColor = theme?.MessageBgColor ?? BackgroundColorFallback;
+        var borderColor = theme?.MessageBorderColor ?? textColor;
+
+        var text = Loc.GetString(section.Message, ("hl1", hl1.ToHex()), ("hl2", hl2.ToHex()));
+
+        message.AddMarkupPermissive(BuildBoxMarkup("messagebox", textColor, bgColor, borderColor, text));
+    }
+
+    private string BuildBoxMarkup(string tag, Color textColor, Color bgColor, Color borderColor, string text)
+    {
+        return $"[{tag} bg=\"{bgColor.ToHex()}\" border=\"{borderColor.ToHex()}\"]"
+               + $"[color={textColor.ToHex()}]{text}[/color][/{tag}]";
+    }
+
+    private void PushNewlines(FormattedMessage message, int count)
+    {
+        for (var i = 0; i < count; i++)
+            message.PushNewline();
     }
 }

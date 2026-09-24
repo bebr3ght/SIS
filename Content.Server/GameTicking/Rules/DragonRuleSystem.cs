@@ -51,14 +51,14 @@ public sealed partial class DragonRuleSystem : GameRuleSystem<DragonRuleComponen
         if(dragonRole is null)
             return;
 
-        _antag.SendBriefing(args.EntityUid, MakeGreeting(args.EntityUid, args.Def?.Briefing?.Theme)); // SIS-ChatGreeting
+        _antag.SendBriefing(args.EntityUid, MakeGreeting(args.EntityUid, args.Def)); // SIS-ChatGreeting
     }
 
     // SIS-ChatGreeting Start
-    private GreetingEntry MakeGreeting(EntityUid dragon, GreetingTheme? theme)
+    private GreetingEntry MakeGreeting(EntityUid dragon, AntagSpecifierPrototype proto)
     {
         var direction = GetDirectionToStation(dragon);
-        return _greeting.CreateGreetingEntry("dragon-", theme, ("direction", direction));
+        return _greeting.CreateGreetingEntry("dragon-", proto.Briefing?.Theme, ("direction", direction));
     }
 
     private string GetDirectionToStation(EntityUid dragon)

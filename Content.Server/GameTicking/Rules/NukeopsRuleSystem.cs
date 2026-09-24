@@ -609,10 +609,10 @@ public sealed partial class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleCompon
     }
 
     // SIS-ChatGreeting Start
-    private GreetingEntry MakeChatBriefingEntry(string localePrefix, string targetStation, string teamName, GreetingTheme? theme)
+    private GreetingEntry MakeChatBriefingEntry(NukeopsRuleComponent comp, string targetStation, string teamName, AntagSpecifierPrototype proto)
     {
         (string, object)[] args = [("station", targetStation), ("name", teamName)];
-        return _greeting.CreateGreetingEntry(localePrefix, theme, args);
+        return _greeting.CreateGreetingEntry(comp.LocalePrefix, proto.Briefing?.Theme, args);
     }
     // SIS-ChatGreeting End
 
@@ -621,7 +621,7 @@ public sealed partial class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleCompon
         var target = (ent.Comp.TargetStation is not null) ? Name(ent.Comp.TargetStation.Value) : "the target";
 
         // SIS-ChatGreeting Start
-        var entry = MakeChatBriefingEntry(ent.Comp.LocalePrefix, target, Name(ent), args.Def?.Briefing?.Theme);
+        var entry = MakeChatBriefingEntry(ent.Comp, target, Name(ent), args.Def);
         _antag.SendBriefing(args.Session, entry, ent.Comp.GreetSoundNotification);
         // SIS-ChatGreeting End
     }

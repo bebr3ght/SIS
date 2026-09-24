@@ -1,5 +1,3 @@
-using Robust.Shared.Audio;
-
 namespace Content.SIS.Common.ChatBriefing;
 
 public sealed class GreetingSystem : EntitySystem
@@ -9,6 +7,36 @@ public sealed class GreetingSystem : EntitySystem
     private const string MessageBgColorFallback = "#221919";
     private const string MessageBorderColorFallback = "#3b1111";
     private static readonly Color ColorFallback = Color.Orange;
+
+    public GreetingEntry CreateGreetingEntry(string greetingText, string greetingDesc, GreetingTheme? theme)
+    {
+        var entry = new GreetingEntry { Theme = theme };
+        entry.AddSection(Loc.GetString("role-greeting-title"), greetingText, 0);
+        entry.AddSection(Loc.GetString("role-greeting-desc-title"), greetingDesc, 1);
+        return entry;
+    }
+
+    public GreetingEntry DefaultGreeting(string localePrefix, GreetingTheme? theme, string? name = null)
+    {
+        var greetingTheme = theme ?? new GreetingTheme();
+
+        var hl1 = greetingTheme.MessageHighlightFirstColor
+                  ?? greetingTheme.HighlightFirstColor
+                  ?? greetingTheme.HighlightColor
+                  ?? ColorFallback;
+
+        var hl2 = greetingTheme.MessageHighlightSecondColor
+                  ?? greetingTheme.HighlightSecondColor
+                  ?? hl1;
+
+        var greetingText = name is not null
+            ? Loc.GetString($"{localePrefix}role-greeting", ("name", name), ("hl1", hl1), ("hl2", hl2))
+            : Loc.GetString($"{localePrefix}role-greeting", ("hl1", hl1), ("hl2", hl2));
+
+        var greetingDesc = Loc.GetString($"{localePrefix}role-desc", ("hl1", hl1), ("hl2", hl2));
+
+        return CreateGreetingEntry(greetingText, greetingDesc, greetingTheme);
+    }
 
     /// <summary>
     /// Builds a formatted markup string from a ChatBriefingEntry using TitleBoxes and MessageBoxes.
@@ -32,14 +60,34 @@ public sealed class GreetingSystem : EntitySystem
 
             if (section.Title != null && !string.IsNullOrEmpty(section.Title.Text))
             {
-                var bgColor = section.Title.BackgroundColor?.ToHex() ?? theme?.TitleBgColor?.ToHex() ?? TitleBgColorFallback;
-                var borderColor = section.Title.BorderColor?.ToHex() ?? theme?.TitleBorderColor?.ToHex() ?? TitleBorderColorFallback;
+                var bgColor = section.Title.BackgroundColor?.ToHex()
+                              ?? theme?.TitleBgColor?.ToHex()
+                              ?? TitleBgColorFallback;
 
-                var color = section.Title.TextColor ?? section.TextColor ?? theme?.TitleTextColor ?? theme?.TextColor ?? ColorFallback;
-                var hl1 = section.Title.HighlightFirstColor ?? section.TitleHighlightFirstColor ?? section.HighlightFirstColor ??
-                    theme?.TitleHighlightFirstColor ?? theme?.HighlightFirstColor ?? theme?.HighlightColor ?? color;
-                var hl2 = section.Title.HighlightSecondColor ?? section.TitleHighlightSecondColor ?? section.HighlightSecondColor
-                    ?? theme?.TitleHighlightSecondColor ?? theme?.HighlightSecondColor ?? hl1;
+                var borderColor = section.Title.BorderColor?.ToHex()
+                                  ?? theme?.TitleBorderColor?.ToHex()
+                                  ?? TitleBorderColorFallback;
+
+                var color = section.Title.TextColor
+                            ?? section.TextColor
+                            ?? theme?.TitleTextColor
+                            ?? theme?.TextColor
+                            ?? ColorFallback;
+
+                var hl1 = section.Title.HighlightFirstColor
+                          ?? section.TitleHighlightFirstColor
+                          ?? section.HighlightFirstColor
+                          ?? theme?.TitleHighlightFirstColor
+                          ?? theme?.HighlightFirstColor
+                          ?? theme?.HighlightColor
+                          ?? color;
+
+                var hl2 = section.Title.HighlightSecondColor
+                          ?? section.TitleHighlightSecondColor
+                          ?? section.HighlightSecondColor
+                          ?? theme?.TitleHighlightSecondColor
+                          ?? theme?.HighlightSecondColor
+                          ?? hl1;
 
                 var text = Loc.GetString(section.Title.Text, ("hl1", hl1.ToHex()), ("hl2", hl2.ToHex()));
                 var markup = $"[titlebox bg=\"{bgColor}\" border=\"{borderColor}\"][color={color.ToHex()}]{text}[/color][/titlebox]";
@@ -51,14 +99,34 @@ public sealed class GreetingSystem : EntitySystem
 
             if (section.Message != null && !string.IsNullOrEmpty(section.Message.Text))
             {
-                var bgColor = section.Message.BackgroundColor?.ToHex() ?? theme?.MessageBgColor?.ToHex() ?? MessageBgColorFallback;
-                var borderColor = section.Message.BorderColor?.ToHex() ?? theme?.MessageBorderColor?.ToHex() ?? MessageBorderColorFallback;
+                var bgColor = section.Message.BackgroundColor?.ToHex()
+                              ?? theme?.MessageBgColor?.ToHex()
+                              ?? MessageBgColorFallback;
 
-                var color = section.Message.TextColor ?? section.TextColor ?? theme?.MessageTextColor ?? theme?.TextColor ?? ColorFallback;
-                var hl1 = section.Message.HighlightFirstColor ?? section.MessageHighlightFirstColor ?? section.HighlightFirstColor
-                    ?? theme?.MessageHighlightFirstColor ?? theme?.HighlightFirstColor ?? theme?.HighlightColor ?? color;
-                var hl2 = section.Message.HighlightSecondColor ?? section.MessageHighlightSecondColor ?? section.HighlightSecondColor
-                    ?? theme?.MessageHighlightSecondColor ?? theme?.HighlightSecondColor ?? hl1;
+                var borderColor = section.Message.BorderColor?.ToHex()
+                                  ?? theme?.MessageBorderColor?.ToHex()
+                                  ?? MessageBorderColorFallback;
+
+                var color = section.Message.TextColor
+                            ?? section.TextColor
+                            ?? theme?.MessageTextColor
+                            ?? theme?.TextColor
+                            ?? ColorFallback;
+
+                var hl1 = section.Message.HighlightFirstColor
+                          ?? section.MessageHighlightFirstColor
+                          ?? section.HighlightFirstColor
+                          ?? theme?.MessageHighlightFirstColor
+                          ?? theme?.HighlightFirstColor
+                          ?? theme?.HighlightColor
+                          ?? color;
+
+                var hl2 = section.Message.HighlightSecondColor
+                          ?? section.MessageHighlightSecondColor
+                          ?? section.HighlightSecondColor
+                          ?? theme?.MessageHighlightSecondColor
+                          ?? theme?.HighlightSecondColor
+                          ?? hl1;
 
                 var text = Loc.GetString(section.Message.Text, ("hl1", hl1.ToHex()), ("hl2", hl2.ToHex()));
 
@@ -78,159 +146,4 @@ public sealed class GreetingSystem : EntitySystem
 
         return finalMessage.ToMarkup();
     }
-}
-
-[DataDefinition]
-public partial struct GreetingSection
-{
-    [DataField(required: true)]
-    public GreetingBox? Title;
-
-    [DataField(required: true)]
-    public GreetingBox? Message;
-
-    [DataField]
-    public int Priority = 0;
-
-    [DataField]
-    public Color? TextColor;
-
-    // Highlight
-    [DataField("highlight")]
-    public Color? HighlightColor;
-
-    [DataField("highlight1")]
-    public Color? HighlightFirstColor;
-
-    [DataField("highlight2")]
-    public Color? HighlightSecondColor;
-    // Highlight
-
-    // TitleHighlight
-    [DataField("titleHighlight1")]
-    public Color? TitleHighlightFirstColor;
-
-    [DataField("titleHighlight2")]
-    public Color? TitleHighlightSecondColor;
-    // TitleHighlight
-
-    // MessageHighlight
-    [DataField("messageHighlight1")]
-    public Color? MessageHighlightFirstColor;
-
-    [DataField("messageHighlight2")]
-    public Color? MessageHighlightSecondColor;
-    // MessageHighlight
-}
-
-[DataDefinition]
-public sealed partial class GreetingBox
-{
-    [DataField(required: true)]
-    public string Text;
-
-    [DataField]
-    public Color? BackgroundColor;
-
-    [DataField]
-    public Color? BorderColor;
-
-    [DataField]
-    public Color? TextColor;
-
-    // Highlight
-    [DataField("highlight")]
-    public Color? HighlightColor;
-
-    [DataField("highlight1")]
-    public Color? HighlightFirstColor;
-
-    [DataField("highlight2")]
-    public Color? HighlightSecondColor;
-    // Highlight
-}
-
-[DataDefinition]
-public sealed partial class GreetingEntry
-{
-    [DataField]
-    public List<GreetingSection> Sections { get; private set; } = new();
-
-    [DataField]
-    public GreetingTheme? Theme;
-
-    [DataField]
-    public SoundSpecifier? Sound;
-
-    public void AddSection(string titleText, string messageText, int priority)
-    {
-        Sections.Add(new GreetingSection
-        {
-            Title = new GreetingBox { Text = titleText },
-            Message = new GreetingBox { Text = messageText },
-            Priority = priority,
-        });
-    }
-
-    public void AddSection(GreetingBox title, GreetingBox message, int priority)
-    {
-        Sections.Add(new GreetingSection
-        {
-            Title = title,
-            Message = message,
-            Priority = priority,
-        });
-    }
-}
-
-[DataDefinition]
-public partial record struct GreetingTheme
-{
-    [DataField("titleBackground")]
-    public Color? TitleBgColor;
-
-    [DataField("titleBorder")]
-    public Color? TitleBorderColor;
-
-    [DataField("messageBackground")]
-    public Color? MessageBgColor;
-
-    [DataField("messageBorder")]
-    public Color? MessageBorderColor;
-
-    [DataField("text")]
-    public Color? TextColor;
-
-    [DataField("titleText")]
-    public Color? TitleTextColor;
-
-    [DataField("messageText")]
-    public Color? MessageTextColor;
-
-    // Highlight
-    [DataField("highlight")]
-    public Color? HighlightColor;
-
-    [DataField("highlight1")]
-    public Color? HighlightFirstColor;
-
-    [DataField("highlight2")]
-    public Color? HighlightSecondColor;
-    // Highlight
-
-    // TitleHighlight
-    [DataField("titleHighlight1")]
-    public Color? TitleHighlightFirstColor;
-
-    [DataField("titleHighlight2")]
-    public Color? TitleHighlightSecondColor;
-    // TitleHighlight
-
-    // MessageHighlight
-    [DataField("messageHighlight1")]
-    public Color? MessageHighlightFirstColor;
-
-    [DataField("messageHighlight2")]
-    public Color? MessageHighlightSecondColor;
-    // MessageHighlight
 }

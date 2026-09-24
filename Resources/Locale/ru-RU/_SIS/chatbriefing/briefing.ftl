@@ -1,2 +1,2 @@
 role-greeting-title = Роль
-role-greeting-desc-title = Инструкции
+role-greeting-desc = Инструкции

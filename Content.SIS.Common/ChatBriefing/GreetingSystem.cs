@@ -30,7 +30,7 @@ public sealed class GreetingSystem : EntitySystem
 
         var entry = new GreetingEntry { Theme = resolvedTheme };
         entry.AddSection(Loc.GetString("role-greeting-title"), greetingTitle, 0);
-        entry.AddSection(Loc.GetString("role-greeting-desc-title"), greetingDesc, 1);
+        entry.AddSection(Loc.GetString("role-greeting-desc"), greetingDesc, 1);
 
         return entry;
     }

@@ -39,7 +39,7 @@
         text: tunnel-clown-role-greeting
     - priority: 1
       title:
-        text: role-greeting-desc-title
+        text: role-greeting-desc
       message:
         text: tunnel-clown-role-greeting-desc
     # SIS-ChatGreeting End
@@ -99,7 +99,7 @@
         text: singuloth-knight-role-greeting
     - priority: 1
       title:
-        text: role-greeting-desc-title
+        text: role-greeting-desc
       message:
         text: singuloth-knight-role-greeting-desc
 
@@ -144,7 +144,7 @@
         text: dark-lord-role-greeting
     - priority: 1
       title:
-        text: role-greeting-desc-title
+        text: role-greeting-desc
       message:
         text: dark-lord-role-greeting-desc
 
@@ -188,7 +188,7 @@
         text: chosen-one-role-greeting
     - priority: 1
       title:
-        text: role-greeting-desc-title
+        text: role-greeting-desc
       message:
         text: chosen-one-role-greeting-desc
 
@@ -228,7 +228,7 @@
         text: mime-assassin-role-greeting
     - priority: 1
       title:
-        text: role-greeting-desc-title
+        text: role-greeting-desc
       message:
         text: mime-assassin-role-greeting-desc
 
@@ -287,7 +287,7 @@
         text: dark-priest-role-greeting
     - priority: 1
       title:
-        text: role-greeting-desc-title
+        text: role-greeting-desc
       message:
         text: dark-priest-role-greeting-desc
 
@@ -339,7 +339,7 @@
         text: vox-raider-role-greeting
     - priority: 1
       title:
-        text: role-greeting-desc-title
+        text: role-greeting-desc
       message:
         text: vox-raider-role-greeting-desc
 

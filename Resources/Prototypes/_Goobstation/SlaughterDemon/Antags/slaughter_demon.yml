@@ -29,7 +29,7 @@
         text: slaughter-role-greeting
     - priority: 1
       title:
-        text: role-greeting-desc-title
+        text: role-greeting-desc
       message:
         text: slaughter-role-greeting-desc
     # SIS-ChatGreeting End
@@ -63,7 +63,7 @@
         text: slaughter-role-greeting
     - priority: 1
       title:
-        text: role-greeting-desc-title
+        text: role-greeting-desc
       message:
         text: slaughter-role-greeting-desc
 
@@ -89,7 +89,7 @@
         text: laughter-role-greeting
     - priority: 1
       title:
-        text: role-greeting-desc-title
+        text: role-greeting-desc
       message:
         text: laughter-role-greeting-desc
   components:

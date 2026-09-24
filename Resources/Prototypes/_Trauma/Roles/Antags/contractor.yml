@@ -26,7 +26,7 @@
         text: contractor-role-greeting
     - priority: 1
       title:
-        text: role-greeting-desc-title
+        text: role-greeting-desc
       message:
         text: contractor-role-greeting-desc
     # SIS-ChatGreeting End

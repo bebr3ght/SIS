@@ -45,7 +45,7 @@
         text: head-rev-role-greeting
     - priority: 1
       title:
-        text: role-greeting-desc-title
+        text: role-greeting-desc
       message:
         text: head-rev-role-desc
     # SIS-ChatGreeting End

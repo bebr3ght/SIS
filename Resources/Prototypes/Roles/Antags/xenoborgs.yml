@@ -35,7 +35,7 @@
         text: mothership-greeting
     - priority: 1
       title:
-        text: role-greeting-desc-title
+        text: role-greeting-desc
       message:
         text: mothership-greeting-desc
   # SIS-ChatGreeting End
@@ -76,7 +76,7 @@
         text: xenoborgs-greeting
     - priority: 1
       title:
-        text: role-greeting-desc-title
+        text: role-greeting-desc
       message:
         text: xenoborgs-greeting-desc
 

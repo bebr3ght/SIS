@@ -41,7 +41,7 @@
         text: cosmiccult-role-greeting
     - priority: 1
       title:
-        text: role-greeting-desc-title
+        text: role-greeting-desc
       message:
         text: cosmiccult-role-greeting-desc
   # SIS-ChatGreeting End

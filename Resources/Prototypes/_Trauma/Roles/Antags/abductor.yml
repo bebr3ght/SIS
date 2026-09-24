@@ -24,7 +24,7 @@
         text: abductor-role-greeting
     - priority: 1
       title:
-        text: role-greeting-desc-title
+        text: role-greeting-desc
       message:
         text: abductor-role-greeting-desc
     # SIS-ChatGreeting End
@@ -123,7 +123,7 @@
         text: abductor-victim-role-greeting
     - priority: 1
       title:
-        text: role-greeting-desc-title
+        text: role-greeting-desc
       message:
         text: abductor-victim-role-greeting-desc
   pickPlayer: false # manually assigned

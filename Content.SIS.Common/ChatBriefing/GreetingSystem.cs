@@ -28,7 +28,7 @@ public sealed class GreetingSystem : EntitySystem
         var greetingTitle = Loc.GetString($"{localePrefix}role-greeting", [.. args ?? [], ("hl1", hl1), ("hl2", hl2)]);
         var greetingDesc = Loc.GetString($"{localePrefix}role-desc", ("hl1", hl1), ("hl2", hl2));
 
-        var entry = new GreetingEntry { Theme = theme };
+        var entry = new GreetingEntry { Theme = greetingTheme };
         entry.AddSection(Loc.GetString("role-greeting-title"), greetingTitle, 0);
         entry.AddSection(Loc.GetString("role-greeting-desc-title"), greetingDesc, 1);
 

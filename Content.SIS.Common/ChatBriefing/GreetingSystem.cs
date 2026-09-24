@@ -1,3 +1,5 @@
+using System.Linq;
+
 namespace Content.SIS.Common.ChatBriefing;
 
 public sealed class GreetingSystem : EntitySystem
@@ -8,15 +10,9 @@ public sealed class GreetingSystem : EntitySystem
     private const string MessageBorderColorFallback = "#3b1111";
     private static readonly Color ColorFallback = Color.Orange;
 
-    public GreetingEntry CreateGreetingEntry(string greetingText, string greetingDesc, GreetingTheme? theme)
-    {
-        var entry = new GreetingEntry { Theme = theme };
-        entry.AddSection(Loc.GetString("role-greeting-title"), greetingText, 0);
-        entry.AddSection(Loc.GetString("role-greeting-desc-title"), greetingDesc, 1);
-        return entry;
-    }
-
-    public GreetingEntry DefaultGreeting(string localePrefix, GreetingTheme? theme, string? name = null)
+    public GreetingEntry DefaultGreeting(string localePrefix,
+        GreetingTheme? theme,
+        params (string, object)[]? args)
     {
         var greetingTheme = theme ?? new GreetingTheme();
 
@@ -29,13 +25,17 @@ public sealed class GreetingSystem : EntitySystem
                   ?? greetingTheme.HighlightSecondColor
                   ?? hl1;
 
-        var greetingText = name is not null
-            ? Loc.GetString($"{localePrefix}role-greeting", ("name", name), ("hl1", hl1), ("hl2", hl2))
+        var greetingText = args is not null
+            ? Loc.GetString($"{localePrefix}role-greeting", [.. args, ("hl1", hl1), ("hl2", hl2)])
             : Loc.GetString($"{localePrefix}role-greeting", ("hl1", hl1), ("hl2", hl2));
 
         var greetingDesc = Loc.GetString($"{localePrefix}role-desc", ("hl1", hl1), ("hl2", hl2));
 
-        return CreateGreetingEntry(greetingText, greetingDesc, greetingTheme);
+        var entry = new GreetingEntry { Theme = theme };
+        entry.AddSection(Loc.GetString("role-greeting-title"), greetingText, 0);
+        entry.AddSection(Loc.GetString("role-greeting-desc-title"), greetingDesc, 1);
+
+        return entry;
     }
 
     /// <summary>

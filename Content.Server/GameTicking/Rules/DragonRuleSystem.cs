@@ -35,9 +35,10 @@ public sealed partial class DragonRuleSystem : GameRuleSystem<DragonRuleComponen
         if(ent is null)
             return;
 
-        // SIS-ChatGreeting
+        // SIS-ChatGreeting Start
         var direction = GetDirectionToStation(ent.Value);
         args.Append(Loc.GetString("dragon-role-briefing", ("direction", direction)));
+        // SIS-ChatGreeting End
     }
 
     private void AfterAntagEntitySelected(Entity<DragonRuleComponent> ent, ref AfterAntagEntitySelectedEvent args)
@@ -50,23 +51,14 @@ public sealed partial class DragonRuleSystem : GameRuleSystem<DragonRuleComponen
         if(dragonRole is null)
             return;
 
-        _antag.SendBriefing(args.EntityUid, MakeGreeting(args.EntityUid, args.Def)); // SIS-ChatGreeting
+        _antag.SendBriefing(args.EntityUid, MakeGreeting(args.EntityUid, args.Def?.Briefing?.Theme)); // SIS-ChatGreeting
     }
 
     // SIS-ChatGreeting Start
-    private GreetingEntry MakeGreeting(EntityUid dragon, AntagSpecifierPrototype proto)
+    private GreetingEntry MakeGreeting(EntityUid dragon, GreetingTheme? theme)
     {
-        var theme = proto.Briefing?.Theme ?? new GreetingTheme();
-
-        var hl1 = theme.MessageHighlightFirstColor ?? theme.HighlightFirstColor ?? theme.HighlightColor ?? Color.Orange;
-        var hl2 = theme.MessageHighlightSecondColor ?? theme.HighlightSecondColor  ?? hl1;
-
         var direction = GetDirectionToStation(dragon);
-
-        var greetingText = Loc.GetString("dragon-role-greeting", ("direction", direction), ("hl1", hl1), ("hl2", hl2));
-        var greetingDesc = Loc.GetString("dragon-role-desc", ("hl1", hl1), ("hl2", hl2));
-
-        return _greeting.CreateGreetingEntry(greetingText, greetingDesc, theme);
+        return _greeting.DefaultGreeting("dragon-", theme, ("direction", direction));
     }
 
     private string GetDirectionToStation(EntityUid dragon)

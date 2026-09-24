@@ -98,15 +98,8 @@ public sealed partial class DevilRuleSystem : GameRuleSystem<DevilRuleComponent>
         if (!TryComp<DevilComponent>(uid, out var devilComp))
             return;
 
-        var theme = proto.Briefing?.Theme ?? new GreetingTheme();
-
-        var hl1 = theme.MessageHighlightFirstColor ?? theme.HighlightFirstColor ?? theme.HighlightColor ?? Color.Orange;
-        var hl2 = theme.MessageHighlightSecondColor ?? theme.HighlightSecondColor ?? hl1;
-
-        var greetingText = Loc.GetString("devil-role-greeting", ("trueName", devilComp.TrueName), ("playerName", Name(uid)), ("hl1", hl1), ("hl2", hl2));
-        var greetingDesc = Loc.GetString("devil-role-desc", ("hl1", hl1), ("hl2", hl2));
-
-        var entry = _greeting.CreateGreetingEntry(greetingText, greetingDesc, theme);
+        (string, object)[] args = [("trueName", devilComp.TrueName), ("playerName", Name(uid))];
+        var entry = _greeting.DefaultGreeting("devil-", proto.Briefing?.Theme, args);
         _antag.SendBriefing(uid, entry, proto.Briefing?.Sound);
     }
     // SIS-ChatGreeting End

@@ -609,17 +609,10 @@ public sealed partial class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleCompon
     }
 
     // SIS-ChatGreeting Start
-    private GreetingEntry MakeChatBriefingEntry(NukeopsRuleComponent comp, string targetStation, string teamName, AntagSpecifierPrototype proto)
+    private GreetingEntry MakeChatBriefingEntry(string localePrefix, string targetStation, string teamName, GreetingTheme? theme)
     {
-        var theme = proto.Briefing?.Theme ?? new GreetingTheme();
-        var entry = new GreetingEntry { Theme = theme };
-
-        var hl1 = theme.MessageHighlightFirstColor ?? theme.HighlightFirstColor ?? theme.HighlightColor ?? Color.Orange;
-        var hl2 = theme.MessageHighlightSecondColor ?? theme.HighlightSecondColor ?? hl1;
-
-        var greetingText = Loc.GetString($"{comp.LocalePrefix}role-greeting", ("station", targetStation), ("name", teamName), ("hl1", hl1), ("hl2", hl2));
-        var greetingDesc = Loc.GetString($"{comp.LocalePrefix}role-greeting-desc", ("hl1", hl1), ("hl2", hl2));
-        return _greeting.CreateGreetingEntry(greetingText, greetingDesc, theme);
+        (string, object)[] args = [("station", targetStation), ("name", teamName)];
+        return _greeting.DefaultGreeting(localePrefix, theme, args);
     }
     // SIS-ChatGreeting End
 
@@ -627,8 +620,10 @@ public sealed partial class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleCompon
     {
         var target = (ent.Comp.TargetStation is not null) ? Name(ent.Comp.TargetStation.Value) : "the target";
 
-        var entry = MakeChatBriefingEntry(ent.Comp, target, Name(ent), args.Def);
+        // SIS-ChatGreeting Start
+        var entry = MakeChatBriefingEntry(ent.Comp.LocalePrefix, target, Name(ent), args.Def?.Briefing?.Theme);
         _antag.SendBriefing(args.Session, entry, ent.Comp.GreetSoundNotification);
+        // SIS-ChatGreeting End
     }
 
     private void OnGetBriefing(Entity<NukeopsRoleComponent> role, ref GetBriefingEvent args)

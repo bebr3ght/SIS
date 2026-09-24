@@ -14,21 +14,21 @@ public sealed class GreetingSystem : EntitySystem
         GreetingTheme? theme,
         params (string, object)[]? args)
     {
-        var greetingTheme = theme ?? new GreetingTheme();
+        var resolvedTheme = theme ?? new GreetingTheme();
 
-        var hl1 = greetingTheme.MessageHighlightFirstColor
-                  ?? greetingTheme.HighlightFirstColor
-                  ?? greetingTheme.HighlightColor
+        var hl1 = resolvedTheme.MessageHighlightFirstColor
+                  ?? resolvedTheme.HighlightFirstColor
+                  ?? resolvedTheme.HighlightColor
                   ?? ColorFallback;
 
-        var hl2 = greetingTheme.MessageHighlightSecondColor
-                  ?? greetingTheme.HighlightSecondColor
+        var hl2 = resolvedTheme.MessageHighlightSecondColor
+                  ?? resolvedTheme.HighlightSecondColor
                   ?? hl1;
 
         var greetingTitle = Loc.GetString($"{localePrefix}role-greeting", [.. args ?? [], ("hl1", hl1), ("hl2", hl2)]);
         var greetingDesc = Loc.GetString($"{localePrefix}role-desc", ("hl1", hl1), ("hl2", hl2));
 
-        var entry = new GreetingEntry { Theme = greetingTheme };
+        var entry = new GreetingEntry { Theme = resolvedTheme };
         entry.AddSection(Loc.GetString("role-greeting-title"), greetingTitle, 0);
         entry.AddSection(Loc.GetString("role-greeting-desc-title"), greetingDesc, 1);
 

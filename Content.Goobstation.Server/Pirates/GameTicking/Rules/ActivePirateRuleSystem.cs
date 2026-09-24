@@ -73,7 +73,7 @@ public sealed partial class ActivePirateRuleSystem : GameRuleSystem<ActivePirate
 
         // SIS-ChatGreeting Start
         _role.MindAddRole(mindId, MindRole.Id, mind, true);
-        var entry = _greeting.DefaultGreeting("pirate-", proto.Briefing?.Theme);
+        var entry = _greeting.CreateGreetingEntry("pirate-", proto.Briefing?.Theme);
         _antag.SendBriefing(target, entry, BriefingSound);
         // SIS-ChatGreeting End
 

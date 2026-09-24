@@ -64,7 +64,7 @@ public sealed partial class ChangelingRuleSystem : GameRuleSystem<ChangelingRule
         // briefing
         var name = Name(target) ?? Loc.GetString("generic-unknown-title");
         // SIS-ChatGreeting Start
-        var entry = _greeting.DefaultGreeting("changeling-", proto.Briefing?.Theme, name);
+        var entry = _greeting.CreateGreetingEntry("changeling-", proto.Briefing?.Theme, ("name", name));
         _antag.SendBriefing(target, entry);
         // SIS-ChatGreeting End
 

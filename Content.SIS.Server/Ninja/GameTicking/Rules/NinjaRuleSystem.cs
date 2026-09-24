@@ -23,7 +23,7 @@ public sealed partial class NinjaRuleSystem : GameRuleSystem<NinjaRuleComponent>
     private void OnSelectAntag(Entity<NinjaRuleComponent> ent, ref AfterAntagEntitySelectedEvent args)
     {
         var station = ent.Comp.TargetStation != null ? Name(ent.Comp.TargetStation.Value) : "the station";
-        var entry = _greeting.DefaultGreeting("ninja-", args.Def.Briefing?.Theme, ("station", station));
+        var entry = _greeting.CreateGreetingEntry("ninja-", args.Def.Briefing?.Theme, ("station", station));
         _antag.SendBriefing(args.EntityUid, entry);
     }
 

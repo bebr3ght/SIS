@@ -476,7 +476,7 @@ public sealed partial class CosmicCultRuleSystem : GameRuleSystem<CosmicCultRule
 
         // SIS-ChatGreeting Start
         var proto = _proto.Index(CosmicCultistAntag);
-        var entry = _greeting.DefaultGreeting("cosmiccult-", proto.Briefing?.Theme);
+        var entry = _greeting.CreateGreetingEntry("cosmiccult-", proto.Briefing?.Theme);
         _antag.SendBriefing(session, entry, _briefingSound);
         // SIS-ChatGreeting End
 

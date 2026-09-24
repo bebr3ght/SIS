@@ -10,7 +10,7 @@ public sealed class GreetingSystem : EntitySystem
     private const string MessageBorderColorFallback = "#3b1111";
     private static readonly Color ColorFallback = Color.Orange;
 
-    public GreetingEntry DefaultGreeting(string localePrefix,
+    public GreetingEntry CreateGreetingEntry(string localePrefix,
         GreetingTheme? theme,
         params (string, object)[]? args)
     {
@@ -25,14 +25,11 @@ public sealed class GreetingSystem : EntitySystem
                   ?? greetingTheme.HighlightSecondColor
                   ?? hl1;
 
-        var greetingText = args is not null
-            ? Loc.GetString($"{localePrefix}role-greeting", [.. args, ("hl1", hl1), ("hl2", hl2)])
-            : Loc.GetString($"{localePrefix}role-greeting", ("hl1", hl1), ("hl2", hl2));
-
+        var greetingTitle = Loc.GetString($"{localePrefix}role-greeting", [.. args ?? [], ("hl1", hl1), ("hl2", hl2)]);
         var greetingDesc = Loc.GetString($"{localePrefix}role-desc", ("hl1", hl1), ("hl2", hl2));
 
         var entry = new GreetingEntry { Theme = theme };
-        entry.AddSection(Loc.GetString("role-greeting-title"), greetingText, 0);
+        entry.AddSection(Loc.GetString("role-greeting-title"), greetingTitle, 0);
         entry.AddSection(Loc.GetString("role-greeting-desc-title"), greetingDesc, 1);
 
         return entry;

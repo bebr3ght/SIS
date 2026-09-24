@@ -274,7 +274,7 @@ public sealed partial class WizardRuleSystem : GameRuleSystem<WizardRuleComponen
     public bool MakeWizard(EntityUid target, WizardRuleComponent rule, AntagSpecifierPrototype proto)
     {
         var station = (rule.TargetStation is not null) ? Name(rule.TargetStation.Value) : "the station";
-        var entry = _greeting.DefaultGreeting("wizard-", proto.Briefing?.Theme, ("station", station));
+        var entry = _greeting.CreateGreetingEntry("wizard-", proto.Briefing?.Theme, ("station", station));
         _antag.SendBriefing(target, entry);
 
         if (!TryComp(target, out HumanoidProfileComponent? humanoid) || humanoid.Age >= 60)

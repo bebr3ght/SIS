@@ -312,7 +312,7 @@ public sealed partial class ZombieSystem
 
             // SIS-ChatGreeting Start
             var proto = _prototype.Index(InitialInfectedAntag);
-            var entry = _greeting.DefaultGreeting("zombie-", proto.Briefing?.Theme);
+            var entry = _greeting.CreateGreetingEntry("zombie-", proto.Briefing?.Theme);
             _antag.SendBriefing(session, entry, zombiecomp.GreetSoundNotification);
             // SIS-ChatGreeting End
 

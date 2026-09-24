@@ -15,9 +15,9 @@ namespace Content.Goobstation.Server.Administration.Systems;
 public sealed partial class GoobAdminVerbSystem
 {
     [Dependency] private CommonSiliconSystem _silicon = default!;
-    [Dependency] private AntagSelectionSystem _antag = default!; // SIS-ChatGreeting
+    [Dependency] private AntagSelectionSystem _antag = default!; // SIS-TODO: Портануть фикс Блоба Травме
 
-    private static readonly EntProtoId BlobRule = "BlobGameMode"; // SIS-ChatGreeting
+    private static readonly EntProtoId BlobRule = "BlobGameMode"; // SIS-TODO: Портануть фикс Блоба Травме
 
     private void OnGetAntagVerbs(ref GetAntagVerbsEvent args)
     {
@@ -25,12 +25,12 @@ public sealed partial class GoobAdminVerbSystem
         if (_silicon.IsSilicon(target))
             return;
 
-        // SIS-ChatGreeting Start
+        // SIS-TODO: Портануть фикс Блоба Травме Start
         if (!HasComp<MindContainerComponent>(target) || !TryComp<ActorComponent>(target, out var targetActor))
             return;
 
         var targetPlayer = targetActor.PlayerSession;
-        // SIS-ChatGreeting End
+        // SIS-TODO: Портануть фикс Блоба Травме End
 
         // Blob
         args.Verbs.Verbs.Add(new()
@@ -40,7 +40,7 @@ public sealed partial class GoobAdminVerbSystem
             Icon = new SpriteSpecifier.Rsi(new("_Goobstation/Blob/Actions/blob.rsi"), "blobFactory"),
             Act = () =>
             {
-                _antag.ForceMakeAntag<BlobRuleComponent>(targetPlayer, BlobRule); // SIS-ChatGreeting
+                _antag.ForceMakeAntag<BlobRuleComponent>(targetPlayer, BlobRule); // SIS-TODO: Портануть фикс Блоба Травме
                 EnsureComp<BlobCarrierComponent>(target).HasMind = HasComp<ActorComponent>(target);
             },
             Impact = LogImpact.High,

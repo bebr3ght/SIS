@@ -96,8 +96,7 @@ public sealed partial class HereticRuleSystem : GameRuleSystem<HereticRuleCompon
         }
     }
 
-    // SIS-ChatGreeting Start
-    public bool TryMakeHeretic(EntityUid target, HereticRuleComponent rule, AntagSpecifierPrototype proto)
+    public bool TryMakeHeretic(EntityUid target, HereticRuleComponent rule, AntagSpecifierPrototype proto) // SIS-ChatGreeting
     {
         if (!_mind.TryGetMind(target, out var mindId, out var mind))
             return false;
@@ -107,8 +106,10 @@ public sealed partial class HereticRuleSystem : GameRuleSystem<HereticRuleCompon
         // briefing
         if (HasComp<MetaDataComponent>(target))
         {
+            // SIS-ChatGreeting Start
             var entry = _greeting.CreateGreetingEntry("heretic-", proto.Briefing?.Theme);
             _antag.SendBriefing(target, entry, BriefingSound);
+            // SIS-ChatGreeting End
         }
 
         // add store
@@ -124,7 +125,6 @@ public sealed partial class HereticRuleSystem : GameRuleSystem<HereticRuleCompon
 
         return true;
     }
-    // SIS-ChatGreeting End
 
     public StoreComponent InitializeStore(EntityUid mindId)
     {

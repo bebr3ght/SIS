@@ -270,12 +270,13 @@ public sealed partial class WizardRuleSystem : GameRuleSystem<WizardRuleComponen
         MakeWizard(args.EntityUid, ent.Comp, args.Def); // SIS-ChatGreeting
     }
 
-    // SIS-ChatGreeting Start
     public bool MakeWizard(EntityUid target, WizardRuleComponent rule, AntagSpecifierPrototype proto)
     {
         var station = (rule.TargetStation is not null) ? Name(rule.TargetStation.Value) : "the station";
+        // SIS-ChatGreeting Start
         var entry = _greeting.CreateGreetingEntry("wizard-", proto.Briefing?.Theme, ("station", station));
         _antag.SendBriefing(target, entry);
+        // SIS-ChatGreeting End
 
         if (!TryComp(target, out HumanoidProfileComponent? humanoid) || humanoid.Age >= 60)
             return true;
@@ -286,5 +287,4 @@ public sealed partial class WizardRuleSystem : GameRuleSystem<WizardRuleComponen
 
         return true;
     }
-    // SIS-ChatGreeting End
 }

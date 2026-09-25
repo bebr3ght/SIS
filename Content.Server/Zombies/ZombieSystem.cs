@@ -62,10 +62,7 @@ namespace Content.Server.Zombies
             SlotFlags.INNERCLOTHING |
             SlotFlags.OUTERCLOTHING;
 
-        // SIS-ChatGreeting Start
-        private static readonly ProtoId<AntagSpecifierPrototype> InitialInfectedAntag = "InitialInfected";
-        private static readonly Color FallbackColor = Color.Plum;
-        // SIS-ChatGreeting End
+        private static readonly ProtoId<AntagSpecifierPrototype> InitialInfectedAntag = "InitialInfected"; // SIS-ChatBriefing
 
         public override void Initialize()
         {

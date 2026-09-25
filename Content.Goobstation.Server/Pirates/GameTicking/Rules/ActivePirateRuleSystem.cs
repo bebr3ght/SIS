@@ -38,7 +38,7 @@ public sealed partial class ActivePirateRuleSystem : GameRuleSystem<ActivePirate
 
     private void OnAntagSelect(Entity<ActivePirateRuleComponent> ent, ref AfterAntagEntitySelectedEvent args)
     {
-        if (_mind.TryGetMind(args.EntityUid, out var mindId, out var mind) && TryMakePirate(args.EntityUid, args.Def))
+        if (_mind.TryGetMind(args.EntityUid, out var mindId, out var mind) && TryMakePirate(args.EntityUid, args.Def)) // SIS-ChatGreeting
             ent.Comp.Pirates.Add((mindId, mind));
     }
 

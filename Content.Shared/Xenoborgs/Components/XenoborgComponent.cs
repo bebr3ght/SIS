@@ -20,6 +20,22 @@ public sealed partial class XenoborgComponent : Component
     public EntProtoId<MindRoleComponent> MindRole = "MindRoleXenoborg";
 
     // SIS-ChatBriefing Start
+    /*
+    /// <summary>
+    /// The text that is sent when you become a xenoborg
+    /// </summary>
+    [DataField]
+    public LocId BriefingText = "xenoborgs-welcome";
+
+    /// <summary>
+    /// Briefing sound when you become a xenoborg
+    /// </summary>
+    [DataField]
+    public SoundSpecifier BriefingSound = new SoundPathSpecifier("/Audio/Ambience/Antag/xenoborg_start.ogg");
+    */
+    // SIS-ChatBriefing End
+
+    // SIS-ChatBriefing Start
     [DataField]
     public ProtoId<AntagSpecifierPrototype> AntagProto = "Xenoborg";
     // SIS-ChatBriefing End

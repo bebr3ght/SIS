@@ -119,10 +119,10 @@ public sealed partial class AntagSpecifierPrototype : IPrototype, IInheritingPro
     public List<ProtoId<RoleLoadoutPrototype>>? RoleLoadout;
 
     /// <summary>
-    /// A greeting shown to the player.
+    /// A greeting shown to the player. // SIS-ChatBriefing | briefing
     /// </summary>
     [DataField]
-    public GreetingEntry? Briefing; // SIS-ChatGreeting
+    public GreetingEntry? Briefing; // SIS-ChatBriefing | BriefingData
 
     /// <summary>
     /// A spawner used to defer the selection of this particular definition.

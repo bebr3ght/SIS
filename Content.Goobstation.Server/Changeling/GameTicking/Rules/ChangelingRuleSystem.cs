@@ -64,6 +64,7 @@ public sealed partial class ChangelingRuleSystem : GameRuleSystem<ChangelingRule
         // briefing
         var name = Name(target) ?? Loc.GetString("generic-unknown-title");
         // SIS-ChatGreeting Start
+        var briefingShort = Loc.GetString("changeling-role-greeting-short", ("name", name));
         var entry = _greeting.CreateGreetingEntry("changeling-", proto.Briefing?.Theme, ("name", name));
         _antag.SendBriefing(target, entry);
         // SIS-ChatGreeting End
@@ -75,7 +76,6 @@ public sealed partial class ChangelingRuleSystem : GameRuleSystem<ChangelingRule
         }
 
         var role = mr.Value.Owner;
-        var briefingShort = Loc.GetString("changeling-role-greeting-short", ("name", name)); // SIS-ChatGreeting
         AddComp(role, new RoleBriefingComponent { Briefing = briefingShort }, overwrite: true);
 
         // hivemind stuff

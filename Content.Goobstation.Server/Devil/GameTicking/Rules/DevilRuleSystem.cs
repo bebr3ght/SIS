@@ -43,7 +43,7 @@ public sealed partial class DevilRuleSystem : GameRuleSystem<DevilRuleComponent>
     {
         var devilComp = EnsureComp<DevilComponent>(target);
 
-        SendGreeting(target, proto);
+        SendGreeting(target, proto); // SIS-ChatGreeting
 
         _npcFaction.RemoveFaction(target, rule.NanotrasenFaction);
         _npcFaction.AddFaction(target, rule.DevilFaction);

@@ -26,7 +26,7 @@ public sealed partial class GreetingEntry
 }
 
 [DataDefinition]
-public partial struct GreetingSection
+public partial record struct GreetingSection
 {
     [DataField(required: true)]
     public string? Title;

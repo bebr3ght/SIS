@@ -270,7 +270,7 @@ public sealed partial class WizardRuleSystem : GameRuleSystem<WizardRuleComponen
         MakeWizard(args.EntityUid, ent.Comp, args.Def); // SIS-ChatGreeting
     }
 
-    public bool MakeWizard(EntityUid target, WizardRuleComponent rule, AntagSpecifierPrototype proto)
+    public bool MakeWizard(EntityUid target, WizardRuleComponent rule, AntagSpecifierPrototype proto) // SIS-ChatGreeting
     {
         var station = (rule.TargetStation is not null) ? Name(rule.TargetStation.Value) : "the station";
         // SIS-ChatGreeting Start

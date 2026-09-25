@@ -62,7 +62,7 @@ public sealed partial class HereticRuleSystem : GameRuleSystem<HereticRuleCompon
         if (uid == null)
             return;
 
-        var briefingShort = Loc.GetString("heretic-role-briefing"); // SIS-ChatGreeting
+        var briefingShort = Loc.GetString("heretic-role-briefing"); // SIS-ChatGreeting | heretic-role-greeting-short
         args.Append(briefingShort);
     }
 

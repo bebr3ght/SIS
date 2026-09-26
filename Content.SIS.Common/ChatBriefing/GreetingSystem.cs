@@ -11,15 +11,18 @@ public sealed class GreetingSystem : EntitySystem
     {
         var resolvedTheme = theme ?? new GreetingTheme();
 
-        var hl1 = resolvedTheme.MessageHighlightFirstColor ?? ColorFallback;
-        var hl2 = resolvedTheme.MessageHighlightSecondColor ?? hl1;
+        var titleHl1 = resolvedTheme.TitleHighlightFirstColor ?? ColorFallback;
+        var titleHl2 = resolvedTheme.TitleHighlightSecondColor ?? titleHl1;
 
-        var greetingTitle = Loc.GetString($"{localePrefix}role-greeting", [.. args ?? [], ("hl1", hl1), ("hl2", hl2)]);
-        var greetingDesc = Loc.GetString($"{localePrefix}role-greeting-desc", ("hl1", hl1), ("hl2", hl2));
+        var messageHl1 = resolvedTheme.MessageHighlightFirstColor ?? ColorFallback;
+        var messageHl2 = resolvedTheme.MessageHighlightSecondColor ?? messageHl1;
+
+        var greetingTitle = Loc.GetString($"{localePrefix}role-greeting", [.. args ?? [], ("hl1", messageHl1), ("hl2", messageHl2)]);
+        var greetingDesc = Loc.GetString($"{localePrefix}role-greeting-desc", ("hl1", messageHl1), ("hl2", messageHl2));
 
         var entry = new GreetingEntry { Theme = resolvedTheme };
-        entry.AddSection(Loc.GetString("role-greeting-title"), greetingTitle, 0);
-        entry.AddSection(Loc.GetString("role-greeting-desc"), greetingDesc, 1);
+        entry.AddSection(Loc.GetString("role-greeting-title", ("hl1", titleHl1), ("hl2", titleHl2)), greetingTitle, 0);
+        entry.AddSection(Loc.GetString("role-greeting-desc", ("hl1", titleHl1), ("hl2", titleHl2)), greetingDesc, 1);
 
         return entry;
     }

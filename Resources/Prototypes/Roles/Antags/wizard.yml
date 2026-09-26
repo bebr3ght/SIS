@@ -34,8 +34,6 @@
       messageBackground: "#12081c"
       messageBorder: "#4c1d95"
       messageTextColor: "#f3e8ff"
-      titleHighlight1: "#ff1717"
-      titleHighlight2: "#c084fc"
       messageHighlight1: "#ffd700"
       messageHighlight2: "#c084fc"
     # SIS-ChatGreeting End

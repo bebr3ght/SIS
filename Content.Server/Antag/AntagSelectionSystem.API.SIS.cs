@@ -8,27 +8,10 @@ namespace Content.Server.Antag;
 public sealed partial class AntagSelectionSystem
 {
     /// <summary>
-    /// Helper method to send a formatted briefing entry to a list of sessions
-    /// </summary>
-    /// <param name="sessions">The sessions that will be sent the briefing</param>
-    /// <param name="entry">The formatted briefing entry</param>
-    [PublicAPI]
-    public void SendBriefing(List<ICommonSession> sessions, GreetingEntry? entry)
-    {
-        if (entry == null)
-            return;
-
-        foreach (var session in sessions)
-        {
-            SendBriefing(session, entry, entry.Sound);
-        }
-    }
-
-    /// <summary>
     /// Helper method to send a formatted GreetingEntry to an entity
     /// </summary>
     [PublicAPI]
-    public void SendBriefing(EntityUid entity, GreetingEntry? entry, SoundSpecifier? briefingSound = null)
+    public void SendBriefing(EntityUid entity, GreetingEntry? entry, SoundSpecifier? sound = null)
     {
         if (!_mind.TryGetMind(entity, out _, out var mindComponent))
             return;
@@ -36,7 +19,8 @@ public sealed partial class AntagSelectionSystem
         if (!_playerManager.TryGetSessionById(mindComponent.UserId, out var session))
             return;
 
-        SendBriefing(session, entry, briefingSound);
+        sound ??= entry?.Sound;
+        SendBriefing(session, entry, sound);
     }
 
     /// <summary>
@@ -55,6 +39,7 @@ public sealed partial class AntagSelectionSystem
         if (string.IsNullOrEmpty(markupText))
             return;
 
+        sound ??= entry.Sound;
         SendBriefing(session, markupText, null, sound);
     }
 }

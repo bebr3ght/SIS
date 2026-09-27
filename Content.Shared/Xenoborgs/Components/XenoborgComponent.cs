@@ -1,7 +1,6 @@
 using Content.Shared.Roles.Components;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
-using Content.Shared.Antag; // SIS-ChatBriefing
 
 namespace Content.Shared.Xenoborgs.Components;
 

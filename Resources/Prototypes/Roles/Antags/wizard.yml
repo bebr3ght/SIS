@@ -33,7 +33,7 @@
       titleBorder: "#a855f7"
       messageBackground: "#12081c"
       messageBorder: "#4c1d95"
-      messageTextColor: "#f3e8ff"
+      messageText: "#f3e8ff"
       messageHighlight1: "#ffd700"
       messageHighlight2: "#c084fc"
     # SIS-ChatGreeting End

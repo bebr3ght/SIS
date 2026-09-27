@@ -33,8 +33,8 @@
       messageBorder: "#33141a"
       titleText: "#ff758f"
       messageText: "#dcd1d4"
-      highlight1: "#ff1744"
-      highlight2: "#ff6b81"
+      messageHighlight1: "#ff1744"
+      messageHighlight2: "#ff6b81"
   # SIS-ChatGreeting End
   prefRoles:
   - Traitor

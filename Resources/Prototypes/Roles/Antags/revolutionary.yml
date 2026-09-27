@@ -36,18 +36,12 @@
       messageBorder: "#202e45"
       titleText: White
       messageText: "#F0F0F0"
-      highlight: "#00FFFF"
+      messageHighlight1: "#00FFFF"
     sections:
-    - priority: 0
-      title:
-        text: role-greeting-title
-      message:
-        text: head-rev-role-greeting
-    - priority: 1
-      title:
-        text: role-greeting-desc
-      message:
-        text: head-rev-role-desc
+    - title: role-greeting-title
+      message: head-rev-role-greeting
+    - title: role-greeting-desc
+      message: head-rev-role-desc
     # SIS-ChatGreeting End
   startingGear: HeadRevGear
   components:

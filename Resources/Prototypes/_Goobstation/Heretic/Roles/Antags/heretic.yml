@@ -55,8 +55,13 @@
       messageBorder: "#2e1140"
       titleText: "#ffffff"
       messageText: "#d6c8e0"
-      highlight1: "#00ff9f"
-      highlight2: "#c084fc"
+      messageHighlight1: "#00ff9f"
+      messageHighlight2: "#c084fc"
+    sections:
+    - title: role-greeting-title
+      message: heretic-role-briefing
+    - title: role-greeting-desc
+      message: heretic-role-greeting
   # SIS-ChatGreeting End
 
 - type: antagSpecifier

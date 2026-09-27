@@ -14,19 +14,13 @@
       messageBorder: "#2c1236"
       titleText: "#f472b6"
       messageText: "#c8d6e5"
-      highlight1: "#00ffcc"
-      highlight2: "#fd0098"
+      messageHighlight1: "#00ffcc"
+      messageHighlight2: "#fd0098"
     sections:
-    - priority: 0
-      title:
-        text: role-greeting-title
-      message:
-        text: abductor-role-greeting
-    - priority: 1
-      title:
-        text: role-greeting-desc
-      message:
-        text: abductor-role-greeting-desc
+    - title: role-greeting-title
+      message: abductor-role-greeting
+    - title: role-greeting-desc
+      message: abductor-role-greeting-desc
     # SIS-ChatGreeting End
   components:
   - type: Abductor

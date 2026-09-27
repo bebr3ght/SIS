@@ -34,8 +34,8 @@
       messageBorder: "#4a1515"
       titleText: "#ffa502"
       messageText: "#ffeaa7"
-      highlight1: "#ff3838"
-      highlight2: "#ffa502"
+      messageHighlight1: "#ff3838"
+      messageHighlight2: "#ffa502"
   # SIS-ChatGreeting End
   mindComponents:
   - type: Evil

@@ -13,8 +13,8 @@
       messageBorder: "#3d2617"
       titleText: "#f59e0b"
       messageText: "#d6c5b2"
-      highlight1: "#f59e0b"
-      highlight2: "#fbbf24"
+      messageHighlight1: "#f59e0b"
+      messageHighlight2: "#fbbf24"
   # SIS-ChatGreeting End
   components:
   - type: RandomMetadata

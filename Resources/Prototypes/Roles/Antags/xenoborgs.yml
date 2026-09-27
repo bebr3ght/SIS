@@ -25,19 +25,13 @@
       messageBorder: "#1e3a8a"
       titleText: "#00bfff"
       messageText: "#e0f2fe"
-      highlight1: "#38bdf8"
-      highlight2: "#e0f2fe"
+      messageHighlight1: "#38bdf8"
+      messageHighlight2: "#e0f2fe"
     sections:
-    - priority: 0
-      title:
-        text: role-greeting-title
-      message:
-        text: mothership-greeting
-    - priority: 1
-      title:
-        text: role-greeting-desc
-      message:
-        text: mothership-greeting-desc
+    - title: role-greeting-title
+      message: mothership-greeting
+    - title: role-greeting-desc
+      message: mothership-greeting-desc
   # SIS-ChatGreeting End
 
 - type: antag

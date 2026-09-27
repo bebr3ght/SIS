@@ -22,19 +22,13 @@
       messageBorder: "#272b34"
       titleText: "#cbd5e1"
       messageText: "#94a3b8"
-      highlight1: "#ff1744"
-      highlight2: "#800f2f"
+      messageHighlight1: "#ff1744"
+      messageHighlight2: "#800f2f"
     sections:
-    - priority: 0
-      title:
-        text: role-greeting-title
-      message:
-        text: slasher-role-greeting
-    - priority: 1
-      title:
-        text: role-greeting-desc
-      message:
-        text: slasher-role-greeting-desc
+    - title: role-greeting-title
+      message: slasher-role-greeting
+    - title: role-greeting-desc
+      message: slasher-role-greeting-desc
     # SIS-ChatGreeting End
   mindRoles: [ MindRoleSlasher ]
   components:

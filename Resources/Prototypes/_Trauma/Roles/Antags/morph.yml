@@ -20,17 +20,11 @@
       messageBorder: "#283618"
       titleText: "#d4ed85"
       messageText: "#c5d9a5"
-      highlight1: "#a3e635"
-      highlight2: "#728c49"
+      messageHighlight1: "#a3e635"
+      messageHighlight2: "#728c49"
     sections:
-    - priority: 0
-      title:
-        text: role-greeting-title
-      message:
-        text: morph-role-greeting
-    - priority: 1
-      title:
-        text: role-greeting-desc
-      message:
-        text: morph-role-greeting-desc
+    - title: role-greeting-title
+      message: morph-role-greeting
+    - title: role-greeting-desc
+      message: morph-role-greeting-desc
     # SIS-ChatGreeting End

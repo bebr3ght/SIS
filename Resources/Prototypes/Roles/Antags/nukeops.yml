@@ -76,8 +76,8 @@
       messageBorder: "#381619"
       titleText: "#ff667a"
       messageText: "#d6c9cb"
-      highlight1: Red
-      highlight2: "#c33030"
+      messageHighlight1: Red
+      messageHighlight2: "#c33030"
   # SIS-ChatGreeting End
   prefRoles:
   - GenericTeamAntagonist # For antag ban purposes

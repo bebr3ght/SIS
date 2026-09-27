@@ -43,7 +43,11 @@ public sealed partial class DevilRuleSystem : GameRuleSystem<DevilRuleComponent>
     {
         var devilComp = EnsureComp<DevilComponent>(target);
 
-        SendGreeting(target, proto); // SIS-ChatGreeting
+        // SIS-ChatGreeting Start
+        (string, object)[] args = [("trueName", devilComp.TrueName), ("playerName", Name(target))];
+        var entry = _greeting.CreateGreetingEntry("devil-", proto.Briefing, args);
+        _antag.SendBriefing(target, entry);
+        // SIS-ChatGreeting End
 
         _npcFaction.RemoveFaction(target, rule.NanotrasenFaction);
         _npcFaction.AddFaction(target, rule.DevilFaction);
@@ -91,16 +95,4 @@ public sealed partial class DevilRuleSystem : GameRuleSystem<DevilRuleComponent>
         sb.AppendLine(Loc.GetString($"roundend-prepend-devil-contracts{(!string.IsNullOrWhiteSpace(mostContractsName) ? "-named" : "")}", ("name", mostContractsName), ("number", mostContracts)));
         args.Text = sb.ToString();
     }
-
-    // SIS-ChatGreeting Start
-    private void SendGreeting(EntityUid uid, AntagSpecifierPrototype proto)
-    {
-        if (!TryComp<DevilComponent>(uid, out var devilComp))
-            return;
-
-        (string, object)[] args = [("trueName", devilComp.TrueName), ("playerName", Name(uid))];
-        var entry = _greeting.CreateGreetingEntry("devil-", proto.Briefing, args);
-        _antag.SendBriefing(uid, entry);
-    }
-    // SIS-ChatGreeting End
 }

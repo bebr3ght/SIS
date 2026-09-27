@@ -58,7 +58,7 @@ public sealed partial class DragonRuleSystem : GameRuleSystem<DragonRuleComponen
     private GreetingEntry MakeGreeting(EntityUid dragon, AntagSpecifierPrototype proto)
     {
         var direction = GetDirectionToStation(dragon);
-        return _greeting.CreateGreetingEntry("dragon-", proto.Briefing?.Theme, ("direction", direction));
+        return _greeting.CreateGreetingEntry("dragon-", proto.Briefing, ("direction", direction));
     }
 
     private string GetDirectionToStation(EntityUid dragon)

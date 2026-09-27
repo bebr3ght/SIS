@@ -12,11 +12,11 @@ public sealed class GreetingSystem : EntitySystem
 
     public GreetingEntry CreateGreetingEntry(
         string localePrefix,
-        GreetingTheme? theme,
-        SoundSpecifier? sound,
+        GreetingTheme? oldTheme,
+        SoundSpecifier? oldSound,
         params (string, object)[]? args)
     {
-        var resolvedTheme = theme ?? new GreetingTheme();
+        var resolvedTheme = oldTheme ?? new GreetingTheme();
 
         var titleHl1 = resolvedTheme.TitleHighlightFirstColor ?? ColorFallback;
         var titleHl2 = resolvedTheme.TitleHighlightSecondColor ?? titleHl1;
@@ -30,18 +30,13 @@ public sealed class GreetingSystem : EntitySystem
         var entry = new GreetingEntry
         {
             Theme = resolvedTheme,
-            Sound = sound,
+            Sound = oldSound,
         };
 
         entry.AddSection(Loc.GetString("role-greeting-title", ("hl1", titleHl1), ("hl2", titleHl2)), greetingTitle, 0);
         entry.AddSection(Loc.GetString("role-greeting-desc", ("hl1", titleHl1), ("hl2", titleHl2)), greetingDesc, 1);
 
         return entry;
-    }
-
-    public GreetingEntry CreateGreetingEntry(string localePrefix, GreetingTheme? theme, params (string, object)[]? args)
-    {
-        return CreateGreetingEntry(localePrefix, theme, null, args);
     }
 
     public GreetingEntry CreateGreetingEntry(string localePrefix, GreetingEntry? oldEntry, params (string, object)[]? args)

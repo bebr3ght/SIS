@@ -274,7 +274,7 @@ public sealed partial class WizardRuleSystem : GameRuleSystem<WizardRuleComponen
     {
         var station = (rule.TargetStation is not null) ? Name(rule.TargetStation.Value) : "the station";
         // SIS-ChatGreeting Start
-        var entry = _greeting.CreateGreetingEntry("wizard-", proto.Briefing?.Theme, ("station", station));
+        var entry = _greeting.CreateGreetingEntry("wizard-", proto.Briefing, ("station", station));
         _antag.SendBriefing(target, entry);
         // SIS-ChatGreeting End
 

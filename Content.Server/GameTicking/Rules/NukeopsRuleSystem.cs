@@ -612,7 +612,7 @@ public sealed partial class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleCompon
     private GreetingEntry MakeChatBriefingEntry(NukeopsRuleComponent comp, string targetStation, string teamName, AntagSpecifierPrototype proto)
     {
         (string, object)[] args = [("station", targetStation), ("name", teamName)];
-        return _greeting.CreateGreetingEntry(comp.LocalePrefix, proto.Briefing?.Theme, args);
+        return _greeting.CreateGreetingEntry(comp.LocalePrefix, proto.Briefing, args);
     }
     // SIS-ChatGreeting End
 

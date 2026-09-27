@@ -27,9 +27,6 @@ public sealed class RainbowTag : IAnimatedColorTag
     private const string TagName = "rainbow";
     public string Name => TagName;
 
-    public void PushDrawContext(MarkupNode node, MarkupDrawingContext context) { }
-    public void PopDrawContext(MarkupNode node, MarkupDrawingContext context) { }
-
     public Color GetColor(MarkupNode node, int charIndex, float time, Color baseColor, Vector2 position)
     {
         var startHue = 0f;
@@ -75,9 +72,6 @@ public sealed class GradientTag : IAnimatedColorTag
 {
     private const string TagName = "gradient";
     public string Name => TagName;
-
-    public void PushDrawContext(MarkupNode node, MarkupDrawingContext context) { }
-    public void PopDrawContext(MarkupNode node, MarkupDrawingContext context) { }
 
     public Color GetColor(MarkupNode node, int charIndex, float time, Color baseColor, Vector2 position)
     {

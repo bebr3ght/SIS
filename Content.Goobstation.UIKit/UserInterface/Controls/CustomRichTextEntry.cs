@@ -94,7 +94,7 @@ public struct CustomRichTextEntry
             if (node.Name == null)
                 continue;
 
-            if (node.Name == ExamineBorderTag.TagName || node.Name == TitleBoxTag.TagName || node.Name == MessageBoxTag.TagName) // SIS-ChatGreeting
+            if (node.Name is ExamineBorderTag.TagName or TitleBoxTag.TagName or MessageBoxTag.TagName) // SIS-ChatGreeting
                 IsInBox = true;
 
             if (!tagManager.TryGetMarkupTagHandler(node.Name, _tagsAllowed, out var handler) || !handler.TryCreateControl(node, out var control))
@@ -290,9 +290,7 @@ public struct CustomRichTextEntry
             scrollBarPixelSize,
             context,
             uiScale,
-            lineHeightScale,
-            true,
-            null);
+            lineHeightScale);
         // SIS-ChatGreeting End
     }
 
@@ -307,7 +305,7 @@ public struct CustomRichTextEntry
         float uiScale,
         float lineHeightScale = 1,
         bool drawText = true,
-        List<PanelRenderData>? outPanels = null)
+        List<PanelRenderData>? outPanels = null) // SIS-ChatGreeting
     {
         context.Clear();
         context.Color.Push(_defaultColor);
@@ -346,7 +344,7 @@ public struct CustomRichTextEntry
             nodeIndex++;
 
             // SIS-ChatGreeting Start
-            if (node.Name == "titlebox" || node.Name == "messagebox")
+            if (node.Name is "titlebox" or "messagebox")
             {
                 if (!node.Closing)
                 {

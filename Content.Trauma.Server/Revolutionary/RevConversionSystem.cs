@@ -35,7 +35,7 @@ public sealed partial class RevConversionSystem : EntitySystem
             // SIS-ChatGreeting Start
             var proto = _proto.Index(BriefingTheme);
             var entry = _greeting.CreateGreetingEntry("rev-", proto.Briefing);
-            _antag.SendBriefing(actor.PlayerSession, entry, args.Target.Comp.RevStartSound);
+            _antag.SendBriefing(actor.PlayerSession, entry);
             // SIS-ChatGreeting End
         }
 

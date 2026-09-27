@@ -11,7 +11,7 @@ public sealed partial class AntagSelectionSystem
     /// Helper method to send a formatted GreetingEntry to an entity
     /// </summary>
     [PublicAPI]
-    public void SendBriefing(EntityUid entity, GreetingEntry? entry, SoundSpecifier? sound = null)
+    public void SendBriefing(EntityUid entity, GreetingEntry? entry)
     {
         if (!_mind.TryGetMind(entity, out _, out var mindComponent))
             return;
@@ -19,8 +19,7 @@ public sealed partial class AntagSelectionSystem
         if (!_playerManager.TryGetSessionById(mindComponent.UserId, out var session))
             return;
 
-        sound ??= entry?.Sound;
-        SendBriefing(session, entry, sound);
+        SendBriefing(session, entry);
     }
 
     /// <summary>
@@ -30,7 +29,7 @@ public sealed partial class AntagSelectionSystem
     /// <param name="entry">The ChatBriefingEntry containing sections</param>
     /// <param name="sound">Optional sound to play</param>
     [PublicAPI]
-    public void SendBriefing(ICommonSession? session, GreetingEntry? entry, SoundSpecifier? sound = null)
+    public void SendBriefing(ICommonSession? session, GreetingEntry? entry)
     {
         if (session == null || entry == null)
             return;
@@ -39,7 +38,6 @@ public sealed partial class AntagSelectionSystem
         if (string.IsNullOrEmpty(markupText))
             return;
 
-        sound ??= entry.Sound;
-        SendBriefing(session, markupText, null, sound);
+        SendBriefing(session, markupText, null, entry.Sound);
     }
 }

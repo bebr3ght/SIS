@@ -808,7 +808,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
         Log.Debug($"Assigned {ToPrettyString(antag):target}, mind {ToPrettyString(mind):target} as antagonist: {ToPrettyString(gameRule):user}");
         _adminLogger.Add(LogType.AntagSelection, $"Assigned {ToPrettyString(antag):target}, mind {ToPrettyString(mind):target} as antagonist: {ToPrettyString(gameRule):user}");
 
-        SendBriefing(player, prototype.Briefing, prototype.Briefing?.Sound); // SIS-ChatGreeting
+        SendBriefing(player, prototype.Briefing); // SIS-ChatGreeting
 
         var afterEv = new AfterAntagEntitySelectedEvent(player, antag, gameRule, prototype);
         RaiseLocalEvent(gameRule, ref afterEv, true);

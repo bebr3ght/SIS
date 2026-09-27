@@ -108,7 +108,7 @@ public sealed partial class TraitorRuleSystem : GameRuleSystem<TraitorRuleCompon
         {
             // SIS-ChatGreeting Start
             var greetingEntry = GenerateGreeting(codewords, code, antag, issuer);
-            _antag.SendBriefing(traitor, greetingEntry, component.GreetSoundNotification);
+            _antag.SendBriefing(traitor, greetingEntry);
             // SIS-ChatGreeting End
             Log.Debug($"MakeTraitor {ToPrettyString(traitor)} - Sent the Briefing");
         }

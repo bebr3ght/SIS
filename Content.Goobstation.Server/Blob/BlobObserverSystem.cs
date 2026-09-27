@@ -146,7 +146,7 @@ public sealed partial class BlobObserverSystem : SharedBlobObserverSystem
 
         var proto = _proto.Index(BlobAntag);
         var entry = _greeting.CreateGreetingEntry("blob-", proto.Briefing);
-        _antag.SendBriefing(session, entry, proto.Briefing?.Sound);
+        _antag.SendBriefing(session, entry);
     }
     // SIS-ChatGreeting End
 }

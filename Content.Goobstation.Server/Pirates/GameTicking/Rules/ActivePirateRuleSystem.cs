@@ -74,7 +74,7 @@ public sealed partial class ActivePirateRuleSystem : GameRuleSystem<ActivePirate
         // SIS-ChatGreeting Start
         _role.MindAddRole(mindId, MindRole.Id, mind, true);
         var entry = _greeting.CreateGreetingEntry("pirate-", proto.Briefing);
-        _antag.SendBriefing(target, entry, BriefingSound);
+        _antag.SendBriefing(target, entry);
         // SIS-ChatGreeting End
 
         _npcFaction.AddFaction(target, PirateFaction); // yaml fucking sucks!!!

@@ -313,7 +313,7 @@ public sealed partial class ZombieSystem
             // SIS-ChatGreeting Start
             var proto = _prototype.Index(InitialInfectedAntag);
             var entry = _greeting.CreateGreetingEntry("zombie-", proto.Briefing);
-            _antag.SendBriefing(session, entry, zombiecomp.GreetSoundNotification);
+            _antag.SendBriefing(session, entry);
             // SIS-ChatGreeting End
 
             // Notificate player about new role assignment

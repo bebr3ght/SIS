@@ -100,7 +100,7 @@ public sealed partial class DevilRuleSystem : GameRuleSystem<DevilRuleComponent>
 
         (string, object)[] args = [("trueName", devilComp.TrueName), ("playerName", Name(uid))];
         var entry = _greeting.CreateGreetingEntry("devil-", proto.Briefing, args);
-        _antag.SendBriefing(uid, entry, proto.Briefing?.Sound);
+        _antag.SendBriefing(uid, entry);
     }
     // SIS-ChatGreeting End
 }

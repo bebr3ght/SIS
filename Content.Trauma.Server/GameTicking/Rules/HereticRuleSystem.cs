@@ -108,7 +108,7 @@ public sealed partial class HereticRuleSystem : GameRuleSystem<HereticRuleCompon
         {
             // SIS-ChatGreeting Start
             var entry = _greeting.CreateGreetingEntry("heretic-", proto.Briefing);
-            _antag.SendBriefing(target, entry, BriefingSound);
+            _antag.SendBriefing(target, entry);
             // SIS-ChatGreeting End
         }
 

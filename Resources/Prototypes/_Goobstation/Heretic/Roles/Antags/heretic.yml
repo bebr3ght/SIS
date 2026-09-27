@@ -47,6 +47,7 @@
   jobBlacklist: [ Chaplain ]
   # SIS-ChatGreeting Start
   briefing:
+    sound: /Audio/_Goobstation/Heretic/Ambience/Antag/Heretic/heretic_gain.ogg
     theme:
       titleBackground: "#1a0e24"
       titleBorder: "#9b59b6"

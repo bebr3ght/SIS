@@ -56,7 +56,7 @@ public sealed partial class ShadowlingThrallSystem : EntitySystem
         // SIS-ChatGreeting Start
         var proto = _proto.Index(ShadowlingAntag);
         var entry = _greeting.CreateGreetingEntry("thrall-", proto.Briefing);
-        _antag.SendBriefing(uid, entry, component.ThrallConverted);
+        _antag.SendBriefing(uid, entry);
         // SIS-ChatGreeting End
     }
 

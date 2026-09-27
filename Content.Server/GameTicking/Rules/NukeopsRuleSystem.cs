@@ -622,7 +622,7 @@ public sealed partial class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleCompon
 
         // SIS-ChatGreeting Start
         var entry = MakeChatBriefingEntry(ent.Comp, target, Name(ent), args.Def);
-        _antag.SendBriefing(args.Session, entry, ent.Comp.GreetSoundNotification);
+        _antag.SendBriefing(args.Session, entry);
         // SIS-ChatGreeting End
     }
 

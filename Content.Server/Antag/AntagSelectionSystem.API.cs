@@ -12,7 +12,6 @@ using Robust.Shared.Audio;
 using Robust.Shared.Enums;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
-using Content.SIS.Common.ChatBriefing;
 
 namespace Content.Server.Antag;
 

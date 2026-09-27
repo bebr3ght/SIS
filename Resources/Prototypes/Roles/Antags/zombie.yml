@@ -33,18 +33,12 @@
       messageBorder: "#38163b"
       titleText: "#ffffff"
       messageText: Plum
-      highlight: "#00FF7F"
+      messageHighlight1: "#00FF7F"
     sections:
-    - priority: 0
-      title:
-        text: role-greeting-title
-      message:
-        text: zombie-patientzero-role-greeting
-    - priority: 1
-      title:
-        text: role-greeting-desc
-      message:
-        text: zombie-patientzero-role-greeting-desc
+    - title: role-greeting-title
+      message: zombie-patientzero-role-greeting
+    - title: role-greeting-desc
+      message: zombie-patientzero-role-greeting-desc
     # SIS-ChatGreeting End
   components:
   - type: PendingZombie #less time to prepare than normal

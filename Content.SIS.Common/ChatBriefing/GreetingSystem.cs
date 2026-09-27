@@ -1,4 +1,5 @@
 using System.Linq;
+using Robust.Shared.Audio;
 
 namespace Content.SIS.Common.ChatBriefing;
 
@@ -7,7 +8,13 @@ public sealed class GreetingSystem : EntitySystem
     private static readonly Color ColorFallback = Color.White;
     private static readonly Color BackgroundColorFallback = Color.Black;
 
-    public GreetingEntry CreateGreetingEntry(string localePrefix, GreetingTheme? theme, params (string, object)[]? args)
+    #region Greeting Entry
+
+    public GreetingEntry CreateGreetingEntry(
+        string localePrefix,
+        GreetingTheme? theme,
+        SoundSpecifier? sound,
+        params (string, object)[]? args)
     {
         var resolvedTheme = theme ?? new GreetingTheme();
 
@@ -20,12 +27,29 @@ public sealed class GreetingSystem : EntitySystem
         var greetingTitle = Loc.GetString($"{localePrefix}role-greeting", [.. args ?? [], ("hl1", messageHl1), ("hl2", messageHl2)]);
         var greetingDesc = Loc.GetString($"{localePrefix}role-greeting-desc", ("hl1", messageHl1), ("hl2", messageHl2));
 
-        var entry = new GreetingEntry { Theme = resolvedTheme };
+        var entry = new GreetingEntry
+        {
+            Theme = resolvedTheme,
+            Sound = sound,
+        };
+
         entry.AddSection(Loc.GetString("role-greeting-title", ("hl1", titleHl1), ("hl2", titleHl2)), greetingTitle, 0);
         entry.AddSection(Loc.GetString("role-greeting-desc", ("hl1", titleHl1), ("hl2", titleHl2)), greetingDesc, 1);
 
         return entry;
     }
+
+    public GreetingEntry CreateGreetingEntry(string localePrefix, GreetingTheme? theme, params (string, object)[]? args)
+    {
+        return CreateGreetingEntry(localePrefix, theme, null, args);
+    }
+
+    public GreetingEntry CreateGreetingEntry(string localePrefix, GreetingEntry? oldEntry, params (string, object)[]? args)
+    {
+        return CreateGreetingEntry(localePrefix, oldEntry?.Theme, oldEntry?.Sound, args);
+    }
+
+    #endregion
 
     /// <summary>
     /// Builds a formatted markup string from a ChatBriefingEntry using TitleBoxes and MessageBoxes.

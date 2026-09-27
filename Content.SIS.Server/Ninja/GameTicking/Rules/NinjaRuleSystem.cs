@@ -12,7 +12,7 @@ public sealed partial class NinjaRuleSystem : GameRuleSystem<NinjaRuleComponent>
 {
     [Dependency] private AntagSelectionSystem _antag = default!;
     [Dependency] private IRobustRandom _random = default!;
-    [Dependency] private GreetingSystem _greeting = default!; // SIS-ChatGreeting
+    [Dependency] private GreetingSystem _greeting = default!;
 
     public override void Initialize()
     {
@@ -20,10 +20,11 @@ public sealed partial class NinjaRuleSystem : GameRuleSystem<NinjaRuleComponent>
 
         SubscribeLocalEvent<NinjaRuleComponent, AfterAntagEntitySelectedEvent>(OnSelectAntag);
     }
+
     private void OnSelectAntag(Entity<NinjaRuleComponent> ent, ref AfterAntagEntitySelectedEvent args)
     {
         var station = ent.Comp.TargetStation != null ? Name(ent.Comp.TargetStation.Value) : "the station";
-        var entry = _greeting.CreateGreetingEntry("ninja-", args.Def.Briefing?.Theme, ("station", station));
+        var entry = _greeting.CreateGreetingEntry("ninja-", args.Def.Briefing, ("station", station));
         _antag.SendBriefing(args.EntityUid, entry);
     }
 

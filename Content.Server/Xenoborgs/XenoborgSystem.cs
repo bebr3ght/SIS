@@ -10,6 +10,7 @@ using Content.Shared.Roles;
 using Content.Shared.Roles.Components;
 using Content.Shared.Silicons.Borgs.Components;
 using Content.Shared.Xenoborgs.Components;
+using Content.SIS.Common.ChatBriefing;
 using Robust.Shared.Audio;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
@@ -22,7 +23,10 @@ public sealed partial class XenoborgSystem : EntitySystem
     [Dependency] private BorgSystem _borg = default!;
     [Dependency] private SharedRoleSystem _roles = default!;
     [Dependency] private XenoborgsRuleSystem _xenoborgsRule = default!;
-    [Dependency] private IPrototypeManager _proto = default!; // SIS-ChatBriefing
+    // SIS-ChatBriefing Start
+    [Dependency] private IPrototypeManager _proto = default!;
+    [Dependency] private GreetingSystem _greeting = default!;
+    // SIS-ChatBriefing End
 
     private static readonly ProtoId<AntagSpecifierPrototype> XenoborgAntag = "Xenoborg"; // SIS-ChatBriefing
 
@@ -89,7 +93,8 @@ public sealed partial class XenoborgSystem : EntitySystem
 
         // SIS-ChatBriefing Start
         var proto = _proto.Index(XenoborgAntag);
-        _antag.SendBriefing(ent, proto.Briefing);
+        var entry = _greeting.CreateGreetingEntry("xenoborgs-", proto.Briefing);
+        _antag.SendBriefing(ent, entry);
         // SIS-ChatBriefing End
     }
 

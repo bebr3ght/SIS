@@ -2,7 +2,6 @@ roles-antag-vampire-name = Vampire
 roles-antag-vampire-objective = Suck the blood of the crew, and reach full power.
 
 # SIS-Start
-## --- Vampire Greeting ---
 vampire-role-greeting =
     Вы [gradient angle="65" spread="65" color1="{$hl1}" color2="{$hl2}" speed="1.5"]Вампир[/gradient], бессмертное дитя ночи и повелитель крови.
     Древний голод пробудился в ваших венах. Ваша цель: [gradient angle="65" spread="65" color1="{$hl1}" color2="{$hl2}" speed="1.2"]насытиться кровью экипажа[/gradient] и вернуть былое могущество.

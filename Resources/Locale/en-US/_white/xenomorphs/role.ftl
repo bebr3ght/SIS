@@ -3,7 +3,6 @@ xenomorph-round-end-agent-name = [color=#8c3986]Xenomorph[/color]
 objective-issuer-xenomorph-hive = [color=#8c3986]The Xenomorph Hive[/color]
 
 # SIS-Start
-## --- Xenomorph Greeting ---
 xenomorph-role-greeting =
     Вы {"["}gradient angle="45" color1="{$hl1}" color2="{$hl2}" speed="1"]Ксеноморф[/gradient], совершенный биологический хищник!
     Ваша цель - расширять колонию, оплетать станцию смолой и [color={$hl1}]истребить всех гуманоидов[/color].

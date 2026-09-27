@@ -2,7 +2,6 @@ xenoborgs-title = Xenoborgs
 xenoborgs-description = A Xenoborg Mothership was detected near the station. Stop them from turning every sentient being into a xenoborg.
 
 # SIS-Start
-## --- Xenoborgs & Mothership Core Greeting ---
 mothership-greeting =
     Инициализация завершена.
     Вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Материнское Ядро[/gradient].

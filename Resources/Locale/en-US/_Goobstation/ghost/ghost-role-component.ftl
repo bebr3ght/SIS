@@ -112,6 +112,7 @@ tide-objective-condition-kill-everyone-else-title = Robust everyone.
 
 ghost-role-information-tunnel-clown-name = Tunnel Clown
 ghost-role-information-tunnel-clown-description = A clown gang member whos made their home in maintenance.
+
 # SIS-Start
 tunnel-clown-role-greeting =
     Техотсеки станции - ваш дом, ваш цирк и ваша персональная скотобойня. Годами вы прятались по шкафчикам от офицеров СБ, но терпение лопнуло.
@@ -123,6 +124,7 @@ tunnel-clown-role-greeting-desc =
     • [color={$hl1}]Засады во мраке:[/color] используйте банановую кожуру, мыло, клаксоны и холодное оружие для молниеносных нападений.
     • [color={$hl1}]Кровавый цирк:[/color] ваши цели указаны в меню персонажа. ХОНК!
 # SIS-End
+
 tunnel-clown-objective-maints-slasher-desc = This stations maintenance has been your home for as long as you can remember, hiding from the crew in lockers is all that you knew until now. Thoses station goers have invaded your home for the last time, kill anyone who dares to distrupt your home.
 tunnel-clown-objective-condition-maints-slasher-title = Protect maintenance.
 tunnel-clown-business-card = Tunnel Clown, licensed to kill.
@@ -145,6 +147,7 @@ singuloth-knight-role-greeting-desc =
 
 ghost-role-information-dark-lord-name = Dark Lord
 ghost-role-information-dark-lord-description = A syndicate agent themed after a sith lord, use your lightning powers and energy sword to complete your objectives!
+
 # SIS-Start
 dark-lord-role-greeting =
     Тёмная сторона могущества пульсирует в ваших жилах. [gradient color1="{$hl1}" color2="{$hl2}" speed="1.2"]Синдикат[/gradient] призвал вас, чтобы сломить волю экипажа и сокрушить станцию.
@@ -159,6 +162,7 @@ dark-lord-role-greeting-desc =
 
 ghost-role-information-chosen-one-name = The Chosen One
 ghost-role-information-chosen-one-description = A special agent sent to the station by Nanotrasen to defeat a dark lord.
+
 # SIS-Start
 chosen-one-role-greeting =
     Великое равновесие нарушено. Тьма сгущается над станцией, и древнее пророчество призывает вас к исполнению своего долга.
@@ -170,6 +174,7 @@ chosen-one-role-greeting-desc =
     • [color={$hl1}]Сила Света:[/color] используйте телекинетический толчок, рывок и защитные барьеры, чтобы пробивать оборону врага и защищать невинных.
     • [color={$hl1}]Великая Дуэль:[/color] ваша главная цель — разыскать и уничтожить [color={$hl1}]Тёмного Лорда[/color] в честном бою. Судьба сектора в ваших руках!
 # SIS-End
+
 objective-condition-dark-lord-kill-title = Ensure Dark Lord {$targetName} dies.
 
 ghost-role-information-mime-Assassin-name = Mime Assassin
@@ -189,6 +194,7 @@ mime-assassin-role-greeting-desc =
 
 ghost-role-information-dark-priest-name = Dark Priest
 ghost-role-information-dark-priest-description = An agent of the dark gods, sent to kill someone, protect someone and hire someone who has roused their interest as their apprentice, Carries the "blessing of the reaper".
+
 # SIS-Start
 dark-priest-role-greeting =
     Шёпот Тёмных Богов направляет каждый ваш шаг. Смертные слепы в своей суете, но вам открыты предначертанные судьбы экипажа.
@@ -200,11 +206,13 @@ dark-priest-role-greeting-desc =
     • [color={$hl1}]Благословение Жреца:[/color] используйте тёмные дары и защитные чары для поддержки союзников и сокрушения врагов.
     • [color={$hl1}]Священная миссия:[/color] ваши точные цели и имя будущего ученика указаны в меню персонажа.
 # SIS-End
+
 objective-condition-other-alive-title = Ensure crew member {$targetName}, {CAPITALIZE($job)} stays alive.
 objective-issuer-self = [color=#7851A9]For your own interests[/color]
 
 ghost-role-information-vox-raider-name = Vox Raider
 ghost-role-information-vox-raider-description = Vox that swear their loyalty to the Shoal. It is unclear what their intentions or whether they plan on trading or thieving from the station. It is always best to use caution when they show up.
+
 # SIS-Start
 vox-raider-role-greeting =
     Крики Стаи звенят в вашем сознании! Пыльная станция людей полна блестящих сокровищ и ценных технологий.
@@ -225,6 +233,7 @@ ghost-role-information-slasher-token = The Slasher (Token)
 ghost-role-information-contractor-name = Syndicate Contractor
 ghost-role-information-contractor-token = Syndicate Contractor (Token)
 ghost-role-information-contractor-description = GET DA... tider..?
+
 # SIS-Start
 contractor-role-greeting =
     Вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Элитный Контрактор[/gradient] на службе Синдиката!

@@ -6,7 +6,6 @@ objective-issuer-slaughter-satan = [color=#FF0000]Satan[/color]
 objective-issuer-slaughter-bubblegum = [color=#9F2B68]Bubblegum[/color]
 objective-issuer-slaughter-devil = [color=#FFC0CB]Devil[/color]
 # SIS-Start
-## --- Slaughter Demon Greeting ---
 slaughter-role-greeting =
     {"["}gradient color1="{$hl1}" color2="{$hl2}" speed="2"]КРОВЬ! КИШКИ! РЕЗНЯ![/gradient]
     Вы [color={$hl2}]Демон Резни[/color], воплощение слепой первобытной бойни из глубин Ада! Ваша утроба воет от голода, а когти жаждут вскрывать грудные клетки!
@@ -23,7 +22,6 @@ slaughter-role-greeting-desc =
     • [color={$hl2}]Кровавый вихрь:[/color]
     Вылетая из лужи, ты мчишься как смертоносный ураган!
 
-## --- Laughter Demon Greeting ---
 laughter-role-greeting =
     {"["}rainbow speed="0.5" sat="0.5"]АХАХАХАХАХАХАХАХАХА![/rainbow]
     {"      ["}rainbow speed="0.5" sat="0.5"]>> Вы ДЕМОН СМЕХА! <<[/rainbow]

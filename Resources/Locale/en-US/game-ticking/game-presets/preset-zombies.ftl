@@ -17,8 +17,8 @@ zombieteors-description = The undead have been unleashed on the station amid a c
 
 zombie-not-enough-ready-players = Not enough players readied up for the game! There were {$readyPlayersCount} players readied up out of {$minimumPlayers} needed. Can't start Zombies.
 zombie-no-one-ready = No players readied up! Can't start Zombies.
+
 # SIS-Start
-## --- PatientZero Greeting ---
 zombie-patientzero-role-greeting =
     Вы [color={$hl1}]Нулевой Пациент[/color]!
     В вашем теле созревает мутировавший штамм зомби-вируса.
@@ -34,6 +34,7 @@ zombie-patientzero-role-briefing =
     В вашем теле созревает мутировавший штамм зомби-вируса.
     Ваша цель: захватить станцию, обратив весь экипаж в живых мертвецов.
 # SIS-End
+
 zombie-healing = В
 
 zombie-healing = You feel a stirring in your flesh

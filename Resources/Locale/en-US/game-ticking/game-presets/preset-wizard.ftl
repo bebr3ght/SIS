@@ -41,7 +41,6 @@ roles-antag-wizard-name = Wizard
 roles-antag-wizard-objective = Teach them a lesson they'll never forget.
 
 # SIS-Start
-## --- Wizard Greeting ---
 wizard-role-greeting =
     {"["}gradient angle="45" color1="{$hl1}" color2="{$hl2}" speed="1"]Время магии, ублюдки![/gradient]
     Отношения между [color={$hl1}]Федерацией Космических Магов[/color] и [color={$hl1}]NanoTrasen[/color] накалились до предела.
@@ -55,6 +54,7 @@ wizard-role-greeting-desc =
     • [color={$hl1}]Свобода хаоса:[/color] обратите станцию в пепелище или устройте безумный цирк — ваш арсенал ограничен лишь запасом маны и фантазией.
     • [color={$hl1}]Главный наказ:[/color] Совет ожидает вашего триумфального возвращения. Разнесите этот сектор, но [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]вернитесь назад живым[/gradient]!
 # SIS-End
+
 wizard-round-end-name = wizard
 
 ## TODO: Wizard Apprentice (Coming sometime post-wizard release)

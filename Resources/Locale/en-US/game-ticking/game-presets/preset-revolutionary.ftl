@@ -18,13 +18,13 @@ roles-antag-rev-head-name = Head Revolutionary
 roles-antag-rev-head-objective = Your objective is to take over the station by converting people to your cause and eliminating all members of Command.
 
 ## Trauma - rewrote
+
 # SIS-Start
-## --- HeadRev Greeting ---
 head-rev-role-greeting =
     Вы [color={$hl1}]Глава Революции[/color]!
     Ваша главная цель: свергнуть тиранию [color={$hl1}]NanoTrasen[/color] и [color={$hl1}]устранить весь командный состав[/color] станции любыми средствами.
 
-head-rev-role-desc =
+head-rev-role-greeting-desc =
     • [color={$hl1}]Вербуйте сторонников:[/color] используйте своё снаряжение, чтобы обращать членов экипажа на сторону восстания.
     • [color={$hl1}]Ограничения:[/color] обращение не сработает на тех, кто носит [color={$hl1}]защиту для глаз[/color] (очки/маски) или имеет имплант [color={$hl1}]«Щит Разума»[/color].
     • [color={$hl1}]Берегите лидеров:[/color] если все Главы Революции погибнут - восстание будет подавлено, а все обращенные вернутся к обычной работе.

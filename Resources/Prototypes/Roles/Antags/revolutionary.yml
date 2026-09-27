@@ -41,7 +41,7 @@
     - title: role-greeting-title
       message: head-rev-role-greeting
     - title: role-greeting-desc
-      message: head-rev-role-desc
+      message: head-rev-role-greeting-desc
     # SIS-ChatGreeting End
   startingGear: HeadRevGear
   components:

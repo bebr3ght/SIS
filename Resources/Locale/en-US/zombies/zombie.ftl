@@ -10,14 +10,14 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 zombie-transform = {CAPITALIZE(THE($target))} turned into a zombie!
+
 # SIS-Start
-## --- Zombie Greeting ---
-zombie-infection-greeting =
+zombie-role-greeting =
     Ваша смертная плоть погибла, но вы восстали как [color={$hl1}]Зомби[/color]!
     Ваш разум поглощен голодом.
     Ваша цель: [color={$hl1}]охотиться на живых[/color] и заражать их, пополняя ряды орды.
 
-zombie-infection-desc =
+zombie-role-greeting-desc =
     • [color={$hl1}]Координация:[/color] держитесь вместе с другими зомби и защищайте [color={$hl1}]Нулевых Пациентов[/color] — ваших прародителей и лидеров.
     • [color={$hl1}]Заражение:[/color] атакуйте выживших когтями и зубами, разнося вирус по всей станции.
     • [color={$hl1}]Конец человечества:[/color] не дайте экипажу спастись на шаттле и обратите станцию в царство мертвых!

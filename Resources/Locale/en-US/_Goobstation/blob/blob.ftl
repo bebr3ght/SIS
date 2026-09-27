@@ -91,7 +91,6 @@ blob-carrier-role-desc =  A blob-infected creature.
 blob-carrier-role-rules = You are an antagonist. You have 10 minutes before you transform into a blob.
                         Use this time to find a safe spot on the station. Keep in mind that you will be very weak right after the transformation.
 # SIS-Start
-## --- Blob Carrier Greeting ---
 blob-carrier-role-greeting =
     Вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Носитель Блоба[/gradient]!
     В вашем теле дремлет космический паразит 5-го уровня биоугрозы.
@@ -115,12 +114,11 @@ blob-health-alert-desc = Your core's health. You will die if it reaches zero.
 
 # Greeting
 # SIS-Start
-## --- Blob Role Greeting ---
 blob-role-greeting =
     Вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Ядро Блоба[/gradient], сверхорганическая космическая биомасса!
     Ваша цель — поглотить станцию и достичь [gradient color1="{$hl1}" color2="{$hl2}" speed="1.2"]критической массы[/gradient].
 
-blob-role-desc =
+blob-role-greeting-desc =
     • [color={$hl1}]Защита:[/color] улучшайте обычные клетки в усиленные (защита от пуль) и отражающие (защита от лазеров) через Alt+ЛКМ.
     • [color={$hl1}]Экономика:[/color] стройте ресурсные клетки и фабрики [color={$hl1}]рядом с Узлами или Ядром[/color].
     • [color={$hl1}]Коллективный разум:[/color] используйте [color={$hl1}]+[/color] или [color={$hl1}]+e[/color] в чате для командования подчинёнными.

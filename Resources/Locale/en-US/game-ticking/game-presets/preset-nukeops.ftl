@@ -2,7 +2,6 @@ nukeops-title = Nuclear Operatives
 nukeops-description = Nuclear operatives have targeted the station. Try to keep them from arming and detonating the nuke by protecting the nuke disk!
 
 # SIS-Start
-## --- Nukeops Greeting ---
 nukeops-role-greeting =
     Вы [color={$hl1}]Ядерный Оперативник[/color].
     Ваша задача — взорвать [color={$hl1}]{ $station }[/color] и убедиться, что от неё осталась лишь груда обломков.
@@ -15,6 +14,7 @@ nukeops-role-greeting-desc =
 
     {"["}color={$hl1}]Начинайте миссию.[/color]
 # SIS-End
+
 nukeops-briefing = Your objectives are simple. Deliver the payload and get out before the payload detonates. Begin mission.
 
 nukeops-opsmajor = [color=crimson]Syndicate major victory![/color]

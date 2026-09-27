@@ -1,5 +1,4 @@
 # SIS-Start
-## --- Morph Briefing ---
 morph-role-greeting =
     Вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Морф[/gradient], аморфное существо из потустороннего мира!
     Ваш вид прибыл на эту станцию в сезон спаривания.

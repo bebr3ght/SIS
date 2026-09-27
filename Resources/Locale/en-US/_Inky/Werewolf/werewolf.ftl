@@ -5,8 +5,8 @@ werewolf-beckon-message = {$name} beckons the pack to {$location}.
 role-subtype-werewolf = Werewolf
 roles-antag-werewolf-name = Werewolf
 roles-antag-werewolf-desc = Whether by infection or hereditary genes, you’ve been given the curse and/or gift of Lycanthropy! Aren’t you special?
+
 # SIS-Start
-## --- Werewolf Greeting ---
 werewolf-role-greeting =
     {"["}gradient angle="45" color1="{$hl1}" color2="{$hl2}" speed="1"]В вашей крови проснулся древний зверь![/gradient]
     Вы поражены проклятием [color={$hl1}]Ликантропии[/color]. Ваше человеческое тело лишь маскировка.
@@ -20,6 +20,7 @@ werewolf-role-greeting-desc =
     - [color={$hl1}]Белый Волк:[/color] инквизитор Бездны, охотящийся на других оборотней святыми серебряными когтями.
     • [color={$hl1}]Скрытность:[/color] в человеческом облике действуйте скрытно — серебро и оружие службы безопасности смертельны!
 # SIS-End
+
 werewolf-round-end-summary = {$name} was a werewolf, who has bit {$points} amount of people.
 
 werewolf-action-fail-hunger = You are too hungry to do that right now.

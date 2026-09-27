@@ -5,7 +5,6 @@ ghost-role-information-wraith-rules =  You are a [color=red]Solo Antagonist[/col
 wraith-round-end-agent-name = Wraith
 
 # SIS-Start
-## --- Wraith Greeting ---
 wraith-role-greeting =
     Вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Фантом[/gradient], мстительный астральный дух, вырванный из глубин Пустоты!
     Ваш разум пылает ненавистью. Превратите станцию в могильник, стравите экипаж и отомстите живым за своё заточение.

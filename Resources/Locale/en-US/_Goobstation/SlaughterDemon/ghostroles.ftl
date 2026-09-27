@@ -1,4 +1,5 @@
 ghost-role-information-slaughter-demon-name = Slaughter Demon
+
 # SIS-Start
 ghost-role-information-slaughter-demon-description =
     ЖАТВА! ЖАТВА! ЖАТВА!

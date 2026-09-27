@@ -1,7 +1,6 @@
 shadow-demon-round-end-agent-name = shadow demon
 
 # SIS-Start
-## --- Shadow Demon Greeting ---
 shadow-demon-role-greeting =
     Вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Теневой Демон[/gradient]!
     Смертоносный хищник-засадник, сотканный из первородного мрака. Ваша стихия - темнота, дарующая вам огромную скорость и мгновенную регенерацию ран.

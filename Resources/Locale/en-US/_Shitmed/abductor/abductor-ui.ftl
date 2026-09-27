@@ -52,7 +52,6 @@ objective-condition-abduct-title = Perform {$count} experiments
 objective-condition-abduct-description = You need to complete experiments on the earthlings using your experiment tablet. Each step you complete counts.
 
 # SIS-Start
-## --- Abductor Greeting ---
 abductor-role-greeting =
     {"["}gradient angle="135" spread="35" color1="{$hl1}" color2="{$hl2}" speed="1.8"]Вы Абдуктор, ведущий исследователь высшей цивилизации.[/gradient]
     Примитивные земляне послужат материалом для великих открытий. Ваша задача: [gradient angle="45" spread="60" color1="{$hl1}" color2="{$hl2}" speed="1.2"]похищать людей[/gradient], заменять их органы на экспериментальные устройства и возвращать живыми.
@@ -67,7 +66,6 @@ abductor-role-greeting-desc =
 roles-antag-abductor-objective = Kidnap and brainwash station crew and perform your experiments on them!
 
 # SIS-Start
-## --- Abductor Victim Greeting ---
 abductor-victim-role-greeting =
     {"["}gradient angle="60" spread="40" color1="{$hl1}" color2="{$hl2}" speed="2.2"]Они существуют... Они были здесь.[/gradient]
     Вас похитили серые гуманоиды с летающей тарелки и провели над вами нечестивые вивисекции. Внутри вашего тела [gradient angle="90" spread="50" color1="{$hl1}" color2="{$hl2}" speed="1.5"]что-то неестественно пульсирует...[/gradient]

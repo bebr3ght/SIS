@@ -13,7 +13,6 @@ shadowling-description = The shadow is the greatest teacher for how to come to t
 shadowling-round-end-name = shadowling
 
 # SIS-Start
-## --- Shadowling Greeting ---
 shadowling-role-greeting =
     Человеческое тело было лишь временным инкубатором. Фальшивая плоть трескается, выпуская наружу истинную сущность.
     Вы [gradient angle="45" spread="50" color1="{$hl1}" color2="{$hl2}" speed="1"]Тенеморф[/gradient], древний хищник из глубин звёздной пустоты. Сбросьте кокон и подготовьте станцию к своему [gradient angle="135" spread="75" color1="{$hl1}" color2="{$hl2}" speed="1.2"]Вознесению[/gradient]!
@@ -28,7 +27,6 @@ shadowling-role-greeting-short =
     You are a shadowling who has awakened in the body of {$name}.
 
 # SIS-Start
-## --- Thrall Greeting ---
 thrall-role-greeting =
     [gradient angle="90" spread="45" color1="{$hl1}" color2="{$hl2}" speed="0.8"]Ваш разум поглощён и перестроен Тенеморфом.[/gradient]
     Вы — [gradient angle="45" spread="50" color1="{$hl1}" color2="{$hl2}" speed="1"]Тралл[/gradient], живой щит и верный раб своего хозяина. Прежняя личность растворилась во тьме — осталась лишь священная воля создателя.

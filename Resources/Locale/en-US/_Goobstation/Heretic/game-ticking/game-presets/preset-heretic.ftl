@@ -20,7 +20,6 @@ heretic-gamemode-description =
     Dimensional anomaly detected within the station. There is no additional data.
 
 # SIS-Start
-## --- Heretic Greeting ---
 heretic-role-greeting-fluff =
     Дни бренного существования сочтены. Реальность [color={$hl1}]трещит по швам[/color], обнажая сокрытое.
     Вы заглянули за край смертного восприятия - и [color={$hl1}]Бездна[/color] ответила взаимностью. Врата [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Мансуса[/gradient] распахнулись, наполняя разум запретным знанием.

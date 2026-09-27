@@ -8,7 +8,6 @@ honkops-title = Honklear Operatives
 honkops-description = Honklear operatives have targeted the station. Try to keep them from arming and detonating the nuke by protecting the nuke disk!
 
 # SIS-Start
-## --- Honkops Greeting ---
 honkops-role-greeting =
     Командование [gradient color1="{$hl1}" color2="{$hl2}"]Синдиката[/gradient] доверило красную кнопку тем, кто понимает истинную природу хаоса.
     Вы - [gradient color1="{$hl1}" color2="{$hl2}"]Хонк-Оперативник[/gradient].

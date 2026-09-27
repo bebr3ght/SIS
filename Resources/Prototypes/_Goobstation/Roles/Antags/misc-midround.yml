@@ -77,25 +77,19 @@
   briefing:
     sound: /Audio/_Goobstation/Misc/singulothknight_greeting.ogg
     theme:
-      titleBackground: "#150d1e"   # Гравитационная сингулярность
-      titleBorder: "#7c3aed"       # Фиолетовый горизонт событий
-      messageBackground: "#08050d" # Черная дыра
-      messageBorder: "#29153d"     # Кайма искривления пространства
-      titleText: "#c084fc"         # Светящийся аметистовый гравитон
-      messageText: "#dcd6e8"       # Пепельно-стальной цвет
-      highlight1: "#c084fc"        # Гравитонный фиолетовый
-      highlight2: "#38bdf8"        # Черенковская лазурь
+      titleBackground: "#150d1e"
+      titleBorder: "#7c3aed"
+      messageBackground: "#08050d"
+      messageBorder: "#29153d"
+      titleText: "#c084fc"
+      messageText: "#dcd6e8"
+      messageHighlight1: "#c084fc"
+      messageHighlight2: "#38bdf8"
     sections:
-    - priority: 0
-      title:
-        text: role-greeting-title
-      message:
-        text: singuloth-knight-role-greeting
-    - priority: 1
-      title:
-        text: role-greeting-desc
-      message:
-        text: singuloth-knight-role-greeting-desc
+    - title: role-greeting-title
+      message: singuloth-knight-role-greeting
+    - title: role-greeting-desc
+      message: singuloth-knight-role-greeting-desc
 
 - type: startingGear
   id: SingulothKnightsAntagGear
@@ -122,25 +116,19 @@
   briefing:
     sound: /Audio/_Goobstation/Misc/darklord_greeting.ogg
     theme:
-      titleBackground: "#1a0a0d"   # Глубокий обсидиановый доспех
-      titleBorder: "#e71d36"       # Алый световой клинок
-      messageBackground: "#0d0507" # Тьма за забралом шлема
-      messageBorder: "#381218"     # Тёмный костяной титан
-      titleText: "#ff6b81"         # Светящийся багрянец
-      messageText: "#dcd6d8"       # Пепельно-титановая броня
-      highlight1: "#ff6b81"        # Багровый луч
-      highlight2: "#e71d36"        # Алое пламя Тёмной Стороны
+      titleBackground: "#1a0a0d"
+      titleBorder: "#e71d36"
+      messageBackground: "#0d0507"
+      messageBorder: "#381218"
+      titleText: "#ff6b81"
+      messageText: "#dcd6d8"
+      messageHighlight1: "#ff6b81"
+      messageHighlight2: "#e71d36"
     sections:
-    - priority: 0
-      title:
-        text: role-greeting-title
-      message:
-        text: dark-lord-role-greeting
-    - priority: 1
-      title:
-        text: role-greeting-desc
-      message:
-        text: dark-lord-role-greeting-desc
+    - title: role-greeting-title
+      message: dark-lord-role-greeting
+    - title: role-greeting-desc
+      message: dark-lord-role-greeting-desc
 
 - type: startingGear
   id: DarkLordAntagGear
@@ -166,25 +154,19 @@
   briefing:
     sound: /Audio/_Goobstation/Misc/darklord_greeting.ogg
     theme:
-      titleBackground: "#14171f"   # Тёмный звёздный титан
-      titleBorder: "#e2e8f0"       # Сияющая платиновая рамка Света
-      messageBackground: "#0b0c10" # Ночной обсидиан
-      messageBorder: "#2d3748"     # Матовая стальная кайма
-      titleText: "#ffffff"         # Чистый белый свет
-      messageText: "#e2e8f0"       # Светлое платиновое серебро
-      highlight1: "#ffffff"        # Чистый свет Силы
-      highlight2: "#93c5fd"        # Мягкий небесный отблеск
+      titleBackground: "#14171f"
+      titleBorder: "#e2e8f0"
+      messageBackground: "#0b0c10"
+      messageBorder: "#2d3748"
+      titleText: "#ffffff"
+      messageText: "#e2e8f0"
+      messageHighlight1: "#ffffff"
+      messageHighlight2: "#93c5fd"
     sections:
-    - priority: 0
-      title:
-        text: role-greeting-title
-      message:
-        text: chosen-one-role-greeting
-    - priority: 1
-      title:
-        text: role-greeting-desc
-      message:
-        text: chosen-one-role-greeting-desc
+    - title: role-greeting-title
+      message: chosen-one-role-greeting
+    - title: role-greeting-desc
+      message: chosen-one-role-greeting-desc
 
 - type: startingGear
   id: ChosenOneProtagGear
@@ -206,25 +188,19 @@
   briefing:
     sound: /Audio/Misc/thief_greeting.ogg
     theme:
-      titleBackground: "#16181a"   # Матовый оружейный графит
-      titleBorder: "#475569"       # Холодная сталь глушителя
-      messageBackground: "#0a0b0d" # Глухая ночная тишина
-      messageBorder: "#23272f"     # Сланцевая кайма
-      titleText: "#e2e8f0"         # Полированная платина
-      messageText: "#94a3b8"       # Пепельно-серый шёпот (НЕ БЕЛЫЙ)
-      highlight1: "#ff3838"        # Бесшумный алый выстрел
-      highlight2: "#b91c1c"        # Запёкшаяся кровь
+      titleBackground: "#16181a"
+      titleBorder: "#475569"
+      messageBackground: "#0a0b0d"
+      messageBorder: "#23272f"
+      titleText: "#e2e8f0"
+      messageText: "#94a3b8"
+      messageHighlight1: "#ff3838"
+      messageHighlight2: "#b91c1c"
     sections:
-    - priority: 0
-      title:
-        text: role-greeting-title
-      message:
-        text: mime-assassin-role-greeting
-    - priority: 1
-      title:
-        text: role-greeting-desc
-      message:
-        text: mime-assassin-role-greeting-desc
+    - title: role-greeting-title
+      message: mime-assassin-role-greeting
+    - title: role-greeting-desc
+      message: mime-assassin-role-greeting-desc
 
 - type: startingGear
   id: MimeAssassinGear
@@ -265,25 +241,20 @@
   briefing:
     sound: /Audio/_Goobstation/Heretic/Ambience/Antag/Heretic/heretic_gain.ogg
     theme:
-      titleBackground: "#190d24"   # Глубокий чернильный аметист
-      titleBorder: "#9333ea"       # Тёмно-фиолетовое святилище
-      messageBackground: "#0c0612" # Алтарь Бездны
-      messageBorder: "#2c1240"     # Кайма тёмного благословения
-      titleText: "#d8b4fe"         # Светящийся пепельный аметист
-      messageText: "#e2d9f3"       # Мягкий сумеречный (НЕ БЕЛЫЙ)
-      highlight1: "#c084fc"        # Аметистовая сила
-      highlight2: "#a855f7"        # Тёмный пурпур
+      titleBackground: "#190d24"
+      titleBorder: "#9333ea"
+      messageBackground: "#0c0612"
+      messageBorder: "#2c1240"
+      titleText: "#d8b4fe"
+      messageText: "#e2d9f3"
+      messageHighlight1: "#c084fc"
+      messageHighlight2: "#a855f7"
     sections:
-    - priority: 0
-      title:
-        text: role-greeting-title
-      message:
-        text: dark-priest-role-greeting
+    - title: role-greeting-title
+      message: dark-priest-role-greeting
     - priority: 1
-      title:
-        text: role-greeting-desc
-      message:
-        text: dark-priest-role-greeting-desc
+    - title: role-greeting-desc
+      message: dark-priest-role-greeting-desc
 
 - type: startingGear
   id: DarkPriestAntagGear
@@ -317,25 +288,19 @@
   briefing:
     sound: /Audio/Misc/thief_greeting.ogg
     theme:
-      titleBackground: "#131f1c"   # Тёмный азотный сплав
-      titleBorder: "#14b8a6"       # Азотно-бирюзовый визор
-      messageBackground: "#081210" # Трюм челнока воксов
-      messageBorder: "#1c3832"     # Игольчатая кайма
-      titleText: "#5eead4"         # Бирюзовое перо
-      messageText: "#ccfbf1"       # Азотный туман (НЕ БЕЛЫЙ)
-      highlight1: "#f59e0b"        # Золото добычи
-      highlight2: "#14b8a6"        # Бирюзовый янтарь стаи
+      titleBackground: "#131f1c"
+      titleBorder: "#14b8a6"
+      messageBackground: "#081210"
+      messageBorder: "#1c3832"
+      titleText: "#5eead4"
+      messageText: "#ccfbf1"
+      messageHighlight1: "#f59e0b"
+      messageHighlight2: "#14b8a6"
     sections:
-    - priority: 0
-      title:
-        text: role-greeting-title
-      message:
-        text: vox-raider-role-greeting
-    - priority: 1
-      title:
-        text: role-greeting-desc
-      message:
-        text: vox-raider-role-greeting-desc
+    - title: role-greeting-title
+      message: vox-raider-role-greeting
+    - title: role-greeting-desc
+      message: vox-raider-role-greeting-desc
 
 - type: startingGear
   id: VoxRaiderAntagGear

@@ -608,20 +608,16 @@ public sealed partial class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleCompon
         nukeops.RoundEndBehavior = RoundEndBehavior.Nothing;
     }
 
-    // SIS-ChatGreeting Start
-    private GreetingEntry MakeChatBriefingEntry(NukeopsRuleComponent comp, string targetStation, string teamName, AntagSpecifierPrototype proto)
-    {
-        (string, object)[] args = [("station", targetStation), ("name", teamName)];
-        return _greeting.CreateGreetingEntry(comp.LocalePrefix, proto.Briefing, args);
-    }
-    // SIS-ChatGreeting End
-
     private void OnAfterAntagEntSelected(Entity<NukeopsRuleComponent> ent, ref AfterAntagEntitySelectedEvent args)
     {
         var target = (ent.Comp.TargetStation is not null) ? Name(ent.Comp.TargetStation.Value) : "the target";
 
         // SIS-ChatGreeting Start
-        var entry = MakeChatBriefingEntry(ent.Comp, target, Name(ent), args.Def);
+        var targetStation = target;
+        var teamName = Name(ent);
+
+        (string, object)[] entryArgs = [("station", targetStation), ("name", teamName)];
+        var entry = _greeting.CreateGreetingEntry(ent.Comp.LocalePrefix, args.Def.Briefing, entryArgs);
         _antag.SendBriefing(args.Session, entry);
         // SIS-ChatGreeting End
     }

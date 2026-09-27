@@ -68,6 +68,7 @@
   id: BaseNukeops
   # SIS-ChatGreeting Start
   briefing:
+    sound: /Audio/Ambience/Antag/nukeops_start.ogg
     theme:
       titleBackground: "#1a0f11"
       titleBorder: "#e61937"

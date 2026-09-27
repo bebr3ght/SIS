@@ -30,9 +30,4 @@ public sealed partial class XenoborgComponent : Component
     /// </summary>
     [DataField]
     public SoundSpecifier BriefingSound = new SoundPathSpecifier("/Audio/Ambience/Antag/xenoborg_start.ogg");
-
-    // SIS-ChatBriefing Start
-    [DataField]
-    public ProtoId<AntagSpecifierPrototype> AntagProto = "Xenoborg";
-    // SIS-ChatBriefing End
 }

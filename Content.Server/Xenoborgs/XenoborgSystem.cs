@@ -2,6 +2,7 @@ using Content.Server.Antag;
 using Content.Server.GameTicking.Rules;
 using Content.Server.GameTicking.Rules.Components;
 using Content.Server.Silicons.Borgs;
+using Content.Shared.Antag;
 using Content.Shared.Destructible;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
@@ -21,9 +22,9 @@ public sealed partial class XenoborgSystem : EntitySystem
     [Dependency] private BorgSystem _borg = default!;
     [Dependency] private SharedRoleSystem _roles = default!;
     [Dependency] private XenoborgsRuleSystem _xenoborgsRule = default!;
-    [Dependency] private IPrototypeManager _prototype = default!; // SIS-ChatBriefing
+    [Dependency] private IPrototypeManager _proto = default!; // SIS-ChatBriefing
 
-    private static readonly Color XenoborgBriefingColor = Color.BlueViolet;
+    private static readonly ProtoId<AntagSpecifierPrototype> XenoborgAntag = "Xenoborg"; // SIS-ChatBriefing
 
     public override void Initialize()
     {
@@ -87,8 +88,8 @@ public sealed partial class XenoborgSystem : EntitySystem
         _roles.MindAddRole(args.Mind, comp.MindRole, silent: true);
 
         // SIS-ChatBriefing Start
-        if (_prototype.TryIndex(comp.AntagProto, out var proto))
-            _antag.SendBriefing(ent, proto.Briefing);
+        var proto = _proto.Index(XenoborgAntag);
+        _antag.SendBriefing(ent, proto.Briefing);
         // SIS-ChatBriefing End
     }
 

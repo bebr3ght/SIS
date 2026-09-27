@@ -19,7 +19,7 @@ public sealed partial class RevConversionSystem : EntitySystem
     [Dependency] private GreetingSystem _greeting = default!;
     // SIS-ChatGreeting End
 
-    private static readonly ProtoId<AntagSpecifierPrototype> BriefingTheme = "HeadRev"; // SIS-ChatGreeting
+    private static readonly ProtoId<AntagSpecifierPrototype> HeadRevAntag = "HeadRev"; // SIS-ChatGreeting
 
     public override void Initialize()
     {
@@ -33,7 +33,7 @@ public sealed partial class RevConversionSystem : EntitySystem
         if (TryComp<ActorComponent>(args.Target, out var actor))
         {
             // SIS-ChatGreeting Start
-            var proto = _proto.Index(BriefingTheme);
+            var proto = _proto.Index(HeadRevAntag);
             var entry = _greeting.CreateGreetingEntry("rev-", proto.Briefing);
             _antag.SendBriefing(actor.PlayerSession, entry);
             // SIS-ChatGreeting End

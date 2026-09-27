@@ -388,9 +388,7 @@ public struct CustomRichTextEntry
                     lastPanelBottomY = panelBottomY;
                     activePanelName = null;
                 }
-
             }
-
 
             if (node.Name != null && tagManager.TryGetMarkupTagHandler(node.Name, _tagsAllowed, out var tagHandler))
             {
@@ -421,7 +419,7 @@ public struct CustomRichTextEntry
                 }
 
                 // SIS-ChatGreeting Start
-                Color drawColor = color;
+                var drawColor = color;
 
                 if (activeAnimTags.TryPeek(out var animState))
                     drawColor = animState.Tag.GetColor(animState.Node, globalBreakCounter, time, color, baseLine);
@@ -454,10 +452,11 @@ public struct CustomRichTextEntry
             control.Measure(new Vector2(Width, Height));
 
             // SIS-ChatGreeting Start
-            if (drawText && control is StaticSpriteView staticSprite && staticSprite.Entity is not null &&
-                _entManager.TryGetComponent<MetaDataComponent>(staticSprite.Entity, out var metaData) &&
-                _entManager.TryGetComponent<SpriteComponent>(staticSprite.Entity, out var spriteComp) &&
-                !metaData.Deleted)
+            if (drawText
+                && control is StaticSpriteView { Entity: not null } staticSprite
+                && _entManager.TryGetComponent<MetaDataComponent>(staticSprite.Entity, out var metaData)
+                && _entManager.TryGetComponent<SpriteComponent>(staticSprite.Entity, out var spriteComp)
+                && !metaData.Deleted)
             {
                 var spritePos = new Vector2(pos.X + (staticSprite.SetWidth / 2), pos.Y + (staticSprite.SetHeight / 2));
                 var spriteScaleX = spriteComp.Icon != null ? staticSprite.SetWidth / spriteComp.Icon.Default.Size.X : 1f;
@@ -473,12 +472,20 @@ public struct CustomRichTextEntry
         // SIS-ChatGreeting Start
         if (activePanelName != null && outPanels != null)
         {
-            var panelBottomY = baseLine.Y - defaultFont.GetAscent(uiScale) + GetLineHeight(defaultFont, uiScale, lineHeightScale) + boxPadding;
+            var panelBottomY = baseLine.Y
+                - defaultFont.GetAscent(uiScale)
+                + GetLineHeight(defaultFont, uiScale, lineHeightScale)
+                + boxPadding;
+
             outPanels.Add(new PanelRenderData
             {
-                Bounds = new UIBox2(drawBox.Left + margin - boxPadding - sPixelWidth, activePanelStartY, drawBox.Right - margin + boxPadding - sPixelWidth, panelBottomY),
+                Bounds = new UIBox2(
+                    drawBox.Left + margin - boxPadding - sPixelWidth,
+                    activePanelStartY,
+                    drawBox.Right - margin + boxPadding - sPixelWidth,
+                    panelBottomY),
                 BgColor = activePanelBg,
-                BorderColor = activePanelBorder
+                BorderColor = activePanelBorder,
             });
         }
 

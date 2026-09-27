@@ -6,6 +6,7 @@
   startingGear: PirateGear
   # SIS-ChatGreeting Start
   briefing:
+    sound: /Audio/Ambience/Antag/pirate_start.ogg
     theme:
       titleBackground: "#1f140e"
       titleBorder: "#d97706"

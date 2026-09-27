@@ -19,8 +19,6 @@ public sealed partial class XenoborgComponent : Component
     [DataField]
     public EntProtoId<MindRoleComponent> MindRole = "MindRoleXenoborg";
 
-    // SIS-ChatBriefing Start
-    /*
     /// <summary>
     /// The text that is sent when you become a xenoborg
     /// </summary>
@@ -32,8 +30,6 @@ public sealed partial class XenoborgComponent : Component
     /// </summary>
     [DataField]
     public SoundSpecifier BriefingSound = new SoundPathSpecifier("/Audio/Ambience/Antag/xenoborg_start.ogg");
-    */
-    // SIS-ChatBriefing End
 
     // SIS-ChatBriefing Start
     [DataField]

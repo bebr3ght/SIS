@@ -26,16 +26,9 @@ public sealed partial class BlobObserverSystem : SharedBlobObserverSystem
     [Dependency] private SharedMindSystem _mind = default!;
     [Dependency] private SharedRoleSystem _role = default!;
     [Dependency] private EntityQuery<MapGridComponent> _gridQuery = default!;
-    // SIS-ChatGreeting Start
-    [Dependency] private AntagSelectionSystem _antag = default!;
-    [Dependency] private IPrototypeManager _proto = default!;
-    [Dependency] private GreetingSystem _greeting = default!;
-    // SIS-ChatGreeting End
 
     private static readonly EntProtoId BlobCaptureObjective = "BlobCaptureObjective";
     private static readonly EntProtoId BlobRule = "BlobRule";
-
-    private static readonly ProtoId<AntagSpecifierPrototype> BlobAntag = "Blob"; // SIS-ChatGreeting
 
     private const double MoverJobTime = 0.005;
     private readonly JobQueue _moveJobQueue = new(MoverJobTime);

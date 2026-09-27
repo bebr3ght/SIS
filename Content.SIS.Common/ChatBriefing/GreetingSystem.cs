@@ -33,8 +33,8 @@ public sealed class GreetingSystem : EntitySystem
             Sound = oldSound,
         };
 
-        entry.AddSection(Loc.GetString("role-greeting-title", ("hl1", titleHl1), ("hl2", titleHl2)), greetingTitle, 0);
-        entry.AddSection(Loc.GetString("role-greeting-desc", ("hl1", titleHl1), ("hl2", titleHl2)), greetingDesc, 1);
+        entry.AddSection(Loc.GetString("role-greeting-title", ("hl1", titleHl1), ("hl2", titleHl2)), greetingTitle);
+        entry.AddSection(Loc.GetString("role-greeting-desc", ("hl1", titleHl1), ("hl2", titleHl2)), greetingDesc);
 
         return entry;
     }
@@ -54,16 +54,13 @@ public sealed class GreetingSystem : EntitySystem
         if (entry == null || entry.Sections.Count == 0)
             return null;
 
-        var theme = entry.Theme;
-        var sections = entry.Sections.OrderBy(s => s.Priority).ToList();
-
         var finalMessage = new FormattedMessage();
         finalMessage.PushNewline();
 
-        foreach (var section in sections)
+        foreach (var section in entry.Sections)
         {
-            AppendTitleBox(finalMessage, theme, section);
-            AppendMessageBox(finalMessage, theme, section);
+            AppendTitleBox(finalMessage, entry.Theme, section);
+            AppendMessageBox(finalMessage, entry.Theme, section);
             PushNewlines(finalMessage, 3);
         }
 

@@ -67,13 +67,13 @@ public sealed partial class ThiefRuleSystem : GameRuleSystem<ThiefRuleComponent>
             var greeting = Loc.GetString("thief-role-greeting-human", ("hl1", hl1), ("hl2", hl2));
             var equipment = Loc.GetString("thief-role-greeting-equipment", ("hl1", hl1), ("hl2", hl2));
 
-            entry.AddSection(Loc.GetString("role-greeting-title"), greeting, 0);
-            entry.AddSection(Loc.GetString("thief-role-greeting-equipment-title"), equipment, 1);
+            entry.AddSection(Loc.GetString("role-greeting-title"), greeting);
+            entry.AddSection(Loc.GetString("thief-role-greeting-equipment-title"), equipment);
         }
         else
         {
             var animalGreeting = Loc.GetString("thief-role-greeting-animal", ("hl1", hl1), ("hl2", hl2));
-            entry.AddSection(Loc.GetString("role-greeting-title"), animalGreeting, 0);
+            entry.AddSection(Loc.GetString("role-greeting-title"), animalGreeting);
         }
 
         return entry;

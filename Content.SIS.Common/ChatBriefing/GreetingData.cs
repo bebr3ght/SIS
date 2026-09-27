@@ -6,21 +6,20 @@ namespace Content.SIS.Common.ChatBriefing;
 public sealed partial class GreetingEntry
 {
     [DataField]
-    public List<GreetingSection> Sections { get; private set; } = new();
+    public SoundSpecifier? Sound;
 
     [DataField]
     public GreetingTheme? Theme;
 
     [DataField]
-    public SoundSpecifier? Sound;
+    public List<GreetingSection> Sections { get; private set; } = new();
 
-    public void AddSection(string titleText, string messageText, int priority)
+    public void AddSection(string titleText, string messageText)
     {
         Sections.Add(new GreetingSection
         {
             Title = titleText,
             Message = messageText,
-            Priority = priority,
         });
     }
 }
@@ -33,9 +32,6 @@ public partial record struct GreetingSection
 
     [DataField(required: true)]
     public string? Message;
-
-    [DataField]
-    public int Priority = 0;
 }
 
 [DataDefinition]

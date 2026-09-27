@@ -246,19 +246,19 @@ public sealed partial class TraitorRuleSystem : GameRuleSystem<TraitorRuleCompon
         var hl2 = theme.MessageHighlightSecondColor ?? hl1;
 
         var greetingText = Loc.GetString("traitor-role-greeting", ("corporation", issuerName), ("hl1", hl1), ("hl2", hl2));
-        entry.AddSection(Loc.GetString("role-greeting-title"), greetingText, priority++);
+        entry.AddSection(Loc.GetString("role-greeting-title"), greetingText);
 
         if (codewords != null && codewords.Length > 0)
         {
             var codewordsText = Loc.GetString("traitor-role-codewords", ("codewords", string.Join(", ", codewords)), ("hl1", hl1), ("hl2", hl2));
-            entry.AddSection(Loc.GetString("traitor-title-codewords"), codewordsText, priority++);
+            entry.AddSection(Loc.GetString("traitor-title-codewords"), codewordsText);
         }
 
         var uplinkText = uplinkCode != null
             ? Loc.GetString("traitor-role-uplink-code", ("code", string.Join("-", uplinkCode).Replace("sharp", "#")), ("hl1", hl1), ("hl2", hl2))
             : Loc.GetString("traitor-role-uplink-implant", ("hl1", hl1), ("hl2", hl2));
 
-        entry.AddSection(Loc.GetString("traitor-title-equipment"), uplinkText, priority++);
+        entry.AddSection(Loc.GetString("traitor-title-equipment"), uplinkText);
 
         return entry;
     }

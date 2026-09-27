@@ -40,6 +40,7 @@
   id: SlaughterDemonMidround
   briefing:
     sound: /Audio/Misc/narsie_rises.ogg
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#3a0005"
       titleBorder: "#ff0033"
@@ -47,45 +48,36 @@
       messageBorder: "#66000e"
       titleText: "#ff3366"
       messageText: "#fca5a5"
-      highlight1: "#660000"
-      highlight2: "#ff0033"
+      messageHighlight1: "#660000"
+      messageHighlight2: "#ff0033"
     sections:
-    - priority: 0
-      title:
-        text: role-greeting-title
-      message:
-        text: slaughter-role-greeting
-    - priority: 1
-      title:
-        text: role-greeting-desc
-      message:
-        text: slaughter-role-greeting-desc
+    - title: role-greeting-title
+      message: slaughter-role-greeting
+    - title: role-greeting-desc
+      message: slaughter-role-greeting-desc
+    # SIS-ChatGreeting End
 
 - type: antagSpecifier
   id: LaughterDemon
   spawnerPrototype: SpawnPointGhostLaughterDemon
   briefing:
     sound: /Audio/_Goobstation/Vehicle/Clowncar/clowncar_fart.ogg
+    # SIS-ChatGreeting Start
     theme:
-      titleBackground: "#21001f"   # Тёмный цирковой шатёр
-      titleBorder: "#ffe600"       # Слепящий жёлтый клоунский стробоскоп
-      messageBackground: "#0d0012" # Чернильный вакуум безумия
-      messageBorder: "#ff007f"     # Ядовитая неоновая фуксия
-      titleText: "#ffe600"         # Светящийся цирковой жёлтый
-      messageText: "#f5d0fe"       # Психоделический сиреневый зефир
-      highlight1: "#ff007f"        # Кислотная фуксия (hl1)
-      highlight2: "#ffe600"        # Ядовитый стробоскоп-жёлтый (hl2)
+      titleBackground: "#21001f"
+      titleBorder: "#ffe600"
+      messageBackground: "#0d0012"
+      messageBorder: "#ff007f"
+      titleText: "#ffe600"
+      messageText: "#f5d0fe"
+      messageHighlight1: "#ff007f"
+      messageHighlight2: "#ffe600"
     sections:
-    - priority: 0
-      title:
-        text: role-greeting-title
-      message:
-        text: laughter-role-greeting
-    - priority: 1
-      title:
-        text: role-greeting-desc
-      message:
-        text: laughter-role-greeting-desc
+    - title: role-greeting-title
+      message: laughter-role-greeting
+    - title: role-greeting-desc
+      message: laughter-role-greeting-desc
+    # SIS-ChatGreeting End
   components:
   - type: RandomMetadata
     nameSegments:

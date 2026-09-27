@@ -19,8 +19,6 @@ using Content.Trauma.Shared.Heretic.Systems;
 using Content.Trauma.Shared.Roles;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
-using Content.Shared.Antag;
-using Content.SIS.Common.ChatBriefing;
 
 namespace Content.Trauma.Server.Heretic.Systems;
 
@@ -31,7 +29,6 @@ public sealed partial class HereticRuleSystem : GameRuleSystem<HereticRuleCompon
     [Dependency] private SharedRoleSystem _role = default!;
     [Dependency] private ObjectivesSystem _objective = default!;
     [Dependency] private UserInterfaceSystem _ui = default!;
-    [Dependency] private GreetingSystem _greeting = default!; // SIS-ChatGreeting
 
     public static readonly SoundSpecifier BriefingSound =
         new SoundPathSpecifier("/Audio/_Goobstation/Heretic/Ambience/Antag/Heretic/heretic_gain.ogg");
@@ -73,7 +70,7 @@ public sealed partial class HereticRuleSystem : GameRuleSystem<HereticRuleCompon
 
     private void OnAntagSelect(Entity<HereticRuleComponent> ent, ref AfterAntagEntitySelectedEvent args)
     {
-        TryMakeHeretic(args.EntityUid, ent.Comp, args.Def); // SIS-ChatGreeting
+        TryMakeHeretic(args.EntityUid, ent.Comp);
 
         SpawnInfluence(ent.Comp.RealityShiftPerHeretic);
     }
@@ -96,7 +93,7 @@ public sealed partial class HereticRuleSystem : GameRuleSystem<HereticRuleCompon
         }
     }
 
-    public bool TryMakeHeretic(EntityUid target, HereticRuleComponent rule, AntagSpecifierPrototype proto) // SIS-ChatGreeting
+    public bool TryMakeHeretic(EntityUid target, HereticRuleComponent rule)
     {
         if (!_mind.TryGetMind(target, out var mindId, out var mind))
             return false;
@@ -107,8 +104,10 @@ public sealed partial class HereticRuleSystem : GameRuleSystem<HereticRuleCompon
         if (HasComp<MetaDataComponent>(target))
         {
             // SIS-ChatGreeting Start
-            var entry = _greeting.CreateGreetingEntry("heretic-", proto.Briefing);
-            _antag.SendBriefing(target, entry);
+            /*
+            _antag.SendBriefing(target, Loc.GetString("heretic-role-greeting-fluff"), Color.MediumPurple, null);
+            _antag.SendBriefing(target, Loc.GetString("heretic-role-greeting"), Color.Red, BriefingSound);
+            */
             // SIS-ChatGreeting End
         }
 

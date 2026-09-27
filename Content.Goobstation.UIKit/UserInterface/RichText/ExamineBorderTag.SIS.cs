@@ -27,7 +27,12 @@ public sealed class RainbowTag : IAnimatedColorTag
     private const string TagName = "rainbow";
     public string Name => TagName;
 
-    public Color GetColor(MarkupNode node, int charIndex, float time, Color baseColor, Vector2 position)
+    public Color GetColor(
+        MarkupNode node,
+        int charIndex,
+        float time,
+        Color baseColor,
+        Vector2 position)
     {
         var startHue = 0f;
         var s = 1.0f;
@@ -42,7 +47,7 @@ public sealed class RainbowTag : IAnimatedColorTag
 
         if (node.Attributes.TryGetValue("color", out var cAttr) && cAttr.StringValue != null)
         {
-            var parsed = Color.TryFromHex(cAttr.StringValue) ?? Color.Orange;
+            var parsed = Color.TryFromHex(cAttr.StringValue) ?? baseColor;
             var hsv = Color.ToHsv(parsed);
             startHue = hsv.X;
             a = hsv.W;
@@ -73,16 +78,21 @@ public sealed class GradientTag : IAnimatedColorTag
     private const string TagName = "gradient";
     public string Name => TagName;
 
-    public Color GetColor(MarkupNode node, int charIndex, float time, Color baseColor, Vector2 position)
+    public Color GetColor(
+        MarkupNode node,
+        int charIndex,
+        float time,
+        Color baseColor,
+        Vector2 position)
     {
         var color1 = Color.White;
         var color2 = Color.Black;
 
         if (node.Attributes.TryGetValue("color1", out var c1) && c1.StringValue != null)
-            color1 = Color.TryFromHex(c1.StringValue) ?? Color.Orange;
+            color1 = Color.TryFromHex(c1.StringValue) ?? baseColor;
 
         if (node.Attributes.TryGetValue("color2", out var c2) && c2.StringValue != null)
-            color2 = Color.TryFromHex(c2.StringValue) ?? Color.Orange;
+            color2 = Color.TryFromHex(c2.StringValue) ?? baseColor;
 
         var speed = 3f;
         if (node.Attributes.TryGetValue("speed", out var sAttr) && sAttr.StringValue != null)

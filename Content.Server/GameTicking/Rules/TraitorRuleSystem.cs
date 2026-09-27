@@ -236,29 +236,35 @@ public sealed partial class TraitorRuleSystem : GameRuleSystem<TraitorRuleCompon
     // SIS-ChatGreeting Start
     private GreetingEntry GenerateGreeting(string[]? codewords, Note[]? uplinkCode, AntagSpecifierPrototype proto, string? objectiveIssuer = null)
     {
-        var theme = proto.Briefing?.Theme ?? new GreetingTheme();
-        var entry = new GreetingEntry { Theme = theme };
-        var priority = 0;
+        var resolvedTheme = proto.Briefing?.Theme ?? new GreetingTheme();
+        var entry = new GreetingEntry
+        {
+            Theme = resolvedTheme,
+            Sound = proto.Briefing?.Sound,
+        };
+
+        var titleHl1 = resolvedTheme.TitleHighlightFirstColor ?? GreetingSystem.ColorFallback;
+        var titleHl2 = resolvedTheme.TitleHighlightSecondColor ?? titleHl1;
+
+        var messageHl1 = resolvedTheme.MessageHighlightFirstColor ?? GreetingSystem.ColorFallback;
+        var messageHl2 = resolvedTheme.MessageHighlightSecondColor ?? messageHl1;
 
         var issuerName = objectiveIssuer ?? Loc.GetString("objective-issuer-unknown");
 
-        var hl1 = theme.MessageHighlightFirstColor ?? Color.Orange;
-        var hl2 = theme.MessageHighlightSecondColor ?? hl1;
-
-        var greetingText = Loc.GetString("traitor-role-greeting", ("corporation", issuerName), ("hl1", hl1), ("hl2", hl2));
-        entry.AddSection(Loc.GetString("role-greeting-title"), greetingText);
+        var greetingText = Loc.GetString("traitor-role-greeting", ("corporation", issuerName), ("hl1", messageHl1), ("hl2", messageHl2));
+        entry.AddSection(Loc.GetString("role-greeting-title", ("hl1", titleHl1), ("hl2", titleHl2)), greetingText);
 
         if (codewords != null && codewords.Length > 0)
         {
-            var codewordsText = Loc.GetString("traitor-role-codewords", ("codewords", string.Join(", ", codewords)), ("hl1", hl1), ("hl2", hl2));
-            entry.AddSection(Loc.GetString("traitor-title-codewords"), codewordsText);
+            var codewordsText = Loc.GetString("traitor-role-codewords", ("codewords", string.Join(", ", codewords)), ("hl1", messageHl1), ("hl2", messageHl2));
+            entry.AddSection(Loc.GetString("traitor-title-codewords", ("hl1", titleHl1), ("hl2", titleHl2)), codewordsText);
         }
 
         var uplinkText = uplinkCode != null
-            ? Loc.GetString("traitor-role-uplink-code", ("code", string.Join("-", uplinkCode).Replace("sharp", "#")), ("hl1", hl1), ("hl2", hl2))
-            : Loc.GetString("traitor-role-uplink-implant", ("hl1", hl1), ("hl2", hl2));
+            ? Loc.GetString("traitor-role-uplink-code", ("code", string.Join("-", uplinkCode).Replace("sharp", "#")), ("hl1", messageHl1), ("hl2", messageHl2))
+            : Loc.GetString("traitor-role-uplink-implant", ("hl1", messageHl1), ("hl2", messageHl2));
 
-        entry.AddSection(Loc.GetString("traitor-title-equipment"), uplinkText);
+        entry.AddSection(Loc.GetString("traitor-title-equipment", ("hl1", titleHl1), ("hl2", titleHl2)), uplinkText);
 
         return entry;
     }

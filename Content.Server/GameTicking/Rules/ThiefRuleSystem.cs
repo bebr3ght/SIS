@@ -54,26 +54,32 @@ public sealed partial class ThiefRuleSystem : GameRuleSystem<ThiefRuleComponent>
     // SIS-ChatGreeting Start
     private GreetingEntry MakeGreeting(EntityUid ent, AntagSpecifierPrototype proto)
     {
-        var theme = proto.Briefing?.Theme ?? new GreetingTheme();
-        var entry = new GreetingEntry { Theme = theme };
+        var resolvedTheme = proto.Briefing?.Theme ?? new GreetingTheme();
+        var entry = new GreetingEntry
+        {
+            Theme = resolvedTheme,
+            Sound = proto.Briefing?.Sound,
+        };
+
+        var titleHl1 = resolvedTheme.TitleHighlightFirstColor ?? GreetingSystem.ColorFallback;
+        var titleHl2 = resolvedTheme.TitleHighlightSecondColor ?? titleHl1;
+
+        var messageHl1 = resolvedTheme.MessageHighlightFirstColor ?? GreetingSystem.ColorFallback;
+        var messageHl2 = resolvedTheme.MessageHighlightSecondColor ?? messageHl1;
 
         var isHuman = HasComp<HumanoidProfileComponent>(ent);
-
-        var hl1 = theme.MessageHighlightFirstColor ?? Color.Orange;
-        var hl2 = theme.MessageHighlightSecondColor ?? hl1;
-
         if (isHuman)
         {
-            var greeting = Loc.GetString("thief-role-greeting-human", ("hl1", hl1), ("hl2", hl2));
-            var equipment = Loc.GetString("thief-role-greeting-equipment", ("hl1", hl1), ("hl2", hl2));
+            var greeting = Loc.GetString("thief-role-greeting-human", ("hl1", messageHl1), ("hl2", messageHl2));
+            var equipment = Loc.GetString("thief-role-greeting-equipment", ("hl1", messageHl1), ("hl2", messageHl2));
 
-            entry.AddSection(Loc.GetString("role-greeting-title"), greeting);
-            entry.AddSection(Loc.GetString("thief-role-greeting-equipment-title"), equipment);
+            entry.AddSection(Loc.GetString("role-greeting-title", ("hl1", titleHl1), ("hl2", titleHl2)), greeting);
+            entry.AddSection(Loc.GetString("thief-role-greeting-equipment-title", ("hl1", titleHl1), ("hl2", titleHl2)), equipment);
         }
         else
         {
-            var animalGreeting = Loc.GetString("thief-role-greeting-animal", ("hl1", hl1), ("hl2", hl2));
-            entry.AddSection(Loc.GetString("role-greeting-title"), animalGreeting);
+            var animalGreeting = Loc.GetString("thief-role-greeting-animal", ("hl1", messageHl1), ("hl2", messageHl2));
+            entry.AddSection(Loc.GetString("role-greeting-title", ("hl1", titleHl1), ("hl2", titleHl2)), animalGreeting);
         }
 
         return entry;

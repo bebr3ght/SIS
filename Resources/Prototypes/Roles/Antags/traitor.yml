@@ -26,6 +26,7 @@
   id: Traitor
   # SIS-ChatGreeting Start
   briefing:
+    sound: /Audio/Ambience/Antag/traitor_start.ogg
     theme:
       titleBackground: "#191113"
       titleBorder: "#ff2a4b"

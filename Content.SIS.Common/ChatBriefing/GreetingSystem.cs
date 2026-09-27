@@ -5,8 +5,8 @@ namespace Content.SIS.Common.ChatBriefing;
 
 public sealed class GreetingSystem : EntitySystem
 {
-    private static readonly Color ColorFallback = Color.White;
-    private static readonly Color BackgroundColorFallback = Color.Black;
+    public static readonly Color ColorFallback = Color.White;
+    public static readonly Color BackgroundColorFallback = Color.Black;
 
     #region Greeting Entry
 

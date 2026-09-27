@@ -48,6 +48,7 @@
   id: CosmicColossus
   spawnerPrototype: SpawnPointCosmicColossus
   briefing:
+    # TODO: Красивый гритинг
     text: ghost-role-colossus-briefing
     color: CadetBlue
     sound: /Audio/_DV/CosmicCult/antag_cosmic_AI_briefing.ogg

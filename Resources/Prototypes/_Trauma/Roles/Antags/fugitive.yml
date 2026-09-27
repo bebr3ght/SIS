@@ -31,6 +31,7 @@
   spawnerPrototype: SpawnPointGhostRoleHunter
   startingGear: HunterAntagGear
   briefing:
+    # TODO: Красивый гритинг
     text: hunter-role-greeting
     color: red
   components:
@@ -68,6 +69,7 @@
   spawnerPrototype: SpawnPointGhostRoleFugitive
   startingGear: FugitiveAntagGear
   briefing:
+    # TODO: Красивый гритинг
     text: fugitive-role-greeting
     color: red
   components:

@@ -16,6 +16,7 @@
   - RoleSurvivalVoxTank # give vox something to breath in case they don't get a copy
   - RoleSurvivalPlasmaTank # Trauma
   briefing:
+    # TODO: Красивый гритинг
     text: paradox-clone-role-greeting
     color: lightblue
     sound: /Audio/Misc/paradox_clone_greeting.ogg

@@ -17,6 +17,7 @@
   spawnerPrototype: SpawnPointGhostWraithRoundstart
   mindRoles: [ MindRoleGhostRoleSoloAntagonist ]
   briefing:
+    # TODO: Красивый гритинг
     text: wraith-role-greeting
     sound: /Audio/_Goobstation/Wraith/Ambience/Void_Calls.ogg
   components:

@@ -117,7 +117,7 @@ public sealed partial class BlobObserverSystem : SharedBlobObserverSystem
         }
 
         _role.MindAddRole(mindId, core.Comp.MindRoleBlobPrototypeId.Id);
-        SendGreeting(mindId); // SIS-ChatGreeting
+        // SendBlobBriefing(mindId); // SIS-ChatGreeting
 
         var ruleExists = false;
         foreach (var rule in EntityQueryEnumerator<BlobRuleComponent>())
@@ -138,15 +138,11 @@ public sealed partial class BlobObserverSystem : SharedBlobObserverSystem
         _mind.TryAddObjective(mindId, mind, BlobCaptureObjective);
     }
 
-    // SIS-ChatGreeting Start
-    private void SendGreeting(EntityUid mind)
+    private void SendBlobBriefing(EntityUid mind)
     {
-        if (!_player.TryGetSessionByEntity(mind, out var session))
-            return;
-
-        var proto = _proto.Index(BlobAntag);
-        var entry = _greeting.CreateGreetingEntry("blob-", proto.Briefing);
-        _antag.SendBriefing(session, entry);
+        if (_player.TryGetSessionByEntity(mind, out var session))
+        {
+            _chat.DispatchServerMessage(session, Loc.GetString("blob-role-greeting"));
+        }
     }
-    // SIS-ChatGreeting End
 }

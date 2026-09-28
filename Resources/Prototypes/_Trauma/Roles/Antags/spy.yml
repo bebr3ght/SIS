@@ -14,6 +14,20 @@
 - type: antagSpecifier
   parent: RestrictedAntag
   id: Spy
+  # SIS-ChatGreeting Start
+  briefing:
+    sound: /Audio/_Trauma/Ambience/Antag/spy.ogg
+    theme:
+      titleBackground: "#0a1410"
+      titleBorder: "#2f9e44"
+      messageBackground: "#060d0a"
+      messageBorder: "#1b3a24"
+      titleText: "#8ce99a"
+      messageText: "#d3f9d8"
+      titleHighlight1: "#2f9e44"
+      messageHighlight1: "#2f9e44"
+      messageHighlight2: "#b2f2bb"
+  # SIS-ChatGreeting End
   prefRoles:
   - Spy
   mindRoles:

@@ -25,28 +25,136 @@
   parent: DerelictCyborg
   id: DerelictGenericCyborg
   spawnerPrototype: SpawnPointGhostDerelictCyborg
+  # SIS-ChatGreeting Start
+  briefing:
+    theme:
+      titleBackground: "#1a1712"
+      titleBorder: "#b58900"
+      messageBackground: "#100e0a"
+      messageBorder: "#4a3c14"
+      titleText: "#e6c86e"
+      messageText: "#ded8c8"
+      titleHighlight1: "#b58900"
+      messageHighlight1: "#b58900"
+      messageHighlight2: "#f0d98c"
+    sections:
+    - title: role-greeting-title
+      message: ghost-role-information-derelict-cyborg-description
+    - title: role-greeting-desc
+      message: derelict-cyborg-role-desc
+  # SIS-ChatGreeting End
 
 - type: antagSpecifier
   parent: DerelictCyborg
   id: DerelictEngineeringCyborg
   spawnerPrototype: SpawnPointGhostDerelictEngineeringCyborg
+  # SIS-ChatGreeting Start
+  briefing:
+    theme:
+      titleBackground: "#1a1712"
+      titleBorder: "#b58900"
+      messageBackground: "#100e0a"
+      messageBorder: "#4a3c14"
+      titleText: "#e6c86e"
+      messageText: "#ded8c8"
+      titleHighlight1: "#b58900"
+      messageHighlight1: "#b58900"
+      messageHighlight2: "#f0d98c"
+    sections:
+    - title: role-greeting-title
+      message: ghost-role-information-derelict-engineering-cyborg-description
+    - title: role-greeting-desc
+      message: derelict-cyborg-role-desc
+  # SIS-ChatGreeting End
 
 - type: antagSpecifier
   parent: DerelictCyborg
   id: DerelictJanitorCyborg
   spawnerPrototype: SpawnPointGhostDerelictJanitorCyborg
+  # SIS-ChatGreeting Start
+  briefing:
+    theme:
+      titleBackground: "#1a1712"
+      titleBorder: "#b58900"
+      messageBackground: "#100e0a"
+      messageBorder: "#4a3c14"
+      titleText: "#e6c86e"
+      messageText: "#ded8c8"
+      titleHighlight1: "#b58900"
+      messageHighlight1: "#b58900"
+      messageHighlight2: "#f0d98c"
+    sections:
+    - title: role-greeting-title
+      message: ghost-role-information-derelict-janitor-cyborg-description
+    - title: role-greeting-desc
+      message: derelict-cyborg-role-desc
+  # SIS-ChatGreeting End
 
 - type: antagSpecifier
   parent: DerelictCyborg
   id: DerelictMedicalCyborg
   spawnerPrototype: SpawnPointGhostDerelictMedicalCyborg
+  # SIS-ChatGreeting Start
+  briefing:
+    theme:
+      titleBackground: "#1a1712"
+      titleBorder: "#b58900"
+      messageBackground: "#100e0a"
+      messageBorder: "#4a3c14"
+      titleText: "#e6c86e"
+      messageText: "#ded8c8"
+      titleHighlight1: "#b58900"
+      messageHighlight1: "#b58900"
+      messageHighlight2: "#f0d98c"
+    sections:
+    - title: role-greeting-title
+      message: ghost-role-information-derelict-medical-cyborg-description
+    - title: role-greeting-desc
+      message: derelict-cyborg-role-desc
+  # SIS-ChatGreeting End
 
 - type: antagSpecifier
   parent: DerelictCyborg
   id: DerelictMiningCyborg
   spawnerPrototype: SpawnPointGhostDerelictMiningCyborg
+  # SIS-ChatGreeting Start
+  briefing:
+    theme:
+      titleBackground: "#1a1712"
+      titleBorder: "#b58900"
+      messageBackground: "#100e0a"
+      messageBorder: "#4a3c14"
+      titleText: "#e6c86e"
+      messageText: "#ded8c8"
+      titleHighlight1: "#b58900"
+      messageHighlight1: "#b58900"
+      messageHighlight2: "#f0d98c"
+    sections:
+    - title: role-greeting-title
+      message: ghost-role-information-derelict-mining-cyborg-description
+    - title: role-greeting-desc
+      message: derelict-cyborg-role-desc
+  # SIS-ChatGreeting End
 
 - type: antagSpecifier
   parent: DerelictCyborg
   id: DerelictSyndicateAssaultCyborg
   spawnerPrototype: SpawnPointGhostDerelictSyndicateAssaultCyborg
+  # SIS-ChatGreeting Start
+  briefing:
+    theme:
+      titleBackground: "#1a1712"
+      titleBorder: "#b58900"
+      messageBackground: "#100e0a"
+      messageBorder: "#4a3c14"
+      titleText: "#e6c86e"
+      messageText: "#ded8c8"
+      titleHighlight1: "#b58900"
+      messageHighlight1: "#b58900"
+      messageHighlight2: "#f0d98c"
+    sections:
+    - title: role-greeting-title
+      message: ghost-role-information-derelict-syndicate-assault-cyborg-description
+    - title: role-greeting-desc
+      message: derelict-cyborg-role-desc
+  # SIS-ChatGreeting End

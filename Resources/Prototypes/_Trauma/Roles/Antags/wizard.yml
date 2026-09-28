@@ -11,6 +11,24 @@
   id: WizardApprentice
   prefRoles: [ Apprentice ]
   mindRoles: [ MindRoleApprentice ]
+  # SIS-ChatGreeting Start
+  briefing:
+    theme:
+      titleBackground: "#241433"
+      titleBorder: "#a855f7"
+      messageBackground: "#12081c"
+      messageBorder: "#4c1d95"
+      messageText: "#f3e8ff"
+      titleHighlight1: "#ffd700"
+      titleHighlight2: "#c084fc"
+      messageHighlight1: "#ffd700"
+      messageHighlight2: "#c084fc"
+    sections:
+    - title: role-greeting-title
+      message: apprentice-role-greeting
+    - title: role-greeting-desc
+      message: apprentice-role-greeting-desc
+  # SIS-ChatGreeting End
   components:
   - type: Apprentice
   - type: LanguageSpeaker

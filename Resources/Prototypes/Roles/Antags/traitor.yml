@@ -14,6 +14,19 @@
   abstract: true
   parent: RestrictedAntag
   id: BaseTraitor
+  # SIS-ChatGreeting Start
+  briefing:
+    theme:
+      titleBackground: "#191113"
+      titleBorder: "#ff2a4b"
+      messageBackground: "#0c0709"
+      messageBorder: "#33141a"
+      titleText: "#ff758f"
+      messageText: "#dcd1d4"
+      titleHighlight1: "#ff1744"
+      messageHighlight1: "#ff1744"
+      messageHighlight2: "#ff6b81"
+  # SIS-ChatGreeting End
   # <Trauma>
   blacklist:
     components:

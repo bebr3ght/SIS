@@ -19,6 +19,24 @@
   prefRoles: [ Insurgent ]
   mindRoles: [ MindRoleInsurgent ]
   roleLoadout: [ RoleSurvivalStandard ]
+  # SIS-ChatGreeting Start
+  briefing:
+    theme:
+      titleBackground: "#1c1108"
+      titleBorder: "#e8590c"
+      messageBackground: "#120a05"
+      messageBorder: "#4a2a10"
+      titleText: "#ffb380"
+      messageText: "#efe3d5"
+      titleHighlight1: "#e8590c"
+      messageHighlight1: "#e8590c"
+      messageHighlight2: "#ffd8a8"
+    sections:
+    - title: role-greeting-title
+      message: insurgent-role-greeting
+    - title: role-greeting-desc
+      message: insurgent-role-greeting-desc
+  # SIS-ChatGreeting End
   components:
   - type: RandomHumanoidAppearance
     randomizeName: true

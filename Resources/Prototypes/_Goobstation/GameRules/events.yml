@@ -36,6 +36,24 @@
 - type: antagSpecifier
   id: DerelictCyborgSyndicate
   spawnerPrototype: SpawnPointGhostDerelictCyborgSyndicate
+  # SIS-ChatGreeting Start
+  briefing:
+    theme:
+      titleBackground: "#170a0c"
+      titleBorder: "#e11d2e"
+      messageBackground: "#0a0507"
+      messageBorder: "#3a1419"
+      titleText: "#ff8a95"
+      messageText: "#e0d2d4"
+      titleHighlight1: "#e11d2e"
+      messageHighlight1: "#e11d2e"
+      messageHighlight2: "#ffb3ba"
+    sections:
+    - title: role-greeting-title
+      message: ghost-role-information-derelict-cyborg-syndicate-description
+    - title: role-greeting-desc
+      message: derelict-cyborg-role-desc
+  # SIS-ChatGreeting End
 
 - type: entity
   parent: BaseGameRule

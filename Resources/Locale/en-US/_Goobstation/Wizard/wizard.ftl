@@ -17,6 +17,17 @@ roles-wizard-objective = Cause havoc and destruction to the station.
 wizard-role-briefing = You are a space wizard. Survive and wreak havoc on the simpletons.
 apprentice-role-briefing = You are a space wizard apprentice. Keep whoever summoned you alive.
 
+# SIS-Start
+apprentice-role-greeting =
+    Вы — [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]подмастерье космического мага[/gradient], призванный служить своему наставнику.
+    Маг поделился с вами частью своей силы, но ваша задача проста: [color={$hl1}]сохранить ему жизнь любой ценой[/color].
+
+apprentice-role-greeting-desc =
+    • [color={$hl1}]Наставник:[/color] защищайте мага, пока он вершит свои заклинания.
+    • [color={$hl1}]Заклинания:[/color] используйте дарованные чары с умом.
+    • [color={$hl1}]Верность:[/color] если маг погибнет — задание провалено.
+# SIS-End
+
 lich-greeting =
     With a hideous feeling of emptiness you watch in horrified fascination as skin sloughs off bone! Blood boils, nerves disintegrate, eyes boil in their sockets! As your organs crumble to dust in your fleshless chest you come to terms with your choice.
     You're a lich.

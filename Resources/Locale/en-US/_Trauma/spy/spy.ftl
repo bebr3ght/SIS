@@ -30,12 +30,19 @@ spy-role-claimed-bounties =
     {CAPITALIZE($name)} has claimed a total of [color=red]{$amount}[/color] bounties.
     {" "}
 
+# SIS-Start
 spy-role-greeting =
-    You are a Spy.
-    Your mission, should you choose to accept it: Infiltrate Space Station 14.
-    Disguise yourself as a member of their crew and steal vital equipment.
-    Should you be caught or killed, your employer will disavow any knowledge of your actions.
-    Good luck agent.
+    Вы - шпион.
+    Ваша миссия, если вы решите её принять: проникнуть на космическую станцию 14.
+    Замаскируйтесь под члена их экипажа и украдите жизненно важное оборудование.
+    Если вас поймают или убьют, ваш работодатель откажется от каких-либо знаний о ваших действиях.
+    Удачи, агент.
+
+spy-role-greeting-desc =
+    • [color={$hl1}]Прикрытие:[/color] выдавайте себя за члена экипажа и не привлекайте внимания службы безопасности.
+    • [color={$hl1}]Награды:[/color] ваши задания на кражи выдаются через аплинк в КПК — выполняйте их ради награды.
+    • [color={$hl1}]Отказ:[/color] если вас раскроют, работодатель от всего откажется. Действуйте тихо и не оставляйте свидетелей.
+# SIS-End
 
 spy-role-briefing-short = You are a Spy, tasked with stealing various station equipment.
 

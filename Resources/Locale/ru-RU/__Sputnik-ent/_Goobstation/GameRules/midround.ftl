@@ -49,5 +49,8 @@ ent-VoxRaidersMidround = { ent-BaseAntagGhostRoleRule }
 ent-ClownGoblinMigration = { ent-BaseGameRule }
     .desc = { ent-BaseGameRule.desc }
 
-ent-SlasherSpawn = { ent-BaseAntagGhostRoleRule }
-    .desc = { ent-BaseAntagGhostRoleRule.desc }
+ent-SlasherRule = { ent-BaseGameRule }
+    .desc = { ent-BaseGameRule.desc }
+
+ent-SlasherSpawn = { ent-SlasherRule }
+    .desc = { ent-SlasherRule.desc }

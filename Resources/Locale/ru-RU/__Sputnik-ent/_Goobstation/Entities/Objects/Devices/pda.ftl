@@ -16,18 +16,6 @@ ent-DeathsquadPDA = КПК Эскадрона Смерти
 ent-NanotrasenRepresentativePDA = КПК представителя NanoTrasen
     .desc = Дьявол кроется в деталях.
 
-ent-NavyCaptainPDA = КПК капитана ВКС
-    .desc = Дьявол кроется в деталях.
-
-ent-NavyOfficerPDA = КПК офицера ЦК
-    .desc = { ent-NavyCaptainPDA.desc }
-
-ent-DiplomatPDA = КПК дипломата
-    .desc = { ent-NavyCaptainPDA.desc }
-
-ent-InspectorPDA = КПК ревизора
-    .desc = { ent-NavyCaptainPDA.desc }
-
 ent-SyndiPDANukie = КПК Синдиката
     .desc = Ладно, пришло время стать продуктивным рабоч... о, круто, я плохой парень, пришло время убивать всех!
 

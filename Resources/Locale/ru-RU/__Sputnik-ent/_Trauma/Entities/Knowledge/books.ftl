@@ -47,10 +47,6 @@ ent-BookAirlocks = { ent-BookSchematic }
     .desc = Чертёж с конструкциями для шлюзов.
     .suffix = Шлюзы
 
-ent-BookToys = { ent-BookSchematic }
-    .desc = Чертёж с конструкциями для игрушек.
-    .suffix = Игрушки
-
 ent-BookBananium = { ent-BookSchematic }
     .desc = Чертёж с конструкциями для бананиевых сооружений.
     .suffix = Бананий

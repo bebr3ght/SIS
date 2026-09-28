@@ -2,22 +2,22 @@ ent-LockerBooze = хранилище алкоголя
     .desc = Здесь бармен хранит алкоголь.
 
 ent-LockerSteel = защищенный шкаф
-    .desc = { ent-LockerBaseSecure.desc }
+    .desc = { ent-LockerBase.desc }
 
 ent-LockerQuarterMaster = шкафчик квартирмейстера
-    .desc = { ent-LockerBaseSecure.desc }
+    .desc = { ent-LockerBase.desc }
 
 ent-LockerSalvageSpecialist = шкафчик специалиста по утилизации
     .desc = Содержит снаряжение, полезное для исследования космоса.
 
 ent-LockerCaptain = шкафчик капитана
-    .desc = { ent-LockerBaseSecure.desc }
+    .desc = { ent-LockerBase.desc }
 
 ent-LockerHeadOfPersonnel = шкафчик главы персонала
-    .desc = { ent-LockerBaseSecure.desc }
+    .desc = { ent-LockerBase.desc }
 
 ent-LockerChiefEngineer = шкафчик старшего инженера
-    .desc = { ent-LockerBaseSecure.desc }
+    .desc = { ent-LockerBase.desc }
 
 ent-LockerElectricalSupplies = шкаф с электротехническими принадлежностями
     .desc = { ent-LockerBase.desc }
@@ -58,7 +58,7 @@ ent-LockerChemistry = химический шкафчик
     .desc = { ent-LockerBase.desc }
 
 ent-LockerChiefMedicalOfficer = шкафчик главного врача
-    .desc = { ent-LockerBaseSecure.desc }
+    .desc = { ent-LockerBase.desc }
 
 ent-LockerResearchDirector = шкафчик директора исследований
     .desc = { ent-LockerBase.desc }
@@ -67,19 +67,19 @@ ent-LockerScientist = шкафчик ученого
     .desc = { ent-LockerBase.desc }
 
 ent-LockerHeadOfSecurity = шкафчик главы службы безопасности
-    .desc = { ent-LockerBaseSecure.desc }
+    .desc = { ent-LockerBase.desc }
 
 ent-LockerWarden = шкафчик смотрителя
-    .desc = { ent-LockerBaseSecure.desc }
+    .desc = { ent-LockerBase.desc }
 
 ent-LockerBrigmedic = шкафчик бригмедика
-    .desc = { ent-LockerBaseSecure.desc }
+    .desc = { ent-LockerBase.desc }
 
 ent-LockerSecurity = шкафчик сотрудника службы безопасности
-    .desc = { ent-LockerBaseSecure.desc }
+    .desc = { ent-LockerBase.desc }
 
 ent-GunSafe = оружейный сейф
-    .desc = { ent-LockerBaseSecure.desc }
+    .desc = { ent-LockerBase.desc }
 
 ent-GunSafeBaseSecure = { ent-GunSafe }
     .desc = { ent-GunSafe.desc }
@@ -135,10 +135,10 @@ ent-LockerBluespaceStation = блюспейс-шкафчик
     .suffix = Один раз до станции
 
 ent-LockerClown = шкафчик клоуна
-    .desc = { ent-LockerBaseSecure.desc }
+    .desc = { ent-LockerBase.desc }
 
 ent-LockerMime = шкафчик мима
-    .desc = { ent-LockerBaseSecure.desc }
+    .desc = { ent-LockerBase.desc }
 
 ent-LockerRepresentative = шкафчик представителя
-    .desc = { ent-LockerBaseSecure.desc }
+    .desc = { ent-LockerBase.desc }

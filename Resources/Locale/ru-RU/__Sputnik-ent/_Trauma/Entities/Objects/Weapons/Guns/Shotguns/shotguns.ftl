@@ -2,7 +2,7 @@ ent-WeaponShotgunKammererEmpty = { ent-WeaponShotgunKammerer }
     .desc = { ent-WeaponShotgunKammerer.desc }
     .suffix = Пустой
 
-ent-WeaponShotgunDevastator = Devastator
+ent-WeaponShotgunDevastator = Опустошитель
     .desc = Четырёхствольный дробовик, точность отвратительная, но результаты говорят сами за себя. Использует патроны для дробовика 12 калибра.
     .suffix = Полный
 

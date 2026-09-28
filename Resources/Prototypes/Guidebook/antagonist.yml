@@ -13,7 +13,6 @@
   - Xenoborgs
   - MinorAntagonists
   # <Trauma>
-  - CorporateAgents
   - Changelings
   - Heretics
   - Blob
@@ -31,7 +30,9 @@
   - Slasher
   - ShadowDemon
   - Vampires
+  - Spy
   # </Trauma>
+  - CorticalBorerGuide # SIS
 
 - type: guideEntry
   id: Traitors

@@ -1,9 +1,6 @@
 ent-OrganBaseExternal = { ent-OrganBase }
     .desc = { ent-OrganBase.desc }
 
-ent-OrganBaseInternal = { ent-OrganBase }
-    .desc = { ent-OrganBase.desc }
-
 ent-OrganBaseFleshy = { ent-OrganBase }
     .desc = { ent-OrganBase.desc }
 

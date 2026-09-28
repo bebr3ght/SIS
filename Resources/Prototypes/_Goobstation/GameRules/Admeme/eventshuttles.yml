@@ -25,7 +25,7 @@
   - type: StationEvent
     startAnnouncement: station-event-cburn-enroute
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_SIS/Announcements/attention.ogg # SIS
     duration: 1
     maxOccurrences: 1
   - type: LoadMapRule
@@ -40,11 +40,29 @@
   - type: StationEvent
     startAnnouncement: station-event-emergencyresponseteam-security-enroute
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_SIS/Announcements/attention.ogg # SIS
     duration: 1
     maxOccurrences: 1
   - type: LoadMapRule
     gridPath: /Maps/_Goobstation/Shuttles/retort_assault.yml
+
+- type: entity
+  parent: SpawnERTSecurity
+  id: SpawnERTSecurityDelayed
+  components:
+  - type: StationEvent
+    # Can't make announcement delayed
+    startAnnouncement: null
+    startAudio: null
+  - type: GameRule
+    delay:
+      min: 15
+      max: 20
+  - type: RoundEndRule
+  - type: AlertLevelInterceptionRule
+    alertLevel: Gamma
+    overrideAlert: true
+    locked: true
 
 - type: entity
   parent: BaseUnknownShuttleRule
@@ -53,7 +71,7 @@
   - type: StationEvent
     startAnnouncement: station-event-emergencyresponseteam-medical-enroute
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_SIS/Announcements/attention.ogg # SIS
     duration: 1
     maxOccurrences: 1
   - type: LoadMapRule
@@ -66,7 +84,7 @@
   - type: StationEvent
     startAnnouncement: station-event-emergencyresponseteam-engineering-enroute
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_SIS/Announcements/attention.ogg # SIS
     duration: 1
     maxOccurrences: 1
   - type: LoadMapRule
@@ -79,7 +97,7 @@
   - type: StationEvent
     startAnnouncement: station-event-emergencyresponseteam-generic-enroute
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_SIS/Announcements/attention.ogg # SIS
     duration: 1
     maxOccurrences: 1
   - type: LoadMapRule
@@ -92,7 +110,7 @@
   - type: StationEvent
     startAnnouncement: station-event-emergencyresponseteam-chaplain-enroute
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_SIS/Announcements/attention.ogg # SIS
     duration: 1
     maxOccurrences: 1
   - type: LoadMapRule

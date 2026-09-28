@@ -39,5 +39,3 @@ cosmic-shop-interface-consequence-level3 = Использование ваших
 # Buttons
 cosmic-shop-interface-influences-button-gain = Получить
 cosmic-shop-interface-confirm-button = Продолжить.
-cosmic-shop-interface-respec-button = Сбросить
-cosmic-shop-interface-respec-confirmation = Подтвердить

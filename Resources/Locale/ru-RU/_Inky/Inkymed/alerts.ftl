@@ -11,3 +11,12 @@ admin-verbs-smite-autism-desc = Делает цель весёлой и прич
 
 alerts-lobotomy-name = Лоботомированый
 alerts-lobotomy-desc = Ваша голова больше не болит, вы чувствуете себя таким... свободным... как в фортнайте...
+
+alerts-brain-oxygen-unstable-name = Головокружение
+alerts-brain-oxygen-unstable-desc = Что-то не так с воздухом, которым вы дышите. Наденьте [color=green]подачу воздуха[/color].
+
+alerts-brain-oxygen-dangerous-name = Головокружение
+alerts-brain-oxygen-dangerous-desc = Что-то не так с воздухом, которым вы дышите. Наденьте [color=green]подачу воздуха[/color].
+
+alerts-brain-oxygen-critical-name = Удушье
+alerts-brain-oxygen-critical-desc = Жизнь... кажется... такой... медленной...

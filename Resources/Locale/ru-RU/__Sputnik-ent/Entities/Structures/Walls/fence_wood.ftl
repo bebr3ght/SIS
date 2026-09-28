@@ -1,24 +1,27 @@
 ent-BaseFenceWood = деревянный забор
     .desc = Часть деревянного забора. Надеюсь, за ним находится бабушкин сад.
 
+ent-BaseFenceWoodHigh = { ent-BaseFenceWood }
+    .desc = { ent-BaseFenceWood.desc }
+
 ent-BaseFenceWoodSmall = небольшой деревянный забор
     .desc = Часть небольшого деревянного забора. Лучшее средство для ограждения частной территории!
 
-ent-FenceWoodHighStraight = { ent-BaseFenceWood }
+ent-FenceWoodHighStraight = { ent-BaseFenceWoodHigh }
+    .desc = { ent-BaseFenceWoodHigh.desc }
     .suffix = Прямой
-    .desc = { ent-BaseFenceWood.desc }
 
-ent-FenceWoodHighEnd = { ent-BaseFenceWood }
+ent-FenceWoodHighEnd = { ent-BaseFenceWoodHigh }
+    .desc = { ent-BaseFenceWoodHigh.desc }
     .suffix = Конец
-    .desc = { ent-BaseFenceWood.desc }
 
-ent-FenceWoodHighCorner = { ent-BaseFenceWood }
+ent-FenceWoodHighCorner = { ent-BaseFenceWoodHigh }
+    .desc = { ent-BaseFenceWoodHigh.desc }
     .suffix = Угол
-    .desc = { ent-BaseFenceWood.desc }
 
-ent-FenceWoodHighTJunction = { ent-BaseFenceWood }
+ent-FenceWoodHighTJunction = { ent-BaseFenceWoodHigh }
+    .desc = { ent-BaseFenceWoodHigh.desc }
     .suffix = Т-образный
-    .desc = { ent-BaseFenceWood.desc }
 
 ent-FenceWoodHighGate = ворота деревянного забора
     .desc = Имеешь ли ты представление, что ждёт тебя за этими воротами? Это может быть как туалет, так и роскошный особняк. А ты продолжай любить своих эмобоев.

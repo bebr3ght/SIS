@@ -1,10 +1,16 @@
 ent-SubGamemodesRuleNoHeretic = { ent-BaseGameRule }
     .desc = { ent-BaseGameRule.desc }
 
+ent-SubGamemodesRuleNoSpy = { ent-BaseGameRule }
+    .desc = { ent-BaseGameRule.desc }
+
 ent-Insurgency = { ent-BaseGameRule }
     .desc = { ent-BaseGameRule.desc }
 
 ent-BaseInsurgencyRule = { ent-BaseRoundstartAntagRule }
+    .desc = { ent-BaseRoundstartAntagRule.desc }
+
+ent-Spies = { ent-BaseRoundstartAntagRule }
     .desc = { ent-BaseRoundstartAntagRule.desc }
 
 ent-InsurgencyShipVariantInsurgents = { ent-BaseInsurgencyRule }

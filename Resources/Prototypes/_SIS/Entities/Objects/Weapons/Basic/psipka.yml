@@ -66,7 +66,7 @@
     heat: 0
   - type: IgniteOnCollide
     fireStacks: 1
-    
+
 - type: entity
   name: White-Cryo Psi Accelerator
   parent: PsiPka
@@ -99,7 +99,7 @@
   - type: UseDelay
     delay: 1
   - type: Summonable
-    specialItem: SpawnPointGhostPsiBasilisk
+    summonEntity: SpawnPointGhostPsiBasilisk
     requiresBibleUser: false
   - type: Tag
     tags: [ ]
@@ -166,9 +166,9 @@
   - type: Action
     useDelay: 60
     itemIconStyle: BigAction
-    icon:
-      sprite: _SIS/Objects/Actions/psipka.rsi
-      state: ability
+  - type: Sprite
+    sprite: _SIS/Objects/Actions/psipka.rsi
+    state: ability
   - type: TargetAction
     range: 120
     checkCanAccess: false

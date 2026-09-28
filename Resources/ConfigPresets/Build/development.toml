@@ -6,7 +6,7 @@ enabled = false
 ascension_requires_objectives = false
 
 [infolinks]
-github = "https://github.com/Trauma-Station/Trauma-Station"
+github = "https://github.com/skill-issue-corp/SISI" # SIS
 # </Trauma>
 
 [game]
@@ -25,9 +25,6 @@ enabled = false
 [ghost]
 role_time = 0.5
 quick_lottery = true
-
-[gateway]
-generator_enabled = false
 
 [movement]
 mob_pushing = false # Trauma - true -> false
@@ -70,6 +67,10 @@ pg_port = 5432
 pg_database = "ss14"
 pg_username = "postgres"
 pg_password = "postgres"
+
+[net]
+max_rapid_connections = 413
+max_ip_connections = 413
 
 # SIS-Start
 [sis]

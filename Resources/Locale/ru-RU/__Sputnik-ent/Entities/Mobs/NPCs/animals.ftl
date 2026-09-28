@@ -1,5 +1,5 @@
 ent-MobBat = летучая мышь
-    .desc = В одних культурах они вызывают ужас, в других — хрустят на зубах.
+    .desc = В одних культурах они вызывают ужас, в других – хрустят на зубах.
 
 ent-MobBee = пчела
     .desc = Приятно иметь, но нельзя построить цивилизацию на фундаменте из одного только мёда.
@@ -9,7 +9,7 @@ ent-MobAngryBee = пчела
     .suffix = Злой
 
 ent-MobChicken = курица
-    .desc = Была раньше яйца, динозавром!
+    .desc = Появилась раньше яйца и САМА является динозавром!
 
 ent-MobChicken1 = { ent-MobChicken }
     .desc = { ent-MobChicken.desc }
@@ -17,19 +17,22 @@ ent-MobChicken1 = { ent-MobChicken }
 ent-MobChicken2 = { ent-MobChicken }
     .desc = { ent-MobChicken.desc }
 
-ent-FoodEggChickenFertilized = куриное яйцо
-    .suffix = Оплодотворённый, Курица
+ent-FoodEggChickenFertilized = { ent-FoodEgg }
     .desc = { ent-FoodEgg.desc }
+    .suffix = Оплодотворённый, Курица
+
+ent-BaseCockroach = { ent-SolutionFood }
+    .desc = { ent-SolutionFood.desc }
 
 ent-MobCockroach = таракан
     .desc = Эта станция просто кишит насекомыми.
 
-ent-MobGlockroach = ТТаракан
+ent-MobGlockroach = глоктаракан
     .desc = Эта станция просто кишит на- О БОЖЕ, У ЭТОГО ТАРАКАНА ПИСТОЛЕТ!!!
-    .suffix = Адмемы
+    .suffix = Адмем
 
 ent-MobMothroach = таракамоль
-    .desc = Очаровательный результат многочисленных попыток генетического смешения молей с тараканами.
+    .desc = Очаровательный побочный продукт множества попыток генетического смешения молелюдей с тараканами.
 
 ent-MobDuckMallard = кряква
     .desc = Очаровательная кряква, она пушистая и мягкая!
@@ -40,12 +43,12 @@ ent-MobDuckWhite = белая утка
 ent-MobDuckBrown = коричневая утка
     .desc = Очаровательная коричневая уточка, пушистая и мягкая!
 
-ent-FoodEggDuckFertilized = утиное яйцо
-    .suffix = Оплодотворённый, Утка
+ent-FoodEggDuckFertilized = { ent-FoodEgg }
     .desc = { ent-FoodEgg.desc }
+    .suffix = Оплодотворённый, Утка
 
 ent-MobButterfly = бабочка
-    .desc = Вопреки заблуждениям, это не душа вашей бабушки.
+    .desc = Вопреки распространённому заблуждению, она на самом деле не сделана из масла.
 
 ent-MobCow = корова
     .desc = Муу.
@@ -84,7 +87,7 @@ ent-MobSheepRainbow = радужная овца
     .desc = Овца; эта, похоже... светится.
 
 ent-MobGoose = гусь
-    .desc = Его желудок и разум — загадка, недоступная человеческому пониманию.
+    .desc = Его желудок и разум – загадка, недоступная человеческому пониманию.
 
 ent-MobGorilla = горилла
     .desc = Крушит, ревёт, выглядит круто. Не стойте рядом с ней.
@@ -105,13 +108,13 @@ ent-MobBaseSyndicateMonkey = обезьяна
     .desc = Новая церковь неодарвинистов действительно верит, что КАЖДОЕ животное произошло от обезьяны. На вкус они как свинина, а убивать их весело и приятно.
     .suffix = Синдикат, Базовый
 
-ent-MobMonkeySyndicateAgent = обезьяна
+ent-MobMonkeySyndicateAgent = { ent-MobBaseSyndicateMonkey }
     .desc = { ent-MobBaseSyndicateMonkey.desc }
-    .suffix = Синдикат
+    .suffix = Агент Синдиката
 
 ent-MobMonkeySyndicateAgentNukeops = { ent-MobBaseSyndicateMonkey }
-    .suffix = Ядерные Оперативники
     .desc = { ent-MobBaseSyndicateMonkey.desc }
+    .suffix = Ядерные оперативники
 
 ent-MobBaseKobold = кобольд
     .desc = Двоюродные братья разумной расы унатхов, кобольды сливаются со своей естественной средой обитания, и так же противны, как обезьяны. Они готовы вырвать ваши волосы и заколоть вас до смерти.
@@ -120,19 +123,19 @@ ent-MobKobold = кобольд
     .desc = Двоюродные братья разумной расы унатхов, кобольды сливаются со своей естественной средой обитания, и так же противны, как обезьяны. Они готовы вырвать ваши волосы и заколоть вас до смерти.
 
 ent-MobBaseSyndicateKobold = { ent-MobBaseKobold }
-    .suffix = Синдикат, Базовый
     .desc = { ent-MobBaseKobold.desc }
+    .suffix = Синдикат, Базовый
 
 ent-MobKoboldSyndicateAgent = { ent-MobBaseSyndicateKobold }
-    .suffix = Агент Синдиката
     .desc = { ent-MobBaseSyndicateKobold.desc }
+    .suffix = Агент Синдиката
 
 ent-MobKoboldSyndicateAgentNukeops = { ent-MobBaseSyndicateKobold }
-    .suffix = Ядерные оперативники
     .desc = { ent-MobBaseSyndicateKobold.desc }
+    .suffix = Ядерные оперативники
 
 ent-MobGuidebookMonkey = тренировочная обезьяна
-    .desc = Специально обученная обезьяна, чья единственная цель в жизни — чтобы вы кликнули на неё. Можно ли считать, что обезьяна преподала вам урок?
+    .desc = Специально обученная обезьяна, чья единственная цель в жизни – чтобы вы кликнули на неё. Можно ли считать, что обезьяна преподала вам урок?
 
 ent-MobMouse = мышь
     .desc = Пии!
@@ -151,31 +154,34 @@ ent-MobMouse2 = { ent-MobMouse }
     .desc = { ent-MobMouse.desc }
 
 ent-MobMouseCancer = раковая мышь
-    .desc = Токсичная. Скуик!
+    .desc = Токсичная. Пии!
 
 ent-MobLizard = ящерица
     .desc = Безобидный дракон.
 
 ent-MobSlug = слизняк
-    .desc = И они называли это ящерицей?
+    .desc = И это они назвали ящерицей?
 
 ent-MobFrog = лягушка
     .desc = Прыг прыг прыг. Выглядит мокрой.
 
-ent-MobParrotBase = { ent-SimpleMobBase }
+ent-MobParrotBase = попугай
     .desc = Проникает в ваши владения, шпионит за вами и при этом остаётся классным питомцем.
 
-ent-MobParrot = попугай
-    .desc = Проникает в ваши владения, шпионит за вами и при этом остаётся классным питомцем.
+ent-MobParrot = { ent-MobParrotBase }
+    .desc = { ent-MobParrotBase.desc }
 
 ent-MobPenguin = пингвин
-    .desc = Их жизнь — это постоянная боль из-за коленных суставов внутри тела.
+    .desc = Их жизни – постоянная боль из-за коленных суставов внутри тела.
 
 ent-MobGrenadePenguin = пингвин гренадёр
     .desc = Маленький пингвин с гранатой на шее. Заготавливается Синдикатом на неблагоприятных ледяных планетах.
 
-ent-MobSpiderBase = { ent-SimpleMobBase }
-    .desc = { ent-SimpleMobBase.desc }
+ent-MobSnake = змея
+    .desc = Шшшш! Укусы не ядовиты.
+
+ent-MobSpiderBase = { ent-BaseMobGiantSpider }
+    .desc = { ent-BaseMobGiantSpider.desc }
 
 ent-SolutionVenomSpider = { ent-SolutionWeapon }
     .desc = { ent-SolutionWeapon.desc }
@@ -186,29 +192,28 @@ ent-MobSpiderAngryBase = { ent-MobSpiderBase }
 ent-MobGiantSpider = тарантул
     .desc = Общепризнанно, что это буквально худшее существо на свете.
 
-ent-MobGiantSpiderAngry = { ent-MobGiantSpider }
-    .desc = { ent-MobGiantSpider.desc }
-    .suffix = Злой
+ent-MobGiantSpiderAngry = { ent-MobSpiderAngryBase }
+    .desc = { ent-MobSpiderAngryBase.desc }
 
 ent-MobClownSpider = клоун-паук
-    .desc = Сочетает в себе две самые страшные вещи на свете — пауков и клоунов.
+    .desc = Сочетает в себе две самые страшные вещи на свете – пауков и клоунов.
 
 ent-MobGiantSpiderWizard = паук-волшебник
-    .desc = Этот паук выглядит немного волшебным.
+    .desc = Этот паук выглядит немного волшебным
     .suffix = Волшебник
 
 ent-MobPossum = поссум
-    .desc = "О поссум! Мой поссум!" -- Уолт Уитмен, 1865.
+    .desc = «О поссум! Мой поссум!» -- Уолт Уитмен, 1865
 
 ent-MobPossumOld = поссум
-    .suffix = Старый спрайт
     .desc = { ent-MobPossum.desc }
+    .suffix = Старый спрайт
 
 ent-MobRaccoon = енот
     .desc = Мусорная панда!
 
 ent-MobFox = лиса
-    .desc = Они — лисы.
+    .desc = Это лиса.
 
 ent-MobCorgiBase = корги
     .desc = Наконец-то, космический корги!
@@ -235,7 +240,7 @@ ent-MobCatSpace = космическая кошка
     .desc = Питомец семейства кошачьих, подготовленный к худшему.
 
 ent-MobCatCaracal = каракаловая кошка
-    .desc = Весёлое создание природы.
+    .desc = Уморительная.
 
 ent-MobCatKitten = котёнок
     .desc = Маленький и пушистый.
@@ -256,14 +261,11 @@ ent-MobDionaNymph = нимфа дионы
     .desc = Похожа на кошку, только.... ветвистее.
 
 ent-MobDionaNymphAccent = { ent-MobDionaNymph }
-    .suffix = Акцент
     .desc = { ent-MobDionaNymph.desc }
+    .suffix = Акцент
 
 ent-MobReindeerBuck = северный олень-самец
     .desc = Думаете, он может тянуть сани?
 
 ent-MobReindeerDoe = северный олень-самка
-    .desc = Думаете, она может тянуть сани?
-
-ent-MobCorgiSmart = умный корги
-    .desc = Необычайно умная собака.
+    .desc = { ent-MobReindeerBuck.desc }

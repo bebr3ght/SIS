@@ -260,3 +260,57 @@ Entries:
   id: 34
   time: '2026-07-22T23:06:39.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/3673
+- author: Nousagi37
+  changes:
+  - type: Tweak
+    message: >-
+      Убраны два лишних факса с карты Центрального Командования, а оставшийся подписан как ЦК.
+  id: 35
+  time: '2026-07-26T11:15:44.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3726
+- author: deltanedas
+  changes:
+  - type: Add
+    message: >-
+      Баны теперь могут указывать переопределение причины для вебхука, например, чтобы оскорбления или данные игрока не публиковались публично.
+  id: 36
+  time: '2026-07-27T14:25:51.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3757
+- author: deltanedas
+  changes:
+  - type: Add
+    message: Добавлены вербы кары антагонистов для кучи антагов.
+  id: 37
+  time: '2026-07-28T00:16:29.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3776
+- author: deltanedas
+  changes:
+  - type: Tweak
+    message: У чипов навыков теперь есть логи вербов для их добавления и удаления.
+  - type: Tweak
+    message: А-госты теперь всегда могут видеть точные чипы навыков людей.
+  id: 38
+  time: '2026-07-29T02:29:16.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3812
+- author: TechnicFighter
+  changes:
+  - type: Add
+    message: >-
+      Добавлены новые типы токенов антагонистов! Админ-пометка, которую они дают игроку, сообщает, на что их можно обменять.
+  id: 39
+  time: '2026-07-30T00:45:20.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/3801
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Исправлено, что игроки-тенеморфы и траллы просто отображались как командный антаг.
+  id: 40
+  time: '2026-08-09T23:50:39.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/4019
+- author: deltanedas
+  changes:
+  - type: Tweak
+    message: Голосования за режим теперь устанавливают режим только на 1 раунд, а не до изменения.
+  id: 41
+  time: '2026-08-12T13:47:10.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/4054

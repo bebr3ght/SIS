@@ -24,8 +24,8 @@ ent-WallCult = стена культа
     .desc = { ent-BaseWall.desc }
 
 ent-WallDebug = debug wall
-    .suffix = DEBUG
     .desc = { ent-BaseWall.desc }
+    .suffix = DEBUG
 
 ent-WallDiamond = бриллиантовая стена
     .desc = { ent-BaseWall.desc }
@@ -34,7 +34,7 @@ ent-WallGold = золотая стена
     .desc = { ent-BaseWall.desc }
 
 ent-WallIce = ледяная стена
-    .desc = { ent-BaseWall.desc }
+    .desc = { ent-BaseStructureWall.desc }
 
 ent-WallPlasma = плазменная стена
     .desc = { ent-BaseWall.desc }
@@ -43,30 +43,29 @@ ent-WallPlastic = пластиковая стена
     .desc = { ent-BaseWall.desc }
 
 ent-WallPlastitaniumIndestructible = пластитановая стена
-    .suffix = Неразрушимый
     .desc = { ent-BaseWall.desc }
+    .suffix = Неразрушимый
 
 ent-WallPlastitanium = пластитановая стена
     .desc = { ent-WallPlastitaniumIndestructible.desc }
 
 ent-WallPlastitaniumDiagonalIndestructible = пластитановая стена
-    .desc = { ent-WallShuttleDiagonal.desc }
+    .desc = { ent-WallDiagonalBase.desc }
     .suffix = Диагональ, Неразрушимое
 
 ent-WallPlastitaniumDiagonal = пластитановая стена
+    .desc = { ent-WallPlastitaniumDiagonalIndestructible.desc }
     .suffix = Диагональ
-    .desc = { ent-WallShuttleDiagonal.desc }
 
 ent-WallReinforced = укреплённая стена
     .desc = { ent-BaseWall.desc }
 
 ent-WallReinforcedRust = { ent-WallReinforced }
-    .suffix = Ржавый
     .desc = { ent-WallReinforced.desc }
+    .suffix = Ржавый
 
 ent-WallReinforcedDiagonal = укреплённая стена
-    .suffix = Диагональ
-    .desc = { ent-WallShuttleDiagonal.desc }
+    .desc = { ent-WallDiagonalBase.desc }
 
 ent-WallRiveted = клёпаная стена
     .desc = { ent-BaseWall.desc }
@@ -79,22 +78,19 @@ ent-WallSilver = серебряная стена
 
 ent-WallShuttleDiagonal = стена шаттла
     .desc = Удерживает воздух внутри, а ассистентов снаружи.
-    .suffix = Диагональ
 
 ent-WallShuttle = стена шаттла
     .desc = { ent-BaseWall.desc }
-    .suffix = Укреплённый, Внешний
 
 ent-WallSolid = обычная стена
     .desc = { ent-BaseWall.desc }
 
 ent-WallSolidDiagonal = обычная стена
-    .suffix = Диагональ
-    .desc = { ent-WallShuttleDiagonal.desc }
+    .desc = { ent-WallDiagonalBase.desc }
 
 ent-WallSolidRust = { ent-WallSolid }
+    .desc = { ent-WallSolid.desc }
     .suffix = Ржавый
-    .desc = { ent-BaseWall.desc }
 
 ent-WallXenoborg = ксеноборговая стена
     .desc = { ent-WallPlastitanium.desc }
@@ -119,8 +115,7 @@ ent-WallMining = шахтёрская стена
     .desc = { ent-BaseWall.desc }
 
 ent-WallMiningDiagonal = шахтёрская стена
-    .suffix = Диагональ
-    .desc = { ent-WallShuttleDiagonal.desc }
+    .desc = { ent-WallDiagonalBase.desc }
 
 ent-WallVaultAlien = инопланетная стена хранилища
     .desc = Таинственная стена с витиеватыми узорами. Внутри могут подстерегать древние опасности.

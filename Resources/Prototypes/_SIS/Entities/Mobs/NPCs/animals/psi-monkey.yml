@@ -1,30 +1,8 @@
 - type: entity
-  parent: [MobBaseAncestor, BaseSlicingRefinable]
-  id: MobFirePsiMonkey
-  name: psi-monkey
-  description: A strange-looking monkey with a red, exposed brain.
+  parent: [MobMonkey, BaseSlicingRefinable]
+  id: MobBasePsiMonkey
+  abstract: true
   components:
-  - type: ActionGrant
-    actions:
-    - ActionPyrokinesBall
-  - type: Sprite
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      sprite: _SIS/Mobs/Animals/psimonkey.rsi
-      state: red
-    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
-      color: "#ffffff"
-      sprite: Objects/Misc/handcuffs.rsi
-      state: body-overlay-2
-      visible: false
-    - map: [ "ears" ]
-    - map: [ "id" ]
-    - map: [ "mask" ]
-    - map: [ "head" ]
-    - map: [ "clownedon" ]
-      sprite: "Effects/creampie.rsi"
-      state: "creampie_human"
-      visible: false
   - type: Prying
     pryPowered: true
     force: true
@@ -44,19 +22,42 @@
     makeSentient: true
     name: ghost-role-information-psimonkey-name
     description: ghost-role-information-psimonkey-description
-    rules: ghost-role-information-antagonist-rules
+    rules: ghost-role-information-freeagent-rules
   - type: GhostTakeoverAvailable
   - type: Clumsy
-    gunShootFailDamage:
-      types:
-        Blunt: 5
-        Piercing: 4
-        Heat: 3
-    catchingFailDamage:
-      types:
-        Blunt: 1
-    clumsySound:
-      path: /Audio/Animals/monkey_scream.ogg
+    clumsyDefaultCheck: 1.0
+  - type: ToolRefinable
+    refineResult:
+    - id: PsiMonkeyRedBrain
+      amount: 1
+
+- type: entity
+  parent: MobBasePsiMonkey
+  id: MobFirePsiMonkey
+  name: psi-monkey
+  description: A strange-looking monkey with a red, exposed brain.
+  components:
+  - type: Sprite
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      sprite: _SIS/Mobs/Animals/psimonkey.rsi
+      state: red
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+    - map: [ "ears" ]
+    - map: [ "id" ]
+    - map: [ "mask" ]
+    - map: [ "head" ]
+    - map: [ "clownedon" ]
+      sprite: "Effects/creampie.rsi"
+      state: "creampie_human"
+      visible: false
+  - type: ActionGrant
+    actions:
+    - ActionPyrokinesBall
   - type: ToolRefinable
     refineResult:
     - id: PsiMonkeyRedBrain
@@ -77,8 +78,10 @@
   components:
   - type: Action
     itemIconStyle: BigAction
-    icon: { sprite : Objects/Weapons/Guns/Projectiles/magic.rsi, state: fireball }
     useDelay: 20
+  - type: Sprite
+    sprite : Objects/Weapons/Guns/Projectiles/magic.rsi
+    state: fireball
   - type: TargetAction
     range: 60
     checkCanAccess: false
@@ -89,14 +92,11 @@
     sentence: action-speech-pyrokines # На случай если кто то зачем то вколит в них когнизин.
 
 - type: entity
-  parent: [MobBaseAncestor, BaseSlicingRefinable]
+  parent: MobBasePsiMonkey
   id: MobIcePsiMonkey
   name: psi-monkey
   description: A strange-looking monkey with a blue exposed brain.
   components:
-  - type: ActionGrant
-    actions:
-    - ActionCryokinesRay
   - type: Sprite
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
@@ -115,38 +115,9 @@
       sprite: "Effects/creampie.rsi"
       state: "creampie_human"
       visible: false
-  - type: Prying
-    pryPowered: true
-    force: true
-    speedModifier: 2
-    useSound:
-      path: /Audio/Items/crowbar.ogg
-  - type: NameIdentifier
-    group: Monkey
-  - type: Speech
-    speechSounds: Monkey
-    speechVerb: Monkey
-  - type: MonkeyAccent
-  - type: SentienceTarget
-    flavorKind: station-event-random-sentience-flavor-primate
-  - type: AlwaysRevolutionaryConvertible
-  - type: GhostRole
-    makeSentient: true
-    name: ghost-role-information-psimonkey-name
-    description: ghost-role-information-psimonkey-description
-    rules: ghost-role-information-antagonist-rules
-  - type: GhostTakeoverAvailable
-  - type: Clumsy
-    gunShootFailDamage:
-      types:
-        Blunt: 5
-        Piercing: 4
-        Heat: 3
-    catchingFailDamage:
-      types:
-        Blunt: 1
-    clumsySound:
-      path: /Audio/Animals/monkey_scream.ogg
+  - type: ActionGrant
+    actions:
+    - ActionCryokinesRay
   - type: ToolRefinable
     refineResult:
     - id: PsiMonkeyBlueBrain
@@ -170,8 +141,10 @@
   components:
   - type: Action
     itemIconStyle: BigAction
-    icon: { sprite : Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi, state: omnilaser }
     useDelay: 10
+  - type: Sprite
+    sprite : Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    state: omnilaser
   - type: TargetAction
     range: 60
     checkCanAccess: false

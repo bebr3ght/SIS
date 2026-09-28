@@ -1,8 +1,8 @@
-ent-JawsOfLifeBase = челюсти жизни
-    .desc = Набор челюстей жизни, скомпонованных при помощи магии науки.
-ent-JawsOfLife = челюсти жизни
-    .desc = Набор челюстей жизни, скомпонованных при помощи магии науки.
-# Corvax-HiddenDesc-Start
-ent-SyndicateJawsOfLife = челюсти жизни синдиката
-    .desc = Используется для проникновения на станцию или в её отделы.
-# Corvax-HiddenDesc-End
+ent-JawsOfLifeBase = гидравлические челюсти жизни
+    .desc = Набор гидравлических челюстей жизни, сжатый с помощью научной магии.
+
+ent-JawsOfLife = { ent-JawsOfLifeBase }
+    .desc = { ent-JawsOfLifeBase.desc }
+
+ent-SyndicateJawsOfLife = гидравлические челюсти смерти
+    .desc = Полезны для проникновения в охраняемые зоны и других коварных дел.

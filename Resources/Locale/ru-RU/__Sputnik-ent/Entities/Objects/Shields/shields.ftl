@@ -1,6 +1,9 @@
 ent-BaseShield = базовый щит
     .desc = Щит!
 
+ent-BaseShieldDestructible = { "" }
+    .desc = { "" }
+
 ent-BaseRepairableShield = базовый ремонтируемый щит
     .desc = Ремонтируемый щит!
 

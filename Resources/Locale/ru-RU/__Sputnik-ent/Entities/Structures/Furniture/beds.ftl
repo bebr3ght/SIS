@@ -1,3 +1,6 @@
+ent-BaseBed = { ent-BaseStructure }
+    .desc = { ent-BaseStructure.desc }
+
 ent-Bed = кровать
     .desc = На ней можно лежать или спать пристёгнутым.
 

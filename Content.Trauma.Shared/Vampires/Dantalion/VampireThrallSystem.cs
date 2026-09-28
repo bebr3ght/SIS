@@ -5,6 +5,7 @@ using Content.Shared.Database;
 using Content.Shared.Examine;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
+using Content.Shared.Mindshield;
 using Content.Shared.Popups;
 using Content.Shared.Roles;
 using Content.Shared.Roles.Components;
@@ -21,6 +22,7 @@ public sealed partial class VampireThrallSystem : EntitySystem
     [Dependency] private IGameTiming _timing = default!;
     [Dependency] private INetManager _net = default!;
     [Dependency] private ISharedAdminLogManager _admin = default!;
+    [Dependency] private MindShieldSystem _mindShield = default!;
     [Dependency] private SharedPopupSystem _popup = default!;
     [Dependency] private SharedMindSystem _mind = default!;
     [Dependency] private SharedRoleSystem _role = default!;
@@ -30,28 +32,22 @@ public sealed partial class VampireThrallSystem : EntitySystem
     private static readonly ProtoId<CollectiveMindPrototype> DantalionMind = "Dantalion";
     private static readonly EntProtoId<MindRoleComponent> ThrallMindRole = "MindRoleVampireThrall";
 
-    public override void Initialize()
-    {
-        base.Initialize();
-
-        SubscribeLocalEvent<VampireThrallsComponent, DanEnthrallActionEvent>(OnEnthrall);
-
-        SubscribeLocalEvent<VampireThrallComponent, GlareAttemptEvent>(OnGlare);
-        SubscribeLocalEvent<VampireThrallComponent, BloodsuckingAttemptEvent>(OnBloodsucking);
-
-        SubscribeLocalEvent<VampireThrallComponent, ExaminedEvent>(OnExamined);
-        SubscribeLocalEvent<VampireThrallComponent, ComponentShutdown>(OnShutdown);
-    }
-
+    [SubscribeLocalEvent]
     private void OnEnthrall(Entity<VampireThrallsComponent> ent, ref DanEnthrallActionEvent args)
     {
         var user = ent.Owner;
         var target = args.Target;
         var cap = ent.Comp.ThrallCap;
 
+        if (_mindShield.IsShielded(target))
+        {
+            _popup.PopupEntity("The target has a mindshield!", user, user, PopupType.MediumCaution);
+            return;
+        }
+
         if (ent.Comp.Thralls.Count == cap)
         {
-            _popup.PopupEntity($"You can't have more than {cap} thralls!", user, user, PopupType.MediumCaution);
+            _popup.PopupEntity($"У вас не может быть больше {cap} рабов!", user, user, PopupType.MediumCaution); // SIS-TODO: Анхаркод локали
             return;
         }
 
@@ -61,14 +57,14 @@ public sealed partial class VampireThrallSystem : EntitySystem
         {
             // but since HasMind is networked it controls the popup to not mispredict user feedback
             if (TryComp<MindContainerComponent>(target, out var mc) && !mc.HasMind)
-                _popup.PopupEntity("The target has no mind!", user, user, PopupType.MediumCaution);
+                _popup.PopupEntity("У цели нет разума!", user, user, PopupType.MediumCaution); // SIS-TODO: Анхаркод локали
             return;
         }
 
         ent.Comp.Thralls.Add(target);
         Dirty(ent);
 
-        _popup.PopupEntity("You gain a new thrall!", user, user, PopupType.Medium);
+        _popup.PopupEntity("Вы обретаете нового раба!", user, user, PopupType.Medium); // SIS-TODO: Анхаркод локали
 
         var comp = EnsureComp<VampireThrallComponent>(target);
         comp.Vampire = user;
@@ -88,6 +84,7 @@ public sealed partial class VampireThrallSystem : EntitySystem
     /// <summary>
     /// Vampire thralls are unable to be glared at.
     /// </summary>
+    [SubscribeLocalEvent]
     private void OnGlare(Entity<VampireThrallComponent> ent, ref GlareAttemptEvent args)
     {
         args.Cancelled = true;
@@ -96,6 +93,7 @@ public sealed partial class VampireThrallSystem : EntitySystem
     /// <summary>
     /// Vampire thralls have protection against bloodsucking.
     /// </summary>
+    [SubscribeLocalEvent]
     private void OnBloodsucking(Entity<VampireThrallComponent> ent, ref BloodsuckingAttemptEvent args)
     {
         args.Cancelled = true;
@@ -104,14 +102,16 @@ public sealed partial class VampireThrallSystem : EntitySystem
     /// <summary>
     /// Exists so dantalion knows which thralls belong to them, since multiple dantalion vampires can exist.
     /// </summary>
+    [SubscribeLocalEvent]
     private void OnExamined(Entity<VampireThrallComponent> ent, ref ExaminedEvent args)
     {
         if (args.Examiner != ent.Comp.Vampire)
             return;
 
-        args.PushMarkup("[color=Green]This thrall belongs to you[/color]");
+        args.PushMarkup("[color=Green]Этот тралл принадлежит вам[/color]"); // SIS-TODO: Анхаркод локали
     }
 
+    [SubscribeLocalEvent]
     private void OnShutdown(Entity<VampireThrallComponent> ent, ref ComponentShutdown args)
     {
         if (_timing.ApplyingState)
@@ -126,11 +126,11 @@ public sealed partial class VampireThrallSystem : EntitySystem
         thralls.Thralls.Remove(user);
         Dirty(vampire, thralls);
 
-        _popup.PopupEntity("You are freed from enthrallment!", user, user, PopupType.Large);
+        _popup.PopupEntity("Вы освобождены от порабощения!", user, user, PopupType.Large); // SIS-TODO: Анхаркод локали
 
         // Notify the vampire that they lost a thrall
         if (_net.IsServer)
-            _popup.PopupEntity("You feel like you lost a follower!", vampire, vampire, PopupType.LargeCaution);
+            _popup.PopupEntity("Вы чувствуете, что потеряли последователя!", vampire, vampire, PopupType.LargeCaution); // SIS-TODO: Анхаркод локали
 
         // Remove collective mind channel since they don't need it anymore
         if (!_collectiveMindQuery.TryComp(user, out var collectiveMind))

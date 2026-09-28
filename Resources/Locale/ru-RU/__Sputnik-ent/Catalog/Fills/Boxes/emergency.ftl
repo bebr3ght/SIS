@@ -1,45 +1,49 @@
 ent-BoxSurvival = аварийный запас
     .desc = Коробка с базовым набором для выживания.
-    .suffix = Стандартный
-ent-BoxSurvivalNitrogen = { ent-BoxSurvival }
-    .suffix = Стандартный Азот N2
-    .desc = { ent-BoxSurvival.desc }
+
+ent-BoxSurvivalNitrogen = N2 аварийный запас
+    .desc = Небольшая коробка с дыхательной маской, аварийным азотным баллоном и экстренным медипеном. Стандартное снаряжение для большинства членов экипажа, дышащих азотом.
+
 ent-BoxSurvivalEngineering = расширенный аварийный запас
     .desc = Коробка с базовым набором для выживания. Согласно этикетке, содержит более ёмкий баллон.
-    .suffix = Инженерный
-ent-BoxSurvivalEngineeringNitrogen = { ent-BoxSurvivalEngineering }
-    .suffix = Расширенный Азот N2
-    .desc = { ent-BoxSurvivalEngineering.desc }
+
+ent-BoxSurvivalEngineeringNitrogen = расширенный N2 аварийный запас
+    .desc = Небольшая коробка с дыхательной маской, расширенным аварийным азотным баллоном и экстренным медипеном. Выдаётся членам экипажа, дышащим азотом, чья работа часто приводит их в места без атмосферы.
+
 ent-BoxSurvivalSecurity = аварийный запас
     .desc = Коробка с базовым набором для выживания.
-    .suffix = СБ
-ent-BoxSurvivalSecurityNitrogen = { ent-BoxSurvivalSecurity }
-    .suffix = Охранный Азот N2
-    .desc = { ent-BoxSurvivalSecurity.desc }
+
+ent-BoxSurvivalSecurityNitrogen = охранный N2 аварийный запас
+    .desc = Небольшая коробка с противогазом, аварийным азотным баллоном и экстренным медипеном. Выдаётся сотрудникам службы безопасности, дышащим азотом.
+
 ent-BoxSurvivalMedical = аварийный запас
     .desc = Коробка с базовым набором для выживания.
-    .suffix = Медицинский
-ent-BoxSurvivalMedicalNitrogen = { ent-BoxSurvivalMedical }
-    .suffix = Медицинский Азот N2
-    .desc = { ent-BoxSurvivalMedical.desc }
-ent-BoxHug = коробка обнимашек
-    .desc = Специальная коробка для чутких людей.
-    .suffix = Аварийный
-ent-BoxHugNitrogen = { ent-BoxHug }
-    .suffix = Аварийный Азот N2
+
+ent-BoxSurvivalMedicalNitrogen = медицинский N2 аварийный запас
+    .desc = Небольшая коробка с медицинской маской, аварийным азотным баллоном и экстренным медипеном. Выдаётся сотрудникам медицинского отдела, дышащим азотом.
+
+ent-BoxSurvivalHug = { ent-BoxHug }
     .desc = { ent-BoxHug.desc }
-ent-BoxMime = { ent-BoxSurvival }
-    .desc = { ent-BoxSurvival.desc }
-    .suffix = Мим, Аварийный
-ent-BoxMimeNitrogen = { ent-BoxSurvivalNitrogen }
-    .suffix = Мим, Аварийный Азот N2
-    .desc = { ent-BoxSurvivalNitrogen.desc }
-ent-BoxMimeMoth = { ent-BoxSurvival }
-    .suffix = Мим, Аварийный ниан
-    .desc = { ent-BoxSurvival.desc }
+    .suffix = Выживание; O2
+
+ent-BoxSurvivalHugNitrogen = { ent-BoxSurvivalHug }
+    .desc = { ent-BoxSurvivalHug.desc }
+    .suffix = Выживание; N2
+
+ent-BoxSurvivalDeluxeExtended = расширенный O2 аварийный запас делюкс
+    .desc = Аварийный запас делюкс с дыхательной маской, расширенным аварийным кислородным баллоном, экстренным медипеном, аварийным фальшфейером, а также небольшим количеством еды и воды.
+
+ent-BoxSurvivalDeluxeExtendedNitrogen = расширенный N2 аварийный запас делюкс
+    .desc = Аварийный запас делюкс с дыхательной маской, расширенным аварийным азотным баллоном, экстренным медипеном, аварийным фальшфейером, а также небольшим количеством еды и воды.
+
 ent-BoxSurvivalSyndicate = расширенный аварийный запас
     .desc = Коробка с базовым набором для выживания. Согласно этикетке, содержит более ёмкий баллон.
-    .suffix = Синдикат
-ent-BoxSurvivalSyndicateNitrogen = { ent-BoxSurvivalSyndicate }
-    .suffix = Синдикат Азот N2
-    .desc = { ent-BoxSurvivalSyndicate.desc }
+
+ent-BoxSurvivalSyndicateNitrogen = синдикатский N2 аварийный запас
+    .desc = Аварийный запас, разработанный Синдикатом, с синдикатским противогазом, расширенным аварийным азотным баллоном, экстренным медипеном, аварийным фальшфейером и небольшим количеством еды.
+
+ent-BoxSurvivalMilitaryDouble = военный O2 аварийный запас
+    .desc = Аварийный запас военного образца с аварийным кислородным баллоном двойной ёмкости, экстренным медипеном и аварийным фальшфейером.
+
+ent-BoxSurvivalMilitaryDoubleNitrogen = военный N2 аварийный запас
+    .desc = Аварийный запас военного образца с аварийным азотным баллоном двойной ёмкости, экстренным медипеном и аварийным фальшфейером.

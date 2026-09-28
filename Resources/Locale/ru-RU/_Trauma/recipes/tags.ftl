@@ -28,6 +28,7 @@ construction-graph-tag-signaltrigger = сигнальный триггер
 construction-graph-tag-butt = ягодицы
 construction-graph-tag-cyber-butt = пах КПЛ
 construction-graph-tag-egg = любое яйцо
+construction-graph-tag-egg-sack = любой яйцевой мешок
 
 # weapons
 construction-graph-tag-improvised-bow = самодельный лук

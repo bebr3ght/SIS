@@ -5,10 +5,10 @@ ent-OrganBaseOrganic = орган
     .desc = { ent-OrganBaseFleshy.desc }
 
 ent-OrganBaseTorso = торс
-    .desc = { ent-OrganBaseExternal.desc }
+    .desc = { ent-OrganBase.desc }
 
 ent-OrganBaseHead = голова
-    .desc = { ent-OrganBaseExternal.desc }
+    .desc = { ent-OrganBase.desc }
 
 ent-OrganBaseArmLeft = левая рука
     .desc = { ent-OrganBaseArm.desc }
@@ -35,40 +35,40 @@ ent-OrganBaseFootRight = правая стопа
     .desc = { ent-OrganBaseFoot.desc }
 
 ent-OrganBaseBrain = мозг
-    .desc = { ent-OrganBaseInternal.desc }
+    .desc = { ent-BaseKnowledgeContainer.desc }
 
 ent-OrganBaseEyes = глаза
-    .desc = { ent-OrganBaseInternal.desc }
+    .desc = { ent-OrganBase.desc }
 
 ent-OrganBaseTongue = язык
-    .desc = { ent-OrganBaseInternal.desc }
+    .desc = { ent-OrganBase.desc }
 
 ent-OrganBaseAppendix = аппендикс
-    .desc = { ent-OrganBaseInternal.desc }
+    .desc = { ent-OrganBase.desc }
 
 ent-OrganBaseEars = уши
-    .desc = { ent-OrganBaseInternal.desc }
+    .desc = { ent-OrganBase.desc }
 
 ent-OrganBaseLungs = лёгкие
-    .desc = { ent-OrganBaseInternal.desc }
+    .desc = { ent-OrganBase.desc }
 
 ent-SolutionLungGas = { ent-Solution }
     .desc = { ent-Solution.desc }
 
 ent-OrganBaseHeart = сердце
-    .desc = { ent-OrganBaseInternal.desc }
+    .desc = { ent-OrganBase.desc }
 
 ent-OrganBaseStomach = желудок
-    .desc = { ent-OrganBaseInternal.desc }
+    .desc = { ent-OrganBase.desc }
 
 ent-SolutionStomach = { ent-Solution }
     .desc = { ent-Solution.desc }
 
 ent-OrganBaseLiver = печень
-    .desc = { ent-OrganBaseInternal.desc }
+    .desc = { ent-OrganBase.desc }
 
 ent-OrganBaseKidneys = почки
-    .desc = { ent-OrganBaseInternal.desc }
+    .desc = { ent-OrganBase.desc }
 
 ent-OrganSpriteHumanInternal = { "" }
     .desc = { "" }
@@ -78,3 +78,12 @@ ent-OrganBaseHeadSexed = голова
 
 ent-OrganBaseTorsoSexed = торс
     .desc = { "" }
+
+ent-OrganBaseParent = { ent-OrganBase }
+    .desc = { ent-OrganBase.desc }
+
+ent-OrganBaseChildExternal = { ent-OrganBaseExternal }
+    .desc = { ent-OrganBaseExternal.desc }
+
+ent-OrganBaseChildInternal = { ent-OrganBase }
+    .desc = { ent-OrganBase.desc }

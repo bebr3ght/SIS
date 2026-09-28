@@ -2,7 +2,7 @@
 
 using Content.Inky.Common.Medical;
 using Content.Shared.Body;
-using Content.Shared.Ghost;
+using Content.Shared.Ghost.Components;
 using Content.Shared.Mind.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
@@ -18,11 +18,7 @@ public sealed partial class SIS_GhostSpriteStateSystem : EntitySystem
     private static readonly ProtoId<OrganCategoryPrototype> BrainOrganCategory = "Brain";
     private const string GhostSpriteState = "ghost_Autism";
 
-    public override void Initialize()
-    {
-        SubscribeLocalEvent<SIS_GhostSpriteStateComponent, MindAddedMessage>(OnGhostMindAdded);
-    }
-
+    [SubscribeLocalEvent]
     private void OnGhostMindAdded(EntityUid uid, SIS_GhostSpriteStateComponent component, MindAddedMessage args)
     {
         if (_random.Prob(component.Chance))

@@ -1,12 +1,17 @@
-ent-WallRockGibtonite = { ent-BaseRockGibtonite }
+ent-WallRockGibtonite = порода
     .desc = { ent-BaseRockGibtonite.desc }
-ent-WallRockBasaltGibtonite = { ent-BaseRockGibtonite }
+
+ent-WallRockBasaltGibtonite = базальт
     .desc = { ent-BaseRockGibtonite.desc }
-ent-WallRockSnowGibtonite = { ent-BaseRockGibtonite }
+
+ent-WallRockSnowGibtonite = сугроб
     .desc = { ent-BaseRockGibtonite.desc }
-ent-WallRockSandGibtonite = { ent-BaseRockGibtonite }
+
+ent-WallRockSandGibtonite = песчаник
     .desc = { ent-BaseRockGibtonite.desc }
-ent-WallRockChromiteGibtonite = { ent-BaseRockGibtonite }
+
+ent-WallRockChromiteGibtonite = хромит
     .desc = { ent-BaseRockGibtonite.desc }
-ent-WallRockAndesiteGibtonite = { ent-BaseRockGibtonite }
+
+ent-WallRockAndesiteGibtonite = андезит
     .desc = { ent-BaseRockGibtonite.desc }

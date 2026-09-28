@@ -1,20 +1,46 @@
+ent-BaseBloomery = незажжённый сыродутный горн
+    .desc = { ent-BaseStructure.desc }
+
+ent-BaseBloomeryLit = разожжённый сыродутный горн
+    .desc = { ent-BaseBloomery.desc }
+
+ent-BaseBloomeryComplete = дымящийся сыродутный горн
+    .desc = Выглядит готовым, разбейте его.
+
 ent-BloomeryCold = потухший сыродутный горн
     .desc = Перед розжигом нужно загрузить углём и металлическим ломом.
-ent-BloomeryColdBrass = потухший сыродутный горн
+
+ent-BloomeryColdBrass = { ent-BaseBloomery }
     .desc = Загружен латунью, осталось только разжечь.
-ent-BloomeryColdPlasteel = потухший сыродутный горн
+    .suffix = Латунь
+
+ent-BloomeryColdPlasteel = { ent-BaseBloomery }
     .desc = Загружен пласталью, осталось только разжечь.
-ent-BloomeryColdSteel = потухший сыродутный горн
+    .suffix = Пласталь
+
+ent-BloomeryColdSteel = { ent-BaseBloomery }
     .desc = Загружен сталью, осталось только разжечь.
-ent-BloomeryLitBrass = разожжённый сыродутный горн
+    .suffix = Сталь
+
+ent-BloomeryLitBrass = { ent-BaseBloomeryLit }
     .desc = Загружен латунью, дайте ему немного погореть, и он будет готов.
-ent-BloomeryLitSteel = разожжённый сыродутный горн
+    .suffix = Латунь
+
+ent-BloomeryLitSteel = { ent-BaseBloomeryLit }
     .desc = Загружен сталью, дайте ему немного погореть, и он будет готов.
+    .suffix = Сталь
+
 ent-BloomeryLitPlasteel = разожжённый сыродутный горн
     .desc = Загружен пласталью, дайте ему немного погореть, и он будет готов.
-ent-BloomeryCompletePlasteel = дымящийся сыродутный горн
-    .desc = Выглядит готовым, разбейте его.
-ent-BloomeryCompleteSteel = дымящийся сыродутный горн
-    .desc = Выглядит готовым, разбейте его.
-ent-BloomeryCompleteBrass = дымящийся сыродутный горн
-    .desc = Выглядит готовым, разбейте его.
+
+ent-BloomeryCompletePlasteel = { ent-BaseBloomeryComplete }
+    .desc = { ent-BaseBloomeryComplete.desc }
+    .suffix = Пласталь
+
+ent-BloomeryCompleteSteel = { ent-BaseBloomeryComplete }
+    .desc = { ent-BaseBloomeryComplete.desc }
+    .suffix = Сталь
+
+ent-BloomeryCompleteBrass = { ent-BaseBloomeryComplete }
+    .desc = { ent-BaseBloomeryComplete.desc }
+    .suffix = Латунь

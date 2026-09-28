@@ -27,7 +27,7 @@ ent-ReinforcementBeaconSpecialistOfficerRiotRanged = { ent-ReinforcementBeaconSe
 
 ent-ReinforcementBeaconSpecialistOfficerHeavyLaser = { ent-ReinforcementBeaconSecurityOfficer }
     .desc = { ent-ReinforcementBeaconSecurityOfficer.desc }
-    .suffix = Служба безопасности, тяжёлый, лазер
+    .suffix = Служба безопасности, тяжёловооруженный
 
 ent-ReinforcementBeaconSpecialistOfficerShield = { ent-ReinforcementBeaconSecurityOfficer }
     .desc = { ent-ReinforcementBeaconSecurityOfficer.desc }

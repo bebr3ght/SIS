@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Goobstation.Common.Weapons.Ranged;
+using Content.Shared.Damage.Events;
 using Content.Shared.Inventory;
 using Content.Shared.Power;
 using Content.Shared.Projectiles;
@@ -21,11 +22,30 @@ public abstract partial class SharedGunSystem
 {
     [Dependency] private InventorySystem _inventory = default!;
 
+    private const float DamagePitchVariation = 0.05f;
+
     /// <summary>
     /// Get a predicted random instance for an entity, specific to this tick.
     /// </summary>
     public IRobustRandom Random(EntityUid uid)
         => SharedRandomExtensions.PredictedRandom(Timing, GetNetEntity(uid));
+
+    [SubscribeLocalEvent]
+    private void OnProjectileDamageExamine(Entity<ProjectileComponent> ent, ref DamageExamineEvent args)
+    {
+        if (ent.Comp.Damage.Empty)
+            return;
+
+        var damage = ent.Comp.Damage * Damageable.UniversalProjectileDamageModifier;
+        _damageExamine.AddDamageExamine(args.Message, Damageable.ApplyUniversalAllModifiers(damage), Loc.GetString("damage-projectile"));
+
+        var ap = GetProjectilePenetration(ent.Comp);
+        if (ap == 0)
+            return;
+
+        var abs = Math.Abs(ap);
+        args.Message.AddMarkupPermissive("\n" + Loc.GetString("armor-penetration", ("arg", ap/abs), ("abs", abs)));
+    }
 
     /// <summary>
     /// Client-overriden function to do recoil for a shot.

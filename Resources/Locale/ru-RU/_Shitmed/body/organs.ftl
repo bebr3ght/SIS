@@ -1,5 +1,4 @@
 # Parts
-markings-organ-Butt = Ягодицы
 markings-organ-Tail = Хвост
 markings-organ-Wings = Крылья
 

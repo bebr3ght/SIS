@@ -10,7 +10,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 admin-player-actions-reason = Причина
-admin-player-actions-bans = Бан-лист
+admin-player-actions-logs = Логи игроков
 admin-player-actions-notes = Заметки
 admin-player-actions-kick = Кикнуть
 admin-player-actions-ban = Забанить

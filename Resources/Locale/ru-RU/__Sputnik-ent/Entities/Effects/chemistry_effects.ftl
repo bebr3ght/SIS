@@ -36,6 +36,3 @@ ent-FoamedAluminiumMetal = вспененный алюминий
 
 ent-ReactionFlash = { "" }
     .desc = { "" }
-
-ent-Resin = смола
-    .desc = { ent-BaseFoam.desc }

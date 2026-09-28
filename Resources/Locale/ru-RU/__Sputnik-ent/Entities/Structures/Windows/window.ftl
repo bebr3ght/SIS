@@ -1,3 +1,6 @@
+ent-BaseWindowStructure = окно
+    .desc = Не заляпайте стекло внизу.
+
 ent-Window = окно
     .desc = Смотри не заляпай.
 
@@ -8,9 +11,15 @@ ent-TintedWindowTransparent = { ent-TintedWindow }
     .suffix = Прозрачное
     .desc = { ent-TintedWindow.desc }
 
+ent-BaseRCDResistant = { "" }
+    .desc = { "" }
+
 ent-WindowRCDResistant = { ent-Window }
     .suffix = РСУ защита
     .desc = { ent-Window.desc }
+
+ent-BaseWindowStructureDirectional = направленное окно
+    .desc = Не заляпайте стекло внизу.
 
 ent-WindowDirectional = направленное окно
     .desc = Смотри не заляпай.

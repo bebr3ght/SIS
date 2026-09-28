@@ -4,6 +4,7 @@ armor-coverage-type-hand = кистей
 armor-coverage-type-foot = стоп
 armor-coverage-type-leg = ног
 armor-coverage-type-torso = груди
+armor-coverage-type-wings = крыльев
 armor-coverage-type-head = головы
 armor-coverage-type-tail = хвоста
 armor-coverage-type-other = других частей тела

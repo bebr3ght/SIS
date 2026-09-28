@@ -10,6 +10,9 @@ ent-BaseTargetObjective = { ent-BaseObjective }
 ent-BaseKillObjective = { ent-BaseTargetObjective }
     .desc = { ent-BaseTargetObjective.desc }
 
+ent-BaseKillRandomObjective = { ent-BaseKillObjective }
+    .desc = { ent-BaseKillObjective.desc }
+
 ent-BaseSocialObjective = { ent-BaseTargetObjective }
     .desc = { ent-BaseTargetObjective.desc }
 

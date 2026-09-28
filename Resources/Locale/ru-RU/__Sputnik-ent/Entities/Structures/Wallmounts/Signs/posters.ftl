@@ -235,7 +235,7 @@ ent-PosterLegitLoveIan = Любовь к Иану
 ent-PosterLegitSpaceCops = Космокопы
     .desc = Плакат, рекламирующий телешоу "Космические копы".
 
-ent-PosterLegitUeNo = Ue No
+ent-PosterLegitUeNo = Ue No.
     .desc = Плакат целиком на японском языке.
 
 ent-PosterLegitGetYourLEGS = Помни про НОГИ

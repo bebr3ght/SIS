@@ -1,3 +1,14 @@
+# SPDX-FileCopyrightText: 2021 20kdc <asdd2808@gmail.com>
+# SPDX-FileCopyrightText: 2021 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2021 Galactic Chimp <63882831+GalacticChimp@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 EmoGarbage404 <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Morb <14136326+Morb0@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Vera Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Aiden <aiden@djkraz.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 # InstrumentComponent
 instrument-component-finger-cramps-light-message = Ваши пальцы начинает немного сводить судорогой!
 instrument-component-finger-cramps-serious-message = Ваши пальцы свело судорогой!
@@ -8,24 +19,51 @@ instruments-component-menu-no-midi-support =
     Если вы на Linux, вам может потребоваться установить
     FluidSynth или пакет разработки
     для FluidSynth.
-instruments-component-menu-input-button = MIDI-ввод
-instruments-component-menu-band-button = Присоединиться к группе
-instruments-component-menu-play-button = Воспроизвести MIDI-файл
+instruments-component-menu-play-tab-title = Воспроизведение
+instruments-component-menu-config-tab-title = Настройки
+instruments-component-menu-midi-source-button = Источник MIDI
+instruments-component-menu-unknown-midi-source-button = Неизвестный
+instruments-component-menu-input-midi-source-button = Ввод
+instruments-component-menu-band-midi-source-button = Группа
+instruments-component-menu-file-midi-source-button = Файлы
+instruments-component-menu-play-stop-button = Воспроизвести
 instruments-component-menu-loop-button = Повтор
-instruments-component-menu-channels-button = Каналы
-instruments-component-menu-stop-button = Стоп
-instruments-component-band-menu = Выбрать лидера группы
-instrument-component-band-refresh = Обновить
+instruments-component-menu-shuffle-button = Перемешать
+instruments-component-menu-channels-label = Каналы [italic](обновляются при воспроизведении)[/italic]
+instruments-component-menu-files-track-playtime-seconds-minutes = {$currentMinutes}:{$currentSeconds}/{$totalMinutes}:{$totalSeconds}
+instruments-component-menu-files-track-playtime-seconds-minutes-hours = {$currentHours}:{$currentMinutes}:{$currentSeconds}/{$totalHours}:{$totalMinutes}:{$totalSeconds}
+instruments-component-menu-files-file-remove-disabled-info = Остановите воспроизведение и выберите элемент для удаления.
+instruments-component-menu-files-add-button = Добавить
+instruments-component-menu-files-remove-button = Удалить
+instruments-component-menu-files-rename-button = Переименовать
+instruments-component-menu-files-rename-dialog-title = Переименовать файл
+instruments-component-menu-files-rename-dialog-prompt = Новое имя
+instruments-component-menu-files-filter = Фильтр...
+instruments-component-menu-files-error = Операция завершилась с неожиданной ошибкой.
+instruments-component-menu-input-notice-label = Подключите MIDI-устройство к компьютеру
+                                                и включите музыку.
+instruments-component-band-title-label = Группы
+instruments-component-band-refresh = Обновить
 instruments-component-channels-menu = Выбор MIDI-канала
-instrument-component-channel-name = MIDI-канал { $number }
-instruments-component-channels-all-button = Все
-instruments-component-channels-clear-button = Очистить
-# SwappableInstrumentComponent
-instruments-component-channels-track-names-toggle = Показать название трека
-instruments-component-channels-single = { $channel } { $name }
-instruments-component-channels-multi = { $channel } { $name } ({ $other })
+instruments-component-channels-all-button = Включить
+instruments-component-channels-clear-button = Выключить
+instruments-component-channels-all-channels-label = Все каналы
+instruments-component-channels-percussion-channel-name = [Перкуссия]
+instruments-component-channels-name-display-selector-label = Отображаемое имя
+instruments-component-channels-name-display-selector-track-button = Трек
+instruments-component-channels-name-display-selector-program-button = Программа
+instruments-component-channels-name-display-selector-instrument-button = Инструмент
+instruments-component-midi-file-collection-label = Коллекция MIDI
+instruments-component-midi-file-collection-size-label = Загружено MIDI-файлов: {$count}
+instruments-component-midi-file-collection-open-dir-button = Открыть папку
+instruments-component-midi-file-collection-reload-button = Перезагрузить коллекцию
+instruments-component-midi-file-collection-delete-all-button = Очистить коллекцию
+instruments-component-menu-midi-min-volume-slider-label = Минимальная громкость MIDI-ввода
+
+
 # SwappableInstrumentComponent
 swappable-instrument-component-style-set = Установить стиль "{ $style }"
+
 instruments-component-menu-midi-channel-acoustic-grand-piano = Акустический рояль
 instruments-component-menu-midi-channel-bright-acoustic-piano = Яркое акустическое фортепиано
 instruments-component-menu-midi-channel-electric-grand-piano = Электрический рояль

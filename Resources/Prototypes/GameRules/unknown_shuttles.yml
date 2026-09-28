@@ -20,6 +20,7 @@
     reoccurrenceDelay: 30
     earliestStart: 20 # Goobstation
     duration: 1
+    occursDuringRoundEnd: false
     maxOccurrences: 1
   - type: RuleGrids
   - type: LoadMapRule
@@ -32,7 +33,7 @@
   - type: StationEvent
     startAnnouncement: station-event-unknown-shuttle-incoming
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_SIS/Announcements/attention.ogg # SIS
 
 # The power of 3 clowns proved too strong for the players and may need to be 1984'ed. Replace this with a more engaging clown shuttle.
 - type: entity

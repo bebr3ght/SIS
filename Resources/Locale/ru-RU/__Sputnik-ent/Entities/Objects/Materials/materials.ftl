@@ -54,7 +54,7 @@ ent-MaterialHideBear = шкура медведя
     .desc = { ent-MaterialBase.desc }
 
 ent-MaterialHideCorgi = шкура корги
-    .desc = Роскошный мех, используемый только в самой элитной моде. Ходят слухи, что его находят, когда корги отправляют на "хорошую ферму".
+    .desc = Роскошный мех, используемый только в самой элитной моде. Ходят слухи, что его находят, когда корги отправляют на «хорошую ферму».
 
 ent-MaterialDiamond = обработанный алмаз
     .desc = { ent-MaterialBase.desc }
@@ -109,7 +109,7 @@ ent-MaterialToothSpaceCarp1 = { ent-MaterialToothSpaceCarp }
     .suffix = 1
 
 ent-MaterialToothSharkminnow = зуб акулоплавки
-    .desc = Выглядит острым. Достаточно острым, чтобы выколоть кому-нибудь глаз. Черт возьми, он огромный.
+    .desc = Выглядит острым. Достаточно острым, чтобы выколоть кому-нибудь глаз. Чёрт возьми, он огромный.
     .suffix = Полный
 
 ent-MaterialToothSharkminnow1 = { ent-MaterialToothSharkminnow }

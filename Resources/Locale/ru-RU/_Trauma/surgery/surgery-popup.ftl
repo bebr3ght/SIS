@@ -16,3 +16,5 @@ surgery-popup-step-SurgeryStepInsertTongue = {$user} вставляет язык
 
 surgery-popup-procedure-SurgeryRemoveKidneys-step-SurgeryStepRemoveOrgan = {$user} удаляет почки у {$target}!
 surgery-popup-step-SurgeryStepInsertKidneys = {$user} вставляет почки в {$part} у {$target}!
+
+surgery-popup-procedure-SurgeryRemoveTongue-step-SurgeryStepRemoveOrganHand = {$user} удаляет язык {$target}!

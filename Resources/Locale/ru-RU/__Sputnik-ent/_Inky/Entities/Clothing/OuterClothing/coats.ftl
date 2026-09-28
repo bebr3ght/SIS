@@ -1,2 +1,5 @@
 ent-ClothingOuterCoatDiscoBlazer = Диско-Пиджак
     .desc = Выглядит так, будто этот пиджак содрали с какого-то давно вымершего диско-животного.
+
+ent-ClothingOuterCoatTransparentBlazer = прозрачный пиджак
+    .desc = Вот чудак, теперь все видят вас голым.

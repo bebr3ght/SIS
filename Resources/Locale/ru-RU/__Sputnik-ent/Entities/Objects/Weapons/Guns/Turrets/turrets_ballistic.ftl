@@ -3,8 +3,8 @@ ent-WeaponTurretSyndicate = { ent-BaseWeaponBallisticTurret }
     .desc = { ent-BaseWeaponBallisticTurret.desc }
 
 ent-WeaponTurretSyndicateDisposable = баллистическая турель
+    .desc = { ent-BaseWeaponBallisticTurretIndestructible.desc }
     .suffix = Синдикат, тулбокс, ящик
-    .desc = { ent-BaseWeaponBallisticTurret.desc }
 
 ent-WeaponTurretNanoTrasen = { ent-BaseWeaponBallisticTurret }
     .suffix = Nanotrasen

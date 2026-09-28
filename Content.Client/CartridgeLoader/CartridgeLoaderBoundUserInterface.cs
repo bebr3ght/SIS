@@ -132,7 +132,7 @@ public abstract class CartridgeLoaderBoundUserInterface : BoundUserInterface
     private void SendCartridgeUiReadyEvent(EntityUid cartridgeUid)
     {
         var message = new CartridgeLoaderUiMessage(_entManager.GetNetEntity(cartridgeUid), CartridgeUiMessageAction.UIReady);
-        SendPredictedMessage(message); // SIS-Cartridge_FIX | TODO: Кинуть офффам
+        SendMessage(message);
     }
 
     private UIFragment? RetrieveCartridgeUI(EntityUid? cartridgeUid)

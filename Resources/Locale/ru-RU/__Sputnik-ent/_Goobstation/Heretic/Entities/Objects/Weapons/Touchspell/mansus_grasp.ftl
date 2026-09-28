@@ -1,4 +1,20 @@
 ent-TouchSpellMansus = Хват Мансуса
     .desc = Сила Древних Богов, направленная через вашу хватку.
-ent-TouchSpellMansusRust = { ent-TouchSpellMansus }
+
+ent-TouchSpellMansusAsh = { ent-TouchSpellMansus }
+    .desc = { ent-TouchSpellMansus.desc }
+
+ent-TouchSpellMansusVoid = { ent-TouchSpellMansus }
+    .desc = { ent-TouchSpellMansus.desc }
+
+ent-TouchSpellMansusBlade = { ent-TouchSpellMansus }
+    .desc = { ent-TouchSpellMansus.desc }
+
+ent-TouchSpellMansusCosmos = { ent-TouchSpellMansus }
+    .desc = { ent-TouchSpellMansus.desc }
+
+ent-TouchSpellMansusFlesh = { ent-TouchSpellMansus }
+    .desc = { ent-TouchSpellMansus.desc }
+
+ent-TouchSpellMansusLock = { ent-TouchSpellMansus }
     .desc = { ent-TouchSpellMansus.desc }

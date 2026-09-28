@@ -1,7 +1,13 @@
+ent-GasPipeSansLayersIndestructible = газовая труба
+    .desc = Удерживает газ.
+
 ent-GasPipeSansLayers = газовая труба
     .desc = Удерживает газ.
 
 ent-VentCrawlerHolder = держатель для лазания по вентиляции
+    .desc = { "" }
+
+ent-BaseGasPipeLayers = { "" }
     .desc = { "" }
 
 ent-GasPipeBase = труба

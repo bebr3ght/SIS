@@ -10,7 +10,7 @@ ent-MobPolymorphable = { "" }
 ent-MobDamageable = { "" }
     .desc = { "" }
 
-ent-MobCombat = { "" }
+ent-BaseMobDestructible = { "" }
     .desc = { "" }
 
 ent-MobAtmosExposed = { "" }

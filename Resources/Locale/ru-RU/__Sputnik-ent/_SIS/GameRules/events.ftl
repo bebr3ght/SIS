@@ -4,5 +4,8 @@ ent-RedPsiMonkeySpawn = { ent-BaseStationEventShortDelay }
 ent-BluePsiMonkeySpawn = { ent-BaseStationEventShortDelay }
     .desc = { ent-BaseStationEventShortDelay.desc }
 
-ent-WerewolfMidround = { ent-BaseAntagGhostRoleRule }
-    .desc = { ent-BaseAntagGhostRoleRule.desc }
+ent-WerewolfMidround = { ent-BaseMidroundAntagRule }
+    .desc = { ent-BaseMidroundAntagRule.desc }
+
+ent-CorticalBorerSpawn = { ent-BaseStationEventShortDelay }
+    .desc = { ent-BaseStationEventShortDelay.desc }

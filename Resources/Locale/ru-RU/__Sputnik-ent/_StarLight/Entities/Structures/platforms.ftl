@@ -1,32 +1,47 @@
 ent-CMPlatformBase = платформа
     .desc = Приподнятая поверхность. Погодите, это же незаконно!
+
 ent-CMPlatform = { ent-CMPlatformBase }
     .desc = { ent-CMPlatformBase.desc }
+
 ent-CMPlatformCorner = { ent-CMPlatformBase }
     .desc = { ent-CMPlatformBase.desc }
+
 ent-RMCPlatformCornerSmall = { ent-CMPlatformBase }
     .desc = { ent-CMPlatformBase.desc }
+
 ent-RMCPlatformStairRight = { ent-CMPlatform }
     .desc = { ent-CMPlatform.desc }
+
 ent-RMCPlatformStairLeft = { ent-CMPlatform }
     .desc = { ent-CMPlatform.desc }
-ent-CMPlatformDark = { ent-CMPlatformBase }
-    .desc = { ent-CMPlatformBase.desc }
-ent-CMPlatformCornerDark = { ent-CMPlatformBase }
-    .desc = { ent-CMPlatformBase.desc }
-ent-RMCPlatformCornerSmallDark = { ent-CMPlatformBase }
-    .desc = { ent-CMPlatformBase.desc }
+
+ent-CMPlatformDark = { ent-CMPlatform }
+    .desc = { ent-CMPlatform.desc }
+
+ent-CMPlatformCornerDark = { ent-CMPlatformCorner }
+    .desc = { ent-CMPlatformCorner.desc }
+
+ent-RMCPlatformCornerSmallDark = { ent-RMCPlatformCornerSmall }
+    .desc = { ent-RMCPlatformCornerSmall.desc }
+
 ent-RMCPlatformStairRightDark = { ent-CMPlatform }
     .desc = { ent-CMPlatform.desc }
+
 ent-RMCPlatformStairLeftDark = { ent-CMPlatform }
     .desc = { ent-CMPlatform.desc }
-ent-CMPlatformWood = { ent-CMPlatformBase }
-    .desc = { ent-CMPlatformBase.desc }
-ent-CMPlatformCornerWood = { ent-CMPlatformBase }
-    .desc = { ent-CMPlatformBase.desc }
-ent-RMCPlatformCornerSmallWood = { ent-CMPlatformBase }
-    .desc = { ent-CMPlatformBase.desc }
+
+ent-CMPlatformWood = { ent-CMPlatform }
+    .desc = { ent-CMPlatform.desc }
+
+ent-CMPlatformCornerWood = { ent-CMPlatformCorner }
+    .desc = { ent-CMPlatformCorner.desc }
+
+ent-RMCPlatformCornerSmallWood = { ent-RMCPlatformCornerSmall }
+    .desc = { ent-RMCPlatformCornerSmall.desc }
+
 ent-RMCPlatformStairRightWood = { ent-CMPlatform }
     .desc = { ent-CMPlatform.desc }
+
 ent-RMCPlatformStairLeftWood = { ent-CMPlatform }
     .desc = { ent-CMPlatform.desc }

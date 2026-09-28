@@ -11,7 +11,7 @@
     sprite: Markers/jobs.rsi
     state: detective
   cost:
-    Spesos: 5000
+    Spesos: 4000 # SIS | 5000
   categories:
   - ReinforcementsHoS
   restockTime: 0
@@ -43,7 +43,7 @@
     sprite: Markers/jobs.rsi
     state: security_officer
   cost:
-    Spesos: 4000
+    Spesos: 3000 # SIS | 4000
   categories:
   - ReinforcementsHoS
   restockTime: 0
@@ -59,7 +59,7 @@
     sprite: Markers/jobs.rsi
     state: security_officer
   cost:
-    Spesos: 7500
+    Spesos: 7000 # SIS | 7500
   categories:
   - ReinforcementsHoS
   restockTime: 0
@@ -75,7 +75,7 @@
     sprite: Markers/jobs.rsi
     state: security_officer
   cost:
-    Spesos: 7500
+    Spesos: 6500 # SIS | 7500
   categories:
   - ReinforcementsHoS
   restockTime: 0
@@ -91,7 +91,7 @@
     sprite: Markers/jobs.rsi
     state: security_officer
   cost:
-    Spesos: 7500
+    Spesos: 7000 # SIS | 7500
   categories:
   - ReinforcementsHoS
   restockTime: 0
@@ -107,7 +107,7 @@
     sprite: Markers/jobs.rsi
     state: security_officer
   cost:
-    Spesos: 10000
+    Spesos: 12000 # SIS | 10000
   categories:
   - ReinforcementsHoS
   restockTime: 0
@@ -123,7 +123,7 @@
     sprite: Markers/jobs.rsi
     state: security_officer
   cost:
-    Spesos: 7500
+    Spesos: 6500 # SIS | 7500
   categories:
   - ReinforcementsHoS
   restockTime: 0
@@ -139,12 +139,12 @@
     sprite: Markers/jobs.rsi
     state: brigmedic
   cost:
-    Spesos: 10000
+    Spesos: 8000 # SIS | 10000
   categories:
   - ReinforcementsHoS
   restockTime: 0
   resetRestockOnPurchase: true
-  restockAfterPurchase: 900
+  restockAfterPurchase: 600 # SIS | 900
 
 - type: listing
   id: ReinforcementCadet
@@ -155,12 +155,46 @@
     sprite: Markers/jobs.rsi
     state: security_cadet
   cost:
-    Spesos: 500
+    Spesos: 1000 # SIS | 500
   categories:
   - ReinforcementsHoS
   restockTime: 0
   resetRestockOnPurchase: true
   restockAfterPurchase: 60
+
+# Bioweapons
+
+- type: listing
+  id: BioweaponManual
+  name: bioweapon-manual-name
+  description: bioweapon-manual-desc
+  productEntity: MilTechManual
+  icon:
+    sprite: Objects/Misc/books.rsi
+    state: cover_old
+  cost:
+    Spesos: 5000
+  categories:
+  - Bioweapons
+  restockTime: 0
+  resetRestockOnPurchase: false
+  restockAfterPurchase: 900
+
+- type: listing
+  id: Bioweapon
+  name: bioweapon-name
+  description: bioweapon-desc
+  productEntity: MobBioweapon
+  icon:
+    sprite: _Trauma/Mobs/Monsters/bioweapon.rsi
+    state: alive
+  cost:
+    Spesos: 15000
+  categories:
+  - Bioweapons
+  restockTime: 30m
+  resetRestockOnPurchase: true
+  restockAfterPurchase: 30m
 
 # Medical
 
@@ -335,12 +369,12 @@
     sprite: Markers/jobs.rsi
     state: prisoner
   cost:
-    Spesos: 250
+    Spesos: 500 # inky
   categories:
   - ScienceHoP
   restockTime: 0
   resetRestockOnPurchase: true
-  restockAfterPurchase: 60
+  restockAfterPurchase: 180 # inky
 
 # Cargo
 

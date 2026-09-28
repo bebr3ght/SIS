@@ -178,7 +178,7 @@ ent-SignEngineering = знак "инженерия"
 ent-SignEscapePods = знак "капсулы"
     .desc = Знак, указывающий на спасательные капсулы.
 
-ent-SignEVA = знак "ВКД"
+ent-SignEVA = знак "EVA"
     .desc = Знак, указывающий на хранилище скафандров.
 
 ent-SignElectrical = знак "высокое напряжение"
@@ -260,8 +260,8 @@ ent-SignCans = знак "канистры"
     .desc = Знак, указывающий на удачное присутствие канистр газов.
 
 ent-SignCansScience = { ent-SignCans }
-    .suffix = Научный
     .desc = { ent-SignCans.desc }
+    .suffix = Научный
 
 ent-SignShipDock = знак "эвакуация"
     .desc = Знак, указывающий, куда (скорее всего) прибудет эвакуационный шаттл.

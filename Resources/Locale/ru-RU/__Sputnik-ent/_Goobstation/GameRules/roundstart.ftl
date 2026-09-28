@@ -1,6 +1,3 @@
-ent-CorporateAgent = { ent-BaseTraitorRule }
-    .desc = { ent-BaseTraitorRule.desc }
-
 ent-CalmTraitor = { ent-BaseTraitorRule }
     .desc = { ent-BaseTraitorRule.desc }
 

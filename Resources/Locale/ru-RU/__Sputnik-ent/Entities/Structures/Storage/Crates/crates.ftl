@@ -32,7 +32,7 @@ ent-CrateSurgery = хирургический ящик
     .desc = { ent-CrateGenericSteel.desc }
 
 ent-CrateWeb = паутинный ящик
-    .desc = { ent-CrateGeneric.desc }
+    .desc = { ent-BaseCrate.desc }
 
 ent-CrateSecgear = ящик оборудования службы безопасности
     .suffix = Защищённый
@@ -86,10 +86,10 @@ ent-CrateSyndicateSecure = защищённый ящик Синдиката
     .desc = Стальной ящик тёмного цвета с красными полосами и выдавленной на передней панели литерой S.
 
 ent-CrateLivestock = ящик для скота
-    .desc = { ent-CrateGeneric.desc }
+    .desc = { ent-BaseCrate.desc }
 
 ent-CrateRodentCage = хомячья клетка
-    .desc = { ent-CrateGeneric.desc }
+    .desc = { ent-BaseCrate.desc }
 
 ent-CrateBaseLockBox = ящик с замком
     .desc = Защищённый ящик с замком. Прибыль с его продажи будет начислена обратно отделу. Но помните: Карго всегда получает свою долю.

@@ -23,6 +23,9 @@ ent-GeneratorWallmountAPU = ВСУ шаттла
     .desc = Вспомогательная силовая установка для шаттла — 6кВт.
     .suffix = ВСУ, 6кВт
 
+ent-BaseRTG = { ent-BaseMachine }
+    .desc = { ent-BaseMachine.desc }
+
 ent-GeneratorRTG = РИТЭГ
     .desc = Радиоизотопный термоэлектрический генератор для долговременного питания.
     .suffix = 10кВт

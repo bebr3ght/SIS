@@ -4,14 +4,17 @@ ent-BasicAntagEventScheduler = { ent-BaseGameRule }
 ent-ModerateAntagEventScheduler = { ent-BaseGameRule }
     .desc = { ent-BaseGameRule.desc }
 
-ent-MorphRule = { ent-BaseRoundstartAntagRule }
-    .desc = { ent-BaseRoundstartAntagRule.desc }
-
-ent-BaseShadowDemonRule = { ent-BaseGameRule }
+ent-MorphRule = { ent-BaseGameRule }
     .desc = { ent-BaseGameRule.desc }
 
-ent-ShadowDemonSummon = { ent-BaseShadowDemonRule }
-    .desc = { ent-BaseShadowDemonRule.desc }
+ent-MorphMidroundRule = { ent-MorphRule }
+    .desc = { ent-MorphRule.desc }
+
+ent-ShadowDemonRule = { ent-BaseGameRule }
+    .desc = { ent-BaseGameRule.desc }
+
+ent-ShadowDemonSummon = { ent-ShadowDemonRule }
+    .desc = { ent-ShadowDemonRule.desc }
 
 ent-ShadowlingMidround = { ent-BaseShadowlingRule }
     .desc = { ent-BaseShadowlingRule.desc }
@@ -21,3 +24,6 @@ ent-SleeperAgentsQuiet = { ent-BaseTraitorRule }
 
 ent-WailingHorseQuiet = { ent-WailingHorseSpawn }
     .desc = { ent-WailingHorseSpawn.desc }
+
+ent-LoneXenomorphSpawnRule = { ent-BaseGameRule }
+    .desc = { ent-BaseGameRule.desc }

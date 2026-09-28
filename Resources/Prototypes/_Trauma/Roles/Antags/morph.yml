@@ -9,6 +9,7 @@
 - type: antagSpecifier
   id: Morph
   spawnerPrototype: GhostRoleSpawnerMorph
+  allowNonHumans: true
   mindRoles: [ MindRoleMorph ]
   briefing:
     # SIS-ChatGreeting Start
@@ -33,3 +34,12 @@
     - title: role-greeting-desc
       message: morph-role-greeting-desc
     # SIS-ChatGreeting End
+
+- type: antagSmite
+  id: Morph
+  antag: Morph
+  rule: MorphRule
+  ruleComp: MorphRule
+  icon:
+    sprite: _Trauma/Mobs/morph.rsi
+    state: morph

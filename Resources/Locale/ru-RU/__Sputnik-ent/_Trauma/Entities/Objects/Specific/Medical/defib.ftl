@@ -1,3 +1,3 @@
-ent-DefibrillatorSyndicateUnpowered = дефибриллятор «Интердайн»
-    .desc = По совместительству — оружие самообороны против военных преступников-тайдеров.
+ent-DefibrillatorSyndicateUnpowered = { ent-DefibrillatorSyndicate }
+    .desc = { ent-DefibrillatorSyndicate.desc }
     .suffix = Всегда с питанием

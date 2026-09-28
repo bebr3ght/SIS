@@ -7,5 +7,5 @@ ent-ChangeFactionStatusEffect = смена фракции
 ent-StatusEffectFireImmune = иммунитет к огню
     .desc = { ent-MobStatusEffectBase.desc }
 
-ent-StatusEffectWeatherImmune = иммунитет к пепельной буре
+ent-StatusEffectAshStormImmune = иммунитет к пепельной буре
     .desc = { ent-MobStatusEffectBase.desc }

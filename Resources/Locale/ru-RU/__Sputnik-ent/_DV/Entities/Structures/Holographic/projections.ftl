@@ -1,2 +1,2 @@
-ent-BaseHolosign = { "" }
+ent-BaseHoloSignNoDespawn = { "" }
     .desc = { "" }

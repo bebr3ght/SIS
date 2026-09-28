@@ -1,3 +1,6 @@
+ent-ActionBaseWerewolf = { "" }
+    .desc = { "" }
+
 ent-ActionWerewolfHowl = Вой
     .desc = Издайте громкий вопль, оглушающий всех в радиусе действия.
 

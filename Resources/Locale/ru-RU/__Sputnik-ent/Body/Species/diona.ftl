@@ -62,6 +62,9 @@ ent-OrganDionaLungs = { ent-OrganBaseLungs }
 ent-OrganDionaStomach = { ent-OrganBaseStomach }
     .desc = { ent-OrganBaseStomach.desc }
 
+ent-BaseNymphingOrgan = { "" }
+    .desc = { "" }
+
 ent-OrganDionaBrainNymphing = { ent-OrganDionaBrain }
     .desc = { ent-OrganDionaBrain.desc }
     .suffix = Диона, нимфа

@@ -1,3 +1,6 @@
+ent-BaseBlobAction = { ent-BaseAction }
+    .desc = { ent-BaseAction.desc }
+
 ent-ActionCreateBlobFactory = Создать фабрику блоба
     .desc = Создает фабрику для производства блобов.
 

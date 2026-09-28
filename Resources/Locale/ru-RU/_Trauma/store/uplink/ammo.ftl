@@ -10,14 +10,11 @@ uplink-caseless-pistol-tranq-desc = Магазин с 10 патронами тр
 uplink-caseless-pistol-poison-name = пистолетный магазин (.25 безгильзовый, токсин)
 uplink-caseless-pistol-poison-desc = Магазин с 10 патронами ядовитых боеприпасов, снаряжёнными лексорином. Убивает за четыре выстрела и небольшое время. Используется с «Коброй».
 
-uplink-magazine-bulldog-pellet-name-trauma = барабанный магазин (12 калибр)
+uplink-magazine-bulldog-pellet-name-trauma = барабанный магазин (12 калибр, дробь)
 
-uplink-magazine-bulldog-slug-name-trauma = барабанный магазин (12 калибр)
+uplink-magazine-bulldog-slug-name-trauma = барабанный магазин (12 калибр, пуля)
 
-uplink-mosin-ammo-name-trauma = коробка патронов (.30 винтовочный)
+uplink-pistol-magazine-c20r-name-trauma = магазин для ПП (9 мм)
 
-uplink-estoc-ammo-name-trauma = винтовочный магазин (.20 винтовочный)
-
-uplink-sniper-ammo-name-trauma = коробка патронов (.60 антиматериальный)
-
-uplink-pistol-magazine-c20r-name-trauma = магазин для ПП (.35 авто)
+uplink-speedloader-magnum-name = Спидлоадер (.45 магнум, бронебойные)
+uplink-speedloader-magnum-desc = Спидлоадер револьвера с 6 бронебойными патронами, способными полностью игнорировать броню. Совместим с «Питоном».

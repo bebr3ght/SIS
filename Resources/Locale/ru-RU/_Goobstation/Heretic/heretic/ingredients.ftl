@@ -60,3 +60,4 @@ heretic-ritual-ingredient-spear = копьё
 heretic-ritual-ingredient-screwdriver = отвёртка
 heretic-ritual-ingredient-wirecutter = кусачки
 heretic-ritual-ingredient-hand = рука
+heretic-ritual-ingredient-bonfire = костёр

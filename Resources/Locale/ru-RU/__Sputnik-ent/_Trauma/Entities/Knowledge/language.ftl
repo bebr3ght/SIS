@@ -129,3 +129,6 @@ ent-LanguageXenoHivemind = { ent-BaseLanguageKnowledgeAntag }
 
 ent-LanguageCodespeak = { ent-BaseLanguageKnowledgeAntag }
     .desc = { ent-BaseLanguageKnowledgeAntag.desc }
+
+ent-LanguageMiltech = { ent-BaseLanguageKnowledgeAntag }
+    .desc = { ent-BaseLanguageKnowledgeAntag.desc }

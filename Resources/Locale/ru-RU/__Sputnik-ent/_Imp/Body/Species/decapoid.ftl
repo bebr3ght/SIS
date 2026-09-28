@@ -1,5 +1,5 @@
-ent-AppearanceDecapoid = внешность декаподов
-    .desc = { ent-BaseSpeciesAppearance.desc }
+ent-AppearanceDecapoid = Внешность декапоида
+    .desc = { ent-BaseSpeciesAppearanceDecapoid.desc }
 
 ent-MobDecapoid = Урист МакКраб
     .desc = { ent-AppearanceDecapoid.desc }

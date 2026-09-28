@@ -4,6 +4,12 @@ ent-BaseXenoArtifactEffect = эффект
 ent-BaseOneTimeXenoArtifactEffect = одноразовый эффект
     .desc = Неизвестный
 
+ent-XenoArtifactBecomeLamp = { ent-BaseOneTimeXenoArtifactEffect }
+    .desc = Излучает странный свет
+
+ent-XenoArtifactBecomeRainbowLamp = { ent-BaseOneTimeXenoArtifactEffect }
+    .desc = Излучает меняющийся свет
+
 ent-XenoArtifactEffectUniversalIntercom = { ent-BaseOneTimeXenoArtifactEffect }
     .desc = Получает способности устройства дальней связи
 
@@ -96,9 +102,6 @@ ent-XenoArtifactMagnetNegative = { ent-BaseOneTimeXenoArtifactEffect }
 
 ent-XenoArtifactStealth = { ent-BaseOneTimeXenoArtifactEffect }
     .desc = Создание световых помех
-
-ent-XenoArtifactRareMaterialSpawn = { ent-BaseXenoArtifactEffect }
-    .desc = Создание редких материалов
 
 ent-XenoArtifactRareMaterialSpawnSilver = { ent-BaseXenoArtifactEffect }
     .desc = Создание редких материалов

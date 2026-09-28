@@ -25,9 +25,6 @@ anchor-filter-examine-enabled = Настроено на пропуск толь�
 anchor-filter-examine-disabled = Настроено на пропуск только не закреплённых, но закрепляемых объектов.
 
 mob-filter-window-title = Редактировать фильтр существ
-mob-state-Alive = Живой
-mob-state-Dead = Мёртвый
-mob-state-Critical = Критическое состояние
 mob-state-SoftCrit = Лёгкий крит
 mob-filter-examine-unset = Состояния существ не настроены
 mob-filter-examine-set = Настроено на пропуск существ в состояниях: { $states }

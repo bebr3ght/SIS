@@ -1,3 +1,2 @@
-ent-GatewayLavalandEmpty = врата в лавовый мир
-    .desc = В ад вы не пойдёте.
-    .suffix = ВЫКЛ
+ent-Gateway = { ent-BaseGateway }
+    .desc = { ent-BaseGateway.desc }

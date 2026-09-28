@@ -23,3 +23,8 @@
     - title: role-greeting-desc
       message: shadowling-role-greeting-desc
   # SIS-ChatGreeting End
+
+- type: antagSpecifier
+  parent: Shadowling
+  id: ShadowlingMidround
+  spawnerPrototype: GhostRoleSpawnerShadowling

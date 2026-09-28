@@ -1,6 +1,9 @@
 ent-RitualSacrifice = жертвоприношение
     .desc = { "" }
 
+ent-RitualAmberFocus = янтарный фокус
+    .desc = { "" }
+
 ent-RitualLivingHeart = неутомимое сердцебиение
     .desc = { "" }
 
@@ -158,4 +161,7 @@ ent-RitualMaidInTheMirror = дева в зеркале
     .desc = { "" }
 
 ent-RitualSharpMedal = острая медаль
+    .desc = { "" }
+
+ent-RitualAshSpirit = пепельный ритуал
     .desc = { "" }

@@ -4,4 +4,4 @@ ent-ChemistryBottleBingleJuice = { ent-BaseChemistryBottleFilled }
 
 ent-ChemistryBottlePlasma = { ent-BaseChemistryBottleFilled }
     .desc = { ent-BaseChemistryBottleFilled.desc }
-    .suffix = плазма
+    .suffix = форон

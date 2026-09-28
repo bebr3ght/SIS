@@ -21,6 +21,3 @@ ent-BorgModuleSyndicateSurgery = модуль борга-хирурга
 
 ent-BorgModuleSyndicateRescue = модуль борга-спасателя
     .desc = { ent-BaseBorgModuleSyndicate.desc }
-
-ent-BorgModuleSyndicateChameleonProjector = модуль борга с проектором хамелеона
-    .desc = { ent-BaseBorgModuleSyndicate.desc }

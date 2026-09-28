@@ -37,5 +37,14 @@ ent-SpiderCrabSpawn = { ent-BaseStationEventShortDelay }
 ent-FugitiveSpawn = { ent-BaseAntagGhostRoleRule }
     .desc = { ent-BaseAntagGhostRoleRule.desc }
 
-ent-FugitiveHunterRule = { ent-BaseAntagGhostRoleRule }
+ent-FugitiveHunterRuleSyndicate = { ent-BaseAntagGhostRoleRule }
+    .desc = { ent-BaseAntagGhostRoleRule.desc }
+
+ent-FugitiveHunterRuleSpacepol = { ent-BaseAntagGhostRoleRule }
+    .desc = { ent-BaseAntagGhostRoleRule.desc }
+
+ent-FugitiveHunterRuleRussians = { ent-BaseAntagGhostRoleRule }
+    .desc = { ent-BaseAntagGhostRoleRule.desc }
+
+ent-FugitiveHunterRuleBountyHunter = { ent-BaseAntagGhostRoleRule }
     .desc = { ent-BaseAntagGhostRoleRule.desc }

@@ -50,7 +50,7 @@ namespace Content.IntegrationTests.Tests
 
         private static readonly string[] Grids =
         {
-            "/Maps/_Trauma/centcomm.yml", // Trauma
+            "/Maps/_SIS/centcomm.yml", // SIS-Maps
             AdminTestArenaSystem.ArenaMapPath
         };
 
@@ -75,7 +75,7 @@ namespace Content.IntegrationTests.Tests
             {"/Maps/Shuttles/ShuttleEvent/honki.yml", ["GoldenBikeHorn", "RubberStampClown"]},
             {"/Maps/Shuttles/ShuttleEvent/syndie_evacpod.yml", ["RubberStampSyndicate"]},
             {"/Maps/Shuttles/ShuttleEvent/cruiser.yml", ["ShuttleGunPerforator"]},
-            {"/Maps/Shuttles/ShuttleEvent/instigator.yml", ["ShuttleGunFriendship"]}
+            {"/Maps/Shuttles/ShuttleEvent/instigator.yml", ["ShuttleGunFriendship"]},
         };
 
         /// <summary>
@@ -94,7 +94,8 @@ namespace Content.IntegrationTests.Tests
             // inky
             "/Maps/_Inky/dev.yml",
             // /inky
-            "/Maps/Shuttles/AdminSpawn/**" // admin gaming
+            "/Maps/Shuttles/AdminSpawn/**", // admin gaming
+            "/Maps/_SIS/centcomm.yml" // SIS
         };
 
         /// <summary>

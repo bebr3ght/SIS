@@ -24,3 +24,6 @@ uplink-holo-carp-dehydrated-desc = Выглядит как плюшевый ка
 uplink-reinforcement-radio-ancestor-name-trauma = Телепорт генетического предка
 
 uplink-syndicate-pai-name-trauma = Персональное ИИ-устройство Синдиката
+
+uplink-necronomicon-name = Некрономикон
+uplink-necronomicon-desc = Нечестивая книга, способная призвать демонического фамильяра.

@@ -91,7 +91,7 @@ trait-french-name = Французский акцент
 trait-french-desc = Ваш акцент, похоже, имеет определённый «je ne sais quoi».
 
 trait-spanish-name = Испанский акцент
-trait-spanish-desc = Hola señor, donde esta la biblioteca.
+trait-spanish-desc = Hola señor, ¿dónde está la biblioteca?
 
 trait-dementia-name = Деменция
 trait-dementia-desc = Я-... э-э, о чём это было? Ах да! Ты иногда многое забываешь.

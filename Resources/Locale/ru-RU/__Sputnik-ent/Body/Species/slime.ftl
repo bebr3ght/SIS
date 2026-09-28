@@ -50,5 +50,8 @@ ent-OrganSlimePersonFootRight = { ent-OrganBaseFootRight }
 ent-OrganSlimePersonCore = разумное ядро слайма
     .desc = { ent-OrganBaseBrain.desc }
 
+ent-OrganSlimePersonEyes = { ent-OrganBaseEyes }
+    .desc = { ent-OrganBaseEyes.desc }
+
 ent-OrganSlimePersonLungs = газовые мешки
     .desc = { ent-OrganBaseLungs.desc }

@@ -1,70 +1,77 @@
-<!--
-SPDX-FileCopyrightText: 2023 /ʊniɹɑː/ <onoira@psiko.zone>
-SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
-
-SPDX-License-Identifier: MIT
--->
-
 <Document>
-# Enchanting
+  # Зачарование
 
-Those who are magically inclined, such as Wizards, Heretic and Chaplains, have access to the arcane art of Enchanting.
+Те, кто обладает магической грамотностью — благодаря годам учёбы или магическому дару — имеют доступ к тайному искусству Зачарования.
 
-# Enchanting an item
+# Снаряжение
 
-To enchant an item, you need a sacrificial offering and an item to enchant. Most often these are the cores of anomalies, but are occasionally more mundane components like Diamonds.
 <Box>
-  <GuideEntityEmbed Entity="AltarConvert" Caption=""/>
+  <GuideEntityEmbed Entity="BloodEnchanter"/>
+  <GuideEntityEmbed Entity="EnchantingRune"/>
 </Box>
-Place an item on an altar (or a Transmutation Rune) alongside the offering and hit the item with your magical tome. For wizards, this is their Wizard's Grimoire. For Chaplain, their Bible or other religious texts. For Heretics, their Codex Cicatrix.
 
-If the item and offering are compatible, the offering will be consumed and the item will become enchanted. If you use an anomaly core, those from critical anomalies are more potent than inert cores, and empower your item more effectively.
+Чтобы зачаровывать предметы, святую библию необходимо [bold]осквернить[/bold], положив её на [bold]Руну Зачарования[/bold], вырезанную на полу.
 
-# Enchantment limits
+# Зачарование предмета
 
-An item can only be enchanted with one kind of enchantment, unless you perform a ritual. By killing any living entity with a soul on top of an altar alongside your enchanted item, their soul will be consumed and increase the enchantment limit.
+Чтобы зачаровать предмет, вам нужны жертвенное подношение и предмет для зачарования. Чаще всего это ядра аномалий, но иногда и более приземлённые компоненты, такие как алмазы.
 
-The sacrifice will be possible to revive, but have the ill effects of losing their soul, akin to selling their soul to a Devil.
+Свитки зачарования можно писать с помощью магических чернил.
 
-# Types of enchantments
+Положите предмет на свою руну зачарования вместе с подношением и ударьте по предмету своим магическим томом. Для волшебников это их Гримуар волшебника. Для Священника — Библия или другие религиозные тексты. Для Еретиков — их Кодекс Цикатрикс.
 
-  ### Fire Aspect
-Fire Aspect causes your weapon to set your foes on fire. Obtainable from Pyroclastic Anomaly cores.
+  Если предмет и подношение совместимы, подношение будет израсходовано, а предмет станет зачарованным. Если вы используете ядро аномалии, ядра от критических аномалий более мощны, чем инертные ядра, и усиливают ваш предмет более эффективно.
 
-  ### Lavaforged
-Lavaforged grants your equipment the ability to protect you from lava. Obtainable from Pyroclastic Anomaly cores.
+  # Пределы зачарования
 
-  ### Knockback
-Knockback causes your weapon to knock people back on hit. Obtainable from Gravity Anomaly cores.
+Предмет можно зачаровать только двумя видами зачарования, если только вы не проведёте ритуал. Убив любое живое существо с душой на руне рядом с вашим зачарованным предметом, вы поглотите его душу и увеличите лимит зачарований.
 
-  ### Fire Protection
-Fire Protection grants your armor protection from... Fire. Obtainable from Ice Anomaly cores.
+  Жертву можно будет оживить, но она будет страдать от дурных последствий потери души, подобно тому, как если бы продала свою душу Дьяволу.
 
-  ### Sharpness
-Sharpness sharpens your weapon and grants four bonus Slash damage per level. Obtainable from Flesh Anomaly cores.
+Жертвоприношения можно совершать в сумме до 10 зачарований.
 
-  ### Unbreaking
-Unbreaking reduces all damage by 50%. Due to complicated magical law restrictions, this is only applicable to mice. Obtainable from Rock Anomaly cores.
+# Типы зачарований
 
-  ### Protection
-Protection grants your equipment damage resistance. Obtainable from Rock Anomaly cores.
+  ### Огненный Аспект
+  Огненный Аспект поджигает ваших врагов при ударе оружием. Получается из ядер Пирокластической Аномалии.
 
-  ### Slippery
-Slippery makes any item slip people. Obtainable from Liquid Anomaly cores.
+  ### Лавакованный
+  Лавакованный даёт вашему снаряжению способность защищать вас от лавы. Получается из ядер Пирокластической Аномалии.
 
-  ### Unslippable
-Unslippable makes any shoes grant immunity to slipping. Obtainable from Liquid Anomaly cores.
+  ### Отбрасывание
+  Отбрасывание отбрасывает людей назад при ударе вашим оружием. Получается из ядер Гравитационной Аномалии.
 
-  ### Insulated?
-Insulated? grants a chance to not be shocked by sources of electricity to gloves. Obtainable from inert Elecricity Anomaly cores.
+  ### Огнестойкость
+  Огнестойкость даёт вашей броне защиту от... Огня. Получается из ядер Ледяной Аномалии.
 
-  ### Insulated
-Insulated grants gloves full insulation from electricity. Obtainable from critical Elecricity Anomaly cores.
+  ### Заточка
+  Заточка затачивает ваше оружие и даёт четыре дополнительных единицы урона резаком за уровень. Получается из ядер Плотской Аномалии.
 
-  ### Thorns
-Thorns can be applied to armor, and damages melee attackers with 4 slash damage per level. Obtainable from Floral Anomaly cores.
+  ### Небьющийся
+  Небьющийся снижает весь урон на 50%. Из-за сложных ограничений магического права применимо только к мышам. Получается из ядер Каменной Аномалии.
 
-  ### Fortune
-Fortune has a chance to increase ore yield for drills and pickaxes, chance proportional to enchantment level. Obtainable from Santa Anomaly cores and diamonds.
+  ### Защита
+  Защита даёт вашему снаряжению сопротивление урону. Получается из ядер Каменной Аномалии.
+
+  ### Скользкий
+  Скользкий заставляет любой предмет вызывать поскальзывание у людей. Получается из ядер Жидкостной Аномалии.
+
+  ### Нескользящий
+  Нескользящий делает любую обувь дающей иммунитет к поскальзыванию. Получается из ядер Жидкостной Аномалии.
+
+  ### Изолирован?
+  Изолирован? даёт перчаткам шанс не получить удар током от источников электричества. Получается из инертных ядер Электрической Аномалии.
+
+  ### Изолирован
+  Изолирован даёт перчаткам полную изоляцию от электричества. Получается из критических ядер Электрической Аномалии.
+
+  ### Шипы
+  Шипы можно применить к броне, они наносят атакующим в ближнем бою 4 единицы урона резаком за уровень. Получается из ядер Цветочной Аномалии.
+
+  ### Удача
+  Удача даёт шанс увеличить добычу руды для дрелей и кирок, шанс пропорционален уровню зачарования. Получается из ядер Аномалии Санты и алмазов.
+
+  ### Прочее...
+Существует множество других зачарований и проклятий; возможно, их могли бы предоставить существа из преисподней?
 
 </Document>

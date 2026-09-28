@@ -9,8 +9,8 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 station-event-ion-storm-start-announcement = Возле станции обнаружен ионный шторм. Пожалуйста, проверьте всё оборудование, управляемое ИИ, на наличие ошибок.
-
-ion-storm-law-scrambled-number = [font="Monospace"][scramble rate=250 length={$length} chars="@@###$$&%!01"/][/font]
+# Characters are randomly selected from the total list, meaning duplicates increase the odds that specific character is seen.
+ion-storm-law-scrambled-number = [font="Monospace"][scramble rate=250 length={$length} chars="!!@@###$$%^&*-_=+0011"/][/font]
 
 ion-storm-you = ВЫ
 ion-storm-the-station = СТАНЦИЯ

@@ -1,8 +1,11 @@
-ent-BaseLightbulb = { ent-BaseItem }
+ent-BaseReplacementLight = { ent-BaseItem }
     .desc = { ent-BaseItem.desc }
 
-ent-BaseLightTube = { ent-BaseLightbulb }
-    .desc = { ent-BaseLightbulb.desc }
+ent-BaseLightbulb = { ent-BaseReplacementLight }
+    .desc = { ent-BaseReplacementLight.desc }
+
+ent-BaseLightTube = { ent-BaseReplacementLight }
+    .desc = { ent-BaseReplacementLight.desc }
 
 ent-LightBulb = лампа накаливания
     .desc = Обычная лампочка.

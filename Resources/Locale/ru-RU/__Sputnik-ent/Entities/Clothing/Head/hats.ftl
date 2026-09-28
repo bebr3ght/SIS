@@ -268,3 +268,6 @@ ent-ClothingHeadPropellerHat = кепка с пропеллером
 
 ent-ClothingHeadHatMitreClown = митра хонкматери
     .desc = Прихожанам трудно заметить банановую кожуру на полу, когда они смотрят вверх на ваш великолепный головной убор.
+
+ent-ClothingHeadHatTramDriver = шляпа машиниста трамвая
+    .desc = Пахнет уверенностью.

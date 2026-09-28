@@ -14,3 +14,9 @@ uplink-shuttle-iff-name = плата консоли IFF Синдиката
 uplink-shuttle-iff-desc = Позволяет управлять IFF и характеристиками скрытности этого судна.
 
 uplink-cameraBug-name-trauma = жучок-камера
+
+uplink-super-surplus-bundle-name = Ящик Припасов
+uplink-super-surplus-bundle-desc = Содержит случайные предметы Синдиката общей стоимостью 625 телекристаллов.
+
+uplink-syndicate-segway-crate-name = Сегвей Синдиката
+uplink-syndicate-segway-crate-desc = Будьте стильным врагом корпорации!

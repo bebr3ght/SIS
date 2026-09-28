@@ -28,10 +28,6 @@
     #- id: SpiderSpawnHorde
     # </Trauma>
     - id: VentClog
-    # SIS-Start
-    - id: BluePsiMonkeySpawn
-    - id: RedPsiMonkeySpawn
-    # SIS-End
 
 - type: entityTable
   id: BasicAntagEventsTable
@@ -208,6 +204,7 @@
   - type: StationEvent
     weight: 5
     duration: 1
+    occursDuringRoundEnd: false
     minimumPlayers: 10
   - type: RandomEntityStorageSpawnRule
     prototype: MobSkeletonCloset
@@ -224,6 +221,7 @@
     maxOccurrences: 1 # Goobstation
     minimumPlayers: 50
     duration: null
+    occursDuringRoundEnd: false
   - type: SpaceSpawnRule
     spawnDistance: 0
   - type: AntagSpawner
@@ -255,9 +253,9 @@
   - type: StationEvent
     weight: 1 # Trauma - was 6
     duration: null
-    earliestStart: 40 # Trauma - Was 45. Lowered so it works better with our schedulers
-    #reoccurrenceDelay: 20 # Goobstation - no longer needed
-    maxOccurrences: 1 # Goobstation
+    occursDuringRoundEnd: false
+    earliestStart: 30
+    maxOccurrences: 1 # Trauma - replaces delay
     minimumPlayers: 30
   - type: SpaceSpawnRule
   - type: AntagGhostCharacterRule # Trauma - use ghost character instead of AntagLoadProfileRule
@@ -285,18 +283,21 @@
   - type: StationEvent
     weight: 4 # Trauma - Was 5
     duration: null
+    occursDuringRoundEnd: false
     earliestStart: 20
     reoccurrenceDelay: 20
     minimumPlayers: 15
   - type: ParadoxCloneRule
+    # <Trauma>
+    targetBlacklist:
+      components:
+      - BorgBrain # No copying the AI or borgs.
+      - BorgChassis
+      - AntagImmune # No copying people who are immune to antags. (Gemini Hologram, etc)
+    # </Trauma>
     objectiveBlacklist:
       tags:
       - ParadoxCloneObjectiveBlacklist
-    targetBlacklist: # Goobstation
-      components:
-      - BorgBrain # No copying the AI or borgs.
-      - AntagImmune # No copying people who are immune to antags. (Gemini Hologram, Ghost bar, etcetera.)
-
   - type: AntagObjectives
     objectives:
     - ParadoxCloneKillObjective
@@ -310,17 +311,19 @@
   - type: DynamicRuleCost
     cost: 50
 
-#- type: entity   Goobstaion start - disabled until rework
-#  parent: BaseGameRule
-#  id: RevenantSpawn
-#  components:
-#  - type: StationEvent
-#    weight: 3.5
-#    duration: 1
-#    earliestStart: 30
-#    minimumPlayers: 20
-#  - type: RandomSpawnRule
-#    prototype: MobRevenant      goobstation end
+- type: entity
+  abstract: true # Trauma - lol
+  parent: BaseGameRule
+  id: RevenantSpawn
+  components:
+  - type: StationEvent
+    weight: 7.5
+    duration: 1
+    occursDuringRoundEnd: false
+    earliestStart: 45
+    minimumPlayers: 20
+  - type: RandomSpawnRule
+    prototype: MobRevenant
 
 - type: entity
   parent: [ BaseAntagGhostRoleRule, BaseWizardRule ]
@@ -329,6 +332,7 @@
   - type: StationEvent
     weight: 5.5 # Trauma - was 1
     duration: null
+    occursDuringRoundEnd: false
     earliestStart: 30
     reoccurrenceDelay: 60
     minimumPlayers: 30
@@ -350,7 +354,7 @@
   - type: StationEvent
     startAnnouncement: station-event-gas-leak-start-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_SIS/Announcements/attention.ogg # SIS
     endAnnouncement: station-event-gas-leak-end-announcement
     weight: 8
   - type: GasLeakRule
@@ -375,7 +379,7 @@
     startAnnouncement: station-event-power-grid-check-start-announcement
     endAnnouncement: station-event-power-grid-check-end-announcement
     startAudio:
-      path: /Audio/Announcements/power_off.ogg
+      path: /Audio/_SIS/Announcements/power_off.ogg # SIS
       params:
         volume: -4
     duration: 60
@@ -391,7 +395,7 @@
     startAnnouncement: station-event-solar-flare-start-announcement
     endAnnouncement: station-event-solar-flare-end-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_SIS/Announcements/attention.ogg # SIS
     duration: 120
     maxDuration: 240
   - type: SolarFlareRule
@@ -417,7 +421,7 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-clog-start-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_SIS/Announcements/attention.ogg # SIS
     earliestStart: 15
     minimumPlayers: 15
     weight: 5
@@ -437,7 +441,7 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-start-horde-announcement
     startAudio:
-      path: /Audio/Announcements/aliens.ogg
+      path: /Audio/_SIS/Announcements/aliens.ogg # SIS
     earliestStart: 20
     minimumPlayers: 15
     weight: 7 # Trauma - was 5
@@ -458,7 +462,7 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-start-horde-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_SIS/Announcements/attention.ogg # SIS
     earliestStart: 20
     minimumPlayers: 15
     weight: 5
@@ -481,7 +485,7 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-start-horde-announcement
     startAudio:
-      path: /Audio/Announcements/aliens.ogg
+      path: /Audio/_SIS/Announcements/aliens.ogg # SIS
     earliestStart: 20
     minimumPlayers: 15
     weight: 7 # Trauma - was 5
@@ -500,7 +504,7 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-start-horde-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_SIS/Announcements/attention.ogg # SIS
     earliestStart: 45 # Trauma - was 20
     minimumPlayers: 30 # Trauma - was 20
     weight: 2 # Trauma - was 1.5
@@ -548,6 +552,7 @@
     weight: 1 # Trauma - was 5.5
     minimumPlayers: 50 # Goobstation - was 20
     duration: null # LoneOpsSpawn needs an infinite duration so that it inherits the NukeOpsRule things of an actually appropriate end screen (not always "Neutral outcome!") and... ending the game if the station is nuked.
+    occursDuringRoundEnd: false
   - type: RuleGrids
   - type: LoadMapRule
     gridPath: /Maps/Shuttles/ShuttleEvent/striker.yml
@@ -615,7 +620,7 @@
   components:
   - type: StationEvent
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_SIS/Announcements/attention.ogg # SIS
     weight: 5
     minimumPlayers: 25
     reoccurrenceDelay: 20
@@ -654,6 +659,7 @@
     reoccurrenceDelay: 20
     minimumPlayers: 4
     duration: null
+    occursDuringRoundEnd: false
   - type: SpaceSpawnRule
     spawnDistance: 0
 

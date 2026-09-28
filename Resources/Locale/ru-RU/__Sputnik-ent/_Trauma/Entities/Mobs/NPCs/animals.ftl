@@ -1,10 +1,10 @@
 ent-MobMonkeyGhostrole = { ent-MobMonkey }
     .desc = { ent-MobMonkey.desc }
-    .suffix = Ghostrole
+    .suffix = Призрачная роль
 
 ent-MobKoboldGhostrole = { ent-MobKobold }
     .desc = { ent-MobKobold.desc }
-    .suffix = Ghostrole
+    .suffix = Призрачная роль
 
 ent-MobBunnySea = морской кролик
     .desc = Милый, пушистый морской кролик.
@@ -30,7 +30,7 @@ ent-SolutionVenomCobra = { ent-SolutionWeapon }
 ent-MobYellowBellySnake = желтобрюхая змея
     .desc = Угрожающая желтобрюхая змея.
 
-ent-MobMantis = богомол
+ent-MobMantis = Богомол
     .desc = Скрытный хищник.
 
 ent-MobMantisShrimp = рак-богомол
@@ -83,3 +83,6 @@ ent-SolutionMouseBites = { ent-SolutionWeapon }
 
 ent-SolutionClownSpider = { ent-SolutionWeapon }
     .desc = { ent-SolutionWeapon.desc }
+
+ent-MobBabySpider = детёныш паука
+    .desc = Растущий паук, лучше разобраться с ним, пока он не вырос.

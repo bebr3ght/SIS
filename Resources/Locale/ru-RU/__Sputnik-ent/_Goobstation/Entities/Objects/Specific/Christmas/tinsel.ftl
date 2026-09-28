@@ -1,42 +1,71 @@
 ent-SpawnerChristmasTinselWhite = спавнер белая рожденственская мишура
     .desc = { ent-MarkerBase.desc }
+
 ent-SpawnerChristmasTinselRed = спавнер красная рожденственская мишура
     .desc = { ent-MarkerBase.desc }
+
 ent-SpawnerChristmasTinselBlue = спавнер синяя рожденственская мишура
     .desc = { ent-MarkerBase.desc }
-ent-ChristmasTinselWhite1 = белая рожденственская мишура
-    .desc = Немного белой мишуры. Чуть блестит.
-ent-ChristmasTinselWhite2 = { ent-ChristmasTinselWhite1 }
-    .desc = { ent-ChristmasTinselWhite1.desc }
-ent-ChristmasTinselWhite3 = { ent-ChristmasTinselWhite1 }
-    .desc = { ent-ChristmasTinselWhite1.desc }
-ent-ChristmasTinselWhite4 = { ent-ChristmasTinselWhite1 }
-    .desc = { ent-ChristmasTinselWhite1.desc }
-ent-ChristmasTinselWhite5 = { ent-ChristmasTinselWhite1 }
-    .desc = { ent-ChristmasTinselWhite1.desc }
-ent-ChristmasTinselWhite6 = { ent-ChristmasTinselWhite1 }
-    .desc = { ent-ChristmasTinselWhite1.desc }
-ent-ChristmasTinselRed1 = красная рожденственская мишура
-    .desc = Немного красной мишуры. Чуть блестит.
-ent-ChristmasTinselRed2 = { ent-ChristmasTinselRed1 }
-    .desc = { ent-ChristmasTinselRed1.desc }
-ent-ChristmasTinselRed3 = { ent-ChristmasTinselRed1 }
-    .desc = { ent-ChristmasTinselRed1.desc }
-ent-ChristmasTinselRed4 = { ent-ChristmasTinselRed1 }
-    .desc = { ent-ChristmasTinselRed1.desc }
-ent-ChristmasTinselRed5 = { ent-ChristmasTinselRed1 }
-    .desc = { ent-ChristmasTinselRed1.desc }
-ent-ChristmasTinselRed6 = { ent-ChristmasTinselRed1 }
-    .desc = { ent-ChristmasTinselRed1.desc }
-ent-ChristmasTinselBlue1 = синяя рожденственская мишура
-    .desc = Немного синей мишуры. Чуть блестит.
-ent-ChristmasTinselBlue2 = { ent-ChristmasTinselBlue1 }
-    .desc = { ent-ChristmasTinselBlue1.desc }
-ent-ChristmasTinselBlue3 = { ent-ChristmasTinselBlue1 }
-    .desc = { ent-ChristmasTinselBlue1.desc }
-ent-ChristmasTinselBlue4 = { ent-ChristmasTinselBlue1 }
-    .desc = { ent-ChristmasTinselBlue1.desc }
-ent-ChristmasTinselBlue5 = { ent-ChristmasTinselBlue1 }
-    .desc = { ent-ChristmasTinselBlue1.desc }
-ent-ChristmasTinselBlue6 = { ent-ChristmasTinselBlue1 }
-    .desc = { ent-ChristmasTinselBlue1.desc }
+
+ent-BaseChristmasTinsel = мишура
+    .desc = Немного белой мишуры. Она слегка блестит.
+
+ent-BaseChristmasTinselRed = { ent-BaseChristmasTinsel }
+    .desc = Немного красной мишуры. Она слегка блестит.
+
+ent-BaseChristmasTinselBlue = { ent-BaseChristmasTinsel }
+    .desc = Немного синей мишуры. Она слегка блестит.
+
+ent-ChristmasTinselWhite1 = { ent-BaseChristmasTinsel }
+    .desc = { ent-BaseChristmasTinsel.desc }
+
+ent-ChristmasTinselWhite2 = { ent-BaseChristmasTinsel }
+    .desc = { ent-BaseChristmasTinsel.desc }
+
+ent-ChristmasTinselWhite3 = { ent-BaseChristmasTinsel }
+    .desc = { ent-BaseChristmasTinsel.desc }
+
+ent-ChristmasTinselWhite4 = { ent-BaseChristmasTinsel }
+    .desc = { ent-BaseChristmasTinsel.desc }
+
+ent-ChristmasTinselWhite5 = { ent-BaseChristmasTinsel }
+    .desc = { ent-BaseChristmasTinsel.desc }
+
+ent-ChristmasTinselWhite6 = { ent-BaseChristmasTinsel }
+    .desc = { ent-BaseChristmasTinsel.desc }
+
+ent-ChristmasTinselRed1 = { ent-BaseChristmasTinselRed }
+    .desc = { ent-BaseChristmasTinselRed.desc }
+
+ent-ChristmasTinselRed2 = { ent-BaseChristmasTinselRed }
+    .desc = { ent-BaseChristmasTinselRed.desc }
+
+ent-ChristmasTinselRed3 = { ent-BaseChristmasTinselRed }
+    .desc = { ent-BaseChristmasTinselRed.desc }
+
+ent-ChristmasTinselRed4 = { ent-BaseChristmasTinselRed }
+    .desc = { ent-BaseChristmasTinselRed.desc }
+
+ent-ChristmasTinselRed5 = { ent-BaseChristmasTinselRed }
+    .desc = { ent-BaseChristmasTinselRed.desc }
+
+ent-ChristmasTinselRed6 = { ent-BaseChristmasTinselRed }
+    .desc = { ent-BaseChristmasTinselRed.desc }
+
+ent-ChristmasTinselBlue1 = { ent-BaseChristmasTinselBlue }
+    .desc = { ent-BaseChristmasTinselBlue.desc }
+
+ent-ChristmasTinselBlue2 = { ent-BaseChristmasTinselBlue }
+    .desc = { ent-BaseChristmasTinselBlue.desc }
+
+ent-ChristmasTinselBlue3 = { ent-BaseChristmasTinselBlue }
+    .desc = { ent-BaseChristmasTinselBlue.desc }
+
+ent-ChristmasTinselBlue4 = { ent-BaseChristmasTinselBlue }
+    .desc = { ent-BaseChristmasTinselBlue.desc }
+
+ent-ChristmasTinselBlue5 = { ent-BaseChristmasTinselBlue }
+    .desc = { ent-BaseChristmasTinselBlue.desc }
+
+ent-ChristmasTinselBlue6 = { ent-BaseChristmasTinselBlue }
+    .desc = { ent-BaseChristmasTinselBlue.desc }

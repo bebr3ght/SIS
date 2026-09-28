@@ -13,7 +13,7 @@ ent-Piercing = { ent-WoundBase }
 ent-Puncture = прокол
     .desc = { ent-Piercing.desc }
 
-ent-ArmorPiercing = { ent-WoundBase }
+ent-Ballistic = { ent-WoundBase }
     .desc = { ent-WoundBase.desc }
 
 ent-Slash = { ent-WoundBase }
@@ -50,12 +50,6 @@ ent-Radiation = { ent-WoundBase }
     .desc = { ent-WoundBase.desc }
 
 ent-Poison = { ent-WoundBase }
-    .desc = { ent-WoundBase.desc }
-
-ent-Bloodloss = { ent-WoundBase }
-    .desc = { ent-WoundBase.desc }
-
-ent-Asphyxiation = { ent-WoundBase }
     .desc = { ent-WoundBase.desc }
 
 ent-BoneDamage = { "" }

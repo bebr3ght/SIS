@@ -39,6 +39,10 @@ ui-options-restart-sounds = Звуки перезапуска раунда
 ui-options-event-music = Музыка событий
 ui-options-admin-sounds = Музыка админов
 ui-options-bwoink-sound = Звук уведомления Ахелпа
+ui-options-mute-unfocused = Отключать звук, когда окно не в фокусе
+ui-options-audio-device = Устройство вывода:
+ui-options-audio-device-default = Системное по умолчанию
+ui-options-audio-hrtf = Включить обработку звука HRTF (требуется перезапуск)
 ui-options-volume-label = Громкость
 
 ## Graphics menu
@@ -108,6 +112,7 @@ ui-options-ambient-occlusion = Отображать окружающее зат�
 ui-options-fps-counter = Показать счётчик FPS
 ui-options-vp-width = Ширина окна игры:
 ui-options-hud-layout = Тип HUD:
+ui-options-sharpness = Резкость:
 
 ## Controls menu
 
@@ -327,14 +332,35 @@ cmd-options-help = Использование: options [tab]
 
 ## Accessibility menu
 
+ui-options-accessibility-header-reduced-motion = Уменьшение движения
 ui-options-accessibility-header-visuals = Визуальные эффекты
 ui-options-accessibility-header-content = Содержимое
 
 ui-options-enable-color-name = Цветные имена персонажей
 ui-options-colorblind-friendly = Режим для дальтоников
-ui-options-reduced-motion = Снижение интенсивности визуальных эффектов
-ui-options-disable-ai-static = Отключить эффект статики на оверлее камеры ИИ
-ui-options-disable-nv-noise = Отключить эффект шума на оверлее ночного видения
+
+ui-options-reduced-motion = Уменьшать общие визуальные эффекты
+ui-options-reduced-motion-tooltip = Включите, чтобы для некоторых предметов отображались альтернативные спрайты с уменьшенной анимацией.
+
+# accessibility option tooltips taken from CVar summary blocks.
+
+ui-options-disable-ai-static = Статика камеры ИИ
+ui-options-disable-ai-static-tooltip = Заменяет эффект статики камеры ИИ обычным градиентом.
+ui-options-disable-blurry-vision = Размытое зрение
+ui-options-disable-blurry-vision-tooltip = Заменяет движение в шейдере размытия статичным эффектом.
+ui-options-disable-drunk-overlay = Эффект опьянения
+ui-options-disable-drunk-overlay-tooltip = Заменяет движение в шейдере опьянения статичным смещением.
+ui-options-disable-flash-effect = Вспышка
+ui-options-disable-flash-effect-tooltip = Заменяет эффект «вспышки» на эквивалент с уменьшенным движением.
+ui-options-disable-heat-distortion = Искажение от жары
+ui-options-disable-heat-distortion-tooltip = Уменьшает движение в шейдере искажения от жары.
+ui-options-disable-nv-noise = Оверлей ночного видения
+ui-options-disable-nv-noise-tooltip = Отключает эффект шума на оверлее ночного видения.
+ui-options-disable-rainbow-overlay = Радужный оверлей
+ui-options-disable-rainbow-overlay-tooltip = Заменяет движение в шейдере радужного оверлея статичным смещением.
+ui-options-disable-singulo-warp = Сингулярность
+ui-options-disable-singulo-warp-tooltip = Отключает эффект искажения экрана сингулярностью.
+
 ui-options-screen-shake-intensity = Интенсивность дрожания экрана
 
 ui-options-chat-window-opacity = Непрозрачность окна чата

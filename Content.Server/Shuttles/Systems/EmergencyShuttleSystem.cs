@@ -396,7 +396,7 @@ public sealed partial class EmergencyShuttleSystem : SharedEmergencyShuttleSyste
 
         var audioFile = result.ResultType == ShuttleDockResultType.NoDock
             ? "/Audio/Misc/notice1.ogg"
-            : "/Audio/Announcements/shuttle_dock.ogg";
+            : "/Audio/_SIS/Announcements/shuttle_dock.ogg"; // SIS
 
         // TODO: Need filter extensions or something don't blame me.
         _audio.PlayGlobal(audioFile, Filter.Broadcast(), true);

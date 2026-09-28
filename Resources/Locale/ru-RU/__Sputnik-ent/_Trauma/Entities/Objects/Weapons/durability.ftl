@@ -66,3 +66,6 @@ ent-BookDurability = { "" }
 
 ent-DrillDurability = { "" }
     .desc = { "" }
+
+ent-DeathNettleDurability = { "" }
+    .desc = { "" }

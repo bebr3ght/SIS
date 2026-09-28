@@ -49,6 +49,7 @@
     - Insurgency
     - CosmicCult
     - XenomorphsInfestationRoundstart
+    - Spies
     # </Trauma>
     - Nukeops
     - Traitor
@@ -66,7 +67,7 @@
     - BlobGameMode
     - LoneAbductorSpawn
     - Changeling
-    - Werewolf # SIS
+    - WerewolfRoundstart # SIS
 #    - Insurgency # inky - kill insurgents
     # </Trauma>
   # inky
@@ -96,6 +97,7 @@
   #    - Insurgency # inky - kill insurgents
     - CosmicCult
     - XenomorphsInfestationRoundstart
+    - Spies
     # </Trauma>
     - Nukeops
     - Traitor
@@ -110,7 +112,7 @@
     - RampingStationEventScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
-    - Werewolf # SIS
+    - WerewolfRoundstart # SIS
   # inky
     - FunGameruleChooser
   # /inky

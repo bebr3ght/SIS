@@ -37,6 +37,8 @@
     - id: CowSwarm
     - id: PotatoSwarm
     - id: FunSwarm
+    - id: MeteorSwarmFlesh
+    - id: MeteorSwarmKudzu
     - id: ImmovableRodSpawn
 
 - type: weightedRandomEntity
@@ -54,7 +56,15 @@
     MeteorRockBananium: 0.5
     MeteorRockBSCrystal: 0.5 # Goobstation
 
-## Event Schedulers
+- type: weightedRandomEntity
+  id: MeteorSpawnFleshMonstersTable
+  weights:
+    MobFleshGolemSalvage: 1
+    MobFleshClampSalvage: 1
+    MobFleshLoverSalvage: 1
+    MobFleshJaredSalvage: 1
+
+# Event Schedulers
 
 - type: entity
   parent: BaseGameRule
@@ -135,7 +145,7 @@
     minimumPlayers: 0
   - type: MeteorSwarm
     announcement: station-event-space-dust-start-announcement
-    announcementSound: /Audio/Announcements/attention.ogg
+    announcementSound: /Audio/_SIS/Announcements/attention.ogg # SIS
     nonDirectional: true
     meteors:
       MeteorSpaceDust: 1
@@ -190,7 +200,7 @@
     weight: 0.05
   - type: MeteorSwarm
     announcement: station-event-meteor-urist-start-announcement
-    announcementSound: /Audio/Announcements/attention.ogg
+    announcementSound: /Audio/_SIS/Announcements/attention.ogg # SIS
     meteors:
       MeteorUrist: 1
     waves:
@@ -207,7 +217,7 @@
   - type: StationEvent
     startAnnouncement: station-event-immovable-rod-start-announcement
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_SIS/Announcements/attention.ogg # SIS
     weight: 3.5
     reoccurrenceDelay: 1
     duration: 1
@@ -251,7 +261,7 @@
     weight: 0.05
   - type: MeteorSwarm
     announcement: station-event-meteor-cow-start-announcement
-    announcementSound: /Audio/Announcements/attention.ogg
+    announcementSound: /Audio/_SIS/Announcements/attention.ogg # SIS
     meteors:
       MeteorCow: 1
     waves:
@@ -269,7 +279,7 @@
     weight: 0.05
   - type: MeteorSwarm
     announcement: station-event-meteor-clown-start-announcement
-    announcementSound: /Audio/Announcements/attention.ogg
+    announcementSound: /Audio/_SIS/Announcements/attention.ogg # SIS
     meteors:
       MeteorClown: 1
     waves:
@@ -287,7 +297,7 @@
     weight: 0.05
   - type: MeteorSwarm
     announcement: station-event-meteor-potato-start-announcement
-    announcementSound: /Audio/Announcements/attention.ogg
+    announcementSound: /Audio/_SIS/Announcements/attention.ogg # SIS
     meteors:
       MeteorPotato: 1
     waves:
@@ -305,7 +315,7 @@
     weight: 0.03
   - type: MeteorSwarm
     announcement: station-event-fun-swarm-start-announcement
-    announcementSound: /Audio/Announcements/attention.ogg
+    announcementSound: /Audio/_SIS/Announcements/attention.ogg # SIS
     meteors:
       MeteorClown: 1
       MeteorCow: 1
@@ -317,3 +327,39 @@
     meteorsPerWave:
       min: 8
       max: 12
+
+- type: entity
+  parent: MeteorSwarm
+  id: MeteorSwarmFlesh
+  components:
+  - type: StationEvent
+    weight: 4
+  - type: MeteorSwarm
+    announcement: station-event-bio-swarm-start-announcement
+    announcementSound: /Audio/Announcements/attention.ogg
+    meteors:
+      MeteorFlesh: 1
+    waves:
+      min: 2
+      max: 3
+    meteorsPerWave:
+      min: 5
+      max: 6
+
+- type: entity
+  parent: MeteorSwarm
+  id: MeteorSwarmKudzu
+  components:
+  - type: StationEvent
+    weight: 5
+  - type: MeteorSwarm
+    announcement: station-event-bio-swarm-start-announcement
+    announcementSound: /Audio/Announcements/attention.ogg
+    meteors:
+      MeteorKudzu: 1
+    waves:
+      min: 2
+      max: 3
+    meteorsPerWave:
+      min: 3
+      max: 5

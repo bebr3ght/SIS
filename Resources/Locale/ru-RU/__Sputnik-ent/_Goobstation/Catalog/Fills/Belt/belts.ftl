@@ -14,10 +14,6 @@ ent-ClothingBeltSecurityWebbingFilledMedical = { ent-ClothingBeltSecurityWebbing
     .desc = { ent-ClothingBeltSecurityWebbingMedical.desc }
     .suffix = Заполненный
 
-ent-ClothingBeltSheathFilledNavyOfficer = { ent-ClothingBeltSheath }
-    .desc = { ent-ClothingBeltSheath.desc }
-    .suffix = Заполненный, офицер флота
-
 ent-ClothingBeltSheathHeadOfSecurityFilled = { ent-ClothingBeltSheathHeadOfSecurity }
     .desc = { ent-ClothingBeltSheathHeadOfSecurity.desc }
     .suffix = Заполненный, глава службы безопасности

@@ -40,6 +40,9 @@ ent-NinjaSpawn = { ent-BaseAntagGhostRoleRule }
 ent-ParadoxCloneSpawn = { ent-BaseAntagGhostRoleRule }
     .desc = { ent-BaseAntagGhostRoleRule.desc }
 
+ent-RevenantSpawn = { ent-BaseGameRule }
+    .desc = { ent-BaseGameRule.desc }
+
 ent-WizardSpawn = { ent-BaseAntagGhostRoleRule }
     .desc = { ent-BaseAntagGhostRoleRule.desc }
 

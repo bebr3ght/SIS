@@ -17,3 +17,5 @@ entity-effect-popup-blood-stops-swelling = Ваша кровь перестаё�
 entity-effect-popup-vampire-light-1 = Солнечный свет обжигает вас!
 entity-effect-popup-vampire-light-2 = Вам стоит держаться подальше от космоса...
 entity-effect-popup-vampire-light-3 = Вы выглядите бледным!
+
+entity-effect-popup-strawberry-ice-addiction = Вы чувствуете потребность во вкусной розовой газировке

@@ -20,21 +20,15 @@ public sealed partial class AutoDebugSmes : EntitySystem
     [Dependency] private ChatSystem _chat = default!;
     [Dependency] private MindSystem _mindSystem = default!;
 
-    private const string _engiDep = "Engineering";
-    private const string _ceId = "ChiefEngineer";
+    private readonly ProtoId<JobPrototype> _ceId = "ChiefEngineer";
+    private readonly ProtoId<DepartmentPrototype> _engiDep = "Engineering";
 
-    private const float DelaySeconds = 5f * 60f;
     private float _timer;
+    private readonly TimeSpan _updateInterval = TimeSpan.FromMinutes(5);
 
     private bool _handled = true;
 
-    public override void Initialize()
-    {
-        base.Initialize();
-
-        SubscribeLocalEvent<RoundStartingEvent>(OnRoundStarting);
-    }
-
+    [SubscribeLocalEvent]
     private void OnRoundStarting(RoundStartingEvent args)
     {
         _timer = 0;
@@ -45,13 +39,13 @@ public sealed partial class AutoDebugSmes : EntitySystem
     {
         base.Update(frameTime);
 
-        _timer += frameTime;
-        if (_timer < DelaySeconds)
-            return;
-        _timer = 0;
-
         if (!_cfg.GetCVar(SIS_CVars.AutoDebug) || _handled)
             return;
+
+        _timer += frameTime;
+        if (_timer < _updateInterval.TotalSeconds)
+            return;
+        _timer = 0;
 
         var jobCount = 0;
         var engiCount = 0;
@@ -78,10 +72,11 @@ public sealed partial class AutoDebugSmes : EntitySystem
             if (jobPrototype is not {} job)
                 continue;
 
-            jobCount++;
+            if (!_jobSystem.TryGetDepartment(job, out var department))
+                continue;
 
-            _jobSystem.TryGetDepartment(job.Id, out var department);
-            if (_engiDep == department?.ID || job.Id == _ceId)
+            jobCount++;
+            if (job == _ceId || _engiDep == department)
                 engiCount++;
         }
 

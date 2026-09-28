@@ -365,8 +365,8 @@ public struct CustomRichTextEntry
                     if (node.Attributes.TryGetValue("border", out var attrBorder) && attrBorder.StringValue != null)
                         finalBorderStr = attrBorder.StringValue;
 
-                    activePanelBg = Color.TryFromHex(finalBgStr) ?? Color.Black;
-                    activePanelBorder = Color.TryFromHex(finalBorderStr) ?? Color.White;
+                    activePanelBg = Color.TryFromHex(finalBgStr, out var parsedBg) ? parsedBg : Color.Black;
+                    activePanelBorder = Color.TryFromHex(finalBorderStr, out var parsedBorder) ? parsedBorder : Color.White;
                 }
                 else if (activePanelName == node.Name)
                 {
@@ -489,25 +489,7 @@ public struct CustomRichTextEntry
             });
         }
 
-        /* TODO: Было у оффов
-        var boxPadding = (BoxPadding * uiScale);
-
-        return new UIBox2(
-                new Vector2(drawBox.Left + (margin - boxPadding) - sPixelWidth, baseLineBase.Y - boxPadding),
-                new Vector2(drawBox.Right - (margin - boxPadding) - sPixelWidth, baseLine.Y - GetLineHeight(defaultFont, uiScale, lineHeightScale) + boxPadding));
-        */
-
-        /* TODO: Было у меня
-        var finalBoxPadding = BoxPadding * uiScale;
-        return new UIBox2(
-            new Vector2(drawBox.Left + (margin - finalBoxPadding) - sPixelWidth, baseLineBase.Y - finalBoxPadding),
-            new Vector2(drawBox.Right - (margin - finalBoxPadding) - sPixelWidth,
-                baseLine.Y - GetLineHeight(defaultFont, uiScale, lineHeightScale) + finalBoxPadding));
-        */
-        
-        /* TODO: Стало
-        var boxPadding = (BoxPadding * uiScale);
-
+        // boxPadding already declared above and used by the panel drawing logic.
         var topLeft = new Vector2(drawBox.Left + (margin - boxPadding) - sPixelWidth, baseLineBase.Y - boxPadding);
         var bottomRight = new Vector2(drawBox.Right - (margin - boxPadding) - sPixelWidth, baseLine.Y - GetLineHeight(defaultFont, uiScale, lineHeightScale) + boxPadding);
         if (topLeft.X > bottomRight.X)
@@ -516,7 +498,7 @@ public struct CustomRichTextEntry
             topLeft.Y = bottomRight.Y;
 
         return new UIBox2(topLeft, bottomRight);
-        */
+        // SIS-ChatGreeting End
     }
 
 

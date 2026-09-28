@@ -47,7 +47,7 @@ public sealed class RainbowTag : IAnimatedColorTag
 
         if (node.Attributes.TryGetValue("color", out var cAttr) && cAttr.StringValue != null)
         {
-            var parsed = Color.TryFromHex(cAttr.StringValue) ?? baseColor;
+            var parsed = Color.TryFromHex(cAttr.StringValue, out var parsedColor) ? parsedColor : baseColor;
             var hsv = Color.ToHsv(parsed);
             startHue = hsv.X;
             a = hsv.W;
@@ -89,10 +89,10 @@ public sealed class GradientTag : IAnimatedColorTag
         var color2 = Color.Black;
 
         if (node.Attributes.TryGetValue("color1", out var c1) && c1.StringValue != null)
-            color1 = Color.TryFromHex(c1.StringValue) ?? baseColor;
+            color1 = Color.TryFromHex(c1.StringValue, out var parsedColor1) ? parsedColor1 : baseColor;
 
         if (node.Attributes.TryGetValue("color2", out var c2) && c2.StringValue != null)
-            color2 = Color.TryFromHex(c2.StringValue) ?? baseColor;
+            color2 = Color.TryFromHex(c2.StringValue, out var parsedColor2) ? parsedColor2 : baseColor;
 
         var speed = 3f;
         if (node.Attributes.TryGetValue("speed", out var sAttr) && sAttr.StringValue != null)

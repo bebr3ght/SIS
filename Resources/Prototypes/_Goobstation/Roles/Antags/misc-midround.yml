@@ -297,7 +297,6 @@
     sections:
     - title: role-greeting-title
       message: dark-priest-role-greeting
-    - priority: 1
     - title: role-greeting-desc
       message: dark-priest-role-greeting-desc
     # SIS-ChatGreeting End

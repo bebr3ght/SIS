@@ -47,9 +47,9 @@
       messageHighlight2: "#3b5bdb"
     sections:
     - title: role-greeting-title
-      message: hunter-role-greeting
+      message: hunter-syndicate-role-greeting
     - title: role-greeting-desc
-      message: hunter-role-greeting-desc
+      message: hunter-syndicate-role-greeting-desc
     # SIS-ChatGreeting End
   components:
   - type: NpcFactionMember

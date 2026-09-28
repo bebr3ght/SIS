@@ -6,8 +6,25 @@
   allowNonHumans: true
   mindRoles: [ MindRoleLoneXenomorph ]
   briefing:
-    text: lone-xenomorph-role-greeting
-    color: "#8c3986"
+    # SIS-ChatGreeting Start
+    # text: lone-xenomorph-role-greeting
+    # color: "#8c3986"
+    theme:
+      titleBackground: "#190e1c"
+      titleBorder: "#8c3986"
+      messageBackground: "#0d070f"
+      messageBorder: "#331538"
+      titleText: "#d680d0"
+      messageText: "#e4d4e6"
+      titleHighlight1: "#8c3986"
+      messageHighlight1: "#8c3986"
+      messageHighlight2: "#e4d4e6"
+    sections:
+    - title: role-greeting-title
+      message: lone-xenomorph-role-greeting
+    - title: role-greeting-desc
+      message: lone-xenomorph-role-greeting-desc
+    # SIS-ChatGreeting End
 
 - type: antag
   id: LoneXenomorph

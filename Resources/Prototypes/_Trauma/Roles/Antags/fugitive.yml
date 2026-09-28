@@ -31,9 +31,26 @@
   spawnerPrototype: SpawnPointGhostRoleHunter
   startingGear: HunterAntagGear
   briefing:
-    # TODO: Красивый гритинг
-    text: hunter-role-greeting
-    color: red
+    # SIS-ChatGreeting Start
+    # text: hunter-role-greeting
+    # color: red
+    theme:
+      titleBackground: "#170a0c"
+      titleBorder: "#e11d2e"
+      messageBackground: "#0a0a12"
+      messageBorder: "#1e2a4a"
+      titleText: "#ff8a95"
+      messageText: "#c7d2e8"
+      titleHighlight1: "#e11d2e"
+      titleHighlight2: "#1e3a8a"
+      messageHighlight1: "#e11d2e"
+      messageHighlight2: "#3b5bdb"
+    sections:
+    - title: role-greeting-title
+      message: hunter-role-greeting
+    - title: role-greeting-desc
+      message: hunter-role-greeting-desc
+    # SIS-ChatGreeting End
   components:
   - type: NpcFactionMember
     factions:
@@ -69,9 +86,26 @@
   spawnerPrototype: SpawnPointGhostRoleFugitive
   startingGear: FugitiveAntagGear
   briefing:
-    # TODO: Красивый гритинг
-    text: fugitive-role-greeting
-    color: red
+    # SIS-ChatGreeting Start
+    # text: fugitive-role-greeting
+    # color: red
+    theme:
+      titleBackground: "#1f1710"
+      titleBorder: "#ff8c1a"
+      messageBackground: "#120d08"
+      messageBorder: "#4a3520"
+      titleText: "#ffd7a8"
+      messageText: "#d9d9d9"
+      titleHighlight1: "#ff8c1a"
+      titleHighlight2: "#8c8c8c"
+      messageHighlight1: "#ff8c1a"
+      messageHighlight2: "#8c8c8c"
+    sections:
+    - title: role-greeting-title
+      message: fugitive-role-greeting
+    - title: role-greeting-desc
+      message: fugitive-role-greeting-desc
+    # SIS-ChatGreeting End
   components:
   - type: NpcFactionMember
     factions:

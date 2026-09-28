@@ -32,7 +32,6 @@
       titleText: "#e0f2fe"
       messageText: "#94a3b8"
       titleHighlight1: "#00f2fe"
-      titleHighlight2: "#a855f7"
       messageHighlight1: "#00f2fe"
       messageHighlight2: "#a855f7"
     sections:
@@ -62,7 +61,6 @@
       titleText: "#e0f2fe"
       messageText: "#94a3b8"
       titleHighlight1: "#00f2fe"
-      titleHighlight2: "#a855f7"
       messageHighlight1: "#00f2fe"
       messageHighlight2: "#a855f7"
     sections:

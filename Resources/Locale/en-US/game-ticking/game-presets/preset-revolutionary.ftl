@@ -21,12 +21,12 @@ roles-antag-rev-head-objective = Your objective is to take over the station by c
 
 # SIS-Start
 head-rev-role-greeting =
-    Вы [color={$hl1}]Глава Революции[/color]!
-    Ваша главная цель: свергнуть тиранию [color={$hl1}]NanoTrasen[/color] и [color={$hl1}]устранить весь командный состав[/color] станции любыми средствами.
+    Вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Глава Революции[/gradient]!
+    Ваша главная цель: свергнуть тиранию [color={$hl1}]NanoTrasen[/color] и [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]устранить весь командный состав[/gradient] станции любыми средствами.
 
 head-rev-role-greeting-desc =
     • [color={$hl1}]Вербуйте сторонников:[/color] используйте своё снаряжение, чтобы обращать членов экипажа на сторону восстания.
-    • [color={$hl1}]Ограничения:[/color] обращение не сработает на тех, кто носит [color={$hl1}]защиту для глаз[/color] (очки/маски) или имеет имплант [color={$hl1}]«Щит Разума»[/color].
+    • [color={$hl1}]Ограничения:[/color] обращение не сработает на тех, кто носит [color={$hl1}]защиту для глаз[/color] (очки/маски) или имеет имплант [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]«Щит Разума»[/gradient].
     • [color={$hl1}]Берегите лидеров:[/color] если все Главы Революции погибнут - восстание будет подавлено, а все обращенные вернутся к обычной работе.
 
     {"["}color={$hl1}]Viva la revolución![/color]
@@ -48,12 +48,12 @@ rev-break-control = {$name} has remembered their true allegiance!
 
 # SIS-Start
 rev-role-greeting =
-    Вы [color={$hl1}]Революционер[/color].
+    Вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Революционер[/gradient].
     Вам поручено защищать [color={$hl1}]Глав Революции[/color] и помочь им захватить станцию.
-    Действуйте сообща, чтобы устранить или обратить [color={$hl1}]весь командный состав[/color]!
+    Действуйте сообща, чтобы устранить или обратить [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]весь командный состав[/gradient]!
 
 rev-role-greeting-desc =
-    • [color={$hl1}]Деконвертация:[/color] остерегайтесь поимки службой безопасности, в вас могут подавить революционные идеи путём установки [color={$hl1}]«Щита Разума»[/color].
+    • [color={$hl1}]Деконвертация:[/color] остерегайтесь поимки службой безопасности, в вас могут подавить революционные идеи путём установки [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]«Щита Разума»[/gradient].
     • [color={$hl1}]Берегите лидеров:[/color] если все Главы Революции погибнут - восстание будет подавлено, а все обращенные вернутся к обычной работе.
 
     {"["}color={$hl1}]Viva la revolución![/color]

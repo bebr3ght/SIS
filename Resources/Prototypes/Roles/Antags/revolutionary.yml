@@ -42,6 +42,7 @@
       messageText: "#F0F0F0"
       titleHighlight1: "#00FFFF"
       messageHighlight1: "#00FFFF"
+      messageHighlight2: White
     sections:
     - title: role-greeting-title
       message: head-rev-role-greeting

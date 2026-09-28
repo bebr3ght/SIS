@@ -15,6 +15,11 @@
   prefRoles: [ Changeling ]
   briefing:
     # SIS-ChatGreeting Start
+    # text: changeling-role-greeting
+    # color: Red
+    # SIS-ChatGreeting End
+    sound: /Audio/_Goobstation/Ambience/Antag/changeling_start.ogg # Trauma
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#2a1010"
       titleBorder: "#cc2222"
@@ -24,8 +29,8 @@
       messageText: Crimson
       titleHighlight1: "#FFA500"
       messageHighlight1: "#FFA500"
+      messageHighlight2: "#298537"
     # SIS-ChatGreeting End
-    sound: /Audio/_Goobstation/Ambience/Antag/changeling_start.ogg # Trauma
   # <Trauma>
   blacklist:
     components:

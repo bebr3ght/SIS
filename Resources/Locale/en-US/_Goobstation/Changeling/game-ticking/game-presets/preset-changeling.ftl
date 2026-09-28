@@ -16,8 +16,8 @@ changeling-gamemode-description =
 
 # SIS-Start
 changeling-role-greeting =
-    Вы [color={$hl1}]Генокрад[/color]!
-    Вы поглотили исходную личность [color={$hl1}]{$name}[/color] и заняли её место, внедрившись в экипаж станции.
+    Вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Генокрад[/gradient]!
+    Вы поглотили исходную личность [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]{$name}[/gradient] и заняли её место, внедрившись в экипаж станции.
     Ваша цель: [color={$hl1}]поглощать органику[/color], собирать образцы ДНК и эволюционировать любой ценой.
 
 changeling-role-greeting-desc =

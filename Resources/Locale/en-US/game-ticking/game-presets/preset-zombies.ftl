@@ -20,9 +20,9 @@ zombie-no-one-ready = No players readied up! Can't start Zombies.
 
 # SIS-Start
 zombie-patientzero-role-greeting =
-    Вы [color={$hl1}]Нулевой Пациент[/color]!
+    Вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Нулевой Пациент[/gradient]!
     В вашем теле созревает мутировавший штамм зомби-вируса.
-    Ваша цель: [color={$hl1}]захватить станцию[/color], обратив весь экипаж в живых мертвецов.
+    Ваша цель: [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]захватить станцию[/gradient], обратив весь экипаж в живых мертвецов.
 
 zombie-patientzero-role-greeting-desc =
     • [color={$hl1}]Подготовка:[/color] пока вирус не проявился, вооружитесь, найдите инструменты и изолируйте первую жертву в темном углу.

@@ -38,7 +38,9 @@
       titleText: "#ffffff"
       messageText: Plum
       titleHighlight1: "#00FF7F"
+      titleHighlight2: "#756d31"
       messageHighlight1: "#00FF7F"
+      messageHighlight2: "#756d31"
     sections:
     - title: role-greeting-title
       message: zombie-patientzero-role-greeting

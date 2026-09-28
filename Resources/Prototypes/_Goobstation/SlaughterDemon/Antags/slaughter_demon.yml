@@ -23,7 +23,7 @@
       messageBorder: "#66000e"
       titleText: "#ff3366"
       messageText: "#fca5a5"
-      titleHighlight1: "#660000"
+      titleHighlight1: "#ff0033"
       messageHighlight1: "#660000"
       messageHighlight2: "#ff0033"
     sections:
@@ -57,7 +57,7 @@
       messageBorder: "#66000e"
       titleText: "#ff3366"
       messageText: "#fca5a5"
-      titleHighlight1: "#660000"
+      titleHighlight1: "#ff0033"
       messageHighlight1: "#660000"
       messageHighlight2: "#ff0033"
     sections:
@@ -84,7 +84,7 @@
       messageBorder: "#ff007f"
       titleText: "#ffe600"
       messageText: "#f5d0fe"
-      titleHighlight1: "#ff007f"
+      titleHighlight1: "#ffe600"
       messageHighlight1: "#ff007f"
       messageHighlight2: "#ffe600"
     sections:

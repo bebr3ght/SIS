@@ -26,14 +26,9 @@
       titleText: "#00bfff"
       messageText: "#e0f2fe"
       titleHighlight1: "#38bdf8"
-      titleHighlight2: "#e0f2fe"
+      titleHighlight2: "#0b00c9"
       messageHighlight1: "#38bdf8"
       messageHighlight2: "#e0f2fe"
-    sections:
-    - title: role-greeting-title
-      message: mothership-greeting
-    - title: role-greeting-desc
-      message: mothership-greeting-desc
   # SIS-ChatGreeting End
 
 - type: antag
@@ -64,8 +59,10 @@
       messageBorder: "#1e3a8a"
       titleText: "#00bfff"
       messageText: "#e0f2fe"
-      titleHighlight1: "#00ffff"
-      messageHighlight1: "#00ffff"
+      titleHighlight1: "#38bdf8"
+      titleHighlight2: "#0b00c9"
+      messageHighlight1: "#38bdf8"
+      messageHighlight2: "#e0f2fe"
   # SIS-ChatGreeting End
 
 - type: antagSpecifier

@@ -20,19 +20,19 @@ heretic-gamemode-description =
     Dimensional anomaly detected within the station. There is no additional data.
 
 # SIS-Start
-heretic-role-greeting-fluff =
+heretic-role-greeting =
     Дни бренного существования сочтены. Реальность [color={$hl1}]трещит по швам[/color], обнажая сокрытое.
     Вы заглянули за край смертного восприятия - и [color={$hl1}]Бездна[/color] ответила взаимностью. Врата [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Мансуса[/gradient] распахнулись, наполняя разум запретным знанием.
 
     Смертный внутри вас угас. Отныне вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Еретик[/gradient], живой сосуд древней воли.
     Сбросьте оковы хрупкой плоти и начните путь к великому [gradient color1="{$hl1}" color2="{$hl2}" speed="1.2"]Вознесению[/gradient]!
 
-heretic-role-greeting =
+heretic-role-greeting-desc =
     • [color={$hl1}]Живое Сердце:[/color] используйте его для выслеживания предназначенных вам [color={$hl1}]Жертв[/color] среди экипажа.
     • [color={$hl1}]Ритуалы и Руны:[/color] чертите руны на полу с помощью хватки мануса в одной руке и ручки в другой, приносите жертвы и собирайте осколки знаний для изучения заклинаний.
     • [color={$hl1}]Вознесение:[/color] завершите путь избранного Пути и станьте бессмертным аватаром Древних!
 
-heretic-role-briefing =
+heretic-role-greeting-fluff =
     Вы — Еретик! Совершите ритуалы и принесите жертвы ради Вознесения.
 # SIS-End
 

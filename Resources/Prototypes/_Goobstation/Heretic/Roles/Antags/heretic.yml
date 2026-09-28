@@ -59,9 +59,9 @@
       messageHighlight2: "#c084fc"
     sections:
     - title: role-greeting-title
-      message: heretic-role-briefing
-    - title: role-greeting-desc
       message: heretic-role-greeting
+    - title: role-greeting-desc
+      message: heretic-role-greeting-desc
   # SIS-ChatGreeting End
 
 - type: antagSpecifier

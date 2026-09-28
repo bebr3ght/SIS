@@ -4,10 +4,10 @@ nukeops-description = Nuclear operatives have targeted the station. Try to keep 
 # SIS-Start
 nukeops-role-greeting =
     Вы [color={$hl1}]Ядерный Оперативник[/color].
-    Ваша задача — взорвать [color={$hl1}]{ $station }[/color] и убедиться, что от неё осталась лишь груда обломков.
+    Ваша задача — взорвать [color={$hl1}]{$station}[/color] и убедиться, что от неё осталась лишь груда обломков.
     Ваше руководство, [color={$hl1}]Синдикат[/color], снабдило вас всем необходимым для выполнения этой задачи.
 
-    Операция «[color={$hl1}]{ $name }[/color]» началась! [color={$hl1}]Смерть NanoTrasen![/color]
+    Операция «[color={$hl1}]{$name}[/color]» началась! [color={$hl1}]Смерть NanoTrasen![/color]
 
 nukeops-role-greeting-desc =
     Ваши задачи просты: [color={$hl1}]доставить бомбу[/color] и убраться до того, как она взорвётся.

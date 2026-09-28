@@ -28,7 +28,7 @@ shadowling-role-greeting-short =
 
 # SIS-Start
 thrall-role-greeting =
-    [gradient angle="90" spread="45" color1="{$hl1}" color2="{$hl2}" speed="0.8"]Ваш разум поглощён и перестроен Тенеморфом.[/gradient]
+    Ваш разум поглощён и перестроен [gradient angle="90" spread="45" color1="{$hl1}" color2="{$hl2}" speed="0.8"]Тенеморфом[/gradient].
     Вы — [gradient angle="45" spread="50" color1="{$hl1}" color2="{$hl2}" speed="1"]Тралл[/gradient], живой щит и верный раб своего хозяина. Прежняя личность растворилась во тьме — осталась лишь священная воля создателя.
 
 thrall-role-greeting-desc =

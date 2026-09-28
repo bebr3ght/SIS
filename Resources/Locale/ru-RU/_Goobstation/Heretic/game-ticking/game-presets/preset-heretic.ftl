@@ -8,26 +8,44 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 heretic-roundend-name = еретик
+
+# Trauma
 roundend-prepend-heretic-ascension-success = { $name }, [color=green]вознёсся![/color]
 roundend-prepend-heretic-ascension-fail = { $name }, [color=red]потерпел неудачу![/color]
 roundend-prepend-heretic-ascension-fail-owls = { $name }, [color=red]отрекся от вознесения и потерпел неудачу![/color]
 roundend-prepend-heretic-knowledge-named = [color=white]{ $name }[/color] изучил всего [color=purple]{ $number }[/color] знаний.
+
 heretic-gamemode-title = Еретики
 heretic-gamemode-description = Обнаружена измерительная аномалия на станции. Дополнительных данных нет.
-heretic-role-greeting-fluff =
-    Ещё один день бессмысленной работы. Вы ощущаете лёгкое мерцание. Вы заглядываете внутрь себя и обнаруживаете нечто, что изменит вашу жизнь.
-    
-    Врата Мансуса открываются вашему разуму.
+
+# SIS-Start
+# AUTOGEN-Start
+# Вы — Еретик!
+# 
+# Подробнее о вашей роли читайте в руководстве.
+# AUTOGEN-End TODO(Update_Locale):
 heretic-role-greeting =
-    Вы — Еретик!
-    
-    Подробнее о вашей роли читайте в руководстве.
-heretic-role-greeting-short =
-    Вы — Еретик!
-    Выполните свои цели, чтобы узнать Финальный Ритуал и Вознестись.
+    Дни бренного существования сочтены. Реальность [color={$hl1}]трещит по швам[/color], обнажая сокрытое.
+    Вы заглянули за край смертного восприятия - и [color={$hl1}]Бездна[/color] ответила взаимностью. Врата [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Мансуса[/gradient] распахнулись, наполняя разум запретным знанием.
 
-## Ghoul
+    Смертный внутри вас угас. Отныне вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Еретик[/gradient], живой сосуд древней воли.
+    Сбросьте оковы хрупкой плоти и начните путь к великому [gradient color1="{$hl1}" color2="{$hl2}" speed="1.2"]Вознесению[/gradient]!
 
+heretic-role-greeting-desc =
+    • [color={$hl1}]Живое Сердце:[/color] используйте его для выслеживания предназначенных вам [color={$hl1}]Жертв[/color] среди экипажа.
+    • [color={$hl1}]Ритуалы и Руны:[/color] чертите руны на полу с помощью хватки мануса[/gradient] в одной руке и ручки в другой, приносите жертвы и собирайте осколки знаний для изучения заклинаний.
+    • [color={$hl1}]Вознесение:[/color] завершите путь избранного Пути и [gradient color1="{$hl1}" color2="{$hl2}" speed="1.2"]станьте бессмертным аватаром Древних[/gradient]!
+
+# AUTOGEN-Start
+# Ещё один день бессмысленной работы. Вы ощущаете лёгкое мерцание. Вы заглядываете внутрь себя и обнаруживаете нечто, что изменит вашу жизнь.
+# 
+# Врата Мансуса открываются вашему разуму.
+# AUTOGEN-End TODO(Update_Locale):
+heretic-role-greeting-fluff =
+    Вы — Еретик! Совершите ритуалы и принесите жертвы ради Вознесения.
+# SIS-End
+
+## ghoul
 heretic-ghoul-greeting =
     Вы были вызваны в этот мир { CAPITALIZE($ent) }!
     Вы должны помочь ему вознестись и защищать любой ценой.
@@ -41,10 +59,12 @@ heretic-ghoul-briefing-end =
     Подчиняйтесь воле своего призывателя, не смотря ни на что.
     
     используйте +m для общения через Разум Мансуса.
+
 ghostrole-ghoul-name = Гуль
 ghostrole-flesh-mimic-name = Имитатор плоти
 ghostrole-prophet-name = Пророк
 ghostrole-stalker-name = Сталкер
+ghostrole-maid-name = Maid in the Mirror
 ghostrole-fire-shark-name = Пылающая акула
 ghostrole-rustwalker-name = Ржавый странник
 ghostrole-stargazer-name = Звёздный наблюдатель
@@ -52,6 +72,7 @@ ghostrole-ghoul-desc = Помогите вашему призывателю до
 ghostrole-flesh-mimic-desc = Помогите вознестись своему призывателю. Помните, что со временем вы умрёте.
 ghostrole-prophet-desc = Помогите вашему призывателю достичь вознесения. Коммуницируйте с другими верующими через Связь Мансуса.
 ghostrole-stalker-desc = Помогите вашему призывателю достичь вознесения. Телепортируйтесь и саботируйте освещение экипажа.
+ghostrole-maid-desc = Aid your summoner in achieving ascension. Jaunt in and out on reflective surfaces to scout or ambush crew.
 ghostrole-fire-shark-desc = Помогите вашему призывателю достичь вознесения. Сжигайте своих жертв.
 ghostrole-rustwalker-desc = Помогай своему призывателю достичь вознесения. Распространяйте ржавчину повсюду.
 ghostrole-stargazer-desc = Помогайте своему призывателю сеять хаос.

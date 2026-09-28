@@ -69,8 +69,26 @@
   spawnerPrototype: SpawnPointGhostRoleHunterSpacepol
   startingGear: HunterAntagGearSpacepol
   briefing:
-    text: hunter-spacepol-role-greeting
-    color: red
+    # SIS-ChatGreeting Start
+    # text: hunter-spacepol-role-greeting
+    # color: red
+    theme:
+      titleBackground: "#0a1120"
+      titleBorder: "#3b82f6"
+      messageBackground: "#070b14"
+      messageBorder: "#1e3a5f"
+      titleText: "#bfdbfe"
+      messageText: "#dbeafe"
+      titleHighlight1: "#3b82f6"
+      titleHighlight2: "#e2e8f0"
+      messageHighlight1: "#3b82f6"
+      messageHighlight2: "#e2e8f0"
+    sections:
+    - title: role-greeting-title
+      message: hunter-spacepol-role-greeting
+    - title: role-greeting-desc
+      message: hunter-spacepol-role-greeting-desc
+    # SIS-ChatGreeting End
   components:
   - type: RandomMetadata
   mindRoles:
@@ -104,8 +122,26 @@
   spawnerPrototype: SpawnPointGhostRoleHunterRussian
   startingGear: HunterAntagGearRussian
   briefing:
-    text: hunter-spacepol-role-greeting
-    color: red
+    # SIS-ChatGreeting Start
+    # text: hunter-russians-role-greeting
+    # color: red
+    theme:
+      titleBackground: "#1a0a0a"
+      titleBorder: "#d52b1e"
+      messageBackground: "#0d0808"
+      messageBorder: "#3a1a1a"
+      titleText: "#f5c6c0"
+      messageText: "#ededed"
+      titleHighlight1: "#d52b1e"
+      titleHighlight2: "#e8e8e8"
+      messageHighlight1: "#d52b1e"
+      messageHighlight2: "#e8e8e8"
+    sections:
+    - title: role-greeting-title
+      message: hunter-russians-role-greeting
+    - title: role-greeting-desc
+      message: hunter-russians-role-greeting-desc
+    # SIS-ChatGreeting End
   components:
   - type: RandomMetadata
   mindRoles:
@@ -137,8 +173,26 @@
   spawnerPrototype: SpawnPointGhostRoleHunterBounty
   startingGear: HunterAntagGearBounty
   briefing:
-    text: hunter-spacepol-role-greeting
-    color: red
+    # SIS-ChatGreeting Start
+    # text: hunter-bounty-role-greeting
+    # color: red
+    theme:
+      titleBackground: "#1f1608"
+      titleBorder: "#f59e0b"
+      messageBackground: "#120d05"
+      messageBorder: "#4a3410"
+      titleText: "#fcd34d"
+      messageText: "#e7ddc8"
+      titleHighlight1: "#f59e0b"
+      titleHighlight2: "#b45309"
+      messageHighlight1: "#f59e0b"
+      messageHighlight2: "#b45309"
+    sections:
+    - title: role-greeting-title
+      message: hunter-bounty-role-greeting
+    - title: role-greeting-desc
+      message: hunter-bounty-role-greeting-desc
+    # SIS-ChatGreeting End
   components:
   - type: RandomMetadata
   mindRoles:

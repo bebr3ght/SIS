@@ -63,11 +63,6 @@
       titleText: "#00bfff"
       messageText: "#e0f2fe"
       messageHighlight1: "#00ffff"
-    sections:
-    - title: role-greeting-title
-      message: xenoborgs-greeting
-    - title: role-greeting-desc
-      message: xenoborgs-greeting-desc
   # SIS-ChatGreeting End
 
 - type: antagSpecifier

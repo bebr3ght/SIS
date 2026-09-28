@@ -23,6 +23,7 @@
   id: CosmicCultist
   jobBlacklist: [ Chaplain ]
   # SIS-ChatGreeting Start
+  sound: /Audio/_DV/CosmicCult/antag_cosmic_briefing.ogg
   briefing:
     theme:
       titleBackground: "#102226"

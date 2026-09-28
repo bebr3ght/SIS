@@ -94,6 +94,7 @@ public sealed partial class CosmicCultRuleSystem : GameRuleSystem<CosmicCultRule
     // SIS-ChatGreeting End
 
     private static readonly EntProtoId PressureImmunity = "StatusEffectPressureImmunity";
+    private readonly ProtoId<AntagSpecifierPrototype> CosmicCultistAntag = "CosmicCultist"; // SIS-ChatGreeting
 
     private readonly SoundSpecifier _briefingSound = new SoundPathSpecifier("/Audio/_DV/CosmicCult/antag_cosmic_briefing.ogg");
     private readonly SoundSpecifier _deconvertSound = new SoundPathSpecifier("/Audio/_DV/CosmicCult/antag_cosmic_deconvert.ogg");
@@ -101,8 +102,6 @@ public sealed partial class CosmicCultRuleSystem : GameRuleSystem<CosmicCultRule
     private readonly SoundSpecifier _tier1Sound = new SoundPathSpecifier("/Audio/_DV/CosmicCult/tier1.ogg");
 
     public List<List<InfluencePrototype>> TierInfluences = new();
-
-    private readonly ProtoId<AntagSpecifierPrototype> CosmicCultistAntag = "CosmicCultist"; // SIS-ChatGreeting
 
     public override void Initialize()
     {

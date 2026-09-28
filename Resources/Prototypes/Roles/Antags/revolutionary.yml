@@ -41,6 +41,7 @@
       titleText: White
       messageText: "#F0F0F0"
       titleHighlight1: "#00FFFF"
+      titleHighlight2: White
       messageHighlight1: "#00FFFF"
       messageHighlight2: White
     sections:

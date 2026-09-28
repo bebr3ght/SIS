@@ -28,6 +28,7 @@
       titleText: White
       messageText: Crimson
       titleHighlight1: "#FFA500"
+      titleHighlight2: "#298537"
       messageHighlight1: "#FFA500"
       messageHighlight2: "#298537"
     # SIS-ChatGreeting End

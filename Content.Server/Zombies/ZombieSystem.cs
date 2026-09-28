@@ -52,6 +52,7 @@ namespace Content.Server.Zombies
         [Dependency] private AntagSelectionSystem _antag = default!; // SIS-ChatBriefing
 
         public readonly ProtoId<NpcFactionPrototype> Faction = "Zombie";
+        private static readonly ProtoId<AntagSpecifierPrototype> InitialInfectedAntag = "InitialInfected"; // SIS-ChatBriefing
 
         public const SlotFlags ProtectiveSlots =
             SlotFlags.FEET |
@@ -62,8 +63,6 @@ namespace Content.Server.Zombies
             SlotFlags.NECK |
             SlotFlags.INNERCLOTHING |
             SlotFlags.OUTERCLOTHING;
-
-        private static readonly ProtoId<AntagSpecifierPrototype> InitialInfectedAntag = "InitialInfected"; // SIS-ChatBriefing
 
         public override void Initialize()
         {

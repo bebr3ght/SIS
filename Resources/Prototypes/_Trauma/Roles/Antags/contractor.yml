@@ -22,8 +22,8 @@
       messageText: "#cbd5e1"
       titleHighlight1: "#ff1744"
       titleHighlight2: "#ff5252"
-      highlight1: "#ff1744"
-      highlight2: "#ff5252"
+      messageHighlight1: "#ff1744"
+      messageHighlight2: "#ff5252"
     sections:
     - title: role-greeting-title
       message: contractor-role-greeting

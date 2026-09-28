@@ -76,6 +76,8 @@
       messageBorder: "#381619"
       titleText: "#ff667a"
       messageText: "#d6c9cb"
+      titleHighlight1: Red
+      titleHighlight2: "#c33030"
       messageHighlight1: Red
       messageHighlight2: "#c33030"
   # SIS-ChatGreeting End

@@ -42,6 +42,10 @@
   prefRoles: [ Vampire ]
   mindRoles: [ MindRoleVampire ]
   briefing:
+    # SIS-ChatGreeting Start
+    # text: vampire-role-briefing
+    # color: "#650000"
+    # SIS-ChatGreeting End
     sound: /Audio/_Trauma/Vampires/vampalert.ogg
     # SIS-ChatGreeting Start
     theme:
@@ -51,6 +55,8 @@
       messageBorder: "#45131e"
       titleText: "#ffb8c6"
       messageText: "#e0d0d5"
+      titleHighlight1: "#ff1744"
+      titleHighlight2: "#870852"
       messageHighlight1: "#ff1744"
       messageHighlight2: "#870852"
     sections:

@@ -5,6 +5,10 @@
   id: BaseAbductor
   unequipOldGear: true
   briefing:
+    # SIS-ChatGreeting Start
+    # text: abductor-role-greeting
+    # color: Green
+    # SIS-ChatGreeting End
     sound: /Audio/_Shitmed/Misc/abductor.ogg
     # SIS-ChatGreeting Start
     theme:
@@ -14,6 +18,8 @@
       messageBorder: "#2c1236"
       titleText: "#f472b6"
       messageText: "#c8d6e5"
+      titleHighlight1: "#00ffcc"
+      titleHighlight2: "#fd0098"
       messageHighlight1: "#00ffcc"
       messageHighlight2: "#fd0098"
     sections:
@@ -99,7 +105,12 @@
   id: AbductorVictim
   mindRoles: [ MindRoleAbductorVictim ]
   briefing:
+    # SIS-ChatGreeting Start
+    # text: abductor-victim-role-greeting
+    # color: Red
+    # SIS-ChatGreeting End
     sound: /Audio/_Shitmed/Misc/abducted.ogg
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#19140d"
       titleBorder: "#e67e22"
@@ -107,6 +118,8 @@
       messageBorder: "#362412"
       titleText: "#facc15"
       messageText: "#ded3c2"
+      titleHighlight1: "#facc15"
+      titleHighlight2: "#fd0098"
       messageHighlight1: "#facc15"
       messageHighlight2: "#fd0098"
     sections:
@@ -114,4 +127,5 @@
       message: abductor-victim-role-greeting
     - title: role-greeting-desc
       message: abductor-victim-role-greeting-desc
+    # SIS-ChatGreeting End
   pickPlayer: false # manually assigned

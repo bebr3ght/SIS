@@ -22,6 +22,7 @@
       messageBorder: "#331414"
       titleText: White
       messageText: Crimson
+      titleHighlight1: "#FFA500"
       messageHighlight1: "#FFA500"
     # SIS-ChatGreeting End
     sound: /Audio/_Goobstation/Ambience/Antag/changeling_start.ogg # Trauma

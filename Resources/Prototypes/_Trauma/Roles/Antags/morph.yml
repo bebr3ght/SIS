@@ -11,6 +11,10 @@
   spawnerPrototype: GhostRoleSpawnerMorph
   mindRoles: [ MindRoleMorph ]
   briefing:
+    # SIS-ChatGreeting Start
+    # text: morph-role-greeting
+    # color: lime
+    # SIS-ChatGreeting End
     sound: /Audio/_Trauma/Morph/mutate.ogg
     # SIS-ChatGreeting Start
     theme:
@@ -20,6 +24,8 @@
       messageBorder: "#283618"
       titleText: "#d4ed85"
       messageText: "#c5d9a5"
+      titleHighlight1: "#a3e635"
+      titleHighlight2: "#728c49"
       messageHighlight1: "#a3e635"
       messageHighlight2: "#728c49"
     sections:

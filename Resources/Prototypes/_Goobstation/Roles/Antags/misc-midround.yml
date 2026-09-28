@@ -20,6 +20,10 @@
   mindRoles:
   - MindRoleGhostRoleSoloAntagonist
   briefing:
+    # SIS-ChatGreeting Start
+    # text: tunnel-clown-role-greeting
+    # color: Pink
+    # SIS-ChatGreeting End
     sound: /Audio/_Goobstation/Misc/clownalwayswinsshort.ogg
     # SIS-ChatGreeting Start
     theme:
@@ -29,6 +33,8 @@
       messageBorder: "#3d1430"
       titleText: "#f472b6"
       messageText: "#fce7f3"
+      titleHighlight1: "#facc15"
+      titleHighlight2: "#ec4899"
       messageHighlight1: "#facc15"
       messageHighlight2: "#ec4899"
     sections:
@@ -75,7 +81,12 @@
   spawnerPrototype: SpawnPointGhostSingulothKnight
   mindRoles: [ MindRoleGhostRoleFreeAgent ]
   briefing:
+    # SIS-ChatGreeting Start
+    # text: Singuloth-Knight-role-greeting
+    # color: Red
+    # SIS-ChatGreeting End
     sound: /Audio/_Goobstation/Misc/singulothknight_greeting.ogg
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#150d1e"
       titleBorder: "#7c3aed"
@@ -83,6 +94,8 @@
       messageBorder: "#29153d"
       titleText: "#c084fc"
       messageText: "#dcd6e8"
+      titleHighlight1: "#c084fc"
+      titleHighlight2: "#38bdf8"
       messageHighlight1: "#c084fc"
       messageHighlight2: "#38bdf8"
     sections:
@@ -90,6 +103,7 @@
       message: singuloth-knight-role-greeting
     - title: role-greeting-desc
       message: singuloth-knight-role-greeting-desc
+    # SIS-ChatGreeting End
 
 - type: startingGear
   id: SingulothKnightsAntagGear
@@ -114,7 +128,12 @@
   spawnerPrototype: SpawnPointGhostDarkLord
   mindRoles: [ MindRoleGhostRoleSoloAntagonist ]
   briefing:
+    # SIS-ChatGreeting Start
+    # text: dark-lord-role-greeting
+    # color: Red
+    # SIS-ChatGreeting End
     sound: /Audio/_Goobstation/Misc/darklord_greeting.ogg
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#1a0a0d"
       titleBorder: "#e71d36"
@@ -122,6 +141,8 @@
       messageBorder: "#381218"
       titleText: "#ff6b81"
       messageText: "#dcd6d8"
+      titleHighlight1: "#ff6b81"
+      titleHighlight2: "#e71d36"
       messageHighlight1: "#ff6b81"
       messageHighlight2: "#e71d36"
     sections:
@@ -129,6 +150,7 @@
       message: dark-lord-role-greeting
     - title: role-greeting-desc
       message: dark-lord-role-greeting-desc
+    # SIS-ChatGreeting End
 
 - type: startingGear
   id: DarkLordAntagGear
@@ -152,7 +174,12 @@
   spawnerPrototype: SpawnPointGhostChosenOne
   mindRoles: [ MindRoleGhostRoleNeutral ]
   briefing:
+    # SIS-ChatGreeting Start
+    # text: chosen-one-role-greeting
+    # color: Green
+    # SIS-ChatGreeting End
     sound: /Audio/_Goobstation/Misc/darklord_greeting.ogg
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#14171f"
       titleBorder: "#e2e8f0"
@@ -160,6 +187,8 @@
       messageBorder: "#2d3748"
       titleText: "#ffffff"
       messageText: "#e2e8f0"
+      titleHighlight1: "#ffffff"
+      titleHighlight2: "#93c5fd"
       messageHighlight1: "#ffffff"
       messageHighlight2: "#93c5fd"
     sections:
@@ -167,6 +196,7 @@
       message: chosen-one-role-greeting
     - title: role-greeting-desc
       message: chosen-one-role-greeting-desc
+    # SIS-ChatGreeting End
 
 - type: startingGear
   id: ChosenOneProtagGear
@@ -186,7 +216,12 @@
   mindRoles:
   - MindRoleGhostRoleSoloAntagonist
   briefing:
+    # SIS-ChatGreeting Start
+    # text: mime-Assassin-role-greeting
+    # color: Red
+    # SIS-ChatGreeting End
     sound: /Audio/Misc/thief_greeting.ogg
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#16181a"
       titleBorder: "#475569"
@@ -194,6 +229,8 @@
       messageBorder: "#23272f"
       titleText: "#e2e8f0"
       messageText: "#94a3b8"
+      titleHighlight1: "#ff3838"
+      titleHighlight2: "#b91c1c"
       messageHighlight1: "#ff3838"
       messageHighlight2: "#b91c1c"
     sections:
@@ -201,6 +238,7 @@
       message: mime-assassin-role-greeting
     - title: role-greeting-desc
       message: mime-assassin-role-greeting-desc
+    # SIS-ChatGreeting End
 
 - type: startingGear
   id: MimeAssassinGear
@@ -239,7 +277,12 @@
   spawnerPrototype: SpawnPointGhostDarkPriest
   mindRoles: [ MindRoleGhostRoleFreeAgent ]
   briefing:
+    # SIS-ChatGreeting Start
+    # text: dark-priest-role-greeting
+    # color: Purple
+    # SIS-ChatGreeting End
     sound: /Audio/_Goobstation/Heretic/Ambience/Antag/Heretic/heretic_gain.ogg
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#190d24"
       titleBorder: "#9333ea"
@@ -247,6 +290,8 @@
       messageBorder: "#2c1240"
       titleText: "#d8b4fe"
       messageText: "#e2d9f3"
+      titleHighlight1: "#c084fc"
+      titleHighlight2: "#a855f7"
       messageHighlight1: "#c084fc"
       messageHighlight2: "#a855f7"
     sections:
@@ -255,6 +300,7 @@
     - priority: 1
     - title: role-greeting-desc
       message: dark-priest-role-greeting-desc
+    # SIS-ChatGreeting End
 
 - type: startingGear
   id: DarkPriestAntagGear
@@ -286,7 +332,12 @@
   - MindRoleGhostRoleTeamAntagonist
   - MindRoleThief
   briefing:
+    # SIS-ChatGreeting Start
+    # text: vox-raider-role-greeting
+    # color: Purple
+    # SIS-ChatGreeting End
     sound: /Audio/Misc/thief_greeting.ogg
+    # SIS-ChatGreeting Start
     theme:
       titleBackground: "#131f1c"
       titleBorder: "#14b8a6"
@@ -294,6 +345,8 @@
       messageBorder: "#1c3832"
       titleText: "#5eead4"
       messageText: "#ccfbf1"
+      titleHighlight1: "#f59e0b"
+      titleHighlight2: "#14b8a6"
       messageHighlight1: "#f59e0b"
       messageHighlight2: "#14b8a6"
     sections:
@@ -301,6 +354,7 @@
       message: vox-raider-role-greeting
     - title: role-greeting-desc
       message: vox-raider-role-greeting-desc
+    # SIS-ChatGreeting End
 
 - type: startingGear
   id: VoxRaiderAntagGear

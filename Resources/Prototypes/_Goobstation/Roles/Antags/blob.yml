@@ -18,6 +18,10 @@
   prefRoles: [ Blob ]
   allowNonHumans: true
   briefing:
+    # SIS-ChatGreeting Start
+    # text: blob-carrier-role-greeting
+    # color: Plum
+    # SIS-ChatGreeting End
     sound: /Audio/Announcements/bloblarm.ogg
     # SIS-ChatGreeting Start
     theme:

@@ -22,6 +22,10 @@
   prefRoles:
   - Werewolf
   briefing:
+    # SIS-ChatGreeting Start
+    # text: werewolf-role-greeting
+    # color: Brown
+    # SIS-ChatGreeting End
     sound: "/Audio/_Inky/Antag/Werewolf/werewolf_start.ogg"
     # SIS-ChatGreeting Start
     theme:
@@ -31,6 +35,8 @@
       messageBorder: "#331f12"
       titleText: "#fde68a"
       messageText: "#e2d9d2"
+      titleHighlight1: "#fde68a"
+      titleHighlight2: "#b45309"
       messageHighlight1: "#fde68a"
       messageHighlight2: "#b45309"
     sections:

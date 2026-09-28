@@ -25,6 +25,8 @@
       messageBorder: "#331538"
       titleText: "#d680d0"
       messageText: "#e4d4e6"
+      titleHighlight1: "#e4d4e6"
+      titleHighlight2: "#8c3986"
       messageHighlight1: "#e4d4e6"
       messageHighlight2: "#8c3986"
     sections:

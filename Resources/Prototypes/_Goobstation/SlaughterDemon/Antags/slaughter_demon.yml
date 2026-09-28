@@ -10,6 +10,10 @@
   id: SlaughterDemon
   spawnerPrototype: SpawnPointGhostSlaughterDemon
   briefing:
+    # SIS-ChatGreeting Start
+    # text: slaughter-role-greeting
+    # color: Red
+    # SIS-ChatGreeting End
     sound: /Audio/_Goobstation/SlaughterDemon/briefing.ogg
     # SIS-ChatGreeting Start
     theme:
@@ -19,6 +23,8 @@
       messageBorder: "#66000e"
       titleText: "#ff3366"
       messageText: "#fca5a5"
+      titleHighlight1: "#660000"
+      titleHighlight2: "#ff0033"
       messageHighlight1: "#660000"
       messageHighlight2: "#ff0033"
     sections:
@@ -39,6 +45,10 @@
   parent: SlaughterDemon
   id: SlaughterDemonMidround
   briefing:
+    # SIS-ChatGreeting Start
+    # text: slaughter-role-greeting
+    # color: Red
+    # SIS-ChatGreeting End
     sound: /Audio/Misc/narsie_rises.ogg
     # SIS-ChatGreeting Start
     theme:
@@ -48,6 +58,8 @@
       messageBorder: "#66000e"
       titleText: "#ff3366"
       messageText: "#fca5a5"
+      titleHighlight1: "#660000"
+      titleHighlight2: "#ff0033"
       messageHighlight1: "#660000"
       messageHighlight2: "#ff0033"
     sections:
@@ -61,6 +73,10 @@
   id: LaughterDemon
   spawnerPrototype: SpawnPointGhostLaughterDemon
   briefing:
+    # SIS-ChatGreeting Start
+    # text: laughter-role-greeting
+    # color: Pink
+    # SIS-ChatGreeting End
     sound: /Audio/_Goobstation/Vehicle/Clowncar/clowncar_fart.ogg
     # SIS-ChatGreeting Start
     theme:
@@ -70,6 +86,8 @@
       messageBorder: "#ff007f"
       titleText: "#ffe600"
       messageText: "#f5d0fe"
+      titleHighlight1: "#ff007f"
+      titleHighlight2: "#ffe600"
       messageHighlight1: "#ff007f"
       messageHighlight2: "#ffe600"
     sections:

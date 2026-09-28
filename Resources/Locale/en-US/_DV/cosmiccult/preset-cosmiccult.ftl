@@ -54,7 +54,7 @@ cosmiccult-elimination-announcement = Based on scans from our long-range sensors
 
 ## BRIEFINGS
 
-co# SIS-Start
+# SIS-Start
 cosmiccult-role-greeting =
     Пока вы готовитесь к очередной смене, ваш разум затапливает невыразимое знание.
     Реальность распадается на части. Приближается великий [gradient color1="{$hl1}" color2="{$hl2}" speed="1.2"]Последний Занавес[/gradient]...

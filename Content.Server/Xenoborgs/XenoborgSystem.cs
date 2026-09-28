@@ -28,7 +28,10 @@ public sealed partial class XenoborgSystem : EntitySystem
     [Dependency] private GreetingSystem _greeting = default!;
     // SIS-ChatBriefing End
 
-    private static readonly ProtoId<AntagSpecifierPrototype> XenoborgAntag = "Xenoborg"; // SIS-ChatBriefing
+    // SIS-ChatBriefing
+    private static readonly EntProtoId MothershipCoreAntag = "MothershipCore";
+    private static readonly ProtoId<AntagSpecifierPrototype> XenoborgAntag = "Xenoborg";
+    // SIS-ChatBriefing
 
     public override void Initialize()
     {
@@ -92,6 +95,10 @@ public sealed partial class XenoborgSystem : EntitySystem
         _roles.MindAddRole(args.Mind, comp.MindRole, silent: true);
 
         // SIS-ChatBriefing Start
+        if (MetaData(ent).EntityPrototype is { } protoId
+            && protoId == MothershipCoreAntag)
+            return;
+
         var proto = _proto.Index(XenoborgAntag);
         var entry = _greeting.CreateGreetingEntry("xenoborgs-", proto.Briefing);
         _antag.SendBriefing(ent, entry);

@@ -14,7 +14,7 @@ mothership-role-greeting-desc =
 
 xenoborgs-role-greeting =
     Вы [color={$hl1}]Ксеноборг[/color]!
-    Ваша цель: защищать [color={$hl1}]Материнское Ядро[/color] и обратить всю углеродную жизнь станции в кремний.
+    Ваша цель: защищать [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Материнское Ядро[/gradient] и обратить всю углеродную жизнь станции в кремний.
 
 xenoborgs-role-greeting-desc =
     • [color={$hl1}]Сбор ресурсов:[/color] добывайте металл, руду и платы, доставляя их Ядру для постройки новых сородичей.

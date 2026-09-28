@@ -24,7 +24,6 @@
       titleText: "#ff3366"
       messageText: "#fca5a5"
       titleHighlight1: "#660000"
-      titleHighlight2: "#ff0033"
       messageHighlight1: "#660000"
       messageHighlight2: "#ff0033"
     sections:
@@ -59,7 +58,6 @@
       titleText: "#ff3366"
       messageText: "#fca5a5"
       titleHighlight1: "#660000"
-      titleHighlight2: "#ff0033"
       messageHighlight1: "#660000"
       messageHighlight2: "#ff0033"
     sections:
@@ -87,7 +85,6 @@
       titleText: "#ffe600"
       messageText: "#f5d0fe"
       titleHighlight1: "#ff007f"
-      titleHighlight2: "#ffe600"
       messageHighlight1: "#ff007f"
       messageHighlight2: "#ffe600"
     sections:

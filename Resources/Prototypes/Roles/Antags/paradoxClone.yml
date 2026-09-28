@@ -16,10 +16,28 @@
   - RoleSurvivalVoxTank # give vox something to breath in case they don't get a copy
   - RoleSurvivalPlasmaTank # Trauma
   briefing:
-    # TODO: Красивый гритинг
-    text: paradox-clone-role-greeting
-    color: lightblue
+    # SIS-ChatGreeting Start
+    # text: paradox-clone-role-greeting
+    # color: lightblue
+    # SIS-ChatGreeting End
     sound: /Audio/Misc/paradox_clone_greeting.ogg
+    # SIS-ChatGreeting Start
+    theme:
+      titleBackground: "#14171f"
+      titleBorder: "#00f2ed"
+      messageBackground: "#0b0c10"
+      messageBorder: "#2d3748"
+      titleText: "#ffffff"
+      messageText: "#e2e8f0"
+      titleHighlight1: "#2789cd"
+      messageHighlight1: "#2789cd"
+      messageHighlight2: "#960019"
+    sections:
+    - title: role-greeting-title
+      message: paradox-clone-role-greeting
+    - title: role-greeting-desc
+      message: paradox-clone-role-greeting-desc
+    # SIS-ChatGreeting End
   mindRoles:
   - MindRoleParadoxClone
 

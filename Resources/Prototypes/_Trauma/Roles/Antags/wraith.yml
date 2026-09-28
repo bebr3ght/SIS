@@ -17,9 +17,26 @@
   spawnerPrototype: SpawnPointGhostWraithRoundstart
   mindRoles: [ MindRoleGhostRoleSoloAntagonist ]
   briefing:
-    # TODO: Красивый гритинг
-    text: wraith-role-greeting
+    # text: wraith-role-greeting # SIS-ChatGreeting
     sound: /Audio/_Goobstation/Wraith/Ambience/Void_Calls.ogg
+    # SIS-ChatGreeting Start
+    theme:
+      titleBackground: "#110817"
+      titleBorder: "#6d28d9"
+      messageBackground: "#06030a"
+      messageBorder: "#1f0c29"
+      titleText: "#a855f7"
+      messageText: "#9ca3af"
+      titleHighlight1: "#a855f7"
+      titleHighlight2: "#e20000"
+      messageHighlight1: "#a855f7"
+      messageHighlight2: "#e20000"
+    sections:
+    - title: role-greeting-title
+      message: wraith-role-greeting
+    - title: role-greeting-desc
+      message: wraith-role-greeting-desc
+    # SIS-ChatGreeting End
   components:
   - type: RandomMetadata
     nameSegments:

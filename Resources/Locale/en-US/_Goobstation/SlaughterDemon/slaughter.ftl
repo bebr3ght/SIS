@@ -5,6 +5,7 @@ lesser-slaughter-round-end-agent-name = lesser slaughter demon
 objective-issuer-slaughter-satan = [color=#FF0000]Satan[/color]
 objective-issuer-slaughter-bubblegum = [color=#9F2B68]Bubblegum[/color]
 objective-issuer-slaughter-devil = [color=#FFC0CB]Devil[/color]
+
 # SIS-Start
 slaughter-role-greeting =
     {"["}gradient color1="{$hl1}" color2="{$hl2}" speed="2"]КРОВЬ! КИШКИ! РЕЗНЯ![/gradient]

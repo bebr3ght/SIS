@@ -47,11 +47,14 @@ roles-antag-rev-objective = Your objective is to ensure the safety and follow th
 rev-break-control = {$name} has remembered their true allegiance!
 
 # SIS-Start
-## --- Rev Greeting ---
 rev-role-greeting =
     Вы [color={$hl1}]Революционер[/color].
     Вам поручено защищать [color={$hl1}]Глав Революции[/color] и помочь им захватить станцию.
     Действуйте сообща, чтобы устранить или обратить [color={$hl1}]весь командный состав[/color]!
+
+rev-role-greeting-desc =
+    • [color={$hl1}]Деконвертация:[/color] остерегайтесь от поимки службой безопасности, в вас могут подавить революционные идеи путём установки [color={$hl1}]«Щита Разума»[/color].
+    • [color={$hl1}]Берегите лидеров:[/color] если все Главы Революции погибнут - восстание будет подавлено, а все обращенные вернутся к обычной работе.
 
     {"["}color={$hl1}]Viva la revolución![/color]
 # SIS-End

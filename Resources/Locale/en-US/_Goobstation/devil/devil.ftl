@@ -8,7 +8,6 @@ devil-component-examined = [color=darkred]{CAPITALIZE(POSS-ADJ($target))} eyes g
 condemned-component-examined = [color=chartreuse]{CAPITALIZE($target)}'s eyes are hollow and soulless.[/color]
 
 # SIS-Start
-## --- Devil Greeting ---
 devil-role-greeting =
     Вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Дьявол[/gradient], владыка Преисподней, подчинивший себе смертную оболочку [color={$hl1}]{$playerName}[/color]!
 

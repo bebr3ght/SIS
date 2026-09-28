@@ -28,10 +28,10 @@ public sealed partial class XenoborgSystem : EntitySystem
     [Dependency] private GreetingSystem _greeting = default!;
     // SIS-ChatBriefing End
 
-    // SIS-ChatBriefing
+    // SIS-ChatBriefing Start
     private static readonly EntProtoId MothershipCoreAntag = "MothershipCore";
     private static readonly ProtoId<AntagSpecifierPrototype> XenoborgAntag = "Xenoborg";
-    // SIS-ChatBriefing
+    // SIS-ChatBriefing End
 
     public override void Initialize()
     {

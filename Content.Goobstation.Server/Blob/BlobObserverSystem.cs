@@ -26,9 +26,16 @@ public sealed partial class BlobObserverSystem : SharedBlobObserverSystem
     [Dependency] private SharedMindSystem _mind = default!;
     [Dependency] private SharedRoleSystem _role = default!;
     [Dependency] private EntityQuery<MapGridComponent> _gridQuery = default!;
+    // SIS-ChatGreeting Start
+    [Dependency] private AntagSelectionSystem _antag = default!;
+    [Dependency] private IPrototypeManager _proto = default!;
+    [Dependency] private GreetingSystem _greeting = default!;
+    // SIS-ChatGreeting End
 
     private static readonly EntProtoId BlobCaptureObjective = "BlobCaptureObjective";
     private static readonly EntProtoId BlobRule = "BlobRule";
+
+    private static readonly ProtoId<AntagSpecifierPrototype> BlobAntag = "Blob"; // SIS-ChatGreeting
 
     private const double MoverJobTime = 0.005;
     private readonly JobQueue _moveJobQueue = new(MoverJobTime);
@@ -110,7 +117,7 @@ public sealed partial class BlobObserverSystem : SharedBlobObserverSystem
         }
 
         _role.MindAddRole(mindId, core.Comp.MindRoleBlobPrototypeId.Id);
-        // SendBlobBriefing(mindId); // SIS-ChatGreeting
+        SendGreeting(mindId); // SIS-ChatGreeting
 
         var ruleExists = false;
         foreach (var rule in EntityQueryEnumerator<BlobRuleComponent>())
@@ -131,11 +138,15 @@ public sealed partial class BlobObserverSystem : SharedBlobObserverSystem
         _mind.TryAddObjective(mindId, mind, BlobCaptureObjective);
     }
 
-    private void SendBlobBriefing(EntityUid mind)
+    // SIS-ChatGreeting Start
+    private void SendGreeting(EntityUid mind)
     {
-        if (_player.TryGetSessionByEntity(mind, out var session))
-        {
-            _chat.DispatchServerMessage(session, Loc.GetString("blob-role-greeting"));
-        }
+        if (!_player.TryGetSessionByEntity(mind, out var session))
+            return;
+
+        var proto = _proto.Index(BlobAntag);
+        var entry = _greeting.CreateGreetingEntry("blob-", proto.Briefing);
+        _antag.SendBriefing(session, entry);
     }
+    // SIS-ChatGreeting End
 }

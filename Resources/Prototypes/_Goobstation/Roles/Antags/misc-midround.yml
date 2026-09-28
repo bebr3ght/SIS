@@ -187,10 +187,10 @@
       messageBorder: "#2d3748"
       titleText: "#ffffff"
       messageText: "#e2e8f0"
-      titleHighlight1: "#ffffff"
-      titleHighlight2: "#93c5fd"
-      messageHighlight1: "#ffffff"
-      messageHighlight2: "#93c5fd"
+      titleHighlight1: "#93c5fd"
+      titleHighlight2: "#ffffff"
+      messageHighlight1: "#93c5fd"
+      messageHighlight2: "#ffffff"
     sections:
     - title: role-greeting-title
       message: chosen-one-role-greeting

@@ -15,7 +15,7 @@ dragon-role-greeting =
     Вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Космический Дракон[/gradient], древний левиафан из глубин космической Бездны.
     Ваша цель: подчинить этот сектор и открыть врата для стаи карпов.
 
-    Ближайшая станция находится в направлении: [gradient color1="{$hl1}" color2="{$hl2}" speed="1.2"]{ $direction }[/gradient].
+    Ближайшая станция находится в направлении: [gradient color1="{$hl1}" color2="{$hl2}" speed="1.2"]{$direction}[/gradient].
 
 dragon-role-greeting-desc =
     • [color={$hl1}]Карповые разломы:[/color] прилетите на станцию и откройте [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]3 карповых разлома[/gradient] в разных отсеках.
@@ -23,5 +23,5 @@ dragon-role-greeting-desc =
     • [color={$hl1}]Пожирание:[/color] сокрушайте конструкции станции и [gradient color1="{$hl1}" color2="{$hl2}" speed="1.2"]пожирайте смертных[/gradient], восстанавливая здоровье и силы!
 
 
-dragon-role-briefing = Откройте 3 карповых разлома на станции ({ $direction }) и захватите сектор!
+dragon-role-briefing = Откройте 3 карповых разлома на станции ({$direction}) и захватите сектор!
 # SIS-End

@@ -31,6 +31,8 @@
       messageBorder: "#1e3b40"
       titleText: "#e0f2fe"
       messageText: "#94a3b8"
+      titleHighlight1: "#00f2fe"
+      titleHighlight2: "#a855f7"
       messageHighlight1: "#00f2fe"
       messageHighlight2: "#a855f7"
     sections:
@@ -48,10 +50,25 @@
   id: CosmicColossus
   spawnerPrototype: SpawnPointCosmicColossus
   briefing:
-    # TODO: Красивый гритинг
     text: ghost-role-colossus-briefing
-    color: CadetBlue
+    # color: CadetBlue
     sound: /Audio/_DV/CosmicCult/antag_cosmic_AI_briefing.ogg
+    # SIS-ChatGreeting Start
+    theme:
+      titleBackground: "#102226"
+      titleBorder: "#4cabb3"
+      messageBackground: "#081214"
+      messageBorder: "#1e3b40"
+      titleText: "#e0f2fe"
+      messageText: "#94a3b8"
+      titleHighlight1: "#00f2fe"
+      titleHighlight2: "#a855f7"
+      messageHighlight1: "#00f2fe"
+      messageHighlight2: "#a855f7"
+    sections:
+    - title: role-greeting-title
+      message: ghost-role-colossus-briefing
+    # SIS-ChatGreeting End
   mindRoles: [ MindRoleCosmicColossus ]
 
 - type: antagSmite

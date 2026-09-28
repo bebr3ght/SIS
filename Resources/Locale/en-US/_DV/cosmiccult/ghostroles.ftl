@@ -22,10 +22,13 @@ terror-colossus = Attention crew, it appears that someone on your station has dr
 
 ghost-role-colossus-charactermenu = You must usher in the end of all things. Wreak untold havoc upon all before you.
 ghost-role-colossus-objective = Call forth an Effigy of Entropy and persist until the end of all things.
+
+# SIS-Start
 ghost-role-colossus-briefing =
-    You are an Entropic Colossus!
-    Your objectives are listed in the character menu.
-    Read more about your role in the guidebook entry.
+    Вы — [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Энтропийный Колосс[/gradient]!
+    Ваши цели указаны в меню персонажа.
+    Подробнее о своей роли вы можете узнать в справочнике.
+# SIS-End
 
 ghost-role-colossus-death = The colossus collapses, its surface desintegrating rapidly.
 ghost-role-colossus-hibernate = The colossus begins drawing in energy!

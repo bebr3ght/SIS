@@ -29,6 +29,7 @@
       titleText: "#ffb380"
       messageText: "#efe3d5"
       titleHighlight1: "#e8590c"
+      titleHighlight2: "#ffd8a8"
       messageHighlight1: "#e8590c"
       messageHighlight2: "#ffd8a8"
     sections:

@@ -24,7 +24,7 @@ apprentice-role-greeting =
 
 apprentice-role-greeting-desc =
     • [color={$hl1}]Наставник:[/color] защищайте мага, пока он вершит свои заклинания.
-    • [color={$hl1}]Заклинания:[/color] используйте дарованные чары с умом.
+    • [color={$hl1}]Заклинания:[/color] используйте [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]дарованные чары[/gradient] с умом.
     • [color={$hl1}]Верность:[/color] если маг погибнет — задание провалено.
 # SIS-End
 

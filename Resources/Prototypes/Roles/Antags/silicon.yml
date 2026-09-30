@@ -35,6 +35,7 @@
       titleText: "#e6c86e"
       messageText: "#ded8c8"
       titleHighlight1: "#b58900"
+      titleHighlight2: "#f0d98c"
       messageHighlight1: "#b58900"
       messageHighlight2: "#f0d98c"
     sections:
@@ -58,6 +59,7 @@
       titleText: "#e6c86e"
       messageText: "#ded8c8"
       titleHighlight1: "#b58900"
+      titleHighlight2: "#f0d98c"
       messageHighlight1: "#b58900"
       messageHighlight2: "#f0d98c"
     sections:
@@ -81,6 +83,7 @@
       titleText: "#e6c86e"
       messageText: "#ded8c8"
       titleHighlight1: "#b58900"
+      titleHighlight2: "#f0d98c"
       messageHighlight1: "#b58900"
       messageHighlight2: "#f0d98c"
     sections:
@@ -104,6 +107,7 @@
       titleText: "#e6c86e"
       messageText: "#ded8c8"
       titleHighlight1: "#b58900"
+      titleHighlight2: "#f0d98c"
       messageHighlight1: "#b58900"
       messageHighlight2: "#f0d98c"
     sections:
@@ -127,6 +131,7 @@
       titleText: "#e6c86e"
       messageText: "#ded8c8"
       titleHighlight1: "#b58900"
+      titleHighlight2: "#f0d98c"
       messageHighlight1: "#b58900"
       messageHighlight2: "#f0d98c"
     sections:
@@ -150,6 +155,7 @@
       titleText: "#e6c86e"
       messageText: "#ded8c8"
       titleHighlight1: "#b58900"
+      titleHighlight2: "#f0d98c"
       messageHighlight1: "#b58900"
       messageHighlight2: "#f0d98c"
     sections:

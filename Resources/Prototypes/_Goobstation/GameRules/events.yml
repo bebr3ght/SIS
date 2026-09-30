@@ -46,6 +46,7 @@
       titleText: "#ff8a95"
       messageText: "#e0d2d4"
       titleHighlight1: "#e11d2e"
+      titleHighlight2: "#ffb3ba"
       messageHighlight1: "#e11d2e"
       messageHighlight2: "#ffb3ba"
     sections:

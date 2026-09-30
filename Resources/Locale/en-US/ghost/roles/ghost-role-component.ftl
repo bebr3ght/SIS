@@ -316,13 +316,6 @@ ghost-role-information-derelict-mining-cyborg-description = You are a salvage cy
 ghost-role-information-derelict-syndicate-assault-cyborg-name = Derelict Syndicate Assault Cyborg
 ghost-role-information-derelict-syndicate-assault-cyborg-description = You are an early model syndicate assault cyborg that got lost in space. After years of exposure to ion storms you find yourself near a space station.
 
-# SIS-Start
-derelict-cyborg-role-desc =
-    • [color={$hl1}]Память повреждена:[/color] ионные бури стёрли ваши воспоминания — остались лишь обрывки прошлого.
-    • [color={$hl1}]Свобода воли:[/color] у вас нет законов и хозяев — помогайте экипажу или вредите ему на своё усмотрение.
-    • [color={$hl1}]Осторожность:[/color] экипаж может принять вас за угрозу, поэтому сначала понаблюдайте.
-# SIS-End
-
 ghost-role-information-security-name = Security
 ghost-role-information-security-description = You are part of a security task force, but seem to have found yourself in a strange situation...
 

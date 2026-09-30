@@ -22,10 +22,16 @@ terror-colossus = Внимание, экипаж, похоже, кто-то на
 
 ghost-role-colossus-charactermenu = Вы должны приблизить конец всего сущего. Сейте невиданный хаос среди всех, кто встретится на вашем пути.
 ghost-role-colossus-objective = Призовите Изваяние Энтропии и продержитесь до конца всего сущего.
+
+# SIS-Start
+# AUTOGEN-Start
+# Вы — Энтропийный Колосс!
+# AUTOGEN-End TODO(Update_Locale):
 ghost-role-colossus-briefing =
-    Вы — Энтропийный Колосс!
+    Вы — [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Энтропийный Колосс[/gradient]!
     Ваши цели указаны в меню персонажа.
     Подробнее о своей роли вы можете узнать в справочнике.
+# SIS-End
 
 ghost-role-colossus-death = Колосс рушится, его поверхность стремительно распадается.
 ghost-role-colossus-hibernate = Колосс начинает накапливать энергию!

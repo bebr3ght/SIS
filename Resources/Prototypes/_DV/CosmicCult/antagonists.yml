@@ -50,8 +50,10 @@
   id: CosmicColossus
   spawnerPrototype: SpawnPointCosmicColossus
   briefing:
-    text: ghost-role-colossus-briefing
-    # color: CadetBlue # SIS-ChatGreeting
+    # SIS-ChatGreeting Start
+    # text: ghost-role-colossus-briefing
+    # color: CadetBlue
+    # SIS-ChatGreeting End
     sound: /Audio/_DV/CosmicCult/antag_cosmic_AI_briefing.ogg
     # SIS-ChatGreeting Start
     theme:

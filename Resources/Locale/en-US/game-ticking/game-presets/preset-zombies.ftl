@@ -35,8 +35,6 @@ zombie-patientzero-role-briefing =
     Ваша цель: захватить станцию, обратив весь экипаж в живых мертвецов.
 # SIS-End
 
-zombie-healing = В
-
 zombie-healing = You feel a stirring in your flesh
 zombie-infection-warning = You feel the zombie virus take hold
 zombie-infection-underway = Your blood begins to thicken

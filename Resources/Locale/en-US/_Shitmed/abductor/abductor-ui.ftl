@@ -76,7 +76,6 @@ abductor-victim-role-greeting-desc =
     • [color={$hl1}]Инопланетные органы:[/color] пришельцы зашили внутрь вас экспериментальный орган — используйте его новые странные свойства!
 # SIS-End
 
-abductor-victim-role-greeting = You have seen things you shouldn't have. The world must know the truth.
 abductor-victim-role-name = Abductee
 abductor-victim-role-name-freeagent = Abductee (Free Agent)
 abductor-victim-role-desc = You have seen things you shouldn't have. The world must know the truth.

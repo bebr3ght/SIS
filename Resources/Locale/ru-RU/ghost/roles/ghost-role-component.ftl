@@ -316,13 +316,6 @@ ghost-role-information-derelict-mining-cyborg-description = Вы - шахтёр�
 ghost-role-information-derelict-syndicate-assault-cyborg-name = Заброшенный штурмовой киборг Синдиката
 ghost-role-information-derelict-syndicate-assault-cyborg-description = Вы - ранняя модель штурмового киборга Синдиката, потерявшегося в космосе. После многих лет воздействия ионных штормов вы оказались рядом с космической станцией.
 
-# SIS-Start
-derelict-cyborg-role-desc =
-    • [color={$hl1}]Память повреждена:[/color] ионные бури стёрли ваши воспоминания — остались лишь обрывки прошлого.
-    • [color={$hl1}]Свобода воли:[/color] у вас нет законов и хозяев — помогайте экипажу или вредите ему на своё усмотрение.
-    • [color={$hl1}]Осторожность:[/color] экипаж может принять вас за угрозу, поэтому сначала понаблюдайте.
-# SIS-End
-
 ghost-role-information-security-name = Служба безопасности
 ghost-role-information-security-description = Вы - часть оперативной группы службы безопасности, но, похоже, оказались в странной ситуации...
 

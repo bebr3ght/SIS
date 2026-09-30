@@ -18,31 +18,7 @@ zombieteors-description = На станции во время катаклизм
 zombie-not-enough-ready-players = Недостаточно игроков готовы к игре! { $readyPlayersCount } игроков из необходимых { $minimumPlayers } готовы. Нельзя запустить пресет Зомби.
 zombie-no-one-ready = Нет готовых игроков! Нельзя запустить пресет Зомби.
 
-# SIS-Start
-# AUTOGEN-Start
-# Вы — нулевой пациент. Снарядитесь и подготовьтесь к своему превращению. Ваша цель - захватить станцию, заразив при этом как можно больше членов экипажа.
-# AUTOGEN-End TODO(Update_Locale):
-zombie-patientzero-role-greeting =
-    Вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Нулевой Пациент[/gradient]!
-    В вашем теле созревает мутировавший штамм зомби-вируса.
-    Ваша цель: [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]захватить станцию[/gradient], обратив весь экипаж в живых мертвецов.
-
-zombie-patientzero-role-greeting-desc =
-    • [color={$hl1}]Подготовка:[/color] пока вирус не проявился, вооружитесь, найдите инструменты и изолируйте первую жертву в темном углу.
-    • [color={$hl1}]Таймер:[/color] вы обратитесь в зомби после смерти, по истечении времени или нажав кнопку активации в панели действий.
-    • [color={$hl1}]Орда:[/color] атакуйте членов экипажа в ближнем бою - каждый павший станет вашим верным соратником!
-
-zombie-patientzero-role-briefing =
-    Вы — Нулевой Пациент!
-    В вашем теле созревает мутировавший штамм зомби-вируса.
-    Ваша цель: захватить станцию, обратив весь экипаж в живых мертвецов.
-# SIS-End
-
-# AUTOGEN-Start
-# Вы ощущаете шевеление в своей плоти
-# AUTOGEN-End TODO(Update_Locale):
-zombie-healing = В
-
+zombie-patientzero-role-greeting = Вы — нулевой пациент. Снарядитесь и подготовьтесь к своему превращению. Ваша цель - захватить станцию, заразив при этом как можно больше членов экипажа.
 zombie-healing = Вы ощущаете шевеление в своей плоти
 zombie-infection-warning = Вы чувствуете, как зомби-вирус берёт верх
 zombie-infection-underway = Ваша кровь начинает сгущаться
@@ -73,4 +49,3 @@ zombie-round-end-survivor-count =
        *[other] Осталось всего { $count } выживших, это:
     }
 zombie-round-end-user-was-survivor = - [color=White]{ $name }[/color] ([color=gray]{ $username }[/color]) пережил заражение.
-

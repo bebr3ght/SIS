@@ -81,9 +81,5 @@ ent-MobMonkeyPunpun = Пун Пун
 ent-MobCrabAtmos = Тропико
     .desc = Благородный и непоколебимый защитник Атмосии. Viva!
 
-# AUTOGEN-Start
-# Полли
-# .desc = Эксперт в теории квантового крэкера.
-# AUTOGEN-End TODO(Update_Locale):
 ent-MobPollyParrot = Полли
     .desc = Эксперт в теории квантового крэкера.

@@ -11,11 +11,6 @@ ninja-round-end-agent-name = Ниндзя
 objective-issuer-spiderclan = [color=#33cc00]Клан Паука[/color]
 
 # SIS-Start
-# AUTOGEN-Start
-# Я — элитный наёмник могущественного Клана Паука!
-# Внезапность — моё оружие. Тени — моя броня. Без них я ничто.
-# Используйте свой пинпоинтер, чтобы найти станцию. Удачи!
-# AUTOGEN-End TODO(Update_Locale):
 ninja-role-greeting =
     {"["}gradient angle="45" color1="{$hl1}" color2="{$hl2}" speed="1"]// SPIDER-NET OS [v6.5] ///[/gradient]
     {"["}color=#576574]» Статус:[/color] [color={$hl1}]В открытом космосе.[/color]

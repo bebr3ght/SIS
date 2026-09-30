@@ -4,7 +4,7 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-roles-antag-wizard-description-goob = Cause havoc and destruction to the station.
+roles-antag-wizard-description-goob = Сейте хаос и разрушения на станции.
 
 roles-antag-apprentice-name = Подмастерье
 roles-antag-apprentice-description = Помогай магу, который тебя призвал, и защищай его жизнь.

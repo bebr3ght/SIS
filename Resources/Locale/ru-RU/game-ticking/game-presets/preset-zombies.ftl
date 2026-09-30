@@ -19,9 +19,6 @@ zombie-not-enough-ready-players = Недостаточно игроков гот
 zombie-no-one-ready = Нет готовых игроков! Нельзя запустить пресет Зомби.
 
 # SIS-Start
-# AUTOGEN-Start
-# Вы — нулевой пациент. Снарядитесь и подготовьтесь к своему превращению. Ваша цель - захватить станцию, заразив при этом как можно больше членов экипажа.
-# AUTOGEN-End TODO(Update_Locale):
 zombie-patientzero-role-greeting =
     Вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Нулевой Пациент[/gradient]!
     В вашем теле созревает мутировавший штамм зомби-вируса.
@@ -37,11 +34,6 @@ zombie-patientzero-role-briefing =
     В вашем теле созревает мутировавший штамм зомби-вируса.
     Ваша цель: захватить станцию, обратив весь экипаж в живых мертвецов.
 # SIS-End
-
-# AUTOGEN-Start
-# Вы ощущаете шевеление в своей плоти
-# AUTOGEN-End TODO(Update_Locale):
-zombie-healing = В
 
 zombie-healing = Вы ощущаете шевеление в своей плоти
 zombie-infection-warning = Вы чувствуете, как зомби-вирус берёт верх

@@ -24,9 +24,6 @@ ghost-role-colossus-charactermenu = Вы должны приблизить ко�
 ghost-role-colossus-objective = Призовите Изваяние Энтропии и продержитесь до конца всего сущего.
 
 # SIS-Start
-# AUTOGEN-Start
-# Вы — Энтропийный Колосс!
-# AUTOGEN-End TODO(Update_Locale):
 ghost-role-colossus-briefing =
     Вы — [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Энтропийный Колосс[/gradient]!
     Ваши цели указаны в меню персонажа.

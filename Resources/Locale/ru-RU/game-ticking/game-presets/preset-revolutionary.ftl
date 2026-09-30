@@ -20,13 +20,6 @@ roles-antag-rev-head-objective = Ваша задача - захватить ст
 ## Trauma - rewrote
 
 # SIS-Start
-# AUTOGEN-Start
-# Вы - глава революции.
-# Вам поручено устранить весь командный состав станции путём конверсии, убийства, или ареста.
-# Синдикат проспонсировал вас особой вспышкой, которая конвертирует членов экипажа на вашу сторону.
-# Осторожно, она не сработает на тех, у кого есть имплант "Щит Разума", и тех, кто носит защиту для глаз.
-# Viva la revolución!
-# AUTOGEN-End TODO(Update_Locale):
 head-rev-role-greeting =
     Вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Глава Революции[/gradient]!
     Ваша главная цель: свергнуть тиранию [color={$hl1}]NanoTrasen[/color] и [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]устранить весь командный состав[/gradient] станции любыми средствами.
@@ -60,12 +53,6 @@ rev-break-control =
     } на самом деле!
 
 # SIS-Start
-# AUTOGEN-Start
-# Вы - Революционер.
-# Вам поручено захватить станцию и защищать глав революции.
-# Избавьтесь от всего командного состава станции или конвертируйте его.
-# Viva la revolución!
-# AUTOGEN-End TODO(Update_Locale):
 rev-role-greeting =
     Вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Революционер[/gradient].
     Вам поручено защищать [color={$hl1}]Глав Революции[/color] и помочь им захватить станцию.

@@ -25,11 +25,6 @@ traitor-death-match-end-round-description-entry = КПК { $originalName }, с {
 # TraitorRole
 
 # SIS-Start
-# AUTOGEN-Start
-# Вы - агент, отправленный [color = darkred]Синдикатом[/color] от имени $corporation.
-# Ваши цели и кодовые слова перечислены в меню персонажа. Используйте свой аплинк, чтобы приобрести инструменты, необходимые для этой миссии.
-# Смерть Nanotrasen!
-# AUTOGEN-End TODO(Update_Locale):
 traitor-role-greeting =
     Вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]тайный агент[/gradient] корпорации [color={$hl1}]{ $corporation }[/color] на службе [color={$hl1}]Синдиката[/color].
     Ваши цели и кодовые слова доступны в меню персонажа.
@@ -40,29 +35,15 @@ traitor-role-greeting =
 traitor-title-codewords = Кодовые слова
 traitor-title-equipment = Снаряжение
 
-# AUTOGEN-Start
-# Кодовые слова следующие: [color = lightgray]
-# $codewords.[/color]
-# Кодовые слова можно использовать в обычном разговоре, чтобы незаметно идентифицировать себя для других агентов Синдиката.
-# Прислушивайтесь к ним и храните их в тайне.
-# AUTOGEN-End TODO(Update_Locale):
 traitor-role-codewords =
     Кодовые фразы для связи с союзниками:
     {"["}color={$hl1}]{ $codewords }[/color]
     Используйте эти слова в обычной речи, чтобы [color={$hl1}]найти других агентов[/color] Синдиката на станции. Прислушивайтесь к разговорам вокруг и держите свои фразы в секрете!
 
-# AUTOGEN-Start
-# Установите рингтон Вашего КПК на [color = lightgray]$code[/color] чтобы заблокировать или разблокировать аплинк.
-# Не забудьте заблокировать его и сменить код, иначе кто угодно из экипажа станции сможет открыть аплинк!
-# AUTOGEN-End TODO(Update_Locale):
 traitor-role-uplink-code =
     Для доступа к аплинку установите рингтон КПК на код: [gradient color1="{$hl1}" color2="{$hl2}" speed="1.2"]{ $code }[/gradient]
     {"["}color={$hl1}]Внимание:[/color] обязательно смените рингтон или заблокируйте КПК после покупок, иначе любой член экипажа сможет обнаружить ваш аплинк!
 
-# AUTOGEN-Start
-# Ваш имплант аплинк активирован, воспользуйтесь им из хотбара.
-# Аплинк надежно защищён, пока кто-нибудь не извлечёт его из вашего тела.
-# AUTOGEN-End TODO(Update_Locale):
 traitor-role-uplink-implant =
     В ваше тело встроен [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]имплант-аплинк[/gradient]. Активируйте его из панели действий ([color={$hl1}]хотбара[/color]).
     Магазин скрыт внутри вас и недоступен охране, пока имплант не извлекут хирургическим путём.

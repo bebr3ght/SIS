@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-changeling-round-end-agent-name = changeling
+changeling-round-end-agent-name = генокрад
 
 objective-issuer-hivemind = [color=orange]Улей[/color]
 objective-issuer-tiger = [color=crimson]Tiger Cooperative[/color]
@@ -14,11 +14,6 @@ changeling-gamemode-title = Генокрады
 changeling-gamemode-description = Улей Генокрадов захватил станцию, и готов забрать всё что только пожелает — ваше снаряжение, ваши лица, ваши жизни!
 
 # SIS-Start
-# AUTOGEN-Start
-# Вы — генокрад, который поглотил и принял облик $name!
-# Ваши цели указаны в меню персонажа.
-# Поглощайте, меняйте форму и развивайтесь, чтобы выполнить их!
-# AUTOGEN-End TODO(Update_Locale):
 changeling-role-greeting =
     Вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Генокрад[/gradient]!
     Вы поглотили исходную личность [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]{$name}[/gradient] и заняли её место, внедрившись в экипаж станции.

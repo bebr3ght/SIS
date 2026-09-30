@@ -32,11 +32,11 @@ survivor-round-end-alive-on-shuttle-count =
 
 objective-issuer-swf = [color=turquoise]Федерация космических волшебников[/color]
 
-wizard-title = Wizard
-wizard-description = There's a Wizard on the station! You never know what they might do.
+wizard-title = Волшебник
+wizard-description = На станции волшебник! Никогда не знаешь, что он может выкинуть.
 
-roles-antag-wizard-name = Wizard
-roles-antag-wizard-objective = Teach them a lesson they'll never forget.
+roles-antag-wizard-name = Волшебник
+roles-antag-wizard-objective = Преподайте им урок, который они никогда не забудут.
 
 # SIS-Start
 wizard-role-greeting =

@@ -31,10 +31,6 @@ spy-role-claimed-bounties =
     {" "}
 
 # SIS-Start
-# AUTOGEN-Start
-# Вы - шпион.
-# Замаскируйтесь под члена их экипажа и украдите жизненно важное оборудование.
-# AUTOGEN-End TODO(Update_Locale):
 spy-role-greeting =
     Вы - [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]шпион[/gradient].
     Ваша миссия, если вы решите её принять: проникнуть на космическую станцию 14.

@@ -3,11 +3,6 @@ xenomorph-round-end-agent-name = [color=#8c3986]Ксеноморф[/color]
 objective-issuer-xenomorph-hive = [color=#8c3986]Улей Ксеноморфов[/color]
 
 # SIS-Start
-# AUTOGEN-Start
-# Вы — Ксеноморф. Помогайте своему улью расширяться.
-# Если вы первый или последний в своём улье, эволюционируйте в [color=Red]ДРОНА[/color], иначе рой не сможет продолжить своё существование.
-# И помните, на станции должен остаться только один вид, и это точно не гуманоиды.
-# AUTOGEN-End TODO(Update_Locale):
 xenomorph-role-greeting =
     Вы {"["}gradient angle="45" color1="{$hl1}" color2="{$hl2}" speed="1"]Ксеноморф[/gradient], совершенный биологический хищник!
     Ваша цель - расширять колонию, оплетать станцию смолой и [color={$hl1}]истребить всех гуманоидов[/color].

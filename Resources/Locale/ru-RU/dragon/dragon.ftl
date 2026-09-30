@@ -23,8 +23,5 @@ dragon-role-greeting-desc =
     • [color={$hl1}]Пожирание:[/color] сокрушайте конструкции станции и [gradient color1="{$hl1}" color2="{$hl2}" speed="1.2"]пожирайте смертных[/gradient], восстанавливая здоровье и силы!
 
 
-# AUTOGEN-Start
-# Создайте 3 карповых разлома и захватите этот квадрант! Станция находится от вас на $direction.
-# AUTOGEN-End TODO(Update_Locale):
 dragon-role-briefing = Откройте 3 карповых разлома на станции ({$direction}) и захватите сектор!
 # SIS-End

@@ -3,9 +3,6 @@ paradox-clone-round-end-agent-name = парадоксальный клон
 objective-issuer-paradox = [color=lightblue]Парадокс[/color]
 
 # SIS-Start
-# AUTOGEN-Start
-# Странная пространственно-временная аномалия телепортировала вас в другую реальность! Теперь вам предстоит найти своего двойника, убить и заменить его. Только один из вас двоих сможет выжить.
-# AUTOGEN-End TODO(Update_Locale):
 paradox-clone-role-greeting = Странная [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]пространственно-временная аномалия[/gradient] телепортировала вас в другую реальность!
 
 paradox-clone-role-greeting-desc =

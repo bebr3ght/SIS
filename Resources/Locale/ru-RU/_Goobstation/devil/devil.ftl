@@ -8,13 +8,6 @@ devil-component-examined = [color=darkred]{ CAPITALIZE(POSS-ADJ($target)) } гл
 condemned-component-examined = [color=chartreuse]Глаза { CAPITALIZE($target) } пусты и бездушны.[/color]
 
 # SIS-Start
-# AUTOGEN-Start
-# Вы — дьявол из глубин ада,
-# овладевший телом $playerName.
-# Развращайте смертных и собирайте души при помощи контрактов.
-# Вам неинтересны задачи, не связанные со сделками — это ниже вашего достоинства.
-# Ваше истинное имя — $trueName — постарайтесь сохранить его в тайне.
-# AUTOGEN-End TODO(Update_Locale):
 devil-role-greeting =
     Вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]Дьявол[/gradient], владыка Преисподней, подчинивший себе смертную оболочку [color={$hl1}]{$playerName}[/color]!
 

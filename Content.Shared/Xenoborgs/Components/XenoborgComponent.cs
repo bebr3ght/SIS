@@ -18,11 +18,15 @@ public sealed partial class XenoborgComponent : Component
     [DataField]
     public EntProtoId<MindRoleComponent> MindRole = "MindRoleXenoborg";
 
+    // SIS-ChatGreeting Start
+    /*
     /// <summary>
     /// The text that is sent when you become a xenoborg
     /// </summary>
     [DataField]
     public LocId BriefingText = "xenoborgs-welcome";
+    */
+    // SIS-ChatGreeting End
 
     /// <summary>
     /// Briefing sound when you become a xenoborg

@@ -8,6 +8,17 @@ objective-issuer-insurgents = повстанцы
 insurgency-title = мятеж
 insurgency-description = Повстанцы среди нас...
 
+# SIS-Start
+insurgent-role-greeting =
+    Вы [gradient color1="{$hl1}" color2="{$hl2}" speed="1"]повстанец[/gradient], которому надоели порядки корпораций.
+    Ваша ячейка пробралась на станцию, чтобы [color={$hl1}]устроить хаос и захватить её[/color]. Действуйте вместе и не дайте себя остановить.
+
+insurgent-role-greeting-desc =
+    • [color={$hl1}]Цель:[/color] проберитесь на станцию, саботируйте системы и захватите ключевые точки.
+    • [color={$hl1}]Ячейка:[/color] держитесь вместе с соратниками — в одиночку вас быстро перебьют.
+    • [color={$hl1}]Арсенал:[/color] используйте самодельное снаряжение и захваченное у экипажа оружие.
+# SIS-End
+
 roles-antag-shadow-demon-name = теневой демон
 roles-antag-shadow-demon-objective = Тьме нужен Король, и вас призвали, чтобы носить эту корону.
 

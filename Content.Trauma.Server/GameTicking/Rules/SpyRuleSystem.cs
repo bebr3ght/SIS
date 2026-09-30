@@ -43,7 +43,6 @@ public sealed partial class SpyRuleSystem : GameRuleSystem<SpyRuleComponent>
     [Dependency] private IGameTiming _timing = default!;
     [Dependency] private IRobustRandom _random = default!;
     [Dependency] private AntagSelectionSystem _antag = default!;
-    [Dependency] private GreetingSystem _greeting = default!;
     [Dependency] private MindSystem _mind = default!;
     [Dependency] private UplinkSystem _uplink = default!;
     [Dependency] private SpyUplinkSystem _spyUplink = default!;
@@ -59,6 +58,8 @@ public sealed partial class SpyRuleSystem : GameRuleSystem<SpyRuleComponent>
     [Dependency] private EntityQuery<HumanoidProfileComponent> _humanoidQuery = default!;
     [Dependency] private EntityQuery<BrainComponent> _brainQuery = default!;
     [Dependency] private EntityQuery<HeartComponent> _heartQuery = default!;
+
+    [Dependency] private GreetingSystem _greeting = default!; // SIS-ChatGreeting
 
     public override void Initialize()
     {
